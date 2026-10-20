@@ -1,0 +1,16 @@
+# KiCad local settings
+*.kicad_prl
+
+# KiCad backups
+*-backups/
+_autosave-*
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.bak
+
+# Temporary and lock files
+~*.lck
+*.tmp
+
+# Local history
+.history/
