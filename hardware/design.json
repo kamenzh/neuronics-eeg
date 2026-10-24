@@ -1,0 +1,1874 @@
+{
+  "revision": "A0-review",
+  "state": "placed-unrouted-bench-only",
+  "parts": [
+    {
+      "ref": "U1",
+      "lib": "Neuronic:ADS1299IPAG",
+      "value": "ADS1299IPAG",
+      "nets": {
+        "16": "EEG1",
+        "15": "AVDD_5V",
+        "14": "EEG2",
+        "13": "AVDD_5V",
+        "12": "EEG3",
+        "11": "AVDD_5V",
+        "10": "EEG4",
+        "9": "AVDD_5V",
+        "8": "EEG5",
+        "7": "AVDD_5V",
+        "6": "EEG6",
+        "5": "AVDD_5V",
+        "4": "EEG7",
+        "3": "AVDD_5V",
+        "2": "EEG8",
+        "1": "AVDD_5V",
+        "17": "REF_FILTERED",
+        "18": null,
+        "19": "AVDD_5V",
+        "20": "GND",
+        "21": "AVDD_5V",
+        "22": "AVDD_5V",
+        "23": "GND",
+        "24": "VREFP",
+        "25": "GND",
+        "26": "VCAP4",
+        "27": null,
+        "28": "VCAP1",
+        "29": null,
+        "30": "VCAP2",
+        "31": "GND",
+        "32": "GND",
+        "33": "GND",
+        "34": "SPI_MOSI",
+        "35": "ADS_PWDN_N",
+        "36": "ADS_RESET_N",
+        "37": null,
+        "38": "ADS_START",
+        "39": "ADS_CS_N",
+        "40": "SPI_SCLK",
+        "41": "GND",
+        "42": "GPIO1_PD",
+        "43": "SPI_MISO",
+        "44": "GPIO2_PD",
+        "45": "GPIO3_PD",
+        "46": "GPIO4_PD",
+        "47": "ADS_DRDY_N",
+        "48": "DVDD_3V3",
+        "49": "GND",
+        "50": "DVDD_3V3",
+        "51": "GND",
+        "52": "CLKSEL_PU",
+        "53": "GND",
+        "54": "AVDD_5V",
+        "55": "VCAP3",
+        "56": "AVDD_5V",
+        "57": "GND",
+        "58": "GND",
+        "59": "AVDD_5V",
+        "60": null,
+        "61": "BIASINV",
+        "62": "GND",
+        "63": "BIASOUT",
+        "64": null
+      },
+      "fp": "Neuronic:TQFP-64_10x10mm_P0.5mm",
+      "xy": [
+        95,
+        90
+      ],
+      "rot": 0,
+      "note": "TI SBAS499C pin functions, unipolar 5 V, internal clock/reference",
+      "mpn": "ADS1299IPAG",
+      "sheet": "neuronic",
+      "uuid": "1d78f5a4-670b-5d43-b66d-e817a944dd9d"
+    },
+    {
+      "ref": "J11",
+      "lib": "Connector_Generic:Conn_02x06_Odd_Even",
+      "value": "MCU_3V3_IO_ONLY",
+      "nets": {
+        "1": "GND",
+        "2": "GND",
+        "3": "SPI_SCLK",
+        "4": "SPI_MOSI",
+        "5": "SPI_MISO",
+        "6": "ADS_CS_N",
+        "7": "ADS_DRDY_N",
+        "8": "ADS_RESET_N",
+        "9": "ADS_START",
+        "10": "ADS_PWDN_N",
+        "11": "DVDD_3V3",
+        "12": "GND"
+      },
+      "fp": "Neuronic:PinHeader_2x06_P2.54mm_Vertical",
+      "xy": [
+        130,
+        86
+      ],
+      "rot": 0,
+      "note": "Pin 11 is AFE logic reference only. Do not power the ESP32 from this LDO.",
+      "mpn": "",
+      "sheet": "neuronic",
+      "uuid": "63e5f4a2-b11b-511b-ada5-91834f363141"
+    },
+    {
+      "ref": "R30",
+      "lib": "Device:R",
+      "value": "100k",
+      "nets": {
+        "1": "ADS_CS_N",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        116,
+        103
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "neuronic",
+      "uuid": "3f19546f-df08-5946-9a14-4affbafca351"
+    },
+    {
+      "ref": "R31",
+      "lib": "Device:R",
+      "value": "100k",
+      "nets": {
+        "1": "ADS_RESET_N",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        121,
+        103
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "neuronic",
+      "uuid": "283eee7f-83e0-51af-bbc9-4f432150ff32"
+    },
+    {
+      "ref": "R32",
+      "lib": "Device:R",
+      "value": "100k",
+      "nets": {
+        "1": "ADS_PWDN_N",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        126,
+        103
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "neuronic",
+      "uuid": "ce44d336-c277-5797-8269-e87d06d91711"
+    },
+    {
+      "ref": "R33",
+      "lib": "Device:R",
+      "value": "100k",
+      "nets": {
+        "1": "ADS_START",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        131,
+        103
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "neuronic",
+      "uuid": "80fc2584-9344-5a4f-ac2e-b6fcbdd45d17"
+    },
+    {
+      "ref": "R34",
+      "lib": "Device:R",
+      "value": "100k",
+      "nets": {
+        "1": "SPI_SCLK",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        116,
+        110
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "neuronic",
+      "uuid": "7c78c625-a4a2-5ced-8bf2-91688841e2f7"
+    },
+    {
+      "ref": "R35",
+      "lib": "Device:R",
+      "value": "100k",
+      "nets": {
+        "1": "SPI_MOSI",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        121,
+        110
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "neuronic",
+      "uuid": "7f62b4bc-71f8-5a35-8b98-2059aba3a4d1"
+    },
+    {
+      "ref": "R36",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "CLKSEL_PU",
+        "2": "DVDD_3V3"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        126,
+        110
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "neuronic",
+      "uuid": "3d630532-8cc2-5431-a223-d4fd4e02770d"
+    },
+    {
+      "ref": "R37",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "GPIO1_PD",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        131,
+        110
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "neuronic",
+      "uuid": "b5f55863-e092-5f8d-b719-9fc730927c74"
+    },
+    {
+      "ref": "R38",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "GPIO2_PD",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        116,
+        117
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "neuronic",
+      "uuid": "8dec5370-1cff-504c-bd29-9486d0472f40"
+    },
+    {
+      "ref": "R39",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "GPIO3_PD",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        121,
+        117
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "neuronic",
+      "uuid": "e9385b34-817d-55c4-b608-c67b442d13e4"
+    },
+    {
+      "ref": "R40",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "GPIO4_PD",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        126,
+        117
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "neuronic",
+      "uuid": "b0a3d05d-1a36-5374-8617-242bf5691c45"
+    },
+    {
+      "ref": "J1",
+      "lib": "Connector_Generic:Conn_01x01",
+      "value": "CH1_BENCH",
+      "nets": {
+        "1": "CONTACT_1"
+      },
+      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "xy": [
+        57,
+        65
+      ],
+      "rot": 0,
+      "note": "Bench header; replace with verified electrode connector before wearable revision",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "ca444771-fef7-534d-a1e3-8eddef82ade5"
+    },
+    {
+      "ref": "R1",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "CONTACT_1",
+        "2": "INPUT_RMID_1"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        64,
+        65
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "1da75846-d3f5-5bab-a143-a5f9e58bbfc6"
+    },
+    {
+      "ref": "R2",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "INPUT_RMID_1",
+        "2": "EEG1"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        69,
+        65
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "39337229-bb4e-5d28-b186-99cabe1cd319"
+    },
+    {
+      "ref": "C1",
+      "lib": "Device:C",
+      "value": "1nF C0G",
+      "nets": {
+        "1": "EEG1",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        78,
+        65
+      ],
+      "rot": 0,
+      "note": "Matched C0G RF filter capacitor",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "815d2fd3-3b7d-5202-a857-bae8691b26b2"
+    },
+    {
+      "ref": "D1",
+      "lib": "Neuronic:BAV199",
+      "value": "BAV199",
+      "nets": {
+        "1": "GND",
+        "2": "AVDD_5V",
+        "3": "EEG1"
+      },
+      "fp": "Neuronic:SOT-23",
+      "xy": [
+        73.5,
+        65
+      ],
+      "rot": 0,
+      "note": "Clamp candidate only; not certified input protection",
+      "mpn": "BAV199,215",
+      "sheet": "inputs",
+      "uuid": "dc6bb9cc-4e71-5c65-835d-faf90a70e72f"
+    },
+    {
+      "ref": "J2",
+      "lib": "Connector_Generic:Conn_01x01",
+      "value": "CH2_BENCH",
+      "nets": {
+        "1": "CONTACT_2"
+      },
+      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "xy": [
+        57,
+        72
+      ],
+      "rot": 0,
+      "note": "Bench header; replace with verified electrode connector before wearable revision",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "2e68d078-186f-5cb6-9841-168bd9eed1f2"
+    },
+    {
+      "ref": "R3",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "CONTACT_2",
+        "2": "INPUT_RMID_2"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        64,
+        72
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "e7fa5676-b46f-5260-afa2-983682bc7e0f"
+    },
+    {
+      "ref": "R4",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "INPUT_RMID_2",
+        "2": "EEG2"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        69,
+        72
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "9c736448-46d7-5ed8-b3a9-33584deb3b01"
+    },
+    {
+      "ref": "C2",
+      "lib": "Device:C",
+      "value": "1nF C0G",
+      "nets": {
+        "1": "EEG2",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        78,
+        72
+      ],
+      "rot": 0,
+      "note": "Matched C0G RF filter capacitor",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "62b842e7-d8a3-5c41-ac2c-5a62ca04eea9"
+    },
+    {
+      "ref": "D2",
+      "lib": "Neuronic:BAV199",
+      "value": "BAV199",
+      "nets": {
+        "1": "GND",
+        "2": "AVDD_5V",
+        "3": "EEG2"
+      },
+      "fp": "Neuronic:SOT-23",
+      "xy": [
+        73.5,
+        72
+      ],
+      "rot": 0,
+      "note": "Clamp candidate only; not certified input protection",
+      "mpn": "BAV199,215",
+      "sheet": "inputs",
+      "uuid": "daaac1b2-1232-5832-9af9-1eb43674965d"
+    },
+    {
+      "ref": "J3",
+      "lib": "Connector_Generic:Conn_01x01",
+      "value": "CH3_BENCH",
+      "nets": {
+        "1": "CONTACT_3"
+      },
+      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "xy": [
+        57,
+        79
+      ],
+      "rot": 0,
+      "note": "Bench header; replace with verified electrode connector before wearable revision",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "6b0e4943-9211-52b1-8710-40164e00c482"
+    },
+    {
+      "ref": "R5",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "CONTACT_3",
+        "2": "INPUT_RMID_3"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        64,
+        79
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "0feb846c-0761-5e52-bc5d-dcaf09316a81"
+    },
+    {
+      "ref": "R6",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "INPUT_RMID_3",
+        "2": "EEG3"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        69,
+        79
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "a62dad11-8661-521d-9cee-efba542e75f8"
+    },
+    {
+      "ref": "C3",
+      "lib": "Device:C",
+      "value": "1nF C0G",
+      "nets": {
+        "1": "EEG3",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        78,
+        79
+      ],
+      "rot": 0,
+      "note": "Matched C0G RF filter capacitor",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "2c3967b0-2c85-5ca8-91fb-e300ee822df2"
+    },
+    {
+      "ref": "D3",
+      "lib": "Neuronic:BAV199",
+      "value": "BAV199",
+      "nets": {
+        "1": "GND",
+        "2": "AVDD_5V",
+        "3": "EEG3"
+      },
+      "fp": "Neuronic:SOT-23",
+      "xy": [
+        73.5,
+        79
+      ],
+      "rot": 0,
+      "note": "Clamp candidate only; not certified input protection",
+      "mpn": "BAV199,215",
+      "sheet": "inputs",
+      "uuid": "9cef6c0d-723f-5833-aeaf-b38625b5cf64"
+    },
+    {
+      "ref": "J4",
+      "lib": "Connector_Generic:Conn_01x01",
+      "value": "CH4_BENCH",
+      "nets": {
+        "1": "CONTACT_4"
+      },
+      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "xy": [
+        57,
+        86
+      ],
+      "rot": 0,
+      "note": "Bench header; replace with verified electrode connector before wearable revision",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "1328a76a-aa71-5de1-b666-e3347092adb2"
+    },
+    {
+      "ref": "R7",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "CONTACT_4",
+        "2": "INPUT_RMID_4"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        64,
+        86
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "dcdb46be-b923-592e-8ad9-4f6a5e1f76df"
+    },
+    {
+      "ref": "R8",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "INPUT_RMID_4",
+        "2": "EEG4"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        69,
+        86
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "7254eed4-a350-5443-a812-50e724d770d8"
+    },
+    {
+      "ref": "C4",
+      "lib": "Device:C",
+      "value": "1nF C0G",
+      "nets": {
+        "1": "EEG4",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        78,
+        86
+      ],
+      "rot": 0,
+      "note": "Matched C0G RF filter capacitor",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "d6300a51-a9f0-5109-8da8-c80f323db6c5"
+    },
+    {
+      "ref": "D4",
+      "lib": "Neuronic:BAV199",
+      "value": "BAV199",
+      "nets": {
+        "1": "GND",
+        "2": "AVDD_5V",
+        "3": "EEG4"
+      },
+      "fp": "Neuronic:SOT-23",
+      "xy": [
+        73.5,
+        86
+      ],
+      "rot": 0,
+      "note": "Clamp candidate only; not certified input protection",
+      "mpn": "BAV199,215",
+      "sheet": "inputs",
+      "uuid": "bdaab4bf-ed7a-5493-bb81-532a99e19eeb"
+    },
+    {
+      "ref": "J5",
+      "lib": "Connector_Generic:Conn_01x01",
+      "value": "CH5_BENCH",
+      "nets": {
+        "1": "CONTACT_5"
+      },
+      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "xy": [
+        57,
+        93
+      ],
+      "rot": 0,
+      "note": "Bench header; replace with verified electrode connector before wearable revision",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "0c27e9dc-29b1-55c7-9a3a-f1ef3c7218de"
+    },
+    {
+      "ref": "R9",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "CONTACT_5",
+        "2": "INPUT_RMID_5"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        64,
+        93
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "ab9e2a1d-f406-5fc3-b067-bff58eb7d9af"
+    },
+    {
+      "ref": "R10",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "INPUT_RMID_5",
+        "2": "EEG5"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        69,
+        93
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "b403a41e-62e6-5b02-9d47-8c0d543b0f29"
+    },
+    {
+      "ref": "C5",
+      "lib": "Device:C",
+      "value": "1nF C0G",
+      "nets": {
+        "1": "EEG5",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        78,
+        93
+      ],
+      "rot": 0,
+      "note": "Matched C0G RF filter capacitor",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "52b5258a-0b43-5347-82b3-132e03045332"
+    },
+    {
+      "ref": "D5",
+      "lib": "Neuronic:BAV199",
+      "value": "BAV199",
+      "nets": {
+        "1": "GND",
+        "2": "AVDD_5V",
+        "3": "EEG5"
+      },
+      "fp": "Neuronic:SOT-23",
+      "xy": [
+        73.5,
+        93
+      ],
+      "rot": 0,
+      "note": "Clamp candidate only; not certified input protection",
+      "mpn": "BAV199,215",
+      "sheet": "inputs",
+      "uuid": "1546228b-830b-5c1e-b9d5-5e1343d53aa0"
+    },
+    {
+      "ref": "J6",
+      "lib": "Connector_Generic:Conn_01x01",
+      "value": "CH6_BENCH",
+      "nets": {
+        "1": "CONTACT_6"
+      },
+      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "xy": [
+        57,
+        100
+      ],
+      "rot": 0,
+      "note": "Bench header; replace with verified electrode connector before wearable revision",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "34fc5357-ec0f-5f58-8f32-02ef2e8a9f26"
+    },
+    {
+      "ref": "R11",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "CONTACT_6",
+        "2": "INPUT_RMID_6"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        64,
+        100
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "64c1a9ce-e480-5ee4-853f-0d3ae36f83f2"
+    },
+    {
+      "ref": "R12",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "INPUT_RMID_6",
+        "2": "EEG6"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        69,
+        100
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "7a1aaa8d-80a5-5874-9869-135c6129fc80"
+    },
+    {
+      "ref": "C6",
+      "lib": "Device:C",
+      "value": "1nF C0G",
+      "nets": {
+        "1": "EEG6",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        78,
+        100
+      ],
+      "rot": 0,
+      "note": "Matched C0G RF filter capacitor",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "410a0c5e-bcee-5187-b48c-e7f0a8796f01"
+    },
+    {
+      "ref": "D6",
+      "lib": "Neuronic:BAV199",
+      "value": "BAV199",
+      "nets": {
+        "1": "GND",
+        "2": "AVDD_5V",
+        "3": "EEG6"
+      },
+      "fp": "Neuronic:SOT-23",
+      "xy": [
+        73.5,
+        100
+      ],
+      "rot": 0,
+      "note": "Clamp candidate only; not certified input protection",
+      "mpn": "BAV199,215",
+      "sheet": "inputs",
+      "uuid": "886b151d-af49-5987-b27f-60a22c210d0b"
+    },
+    {
+      "ref": "J7",
+      "lib": "Connector_Generic:Conn_01x01",
+      "value": "CH7_BENCH",
+      "nets": {
+        "1": "CONTACT_7"
+      },
+      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "xy": [
+        57,
+        107
+      ],
+      "rot": 0,
+      "note": "Bench header; replace with verified electrode connector before wearable revision",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "b9be75e9-c33a-5fe6-98cd-972df1d64fed"
+    },
+    {
+      "ref": "R13",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "CONTACT_7",
+        "2": "INPUT_RMID_7"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        64,
+        107
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "28873bf5-fc6e-5f39-85f4-1e778ccf0cb4"
+    },
+    {
+      "ref": "R14",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "INPUT_RMID_7",
+        "2": "EEG7"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        69,
+        107
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "e9778dc3-1a4a-553b-b6a9-3e14bd368ed8"
+    },
+    {
+      "ref": "C7",
+      "lib": "Device:C",
+      "value": "1nF C0G",
+      "nets": {
+        "1": "EEG7",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        78,
+        107
+      ],
+      "rot": 0,
+      "note": "Matched C0G RF filter capacitor",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "f4ebee2d-45eb-5b40-96b2-ae9db9edbc9f"
+    },
+    {
+      "ref": "D7",
+      "lib": "Neuronic:BAV199",
+      "value": "BAV199",
+      "nets": {
+        "1": "GND",
+        "2": "AVDD_5V",
+        "3": "EEG7"
+      },
+      "fp": "Neuronic:SOT-23",
+      "xy": [
+        73.5,
+        107
+      ],
+      "rot": 0,
+      "note": "Clamp candidate only; not certified input protection",
+      "mpn": "BAV199,215",
+      "sheet": "inputs",
+      "uuid": "01369e1d-a4d3-5977-b130-33e6639bfcc4"
+    },
+    {
+      "ref": "J8",
+      "lib": "Connector_Generic:Conn_01x01",
+      "value": "CH8_BENCH",
+      "nets": {
+        "1": "CONTACT_8"
+      },
+      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "xy": [
+        57,
+        114
+      ],
+      "rot": 0,
+      "note": "Bench header; replace with verified electrode connector before wearable revision",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "f2578509-69d4-5600-ad63-a7819d66980e"
+    },
+    {
+      "ref": "R15",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "CONTACT_8",
+        "2": "INPUT_RMID_8"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        64,
+        114
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "4023ac2e-0145-59bc-b5f1-ed12643167e2"
+    },
+    {
+      "ref": "R16",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "INPUT_RMID_8",
+        "2": "EEG8"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        69,
+        114
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "fd945c21-ae1d-5914-9933-5bf0bb4b6060"
+    },
+    {
+      "ref": "C8",
+      "lib": "Device:C",
+      "value": "1nF C0G",
+      "nets": {
+        "1": "EEG8",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        78,
+        114
+      ],
+      "rot": 0,
+      "note": "Matched C0G RF filter capacitor",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "5054c6db-6ae8-5ec7-94c8-21df2d70b609"
+    },
+    {
+      "ref": "D8",
+      "lib": "Neuronic:BAV199",
+      "value": "BAV199",
+      "nets": {
+        "1": "GND",
+        "2": "AVDD_5V",
+        "3": "EEG8"
+      },
+      "fp": "Neuronic:SOT-23",
+      "xy": [
+        73.5,
+        114
+      ],
+      "rot": 0,
+      "note": "Clamp candidate only; not certified input protection",
+      "mpn": "BAV199,215",
+      "sheet": "inputs",
+      "uuid": "471b71d9-e379-50cf-b6de-a656b3920564"
+    },
+    {
+      "ref": "J9",
+      "lib": "Connector_Generic:Conn_01x01",
+      "value": "REF_BENCH",
+      "nets": {
+        "1": "CONTACT_REF"
+      },
+      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "xy": [
+        57,
+        121
+      ],
+      "rot": 0,
+      "note": "Bench header; replace with verified electrode connector before wearable revision",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "89b7be3b-a9f6-559d-b86c-fd4e862bc899"
+    },
+    {
+      "ref": "R17",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "CONTACT_REF",
+        "2": "INPUT_RMID_9"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        64,
+        121
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "60b25c42-edb0-5e0e-b7b9-58c39cce6db0"
+    },
+    {
+      "ref": "R18",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "INPUT_RMID_9",
+        "2": "REF_FILTERED"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        69,
+        121
+      ],
+      "rot": 90,
+      "note": "Input series resistor, 1%",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "41f78dfc-b49f-580c-81dc-6a3924597179"
+    },
+    {
+      "ref": "C9",
+      "lib": "Device:C",
+      "value": "1nF C0G",
+      "nets": {
+        "1": "REF_FILTERED",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        78,
+        121
+      ],
+      "rot": 0,
+      "note": "Matched C0G RF filter capacitor",
+      "mpn": "",
+      "sheet": "inputs",
+      "uuid": "a0bca73f-9668-5c0e-a69f-d654482479c5"
+    },
+    {
+      "ref": "D9",
+      "lib": "Neuronic:BAV199",
+      "value": "BAV199",
+      "nets": {
+        "1": "GND",
+        "2": "AVDD_5V",
+        "3": "REF_FILTERED"
+      },
+      "fp": "Neuronic:SOT-23",
+      "xy": [
+        73.5,
+        121
+      ],
+      "rot": 0,
+      "note": "Clamp candidate only; not certified input protection",
+      "mpn": "BAV199,215",
+      "sheet": "inputs",
+      "uuid": "0c333930-9900-5f92-b4ea-0c1201abaead"
+    },
+    {
+      "ref": "J12",
+      "lib": "Connector_Generic:Conn_01x02",
+      "value": "BATTERY_7_TO_9V",
+      "nets": {
+        "1": "VBAT_RAW",
+        "2": "GND"
+      },
+      "fp": "Neuronic:PinHeader_1x02_P2.54mm_Vertical",
+      "xy": [
+        130,
+        61
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "2ea121ce-6928-55f5-bdea-a7c3605be7a7"
+    },
+    {
+      "ref": "F1",
+      "lib": "Device:Polyfuse",
+      "value": "100mA_HOLD_CANDIDATE",
+      "nets": {
+        "1": "VBAT_RAW",
+        "2": "VBAT_FUSED"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        124,
+        60
+      ],
+      "rot": 0,
+      "note": "Choose exact voltage/current/thermal rating before release",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "be43af05-a17f-5546-9934-1ec0f57e5057"
+    },
+    {
+      "ref": "D10",
+      "lib": "Device:D_Schottky",
+      "value": "SS14",
+      "nets": {
+        "2": "VBAT_FUSED",
+        "1": "VBAT_DIODE"
+      },
+      "fp": "Neuronic:D_SMA",
+      "xy": [
+        117,
+        60
+      ],
+      "rot": 0,
+      "note": "Reverse polarity protection; verify thermal behavior",
+      "mpn": "SS14",
+      "sheet": "power",
+      "uuid": "18df0d1e-ac74-53b4-b0ac-e11882612cab"
+    },
+    {
+      "ref": "SW1",
+      "lib": "Switch:SW_SPST",
+      "value": "POWER",
+      "nets": {
+        "1": "VBAT_DIODE",
+        "2": "VBAT"
+      },
+      "fp": "Neuronic:PinHeader_1x02_P2.54mm_Vertical",
+      "xy": [
+        109,
+        60
+      ],
+      "rot": 0,
+      "note": "Header for an offboard SPST switch",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "4711dd50-1339-553f-82a3-e40a21833e6a"
+    },
+    {
+      "ref": "U2",
+      "lib": "Regulator_Linear:MCP1703Ax-330xxDB",
+      "value": "MCP1703AT-5002E/DB",
+      "nets": {
+        "1": "VBAT",
+        "2": "GND",
+        "3": "AVDD_5V"
+      },
+      "fp": "Neuronic:SOT-223-3_TabPin2",
+      "xy": [
+        109,
+        72
+      ],
+      "rot": 0,
+      "note": "Fixed output variant; matching footprint pin1 VIN pin2 GND pin3 VOUT",
+      "mpn": "MCP1703AT-5002E/DB",
+      "sheet": "power",
+      "uuid": "8d6735d3-0c88-59b4-af0f-a2c2c29a81e1"
+    },
+    {
+      "ref": "U3",
+      "lib": "Regulator_Linear:MCP1703Ax-330xxDB",
+      "value": "MCP1703AT-3302E/DB",
+      "nets": {
+        "1": "VBAT",
+        "2": "GND",
+        "3": "DVDD_3V3"
+      },
+      "fp": "Neuronic:SOT-223-3_TabPin2",
+      "xy": [
+        123,
+        72
+      ],
+      "rot": 0,
+      "note": "Fixed output variant; matching footprint pin1 VIN pin2 GND pin3 VOUT",
+      "mpn": "MCP1703AT-3302E/DB",
+      "sheet": "power",
+      "uuid": "5caff16a-83ae-576c-939b-27b4fe449cfc"
+    },
+    {
+      "ref": "C20",
+      "lib": "Device:C",
+      "value": "4.7uF 16V",
+      "nets": {
+        "1": "VBAT",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        109,
+        66
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "e68f4a3e-9363-593a-86a2-414289561dd2"
+    },
+    {
+      "ref": "C21",
+      "lib": "Device:C",
+      "value": "4.7uF 10V",
+      "nets": {
+        "1": "AVDD_5V",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        109,
+        78
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "0b8fa811-87b1-565c-8165-7e9909779e05"
+    },
+    {
+      "ref": "C22",
+      "lib": "Device:C",
+      "value": "4.7uF 16V",
+      "nets": {
+        "1": "VBAT",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        123,
+        66
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "35b284e0-0430-5856-a9c6-0a26b24a94a1"
+    },
+    {
+      "ref": "C23",
+      "lib": "Device:C",
+      "value": "4.7uF 10V",
+      "nets": {
+        "1": "DVDD_3V3",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        123,
+        78
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "d9a4c9a4-2a4b-59b9-afc4-bed01ad5fa60"
+    },
+    {
+      "ref": "C24",
+      "lib": "Device:C",
+      "value": "100uF 6.3V",
+      "nets": {
+        "1": "VCAP1",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_1210_3225Metric",
+      "xy": [
+        91,
+        103
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "2f79a893-0c85-5e64-9abb-973574485eae"
+    },
+    {
+      "ref": "C25",
+      "lib": "Device:C",
+      "value": "1uF",
+      "nets": {
+        "1": "VCAP2",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        96,
+        103
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "9a835b4d-2a15-5a3b-8ea6-358ffcbdcbd9"
+    },
+    {
+      "ref": "C26",
+      "lib": "Device:C",
+      "value": "1uF",
+      "nets": {
+        "1": "VCAP3",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        96,
+        78
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "62db20ee-4fff-5c1c-b6b3-c272aee05207"
+    },
+    {
+      "ref": "C27",
+      "lib": "Device:C",
+      "value": "100nF",
+      "nets": {
+        "1": "VCAP3",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        100,
+        78
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "f4d57264-9224-53d9-bc9f-80f6e18e0cb7"
+    },
+    {
+      "ref": "C28",
+      "lib": "Device:C",
+      "value": "1uF",
+      "nets": {
+        "1": "VCAP4",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        87,
+        103
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "a29e5219-f158-5282-a48a-5d031dce3eb8"
+    },
+    {
+      "ref": "C29",
+      "lib": "Device:C",
+      "value": "10uF",
+      "nets": {
+        "1": "VREFP",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        83,
+        100
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "e8bdfa87-3cae-5dd3-8b34-3917139b4026"
+    },
+    {
+      "ref": "C30",
+      "lib": "Device:C",
+      "value": "100nF",
+      "nets": {
+        "1": "VREFP",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        83,
+        104
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "b03cfd81-3b40-53cb-a755-435b6d13b67f"
+    },
+    {
+      "ref": "C31",
+      "lib": "Device:C",
+      "value": "1uF",
+      "nets": {
+        "1": "AVDD_5V",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        83,
+        94
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "7d6327b4-c36c-512d-97bc-38de9ccc33c0"
+    },
+    {
+      "ref": "C32",
+      "lib": "Device:C",
+      "value": "1uF",
+      "nets": {
+        "1": "AVDD_5V",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        83,
+        90
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "6c4a051f-d7e0-5d6c-9644-4de6ede6ab4f"
+    },
+    {
+      "ref": "C33",
+      "lib": "Device:C",
+      "value": "1uF",
+      "nets": {
+        "1": "AVDD_5V",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        83,
+        86
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "727d4b7c-45c1-5334-90db-ba6748db9350"
+    },
+    {
+      "ref": "C34",
+      "lib": "Device:C",
+      "value": "1uF",
+      "nets": {
+        "1": "AVDD_5V",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        87,
+        78
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "b667f400-8728-500a-bf69-34f81f22374f"
+    },
+    {
+      "ref": "C35",
+      "lib": "Device:C",
+      "value": "1uF",
+      "nets": {
+        "1": "AVDD_5V",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        91,
+        78
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "c8eb77ae-9d4e-5541-91eb-e386aad44454"
+    },
+    {
+      "ref": "C36",
+      "lib": "Device:C",
+      "value": "1uF",
+      "nets": {
+        "1": "AVDD_5V",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        104,
+        86
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "2f51b4d8-53c0-59b1-b3c6-b35237e7bf70"
+    },
+    {
+      "ref": "C37",
+      "lib": "Device:C",
+      "value": "10uF",
+      "nets": {
+        "1": "AVDD_5V",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        105,
+        94
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "d9dd43b3-5476-5ed9-8881-c17344eebfff"
+    },
+    {
+      "ref": "C38",
+      "lib": "Device:C",
+      "value": "100nF",
+      "nets": {
+        "1": "AVDD_5V",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        105,
+        90
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "1768e314-d1e1-5260-9377-56002dc696f5"
+    },
+    {
+      "ref": "C39",
+      "lib": "Device:C",
+      "value": "1uF",
+      "nets": {
+        "1": "DVDD_3V3",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        104,
+        98
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "7ab55853-6277-5006-b879-c9319389c91a"
+    },
+    {
+      "ref": "C40",
+      "lib": "Device:C",
+      "value": "1uF",
+      "nets": {
+        "1": "DVDD_3V3",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        100,
+        102
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "d6948258-3599-5c7b-b34a-791475a4fb62"
+    },
+    {
+      "ref": "C41",
+      "lib": "Device:C",
+      "value": "100nF",
+      "nets": {
+        "1": "DVDD_3V3",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        100,
+        106
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "413239de-acf8-51cc-a8a1-dfbd3c047a5b"
+    },
+    {
+      "ref": "R20",
+      "lib": "Device:R",
+      "value": "1M",
+      "nets": {
+        "1": "BIASOUT",
+        "2": "BIASINV"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        100,
+        72
+      ],
+      "rot": 0,
+      "note": "Bias feedback, candidate compensation must be checked with cable/electrode model",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "870d9589-f263-5193-8262-5c0043ad2ead"
+    },
+    {
+      "ref": "C10",
+      "lib": "Device:C",
+      "value": "1.5nF C0G",
+      "nets": {
+        "1": "BIASOUT",
+        "2": "BIASINV"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        95,
+        72
+      ],
+      "rot": 0,
+      "note": "",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "cd2857f6-23d2-59ea-a910-d918cb2e5189"
+    },
+    {
+      "ref": "R21",
+      "lib": "Device:R",
+      "value": "499k",
+      "nets": {
+        "1": "BIASOUT",
+        "2": "BIAS_LIMIT_MID"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        86,
+        114
+      ],
+      "rot": 90,
+      "note": "",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "e994d005-08d7-57c4-aa4c-315872357b5f"
+    },
+    {
+      "ref": "R22",
+      "lib": "Device:R",
+      "value": "499k",
+      "nets": {
+        "1": "BIAS_LIMIT_MID",
+        "2": "CONTACT_BIAS"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        75,
+        128
+      ],
+      "rot": 90,
+      "note": "",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "de6aa466-42f6-590b-8b27-9824cb0a695a"
+    },
+    {
+      "ref": "J10",
+      "lib": "Connector_Generic:Conn_01x01",
+      "value": "BIAS_BENCH",
+      "nets": {
+        "1": "CONTACT_BIAS"
+      },
+      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "xy": [
+        57,
+        128
+      ],
+      "rot": 0,
+      "note": "Bias output. Not protective earth. Bench connector only.",
+      "mpn": "",
+      "sheet": "power",
+      "uuid": "e9bb80b1-f942-512d-9b65-9f964dfd8b47"
+    }
+  ],
+  "ads_pin_names": {
+    "16": "IN1P",
+    "14": "IN2P",
+    "12": "IN3P",
+    "10": "IN4P",
+    "8": "IN5P",
+    "6": "IN6P",
+    "4": "IN7P",
+    "2": "IN8P",
+    "15": "IN1N",
+    "13": "IN2N",
+    "11": "IN3N",
+    "9": "IN4N",
+    "7": "IN5N",
+    "5": "IN6N",
+    "3": "IN7N",
+    "1": "IN8N",
+    "17": "SRB1",
+    "18": "SRB2",
+    "19": "AVDD",
+    "20": "AVSS",
+    "21": "AVDD",
+    "22": "AVDD",
+    "23": "AVSS",
+    "24": "VREFP",
+    "25": "VREFN",
+    "26": "VCAP4",
+    "27": "NC",
+    "28": "VCAP1",
+    "29": "NC",
+    "30": "VCAP2",
+    "31": "RESV1",
+    "32": "AVSS",
+    "33": "DGND",
+    "34": "DIN",
+    "35": "~{PWDN}",
+    "36": "~{RESET}",
+    "37": "CLK",
+    "38": "START",
+    "39": "~{CS}",
+    "40": "SCLK",
+    "41": "DAISY_IN",
+    "42": "GPIO1",
+    "43": "DOUT",
+    "44": "GPIO2",
+    "45": "GPIO3",
+    "46": "GPIO4",
+    "47": "~{DRDY}",
+    "48": "DVDD",
+    "49": "DGND",
+    "50": "DVDD",
+    "51": "DGND",
+    "52": "CLKSEL",
+    "53": "AVSS1",
+    "54": "AVDD1",
+    "55": "VCAP3",
+    "56": "AVDD",
+    "57": "AVSS",
+    "58": "AVSS",
+    "59": "AVDD",
+    "60": "BIASREF",
+    "61": "BIASINV",
+    "62": "BIASIN",
+    "63": "BIASOUT",
+    "64": "RESERVED"
+  }
+}

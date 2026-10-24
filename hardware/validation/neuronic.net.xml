@@ -1,0 +1,1684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/workspace/scratch/3a280c114457/neuronic/hardware/kicad/neuronic.kicad_sch</source>
+    <date>Sat Oct 24 09:24:03 2026</date>
+    <tool>Eeschema 7.0.11+dfsg-1build4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>01 - ADS1299 core and SPI interface</title>
+        <company>Neuronic</company>
+        <rev>A0-review</rev>
+        <date>2026-10-24</date>
+        <source>neuronic.kicad_sch</source>
+        <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/">
+      <title_block>
+        <title>02 - Eight channels and shared reference</title>
+        <company>Neuronic</company>
+        <rev>A0-review</rev>
+        <date>2026-10-24</date>
+        <source>inputs.kicad_sch</source>
+        <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/">
+      <title_block>
+        <title>03 - Battery regulators, decoupling and bias</title>
+        <company>Neuronic</company>
+        <rev>A0-review</rev>
+        <date>2026-10-24</date>
+        <source>power.kicad_sch</source>
+        <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J11">
+      <value>MCU_3V3_IO_ONLY</value>
+      <footprint>Neuronic:PinHeader_2x06_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x06_Odd_Even" description="Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>63e5f4a2-b11b-511b-ada5-91834f363141</tstamps>
+    </comp>
+    <comp ref="R30">
+      <value>100k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3f19546f-df08-5946-9a14-4affbafca351</tstamps>
+    </comp>
+    <comp ref="R31">
+      <value>100k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>283eee7f-83e0-51af-bbc9-4f432150ff32</tstamps>
+    </comp>
+    <comp ref="R32">
+      <value>100k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ce44d336-c277-5797-8269-e87d06d91711</tstamps>
+    </comp>
+    <comp ref="R33">
+      <value>100k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>80fc2584-9344-5a4f-ac2e-b6fcbdd45d17</tstamps>
+    </comp>
+    <comp ref="R34">
+      <value>100k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7c78c625-a4a2-5ced-8bf2-91688841e2f7</tstamps>
+    </comp>
+    <comp ref="R35">
+      <value>100k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7f62b4bc-71f8-5a35-8b98-2059aba3a4d1</tstamps>
+    </comp>
+    <comp ref="R36">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d630532-8cc2-5431-a223-d4fd4e02770d</tstamps>
+    </comp>
+    <comp ref="R37">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b5f55863-e092-5f8d-b719-9fc730927c74</tstamps>
+    </comp>
+    <comp ref="R38">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8dec5370-1cff-504c-bd29-9486d0472f40</tstamps>
+    </comp>
+    <comp ref="R39">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e9385b34-817d-55c4-b608-c67b442d13e4</tstamps>
+    </comp>
+    <comp ref="R40">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b0a3d05d-1a36-5374-8617-242bf5691c45</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>ADS1299IPAG</value>
+      <footprint>Neuronic:TQFP-64_10x10mm_P0.5mm</footprint>
+      <libsource lib="Neuronic" part="ADS1299IPAG" description="TI ADS1299 eight-channel PAG64; pin numbers checked against SBAS499C table 6"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="neuronic.kicad_sch"/>
+      <property name="ki_description" value="TI ADS1299 eight-channel PAG64; pin numbers checked against SBAS499C table 6"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1d78f5a4-670b-5d43-b66d-e817a944dd9d</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>1nF C0G</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>815d2fd3-3b7d-5202-a857-bae8691b26b2</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>1nF C0G</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>62b842e7-d8a3-5c41-ac2c-5a62ca04eea9</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>1nF C0G</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>2c3967b0-2c85-5ca8-91fb-e300ee822df2</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>1nF C0G</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>d6300a51-a9f0-5109-8da8-c80f323db6c5</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>1nF C0G</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>52b5258a-0b43-5347-82b3-132e03045332</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>1nF C0G</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>410a0c5e-bcee-5187-b48c-e7f0a8796f01</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>1nF C0G</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>f4ebee2d-45eb-5b40-96b2-ae9db9edbc9f</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>1nF C0G</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>5054c6db-6ae8-5ec7-94c8-21df2d70b609</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>1nF C0G</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>a0bca73f-9668-5c0e-a69f-d654482479c5</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>BAV199</value>
+      <footprint>Neuronic:SOT-23</footprint>
+      <libsource lib="Neuronic" part="BAV199" description="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>dc6bb9cc-4e71-5c65-835d-faf90a70e72f</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>BAV199</value>
+      <footprint>Neuronic:SOT-23</footprint>
+      <libsource lib="Neuronic" part="BAV199" description="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>daaac1b2-1232-5832-9af9-1eb43674965d</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>BAV199</value>
+      <footprint>Neuronic:SOT-23</footprint>
+      <libsource lib="Neuronic" part="BAV199" description="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>9cef6c0d-723f-5833-aeaf-b38625b5cf64</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>BAV199</value>
+      <footprint>Neuronic:SOT-23</footprint>
+      <libsource lib="Neuronic" part="BAV199" description="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>bdaab4bf-ed7a-5493-bb81-532a99e19eeb</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>BAV199</value>
+      <footprint>Neuronic:SOT-23</footprint>
+      <libsource lib="Neuronic" part="BAV199" description="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>1546228b-830b-5c1e-b9d5-5e1343d53aa0</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>BAV199</value>
+      <footprint>Neuronic:SOT-23</footprint>
+      <libsource lib="Neuronic" part="BAV199" description="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>886b151d-af49-5987-b27f-60a22c210d0b</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>BAV199</value>
+      <footprint>Neuronic:SOT-23</footprint>
+      <libsource lib="Neuronic" part="BAV199" description="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>01369e1d-a4d3-5977-b130-33e6639bfcc4</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>BAV199</value>
+      <footprint>Neuronic:SOT-23</footprint>
+      <libsource lib="Neuronic" part="BAV199" description="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>471b71d9-e379-50cf-b6de-a656b3920564</tstamps>
+    </comp>
+    <comp ref="D9">
+      <value>BAV199</value>
+      <footprint>Neuronic:SOT-23</footprint>
+      <libsource lib="Neuronic" part="BAV199" description="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>0c333930-9900-5f92-b4ea-0c1201abaead</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>CH1_BENCH</value>
+      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>ca444771-fef7-534d-a1e3-8eddef82ade5</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>CH2_BENCH</value>
+      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>2e68d078-186f-5cb6-9841-168bd9eed1f2</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>CH3_BENCH</value>
+      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>6b0e4943-9211-52b1-8710-40164e00c482</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>CH4_BENCH</value>
+      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>1328a76a-aa71-5de1-b666-e3347092adb2</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>CH5_BENCH</value>
+      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>0c27e9dc-29b1-55c7-9a3a-f1ef3c7218de</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>CH6_BENCH</value>
+      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>34fc5357-ec0f-5f58-8f32-02ef2e8a9f26</tstamps>
+    </comp>
+    <comp ref="J7">
+      <value>CH7_BENCH</value>
+      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>b9be75e9-c33a-5fe6-98cd-972df1d64fed</tstamps>
+    </comp>
+    <comp ref="J8">
+      <value>CH8_BENCH</value>
+      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>f2578509-69d4-5600-ad63-a7819d66980e</tstamps>
+    </comp>
+    <comp ref="J9">
+      <value>REF_BENCH</value>
+      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>89b7be3b-a9f6-559d-b86c-fd4e862bc899</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>1da75846-d3f5-5bab-a143-a5f9e58bbfc6</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>39337229-bb4e-5d28-b186-99cabe1cd319</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>e7fa5676-b46f-5260-afa2-983682bc7e0f</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>9c736448-46d7-5ed8-b3a9-33584deb3b01</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>0feb846c-0761-5e52-bc5d-dcaf09316a81</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>a62dad11-8661-521d-9cee-efba542e75f8</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>dcdb46be-b923-592e-8ad9-4f6a5e1f76df</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>7254eed4-a350-5443-a812-50e724d770d8</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>ab9e2a1d-f406-5fc3-b067-bff58eb7d9af</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>b403a41e-62e6-5b02-9d47-8c0d543b0f29</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>64c1a9ce-e480-5ee4-853f-0d3ae36f83f2</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>7a1aaa8d-80a5-5874-9869-135c6129fc80</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>28873bf5-fc6e-5f39-85f4-1e778ccf0cb4</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>e9778dc3-1a4a-553b-b6a9-3e14bd368ed8</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>4023ac2e-0145-59bc-b5f1-ed12643167e2</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>fd945c21-ae1d-5914-9933-5bf0bb4b6060</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>60b25c42-edb0-5e0e-b7b9-58c39cce6db0</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
+      <property name="Sheetfile" value="inputs.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
+      <tstamps>41f78dfc-b49f-580c-81dc-6a3924597179</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>1.5nF C0G</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>cd2857f6-23d2-59ea-a910-d918cb2e5189</tstamps>
+    </comp>
+    <comp ref="C20">
+      <value>4.7uF 16V</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>e68f4a3e-9363-593a-86a2-414289561dd2</tstamps>
+    </comp>
+    <comp ref="C21">
+      <value>4.7uF 10V</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>0b8fa811-87b1-565c-8165-7e9909779e05</tstamps>
+    </comp>
+    <comp ref="C22">
+      <value>4.7uF 16V</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>35b284e0-0430-5856-a9c6-0a26b24a94a1</tstamps>
+    </comp>
+    <comp ref="C23">
+      <value>4.7uF 10V</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>d9a4c9a4-2a4b-59b9-afc4-bed01ad5fa60</tstamps>
+    </comp>
+    <comp ref="C24">
+      <value>100uF 6.3V</value>
+      <footprint>Neuronic:C_1210_3225Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>2f79a893-0c85-5e64-9abb-973574485eae</tstamps>
+    </comp>
+    <comp ref="C25">
+      <value>1uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>9a835b4d-2a15-5a3b-8ea6-358ffcbdcbd9</tstamps>
+    </comp>
+    <comp ref="C26">
+      <value>1uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>62db20ee-4fff-5c1c-b6b3-c272aee05207</tstamps>
+    </comp>
+    <comp ref="C27">
+      <value>100nF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>f4d57264-9224-53d9-bc9f-80f6e18e0cb7</tstamps>
+    </comp>
+    <comp ref="C28">
+      <value>1uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>a29e5219-f158-5282-a48a-5d031dce3eb8</tstamps>
+    </comp>
+    <comp ref="C29">
+      <value>10uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>e8bdfa87-3cae-5dd3-8b34-3917139b4026</tstamps>
+    </comp>
+    <comp ref="C30">
+      <value>100nF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>b03cfd81-3b40-53cb-a755-435b6d13b67f</tstamps>
+    </comp>
+    <comp ref="C31">
+      <value>1uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>7d6327b4-c36c-512d-97bc-38de9ccc33c0</tstamps>
+    </comp>
+    <comp ref="C32">
+      <value>1uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>6c4a051f-d7e0-5d6c-9644-4de6ede6ab4f</tstamps>
+    </comp>
+    <comp ref="C33">
+      <value>1uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>727d4b7c-45c1-5334-90db-ba6748db9350</tstamps>
+    </comp>
+    <comp ref="C34">
+      <value>1uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>b667f400-8728-500a-bf69-34f81f22374f</tstamps>
+    </comp>
+    <comp ref="C35">
+      <value>1uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>c8eb77ae-9d4e-5541-91eb-e386aad44454</tstamps>
+    </comp>
+    <comp ref="C36">
+      <value>1uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>2f51b4d8-53c0-59b1-b3c6-b35237e7bf70</tstamps>
+    </comp>
+    <comp ref="C37">
+      <value>10uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>d9dd43b3-5476-5ed9-8881-c17344eebfff</tstamps>
+    </comp>
+    <comp ref="C38">
+      <value>100nF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>1768e314-d1e1-5260-9377-56002dc696f5</tstamps>
+    </comp>
+    <comp ref="C39">
+      <value>1uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>7ab55853-6277-5006-b879-c9319389c91a</tstamps>
+    </comp>
+    <comp ref="C40">
+      <value>1uF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>d6948258-3599-5c7b-b34a-791475a4fb62</tstamps>
+    </comp>
+    <comp ref="C41">
+      <value>100nF</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>413239de-acf8-51cc-a8a1-dfbd3c047a5b</tstamps>
+    </comp>
+    <comp ref="D10">
+      <value>SS14</value>
+      <footprint>Neuronic:D_SMA</footprint>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Schottky diode"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>18df0d1e-ac74-53b4-b0ac-e11882612cab</tstamps>
+    </comp>
+    <comp ref="F1">
+      <value>100mA_HOLD_CANDIDATE</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Resettable fuse, polymeric positive temperature coefficient"/>
+      <property name="ki_keywords" value="resettable fuse PTC PPTC polyfuse polyswitch"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>be43af05-a17f-5546-9934-1ec0f57e5057</tstamps>
+    </comp>
+    <comp ref="J10">
+      <value>BIAS_BENCH</value>
+      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>e9bb80b1-f942-512d-9b65-9f964dfd8b47</tstamps>
+    </comp>
+    <comp ref="J12">
+      <value>BATTERY_7_TO_9V</value>
+      <footprint>Neuronic:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>2ea121ce-6928-55f5-bdea-a7c3605be7a7</tstamps>
+    </comp>
+    <comp ref="R20">
+      <value>1M</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>870d9589-f263-5193-8262-5c0043ad2ead</tstamps>
+    </comp>
+    <comp ref="R21">
+      <value>499k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>e994d005-08d7-57c4-aa4c-315872357b5f</tstamps>
+    </comp>
+    <comp ref="R22">
+      <value>499k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>de6aa466-42f6-590b-8b27-9824cb0a695a</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>POWER</value>
+      <footprint>Neuronic:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Switch" part="SW_SPST" description="Single Pole Single Throw (SPST) switch"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Single Pole Single Throw (SPST) switch"/>
+      <property name="ki_keywords" value="switch lever"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>4711dd50-1339-553f-82a3-e40a21833e6a</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>MCP1703AT-5002E/DB</value>
+      <footprint>Neuronic:SOT-223-3_TabPin2</footprint>
+      <libsource lib="Regulator_Linear" part="MCP1703Ax-330xxDB" description="Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin&lt;=16V, SOT-223"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin&lt;=16V, SOT-223"/>
+      <property name="ki_keywords" value="REGULATOR LDO"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>8d6735d3-0c88-59b4-af0f-a2c2c29a81e1</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>MCP1703AT-3302E/DB</value>
+      <footprint>Neuronic:SOT-223-3_TabPin2</footprint>
+      <libsource lib="Regulator_Linear" part="MCP1703Ax-330xxDB" description="Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin&lt;=16V, SOT-223"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_description" value="Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin&lt;=16V, SOT-223"/>
+      <property name="ki_keywords" value="REGULATOR LDO"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>5caff16a-83ae-576c-939b-27b4fe449cfc</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x01">
+      <description>Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x01</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x06_Odd_Even">
+      <description>Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x06_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Polyfuse">
+      <description>Resettable fuse, polymeric positive temperature coefficient</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*polyfuse*</fp>
+        <fp>*PTC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Polyfuse</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Neuronic" part="ADS1299IPAG">
+      <description>TI ADS1299 eight-channel PAG64; pin numbers checked against SBAS499C table 6</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ADS1299IPAG</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN8N" type="input"/>
+        <pin num="2" name="IN8P" type="input"/>
+        <pin num="3" name="IN7N" type="input"/>
+        <pin num="4" name="IN7P" type="input"/>
+        <pin num="5" name="IN6N" type="input"/>
+        <pin num="6" name="IN6P" type="input"/>
+        <pin num="7" name="IN5N" type="input"/>
+        <pin num="8" name="IN5P" type="input"/>
+        <pin num="9" name="IN4N" type="input"/>
+        <pin num="10" name="IN4P" type="input"/>
+        <pin num="11" name="IN3N" type="input"/>
+        <pin num="12" name="IN3P" type="input"/>
+        <pin num="13" name="IN2N" type="input"/>
+        <pin num="14" name="IN2P" type="input"/>
+        <pin num="15" name="IN1N" type="input"/>
+        <pin num="16" name="IN1P" type="input"/>
+        <pin num="17" name="SRB1" type="bidirectional"/>
+        <pin num="18" name="SRB2" type="bidirectional"/>
+        <pin num="19" name="AVDD" type="power_in"/>
+        <pin num="20" name="AVSS" type="power_in"/>
+        <pin num="21" name="AVDD" type="power_in"/>
+        <pin num="22" name="AVDD" type="power_in"/>
+        <pin num="23" name="AVSS" type="power_in"/>
+        <pin num="24" name="VREFP" type="bidirectional"/>
+        <pin num="25" name="VREFN" type="input"/>
+        <pin num="26" name="VCAP4" type="output"/>
+        <pin num="27" name="NC" type="no_connect"/>
+        <pin num="28" name="VCAP1" type="output"/>
+        <pin num="29" name="NC" type="no_connect"/>
+        <pin num="30" name="VCAP2" type="output"/>
+        <pin num="31" name="RESV1" type="input"/>
+        <pin num="32" name="AVSS" type="power_in"/>
+        <pin num="33" name="DGND" type="power_in"/>
+        <pin num="34" name="DIN" type="input"/>
+        <pin num="35" name="~{PWDN}" type="input"/>
+        <pin num="36" name="~{RESET}" type="input"/>
+        <pin num="37" name="CLK" type="input"/>
+        <pin num="38" name="START" type="input"/>
+        <pin num="39" name="~{CS}" type="input"/>
+        <pin num="40" name="SCLK" type="input"/>
+        <pin num="41" name="DAISY_IN" type="input"/>
+        <pin num="42" name="GPIO1" type="bidirectional"/>
+        <pin num="43" name="DOUT" type="output"/>
+        <pin num="44" name="GPIO2" type="bidirectional"/>
+        <pin num="45" name="GPIO3" type="bidirectional"/>
+        <pin num="46" name="GPIO4" type="bidirectional"/>
+        <pin num="47" name="~{DRDY}" type="output"/>
+        <pin num="48" name="DVDD" type="power_in"/>
+        <pin num="49" name="DGND" type="power_in"/>
+        <pin num="50" name="DVDD" type="power_in"/>
+        <pin num="51" name="DGND" type="power_in"/>
+        <pin num="52" name="CLKSEL" type="input"/>
+        <pin num="53" name="AVSS1" type="power_in"/>
+        <pin num="54" name="AVDD1" type="power_in"/>
+        <pin num="55" name="VCAP3" type="output"/>
+        <pin num="56" name="AVDD" type="power_in"/>
+        <pin num="57" name="AVSS" type="power_in"/>
+        <pin num="58" name="AVSS" type="power_in"/>
+        <pin num="59" name="AVDD" type="power_in"/>
+        <pin num="60" name="BIASREF" type="input"/>
+        <pin num="61" name="BIASINV" type="bidirectional"/>
+        <pin num="62" name="BIASIN" type="input"/>
+        <pin num="63" name="BIASOUT" type="output"/>
+        <pin num="64" name="RESERVED" type="no_connect"/>
+      </pins>
+    </libpart>
+    <libpart lib="Neuronic" part="BAV199">
+      <description>Series low leakage diodes: pin1 anode to GND, pin2 cathode to AVDD, pin3 input</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BAV199</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="passive"/>
+        <pin num="2" name="K2" type="passive"/>
+        <pin num="3" name="K1_A2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="MCP1703Ax-330xxDB">
+      <description>Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin&lt;=16V, SOT-223</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf</docs>
+      <footprints>
+        <fp>SOT?223*TabPin2*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP1703Ax-330xxDB</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-223-3_TabPin2</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VI" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_SPST">
+      <description>Single Pole Single Throw (SPST) switch</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_SPST</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Neuronic">
+      <uri>/workspace/scratch/3a280c114457/neuronic/hardware/kicad/Neuronic.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="ADS_CS_N">
+      <node ref="J11" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="R30" pin="1" pintype="passive"/>
+      <node ref="U1" pin="39" pinfunction="~{CS}" pintype="input"/>
+    </net>
+    <net code="2" name="ADS_DRDY_N">
+      <node ref="J11" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="U1" pin="47" pinfunction="~{DRDY}" pintype="output"/>
+    </net>
+    <net code="3" name="ADS_PWDN_N">
+      <node ref="J11" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="R32" pin="1" pintype="passive"/>
+      <node ref="U1" pin="35" pinfunction="~{PWDN}" pintype="input"/>
+    </net>
+    <net code="4" name="ADS_RESET_N">
+      <node ref="J11" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="R31" pin="1" pintype="passive"/>
+      <node ref="U1" pin="36" pinfunction="~{RESET}" pintype="input"/>
+    </net>
+    <net code="5" name="ADS_START">
+      <node ref="J11" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="R33" pin="1" pintype="passive"/>
+      <node ref="U1" pin="38" pinfunction="START" pintype="input"/>
+    </net>
+    <net code="6" name="AVDD_5V">
+      <node ref="C21" pin="1" pintype="passive"/>
+      <node ref="C31" pin="1" pintype="passive"/>
+      <node ref="C32" pin="1" pintype="passive"/>
+      <node ref="C33" pin="1" pintype="passive"/>
+      <node ref="C34" pin="1" pintype="passive"/>
+      <node ref="C35" pin="1" pintype="passive"/>
+      <node ref="C36" pin="1" pintype="passive"/>
+      <node ref="C37" pin="1" pintype="passive"/>
+      <node ref="C38" pin="1" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="K2" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="K2" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="K2" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="K2" pintype="passive"/>
+      <node ref="D5" pin="2" pinfunction="K2" pintype="passive"/>
+      <node ref="D6" pin="2" pinfunction="K2" pintype="passive"/>
+      <node ref="D7" pin="2" pinfunction="K2" pintype="passive"/>
+      <node ref="D8" pin="2" pinfunction="K2" pintype="passive"/>
+      <node ref="D9" pin="2" pinfunction="K2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="IN8N" pintype="input"/>
+      <node ref="U1" pin="11" pinfunction="IN3N" pintype="input"/>
+      <node ref="U1" pin="13" pinfunction="IN2N" pintype="input"/>
+      <node ref="U1" pin="15" pinfunction="IN1N" pintype="input"/>
+      <node ref="U1" pin="19" pinfunction="AVDD" pintype="power_in"/>
+      <node ref="U1" pin="21" pinfunction="AVDD" pintype="power_in"/>
+      <node ref="U1" pin="22" pinfunction="AVDD" pintype="power_in"/>
+      <node ref="U1" pin="3" pinfunction="IN7N" pintype="input"/>
+      <node ref="U1" pin="5" pinfunction="IN6N" pintype="input"/>
+      <node ref="U1" pin="54" pinfunction="AVDD1" pintype="power_in"/>
+      <node ref="U1" pin="56" pinfunction="AVDD" pintype="power_in"/>
+      <node ref="U1" pin="59" pinfunction="AVDD" pintype="power_in"/>
+      <node ref="U1" pin="7" pinfunction="IN5N" pintype="input"/>
+      <node ref="U1" pin="9" pinfunction="IN4N" pintype="input"/>
+      <node ref="U2" pin="3" pinfunction="VO" pintype="power_out"/>
+    </net>
+    <net code="7" name="BIASINV">
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="U1" pin="61" pinfunction="BIASINV" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="BIASOUT">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+      <node ref="U1" pin="63" pinfunction="BIASOUT" pintype="output"/>
+    </net>
+    <net code="9" name="BIAS_LIMIT_MID">
+      <node ref="R21" pin="2" pintype="passive"/>
+      <node ref="R22" pin="1" pintype="passive"/>
+    </net>
+    <net code="10" name="CLKSEL_PU">
+      <node ref="R36" pin="1" pintype="passive"/>
+      <node ref="U1" pin="52" pinfunction="CLKSEL" pintype="input"/>
+    </net>
+    <net code="11" name="CONTACT_1">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="12" name="CONTACT_2">
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="13" name="CONTACT_3">
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+    </net>
+    <net code="14" name="CONTACT_4">
+      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="15" name="CONTACT_5">
+      <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="CONTACT_6">
+      <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+    </net>
+    <net code="17" name="CONTACT_7">
+      <node ref="J7" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+    </net>
+    <net code="18" name="CONTACT_8">
+      <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+    </net>
+    <net code="19" name="CONTACT_BIAS">
+      <node ref="J10" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R22" pin="2" pintype="passive"/>
+    </net>
+    <net code="20" name="CONTACT_REF">
+      <node ref="J9" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+    </net>
+    <net code="21" name="DVDD_3V3">
+      <node ref="C23" pin="1" pintype="passive"/>
+      <node ref="C39" pin="1" pintype="passive"/>
+      <node ref="C40" pin="1" pintype="passive"/>
+      <node ref="C41" pin="1" pintype="passive"/>
+      <node ref="J11" pin="11" pinfunction="Pin_11" pintype="passive"/>
+      <node ref="R36" pin="2" pintype="passive"/>
+      <node ref="U1" pin="48" pinfunction="DVDD" pintype="power_in"/>
+      <node ref="U1" pin="50" pinfunction="DVDD" pintype="power_in"/>
+      <node ref="U3" pin="3" pinfunction="VO" pintype="power_out"/>
+    </net>
+    <net code="22" name="EEG1">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="D1" pin="3" pinfunction="K1_A2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="IN1P" pintype="input"/>
+    </net>
+    <net code="23" name="EEG2">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="D2" pin="3" pinfunction="K1_A2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="IN2P" pintype="input"/>
+    </net>
+    <net code="24" name="EEG3">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="D3" pin="3" pinfunction="K1_A2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="IN3P" pintype="input"/>
+    </net>
+    <net code="25" name="EEG4">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="D4" pin="3" pinfunction="K1_A2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="IN4P" pintype="input"/>
+    </net>
+    <net code="26" name="EEG5">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="D5" pin="3" pinfunction="K1_A2" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="IN5P" pintype="input"/>
+    </net>
+    <net code="27" name="EEG6">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="D6" pin="3" pinfunction="K1_A2" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="IN6P" pintype="input"/>
+    </net>
+    <net code="28" name="EEG7">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="D7" pin="3" pinfunction="K1_A2" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="IN7P" pintype="input"/>
+    </net>
+    <net code="29" name="EEG8">
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="D8" pin="3" pinfunction="K1_A2" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="IN8P" pintype="input"/>
+    </net>
+    <net code="30" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C20" pin="2" pintype="passive"/>
+      <node ref="C21" pin="2" pintype="passive"/>
+      <node ref="C22" pin="2" pintype="passive"/>
+      <node ref="C23" pin="2" pintype="passive"/>
+      <node ref="C24" pin="2" pintype="passive"/>
+      <node ref="C25" pin="2" pintype="passive"/>
+      <node ref="C26" pin="2" pintype="passive"/>
+      <node ref="C27" pin="2" pintype="passive"/>
+      <node ref="C28" pin="2" pintype="passive"/>
+      <node ref="C29" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C30" pin="2" pintype="passive"/>
+      <node ref="C31" pin="2" pintype="passive"/>
+      <node ref="C32" pin="2" pintype="passive"/>
+      <node ref="C33" pin="2" pintype="passive"/>
+      <node ref="C34" pin="2" pintype="passive"/>
+      <node ref="C35" pin="2" pintype="passive"/>
+      <node ref="C36" pin="2" pintype="passive"/>
+      <node ref="C37" pin="2" pintype="passive"/>
+      <node ref="C38" pin="2" pintype="passive"/>
+      <node ref="C39" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C40" pin="2" pintype="passive"/>
+      <node ref="C41" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="D5" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="D6" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="D7" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="D8" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="D9" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="J11" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J11" pin="12" pinfunction="Pin_12" pintype="passive"/>
+      <node ref="J11" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J12" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R30" pin="2" pintype="passive"/>
+      <node ref="R31" pin="2" pintype="passive"/>
+      <node ref="R32" pin="2" pintype="passive"/>
+      <node ref="R33" pin="2" pintype="passive"/>
+      <node ref="R34" pin="2" pintype="passive"/>
+      <node ref="R35" pin="2" pintype="passive"/>
+      <node ref="R37" pin="2" pintype="passive"/>
+      <node ref="R38" pin="2" pintype="passive"/>
+      <node ref="R39" pin="2" pintype="passive"/>
+      <node ref="R40" pin="2" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="AVSS" pintype="power_in"/>
+      <node ref="U1" pin="23" pinfunction="AVSS" pintype="power_in"/>
+      <node ref="U1" pin="25" pinfunction="VREFN" pintype="input"/>
+      <node ref="U1" pin="31" pinfunction="RESV1" pintype="input"/>
+      <node ref="U1" pin="32" pinfunction="AVSS" pintype="power_in"/>
+      <node ref="U1" pin="33" pinfunction="DGND" pintype="power_in"/>
+      <node ref="U1" pin="41" pinfunction="DAISY_IN" pintype="input"/>
+      <node ref="U1" pin="49" pinfunction="DGND" pintype="power_in"/>
+      <node ref="U1" pin="51" pinfunction="DGND" pintype="power_in"/>
+      <node ref="U1" pin="53" pinfunction="AVSS1" pintype="power_in"/>
+      <node ref="U1" pin="57" pinfunction="AVSS" pintype="power_in"/>
+      <node ref="U1" pin="58" pinfunction="AVSS" pintype="power_in"/>
+      <node ref="U1" pin="62" pinfunction="BIASIN" pintype="input"/>
+      <node ref="U2" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="31" name="GPIO1_PD">
+      <node ref="R37" pin="1" pintype="passive"/>
+      <node ref="U1" pin="42" pinfunction="GPIO1" pintype="bidirectional"/>
+    </net>
+    <net code="32" name="GPIO2_PD">
+      <node ref="R38" pin="1" pintype="passive"/>
+      <node ref="U1" pin="44" pinfunction="GPIO2" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="GPIO3_PD">
+      <node ref="R39" pin="1" pintype="passive"/>
+      <node ref="U1" pin="45" pinfunction="GPIO3" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="GPIO4_PD">
+      <node ref="R40" pin="1" pintype="passive"/>
+      <node ref="U1" pin="46" pinfunction="GPIO4" pintype="bidirectional"/>
+    </net>
+    <net code="35" name="INPUT_RMID_1">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="36" name="INPUT_RMID_2">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="37" name="INPUT_RMID_3">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="38" name="INPUT_RMID_4">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="39" name="INPUT_RMID_5">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="40" name="INPUT_RMID_6">
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+    </net>
+    <net code="41" name="INPUT_RMID_7">
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+    </net>
+    <net code="42" name="INPUT_RMID_8">
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+    </net>
+    <net code="43" name="INPUT_RMID_9">
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+    </net>
+    <net code="44" name="REF_FILTERED">
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="D9" pin="3" pinfunction="K1_A2" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+      <node ref="U1" pin="17" pinfunction="SRB1" pintype="bidirectional"/>
+    </net>
+    <net code="45" name="SPI_MISO">
+      <node ref="J11" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="U1" pin="43" pinfunction="DOUT" pintype="output"/>
+    </net>
+    <net code="46" name="SPI_MOSI">
+      <node ref="J11" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R35" pin="1" pintype="passive"/>
+      <node ref="U1" pin="34" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="47" name="SPI_SCLK">
+      <node ref="J11" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R34" pin="1" pintype="passive"/>
+      <node ref="U1" pin="40" pinfunction="SCLK" pintype="input"/>
+    </net>
+    <net code="48" name="VBAT">
+      <node ref="C20" pin="1" pintype="passive"/>
+      <node ref="C22" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="VI" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="VI" pintype="power_in"/>
+    </net>
+    <net code="49" name="VBAT_DIODE">
+      <node ref="D10" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="50" name="VBAT_FUSED">
+      <node ref="D10" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="F1" pin="2" pintype="passive"/>
+    </net>
+    <net code="51" name="VBAT_RAW">
+      <node ref="F1" pin="1" pintype="passive"/>
+      <node ref="J12" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="52" name="VCAP1">
+      <node ref="C24" pin="1" pintype="passive"/>
+      <node ref="U1" pin="28" pinfunction="VCAP1" pintype="output"/>
+    </net>
+    <net code="53" name="VCAP2">
+      <node ref="C25" pin="1" pintype="passive"/>
+      <node ref="U1" pin="30" pinfunction="VCAP2" pintype="output"/>
+    </net>
+    <net code="54" name="VCAP3">
+      <node ref="C26" pin="1" pintype="passive"/>
+      <node ref="C27" pin="1" pintype="passive"/>
+      <node ref="U1" pin="55" pinfunction="VCAP3" pintype="output"/>
+    </net>
+    <net code="55" name="VCAP4">
+      <node ref="C28" pin="1" pintype="passive"/>
+      <node ref="U1" pin="26" pinfunction="VCAP4" pintype="output"/>
+    </net>
+    <net code="56" name="VREFP">
+      <node ref="C29" pin="1" pintype="passive"/>
+      <node ref="C30" pin="1" pintype="passive"/>
+      <node ref="U1" pin="24" pinfunction="VREFP" pintype="bidirectional"/>
+    </net>
+    <net code="57" name="unconnected-(U1-BIASREF-Pad60)">
+      <node ref="U1" pin="60" pinfunction="BIASREF" pintype="input+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U1-CLK-Pad37)">
+      <node ref="U1" pin="37" pinfunction="CLK" pintype="input+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U1-NC-Pad27)">
+      <node ref="U1" pin="27" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U1-NC-Pad29)">
+      <node ref="U1" pin="29" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(U1-RESERVED-Pad64)">
+      <node ref="U1" pin="64" pinfunction="RESERVED" pintype="no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(U1-SRB2-Pad18)">
+      <node ref="U1" pin="18" pinfunction="SRB2" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

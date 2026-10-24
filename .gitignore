@@ -14,3 +14,20 @@ _autosave-*
 
 # Local history
 .history/
+# Generated caches and private experiment assets
+__pycache__/
+*.pyc
+.venv/
+.pio/
+node_modules/
+data/*
+!data/README.md
+*.xdf
+*.fif
+*.edf
+*.bdf
+*.pt
+*.pth
+*.onnx
+hardware/validation/measurements/*
+!hardware/validation/measurements/README.md

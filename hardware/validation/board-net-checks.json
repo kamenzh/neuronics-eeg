@@ -1,0 +1,13 @@
+{
+  "checks": 348,
+  "issues": [],
+  "passed": true,
+  "pcb_footprints": 95,
+  "mechanical_only": [
+    "H1",
+    "H2",
+    "H3",
+    "H4"
+  ],
+  "scope": "Saved physical pad/footprint net parity, not routing continuity or KiCad full schematic parity DRC."
+}

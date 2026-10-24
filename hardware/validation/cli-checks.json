@@ -1,0 +1,17 @@
+{
+  "kicad_version": "7.0.11",
+  "results": [
+    {
+      "check": "netlist",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "check": "ERC/DRC CLI",
+      "returncode": 1,
+      "stderr": "KiCad >=8 required. Use GUI ERC; pcbnew DRC exists separately for KiCad 7."
+    }
+  ],
+  "release_passed": false
+}

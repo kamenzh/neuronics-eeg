@@ -1,0 +1,1623 @@
+{
+  "passed": 404,
+  "total": 404,
+  "checks": [
+    {
+      "name": "All 91 physical components exported by KiCad",
+      "passed": true
+    },
+    {
+      "name": "U1 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "U1.16 -> EEG1",
+      "passed": true
+    },
+    {
+      "name": "U1.15 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.14 -> EEG2",
+      "passed": true
+    },
+    {
+      "name": "U1.13 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.12 -> EEG3",
+      "passed": true
+    },
+    {
+      "name": "U1.11 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.10 -> EEG4",
+      "passed": true
+    },
+    {
+      "name": "U1.9 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.8 -> EEG5",
+      "passed": true
+    },
+    {
+      "name": "U1.7 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.6 -> EEG6",
+      "passed": true
+    },
+    {
+      "name": "U1.5 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.4 -> EEG7",
+      "passed": true
+    },
+    {
+      "name": "U1.3 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.2 -> EEG8",
+      "passed": true
+    },
+    {
+      "name": "U1.1 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.17 -> REF_FILTERED",
+      "passed": true
+    },
+    {
+      "name": "U1.18 -> NC",
+      "passed": true
+    },
+    {
+      "name": "U1.19 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.20 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.21 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.22 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.23 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.24 -> VREFP",
+      "passed": true
+    },
+    {
+      "name": "U1.25 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.26 -> VCAP4",
+      "passed": true
+    },
+    {
+      "name": "U1.27 -> NC",
+      "passed": true
+    },
+    {
+      "name": "U1.28 -> VCAP1",
+      "passed": true
+    },
+    {
+      "name": "U1.29 -> NC",
+      "passed": true
+    },
+    {
+      "name": "U1.30 -> VCAP2",
+      "passed": true
+    },
+    {
+      "name": "U1.31 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.32 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.33 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.34 -> SPI_MOSI",
+      "passed": true
+    },
+    {
+      "name": "U1.35 -> ADS_PWDN_N",
+      "passed": true
+    },
+    {
+      "name": "U1.36 -> ADS_RESET_N",
+      "passed": true
+    },
+    {
+      "name": "U1.37 -> NC",
+      "passed": true
+    },
+    {
+      "name": "U1.38 -> ADS_START",
+      "passed": true
+    },
+    {
+      "name": "U1.39 -> ADS_CS_N",
+      "passed": true
+    },
+    {
+      "name": "U1.40 -> SPI_SCLK",
+      "passed": true
+    },
+    {
+      "name": "U1.41 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.42 -> GPIO1_PD",
+      "passed": true
+    },
+    {
+      "name": "U1.43 -> SPI_MISO",
+      "passed": true
+    },
+    {
+      "name": "U1.44 -> GPIO2_PD",
+      "passed": true
+    },
+    {
+      "name": "U1.45 -> GPIO3_PD",
+      "passed": true
+    },
+    {
+      "name": "U1.46 -> GPIO4_PD",
+      "passed": true
+    },
+    {
+      "name": "U1.47 -> ADS_DRDY_N",
+      "passed": true
+    },
+    {
+      "name": "U1.48 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "U1.49 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.50 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "U1.51 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.52 -> CLKSEL_PU",
+      "passed": true
+    },
+    {
+      "name": "U1.53 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.54 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.55 -> VCAP3",
+      "passed": true
+    },
+    {
+      "name": "U1.56 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.57 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.58 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.59 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U1.60 -> NC",
+      "passed": true
+    },
+    {
+      "name": "U1.61 -> BIASINV",
+      "passed": true
+    },
+    {
+      "name": "U1.62 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U1.63 -> BIASOUT",
+      "passed": true
+    },
+    {
+      "name": "U1.64 -> NC",
+      "passed": true
+    },
+    {
+      "name": "J11 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "J11.1 -> GND",
+      "passed": true
+    },
+    {
+      "name": "J11.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "J11.3 -> SPI_SCLK",
+      "passed": true
+    },
+    {
+      "name": "J11.4 -> SPI_MOSI",
+      "passed": true
+    },
+    {
+      "name": "J11.5 -> SPI_MISO",
+      "passed": true
+    },
+    {
+      "name": "J11.6 -> ADS_CS_N",
+      "passed": true
+    },
+    {
+      "name": "J11.7 -> ADS_DRDY_N",
+      "passed": true
+    },
+    {
+      "name": "J11.8 -> ADS_RESET_N",
+      "passed": true
+    },
+    {
+      "name": "J11.9 -> ADS_START",
+      "passed": true
+    },
+    {
+      "name": "J11.10 -> ADS_PWDN_N",
+      "passed": true
+    },
+    {
+      "name": "J11.11 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "J11.12 -> GND",
+      "passed": true
+    },
+    {
+      "name": "R30 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R30.1 -> ADS_CS_N",
+      "passed": true
+    },
+    {
+      "name": "R30.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "R31 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R31.1 -> ADS_RESET_N",
+      "passed": true
+    },
+    {
+      "name": "R31.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "R32 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R32.1 -> ADS_PWDN_N",
+      "passed": true
+    },
+    {
+      "name": "R32.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "R33 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R33.1 -> ADS_START",
+      "passed": true
+    },
+    {
+      "name": "R33.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "R34 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R34.1 -> SPI_SCLK",
+      "passed": true
+    },
+    {
+      "name": "R34.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "R35 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R35.1 -> SPI_MOSI",
+      "passed": true
+    },
+    {
+      "name": "R35.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "R36 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R36.1 -> CLKSEL_PU",
+      "passed": true
+    },
+    {
+      "name": "R36.2 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "R37 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R37.1 -> GPIO1_PD",
+      "passed": true
+    },
+    {
+      "name": "R37.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "R38 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R38.1 -> GPIO2_PD",
+      "passed": true
+    },
+    {
+      "name": "R38.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "R39 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R39.1 -> GPIO3_PD",
+      "passed": true
+    },
+    {
+      "name": "R39.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "R40 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R40.1 -> GPIO4_PD",
+      "passed": true
+    },
+    {
+      "name": "R40.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "J1 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "J1.1 -> CONTACT_1",
+      "passed": true
+    },
+    {
+      "name": "R1 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R1.1 -> CONTACT_1",
+      "passed": true
+    },
+    {
+      "name": "R1.2 -> INPUT_RMID_1",
+      "passed": true
+    },
+    {
+      "name": "R2 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R2.1 -> INPUT_RMID_1",
+      "passed": true
+    },
+    {
+      "name": "R2.2 -> EEG1",
+      "passed": true
+    },
+    {
+      "name": "C1 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C1.1 -> EEG1",
+      "passed": true
+    },
+    {
+      "name": "C1.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D1 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "D1.1 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D1.2 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "D1.3 -> EEG1",
+      "passed": true
+    },
+    {
+      "name": "J2 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "J2.1 -> CONTACT_2",
+      "passed": true
+    },
+    {
+      "name": "R3 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R3.1 -> CONTACT_2",
+      "passed": true
+    },
+    {
+      "name": "R3.2 -> INPUT_RMID_2",
+      "passed": true
+    },
+    {
+      "name": "R4 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R4.1 -> INPUT_RMID_2",
+      "passed": true
+    },
+    {
+      "name": "R4.2 -> EEG2",
+      "passed": true
+    },
+    {
+      "name": "C2 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C2.1 -> EEG2",
+      "passed": true
+    },
+    {
+      "name": "C2.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D2 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "D2.1 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D2.2 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "D2.3 -> EEG2",
+      "passed": true
+    },
+    {
+      "name": "J3 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "J3.1 -> CONTACT_3",
+      "passed": true
+    },
+    {
+      "name": "R5 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R5.1 -> CONTACT_3",
+      "passed": true
+    },
+    {
+      "name": "R5.2 -> INPUT_RMID_3",
+      "passed": true
+    },
+    {
+      "name": "R6 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R6.1 -> INPUT_RMID_3",
+      "passed": true
+    },
+    {
+      "name": "R6.2 -> EEG3",
+      "passed": true
+    },
+    {
+      "name": "C3 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C3.1 -> EEG3",
+      "passed": true
+    },
+    {
+      "name": "C3.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D3 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "D3.1 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D3.2 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "D3.3 -> EEG3",
+      "passed": true
+    },
+    {
+      "name": "J4 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "J4.1 -> CONTACT_4",
+      "passed": true
+    },
+    {
+      "name": "R7 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R7.1 -> CONTACT_4",
+      "passed": true
+    },
+    {
+      "name": "R7.2 -> INPUT_RMID_4",
+      "passed": true
+    },
+    {
+      "name": "R8 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R8.1 -> INPUT_RMID_4",
+      "passed": true
+    },
+    {
+      "name": "R8.2 -> EEG4",
+      "passed": true
+    },
+    {
+      "name": "C4 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C4.1 -> EEG4",
+      "passed": true
+    },
+    {
+      "name": "C4.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D4 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "D4.1 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D4.2 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "D4.3 -> EEG4",
+      "passed": true
+    },
+    {
+      "name": "J5 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "J5.1 -> CONTACT_5",
+      "passed": true
+    },
+    {
+      "name": "R9 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R9.1 -> CONTACT_5",
+      "passed": true
+    },
+    {
+      "name": "R9.2 -> INPUT_RMID_5",
+      "passed": true
+    },
+    {
+      "name": "R10 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R10.1 -> INPUT_RMID_5",
+      "passed": true
+    },
+    {
+      "name": "R10.2 -> EEG5",
+      "passed": true
+    },
+    {
+      "name": "C5 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C5.1 -> EEG5",
+      "passed": true
+    },
+    {
+      "name": "C5.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D5 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "D5.1 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D5.2 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "D5.3 -> EEG5",
+      "passed": true
+    },
+    {
+      "name": "J6 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "J6.1 -> CONTACT_6",
+      "passed": true
+    },
+    {
+      "name": "R11 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R11.1 -> CONTACT_6",
+      "passed": true
+    },
+    {
+      "name": "R11.2 -> INPUT_RMID_6",
+      "passed": true
+    },
+    {
+      "name": "R12 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R12.1 -> INPUT_RMID_6",
+      "passed": true
+    },
+    {
+      "name": "R12.2 -> EEG6",
+      "passed": true
+    },
+    {
+      "name": "C6 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C6.1 -> EEG6",
+      "passed": true
+    },
+    {
+      "name": "C6.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D6 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "D6.1 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D6.2 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "D6.3 -> EEG6",
+      "passed": true
+    },
+    {
+      "name": "J7 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "J7.1 -> CONTACT_7",
+      "passed": true
+    },
+    {
+      "name": "R13 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R13.1 -> CONTACT_7",
+      "passed": true
+    },
+    {
+      "name": "R13.2 -> INPUT_RMID_7",
+      "passed": true
+    },
+    {
+      "name": "R14 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R14.1 -> INPUT_RMID_7",
+      "passed": true
+    },
+    {
+      "name": "R14.2 -> EEG7",
+      "passed": true
+    },
+    {
+      "name": "C7 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C7.1 -> EEG7",
+      "passed": true
+    },
+    {
+      "name": "C7.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D7 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "D7.1 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D7.2 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "D7.3 -> EEG7",
+      "passed": true
+    },
+    {
+      "name": "J8 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "J8.1 -> CONTACT_8",
+      "passed": true
+    },
+    {
+      "name": "R15 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R15.1 -> CONTACT_8",
+      "passed": true
+    },
+    {
+      "name": "R15.2 -> INPUT_RMID_8",
+      "passed": true
+    },
+    {
+      "name": "R16 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R16.1 -> INPUT_RMID_8",
+      "passed": true
+    },
+    {
+      "name": "R16.2 -> EEG8",
+      "passed": true
+    },
+    {
+      "name": "C8 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C8.1 -> EEG8",
+      "passed": true
+    },
+    {
+      "name": "C8.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D8 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "D8.1 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D8.2 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "D8.3 -> EEG8",
+      "passed": true
+    },
+    {
+      "name": "J9 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "J9.1 -> CONTACT_REF",
+      "passed": true
+    },
+    {
+      "name": "R17 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R17.1 -> CONTACT_REF",
+      "passed": true
+    },
+    {
+      "name": "R17.2 -> INPUT_RMID_9",
+      "passed": true
+    },
+    {
+      "name": "R18 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R18.1 -> INPUT_RMID_9",
+      "passed": true
+    },
+    {
+      "name": "R18.2 -> REF_FILTERED",
+      "passed": true
+    },
+    {
+      "name": "C9 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C9.1 -> REF_FILTERED",
+      "passed": true
+    },
+    {
+      "name": "C9.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D9 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "D9.1 -> GND",
+      "passed": true
+    },
+    {
+      "name": "D9.2 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "D9.3 -> REF_FILTERED",
+      "passed": true
+    },
+    {
+      "name": "J12 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "J12.1 -> VBAT_RAW",
+      "passed": true
+    },
+    {
+      "name": "J12.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "F1 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "F1.1 -> VBAT_RAW",
+      "passed": true
+    },
+    {
+      "name": "F1.2 -> VBAT_FUSED",
+      "passed": true
+    },
+    {
+      "name": "D10 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "D10.2 -> VBAT_FUSED",
+      "passed": true
+    },
+    {
+      "name": "D10.1 -> VBAT_DIODE",
+      "passed": true
+    },
+    {
+      "name": "SW1 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "SW1.1 -> VBAT_DIODE",
+      "passed": true
+    },
+    {
+      "name": "SW1.2 -> VBAT",
+      "passed": true
+    },
+    {
+      "name": "U2 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "U2.1 -> VBAT",
+      "passed": true
+    },
+    {
+      "name": "U2.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U2.3 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "U3 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "U3.1 -> VBAT",
+      "passed": true
+    },
+    {
+      "name": "U3.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U3.3 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "C20 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C20.1 -> VBAT",
+      "passed": true
+    },
+    {
+      "name": "C20.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C21 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C21.1 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "C21.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C22 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C22.1 -> VBAT",
+      "passed": true
+    },
+    {
+      "name": "C22.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C23 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C23.1 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "C23.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C24 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C24.1 -> VCAP1",
+      "passed": true
+    },
+    {
+      "name": "C24.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C25 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C25.1 -> VCAP2",
+      "passed": true
+    },
+    {
+      "name": "C25.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C26 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C26.1 -> VCAP3",
+      "passed": true
+    },
+    {
+      "name": "C26.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C27 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C27.1 -> VCAP3",
+      "passed": true
+    },
+    {
+      "name": "C27.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C28 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C28.1 -> VCAP4",
+      "passed": true
+    },
+    {
+      "name": "C28.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C29 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C29.1 -> VREFP",
+      "passed": true
+    },
+    {
+      "name": "C29.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C30 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C30.1 -> VREFP",
+      "passed": true
+    },
+    {
+      "name": "C30.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C31 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C31.1 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "C31.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C32 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C32.1 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "C32.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C33 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C33.1 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "C33.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C34 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C34.1 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "C34.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C35 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C35.1 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "C35.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C36 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C36.1 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "C36.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C37 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C37.1 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "C37.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C38 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C38.1 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "C38.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C39 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C39.1 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "C39.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C40 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C40.1 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "C40.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C41 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C41.1 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "C41.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "R20 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R20.1 -> BIASOUT",
+      "passed": true
+    },
+    {
+      "name": "R20.2 -> BIASINV",
+      "passed": true
+    },
+    {
+      "name": "C10 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C10.1 -> BIASOUT",
+      "passed": true
+    },
+    {
+      "name": "C10.2 -> BIASINV",
+      "passed": true
+    },
+    {
+      "name": "R21 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R21.1 -> BIASOUT",
+      "passed": true
+    },
+    {
+      "name": "R21.2 -> BIAS_LIMIT_MID",
+      "passed": true
+    },
+    {
+      "name": "R22 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R22.1 -> BIAS_LIMIT_MID",
+      "passed": true
+    },
+    {
+      "name": "R22.2 -> CONTACT_BIAS",
+      "passed": true
+    },
+    {
+      "name": "J10 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "J10.1 -> CONTACT_BIAS",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.16",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.14",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.12",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.10",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.8",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.6",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.4",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.2",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.17",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.24",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.25",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.26",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.28",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.30",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.31",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.33",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.34",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.35",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.36",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.38",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.39",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.40",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.41",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.43",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.47",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.48",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.49",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.50",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.51",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.52",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.53",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.54",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.55",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.61",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.62",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.63",
+      "passed": true
+    },
+    {
+      "name": "Analog rail U1.19",
+      "passed": true
+    },
+    {
+      "name": "Analog rail U1.21",
+      "passed": true
+    },
+    {
+      "name": "Analog rail U1.22",
+      "passed": true
+    },
+    {
+      "name": "Analog rail U1.56",
+      "passed": true
+    },
+    {
+      "name": "Analog rail U1.59",
+      "passed": true
+    },
+    {
+      "name": "Analog return U1.20",
+      "passed": true
+    },
+    {
+      "name": "Analog return U1.23",
+      "passed": true
+    },
+    {
+      "name": "Analog return U1.32",
+      "passed": true
+    },
+    {
+      "name": "Analog return U1.57",
+      "passed": true
+    },
+    {
+      "name": "Analog return U1.58",
+      "passed": true
+    },
+    {
+      "name": "Clamp D1: A1=GND / K2=5V / midpoint=signal",
+      "passed": true
+    },
+    {
+      "name": "Clamp D2: A1=GND / K2=5V / midpoint=signal",
+      "passed": true
+    },
+    {
+      "name": "Clamp D3: A1=GND / K2=5V / midpoint=signal",
+      "passed": true
+    },
+    {
+      "name": "Clamp D4: A1=GND / K2=5V / midpoint=signal",
+      "passed": true
+    },
+    {
+      "name": "Clamp D5: A1=GND / K2=5V / midpoint=signal",
+      "passed": true
+    },
+    {
+      "name": "Clamp D6: A1=GND / K2=5V / midpoint=signal",
+      "passed": true
+    },
+    {
+      "name": "Clamp D7: A1=GND / K2=5V / midpoint=signal",
+      "passed": true
+    },
+    {
+      "name": "Clamp D8: A1=GND / K2=5V / midpoint=signal",
+      "passed": true
+    },
+    {
+      "name": "Clamp D9: A1=GND / K2=5V / midpoint=signal",
+      "passed": true
+    },
+    {
+      "name": "3.3 V logic reference is not 5 V",
+      "passed": true
+    },
+    {
+      "name": "Bias feedback resistor and capacitor are in parallel",
+      "passed": true
+    }
+  ],
+  "scope": "KiCad-exported connectivity and footprint audit. Does not prove electrical behavior or safety."
+}

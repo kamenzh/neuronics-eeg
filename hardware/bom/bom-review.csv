@@ -1,0 +1,92 @@
+Reference,Value,Footprint,Proposed_MPN,Review_notes
+U1,ADS1299IPAG,Neuronic:TQFP-64_10x10mm_P0.5mm,ADS1299IPAG,"TI SBAS499C pin functions, unipolar 5 V, internal clock/reference"
+J11,MCU_3V3_IO_ONLY,Neuronic:PinHeader_2x06_P2.54mm_Vertical,TBD - do not order,Pin 11 is AFE logic reference only. Do not power the ESP32 from this LDO.
+R30,100k,Neuronic:R_0805_2012Metric,TBD - do not order,
+R31,100k,Neuronic:R_0805_2012Metric,TBD - do not order,
+R32,100k,Neuronic:R_0805_2012Metric,TBD - do not order,
+R33,100k,Neuronic:R_0805_2012Metric,TBD - do not order,
+R34,100k,Neuronic:R_0805_2012Metric,TBD - do not order,
+R35,100k,Neuronic:R_0805_2012Metric,TBD - do not order,
+R36,10k,Neuronic:R_0805_2012Metric,TBD - do not order,
+R37,10k,Neuronic:R_0805_2012Metric,TBD - do not order,
+R38,10k,Neuronic:R_0805_2012Metric,TBD - do not order,
+R39,10k,Neuronic:R_0805_2012Metric,TBD - do not order,
+R40,10k,Neuronic:R_0805_2012Metric,TBD - do not order,
+J1,CH1_BENCH,Neuronic:PinHeader_1x01_P2.54mm_Vertical,TBD - do not order,Bench header; replace with verified electrode connector before wearable revision
+R1,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+R2,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+C1,1nF C0G,Neuronic:C_0805_2012Metric,TBD - do not order,Matched C0G RF filter capacitor
+D1,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection
+J2,CH2_BENCH,Neuronic:PinHeader_1x01_P2.54mm_Vertical,TBD - do not order,Bench header; replace with verified electrode connector before wearable revision
+R3,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+R4,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+C2,1nF C0G,Neuronic:C_0805_2012Metric,TBD - do not order,Matched C0G RF filter capacitor
+D2,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection
+J3,CH3_BENCH,Neuronic:PinHeader_1x01_P2.54mm_Vertical,TBD - do not order,Bench header; replace with verified electrode connector before wearable revision
+R5,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+R6,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+C3,1nF C0G,Neuronic:C_0805_2012Metric,TBD - do not order,Matched C0G RF filter capacitor
+D3,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection
+J4,CH4_BENCH,Neuronic:PinHeader_1x01_P2.54mm_Vertical,TBD - do not order,Bench header; replace with verified electrode connector before wearable revision
+R7,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+R8,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+C4,1nF C0G,Neuronic:C_0805_2012Metric,TBD - do not order,Matched C0G RF filter capacitor
+D4,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection
+J5,CH5_BENCH,Neuronic:PinHeader_1x01_P2.54mm_Vertical,TBD - do not order,Bench header; replace with verified electrode connector before wearable revision
+R9,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+R10,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+C5,1nF C0G,Neuronic:C_0805_2012Metric,TBD - do not order,Matched C0G RF filter capacitor
+D5,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection
+J6,CH6_BENCH,Neuronic:PinHeader_1x01_P2.54mm_Vertical,TBD - do not order,Bench header; replace with verified electrode connector before wearable revision
+R11,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+R12,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+C6,1nF C0G,Neuronic:C_0805_2012Metric,TBD - do not order,Matched C0G RF filter capacitor
+D6,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection
+J7,CH7_BENCH,Neuronic:PinHeader_1x01_P2.54mm_Vertical,TBD - do not order,Bench header; replace with verified electrode connector before wearable revision
+R13,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+R14,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+C7,1nF C0G,Neuronic:C_0805_2012Metric,TBD - do not order,Matched C0G RF filter capacitor
+D7,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection
+J8,CH8_BENCH,Neuronic:PinHeader_1x01_P2.54mm_Vertical,TBD - do not order,Bench header; replace with verified electrode connector before wearable revision
+R15,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+R16,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+C8,1nF C0G,Neuronic:C_0805_2012Metric,TBD - do not order,Matched C0G RF filter capacitor
+D8,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection
+J9,REF_BENCH,Neuronic:PinHeader_1x01_P2.54mm_Vertical,TBD - do not order,Bench header; replace with verified electrode connector before wearable revision
+R17,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+R18,10k,Neuronic:R_0805_2012Metric,TBD - do not order,"Input series resistor, 1%"
+C9,1nF C0G,Neuronic:C_0805_2012Metric,TBD - do not order,Matched C0G RF filter capacitor
+D9,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection
+J12,BATTERY_7_TO_9V,Neuronic:PinHeader_1x02_P2.54mm_Vertical,TBD - do not order,
+F1,100mA_HOLD_CANDIDATE,Neuronic:R_0805_2012Metric,TBD - do not order,Choose exact voltage/current/thermal rating before release
+D10,SS14,Neuronic:D_SMA,SS14,Reverse polarity protection; verify thermal behavior
+SW1,POWER,Neuronic:PinHeader_1x02_P2.54mm_Vertical,TBD - do not order,Header for an offboard SPST switch
+U2,MCP1703AT-5002E/DB,Neuronic:SOT-223-3_TabPin2,MCP1703AT-5002E/DB,Fixed output variant; matching footprint pin1 VIN pin2 GND pin3 VOUT
+U3,MCP1703AT-3302E/DB,Neuronic:SOT-223-3_TabPin2,MCP1703AT-3302E/DB,Fixed output variant; matching footprint pin1 VIN pin2 GND pin3 VOUT
+C20,4.7uF 16V,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C21,4.7uF 10V,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C22,4.7uF 16V,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C23,4.7uF 10V,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C24,100uF 6.3V,Neuronic:C_1210_3225Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C25,1uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C26,1uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C27,100nF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C28,1uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C29,10uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C30,100nF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C31,1uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C32,1uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C33,1uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C34,1uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C35,1uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C36,1uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C37,10uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C38,100nF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C39,1uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C40,1uF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+C41,100nF,Neuronic:C_0805_2012Metric,TBD - do not order,"Final MPN, voltage bias capacitance and placement require review"
+R20,1M,Neuronic:R_0805_2012Metric,TBD - do not order,"Bias feedback, candidate compensation must be checked with cable/electrode model"
+C10,1.5nF C0G,Neuronic:C_0805_2012Metric,TBD - do not order,
+R21,499k,Neuronic:R_0805_2012Metric,TBD - do not order,
+R22,499k,Neuronic:R_0805_2012Metric,TBD - do not order,
+J10,BIAS_BENCH,Neuronic:PinHeader_1x01_P2.54mm_Vertical,TBD - do not order,Bias output. Not protective earth. Bench connector only.

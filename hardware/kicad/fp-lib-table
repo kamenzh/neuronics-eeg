@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "Neuronic")(type "KiCad")(uri "${KIPRJMOD}/Neuronic.pretty")(options "")(descr "Bundled KiCad 7 footprints")))
