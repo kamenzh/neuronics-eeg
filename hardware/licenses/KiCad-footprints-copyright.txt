@@ -10,11 +10,11 @@ Comment: Like all KiCad libraries the license for the files is CC-BY-SA 4.0
  Material'."
 
 Files: *
-Copyright: 2024 KiCad Community
+Copyright: 2025 KiCad Community
 License: CC-BY-SA-4.0-with-exception
 
 Files: debian/*
-Copyright: 2016-2024, Carsten Schoenert <c.schoenert@t-online.de>
+Copyright: 2016-2025, Carsten Schoenert <c.schoenert@t-online.de>
            2017-2018, Jean-Samuel Reynaud <js.reynaud@gmail.com>
 License: GPL-2+
 

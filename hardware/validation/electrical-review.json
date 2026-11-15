@@ -1,0 +1,79 @@
+{
+  "revision": "A0.1-review",
+  "manufacture_ready": false,
+  "assumptions": {
+    "battery_min_max_v": [
+      7.2,
+      10.2
+    ],
+    "afe_current_a": 0.04,
+    "fuse_resistance_upper_ohm": 15,
+    "diode_drop_allowance_v": 0.5,
+    "harness_switch_drop_allowance_v": 0.1,
+    "ldo_output_tolerance_assumption": 0.02,
+    "ldo_dropout_allowance_v": 0.725,
+    "capacitor_positive_tolerance": 0.1,
+    "capacitor_positive_temperature_allowance": 0.15
+  },
+  "calculations": {
+    "avdd_direct_caps_uF": {
+      "C21": 1.0,
+      "C31": 1.0,
+      "C32": 1.0,
+      "C33": 1.0,
+      "C34": 1.0,
+      "C35": 1.0,
+      "C36": 1.0,
+      "C37": 10.0,
+      "C38": 0.1
+    },
+    "avdd_nominal_uF": 17.1,
+    "avdd_upper_uF_before_bias_aging": 21.631500000000003,
+    "dvdd_direct_caps_uF": {
+      "C23": 4.7,
+      "C39": 1.0,
+      "C40": 1.0,
+      "C41": 0.1
+    },
+    "dvdd_nominal_uF": 6.8,
+    "afe_ldo_min_input_v_conditional": 6.000000000000001,
+    "analog_headroom_v_at_high_output": 0.9000000000000012,
+    "analog_ldo_power_w_upper_ignoring_input_drops": 0.15599999999999997,
+    "digital_ldo_power_w_upper_ignoring_input_drops": 0.069,
+    "raw_bytes_s": 6750,
+    "frame_read_us_ideal": 216.0,
+    "sample_period_us": 4000.0,
+    "ideal_differential_full_scale_v": 0.375
+  },
+  "open_items": [
+    "No guaranteed effective lower capacitance bounds or startup stability proof",
+    "C29 must retain >=10uF at 4.5V including temperature/tolerance/aging",
+    "Battery limits are operating assumptions, not measured discharge limits or an automatic cutoff",
+    "Nano separate branch protection/wiring/current budget and radio noise need validation",
+    "BAV199 forward voltage is not guaranteed to hold ADS input within AVSS-0.3/AVDD+0.3V",
+    "ADC injection-current limit is not a permissible body current",
+    "All electrode fault paths, aggregate current, unpowered backfeeding and bias-loop stability remain unresolved"
+  ],
+  "conditional_checks": [
+    {
+      "name": "AVDD upper capacitance inside stated 22uF ceramic range",
+      "passed": true
+    },
+    {
+      "name": "Conditional analog dropout headroom",
+      "passed": true
+    },
+    {
+      "name": "40mA AFE allowance below 100mA fuse hold at 23C",
+      "passed": true
+    },
+    {
+      "name": "Eight-channel frame size",
+      "passed": true
+    },
+    {
+      "name": "Ideal SPI frame fits sample period",
+      "passed": true
+    }
+  ]
+}

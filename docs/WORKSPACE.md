@@ -2,16 +2,13 @@
 
 Upstream: https://github.com/kamenzh/neuronics-eeg
 
-Base commit: `ae7d76e271737a5eed24690d71cb7defc26290b1`.
-Local work branch: `work/neuronic-rev-a`.
+A0.1 is based on `b8af12f03bf256dca78ebfd285dcb80679491b1f` (A0 on main).
+This revision reconstructs earlier missing review changes and incorporates the
+user's owned Waveshare ESP32-S3-Nano and Sino-k SGE117DN electrode selection.
+See Git history for the published checkpoint; this document does not embed its
+own commit ID.
 
-This checkpoint is local work based on the public repository, not a claim that
-GitHub has been updated. Original non-empty content is preserved in Git history
-and `docs/archive/initial-README.md`; only the duplicate starter KiCad placeholders
-were removed. The original reference downloads and recovery directory outside
-this checkout were left intact.
-
-To use the download, extract its Neuronic folder and open the project directly.
-To incorporate it into your own existing clone, first make a Git checkpoint,
-then copy the files into your clone, remove the obsolete empty `hardware/pcb_design`
-scaffold, and inspect `git diff` before committing. Do not replace the `.git` folder.
+Open `hardware/kicad/neuronic.kicad_pro` in KiCad 9. Keep bundled libraries with
+the project. Commit existing GUI edits before regeneration. The main files are
+real editable CAD, but the present PCB is unrouted and no fabrication package
+exists. Old starter content remains available in Git history and docs/archive.

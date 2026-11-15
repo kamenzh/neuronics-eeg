@@ -1,0 +1,9 @@
+ERC report (2026-11-15T16:35:40+0100, Encoding UTF8)
+
+***** Sheet /
+
+***** Sheet /Input filters / CH1-8 / REF/
+
+***** Sheet /Power / bypass / bias drive/
+
+ ** ERC messages: 0  Errors 0  Warnings 0

@@ -3,7 +3,7 @@
 
 Python stdlib only for schematic/BOM. --board also requires KiCad pcbnew.
 Set KICAD_DATA to the KiCad share directory, e.g. /usr/share/kicad.
-Generated files are overwritten; commit GUI edits before regenerating.
+Existing generated files require --overwrite. Routed boards are never replaced.
 """
 import argparse
 import csv
@@ -12,6 +12,8 @@ import math
 import os
 import re
 import shutil
+import subprocess
+import tempfile
 import uuid
 from pathlib import Path
 
@@ -19,9 +21,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'hardware/kicad'
 DATA = Path(os.environ.get('KICAD_DATA', '/usr/share/kicad'))
 NS = uuid.UUID('b314a604-c394-4051-a09e-9626c22cb806')
+REVISION = 'A0.1-review'
 def uid(key): return str(uuid.uuid5(NS, key))
 def q(s): return json.dumps(str(s))
 def n(x): return f'{x:.4f}'.rstrip('0').rstrip('.') if x else '0'
+def grid(x): return round(round(x / 1.27) * 1.27, 4)
 
 def block(text, start):
     level = 0
@@ -41,16 +45,18 @@ def block(text, start):
 
 def lib_symbol(lib, name):
     text = (DATA / f'symbols/{lib}.kicad_sym').read_text()
-    token = f'(symbol "{name}" '
+    token = f'(symbol "{name}"'
     start = text.find(token)
     if start < 0: raise ValueError(f'Missing {lib}:{name}')
     s = block(text, start)
     if '(extends ' in s: raise ValueError('Use the base library symbol explicitly')
-    return s.replace(f'(symbol "{name}" ', f'(symbol "{lib}:{name}" ', 1)
+    return s.replace(token, f'(symbol "{lib}:{name}"', 1)
 
 LIB = {}
 PARTS = []
 SHEETS = {}
+CATALOG = json.loads((ROOT/'hardware/parts.json').read_text())
+BY_REF = {ref: p for p in CATALOG['groups'] for ref in p['references']}
 
 def custom_symbol(name, pins, halfwidth=15.24, halfheight=12.7, desc=''):
     p = [f'(symbol "Neuronic:{name}" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)',
@@ -78,7 +84,7 @@ PIN_NAMES = {
 
 def initialize():
     OUT.mkdir(parents=True, exist_ok=True)
-    for lib, name in [('Device','R'), ('Device','C'), ('Device','D_Schottky'),
+    for lib, name in [('Device','R'), ('Device','C'), ('Device','C_Polarized'), ('Device','D_Schottky'),
                       ('Connector_Generic','Conn_01x01'), ('Connector_Generic','Conn_01x02'),
                       ('Connector_Generic','Conn_02x06_Odd_Even'), ('Device','Polyfuse'),
                       ('Switch','SW_SPST'), ('power','PWR_FLAG'),
@@ -104,7 +110,7 @@ def initialize():
 
 def symbol_pins(s):
     out=[]
-    for m in re.finditer(r'\(pin (?:input|output|bidirectional|tri_state|passive|free|unspecified|power_in|power_out|open_collector|open_emitter|no_connect) ',s):
+    for m in re.finditer(r'\(pin\s+(?:input|output|bidirectional|tri_state|passive|free|unspecified|power_in|power_out|open_collector|open_emitter|no_connect)\s+',s):
         b=block(s,m.start())
         num=re.search(r'\(number "([^"]+)"',b).group(1)
         a=re.search(r'\(at ([\-\d.]+) ([\-\d.]+) ([\d.]+)\)',b)
@@ -120,17 +126,42 @@ class Sheet:
     def text(self,t,x,y,size=1.27):
         self.items.append(f'(text {q(t)} (at {n(x)} {n(y)} 0) (effects (font (size {size} {size})) (justify left)) (uuid {self.ident()}))')
     def wire(self,a,b):
+        a=tuple(map(grid,a));b=tuple(map(grid,b))
         if a==b:return
         self.items.append(f'(wire (pts (xy {n(a[0])} {n(a[1])}) (xy {n(b[0])} {n(b[1])})) (stroke (width 0) (type default)) (uuid {self.ident()}))')
     def label(self,t,x,y,angle=0):
+        x,y=grid(x),grid(y)
         self.items.append(f'(global_label {q(t)} (shape bidirectional) (at {n(x)} {n(y)} {angle}) (effects (font (size 1.016 1.016)) (justify {"left" if angle in [0,90] else "right"})) (uuid {self.ident()}) (property "Intersheetrefs" "${{INTERSHEET_REFS}}" (at {n(x)} {n(y)} {angle}) (effects (font (size 1.016 1.016)) hide)))')
     def part(self,ref,lib,value,x,y,nets,fp='',angle=0,xy=None,rot=0,note='',mpn='',labels=True):
+        x,y=grid(x),grid(y)
+        candidate=BY_REF.get(ref)
+        if fp:
+            if candidate is None: raise ValueError(f'No candidate part for {ref}')
+            mpn=candidate['mpn']
+            value=candidate.get('value',value)
+            fp=candidate.get('footprint',fp)
+            note='; '.join(filter(None,[note,candidate.get('review')]))
         self.used.add(lib)
         symid=uid(ref)
+        # Keep visible fields outside small symbols; use the symbol's angle so
+        # horizontal resistors do not get overlapping vertical ref/value text.
+        rx,ry,vx,vy=x+2.54,y-5.08,x+2.54,y-2.54
+        justify=' (justify left)'
+        if lib in ('Device:R','Device:C','Device:C_Polarized','Device:Polyfuse') and angle==0:
+            rx,ry,vx,vy=x+2.54,y-2.54,x+2.54,y
+        if angle==90:
+            rx,ry,vx,vy=x,y-5.08,x,y-2.54
+            justify=''
+        if lib in ('Neuronic:BAV199','Connector_Generic:Conn_02x06_Odd_Even'):
+            rx,ry,vx,vy=x,y-10.16,x,y-7.62
+            justify=''
+        if ref=='U1':justify=''
+        field_angle=angle % 180
         self.items.append(f'(symbol (lib_id {q(lib)}) (at {n(x)} {n(y)} {angle}) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid {symid})\n'
-            f'(property "Reference" {q(ref)} (at {n(x+3)} {n(y-5)} 0) (effects (font (size 1.016 1.016))))\n'
-            f'(property "Value" {q(value)} (at {n(x+3)} {n(y-2.5)} 0) (effects (font (size 1.016 1.016))))\n'
+            f'(property "Reference" {q(ref)} (at {n(rx)} {n(ry)} {field_angle}) (effects (font (size 1.016 1.016)){justify}))\n'
+            f'(property "Value" {q(value)} (at {n(vx)} {n(vy)} {field_angle}) (effects (font (size 1.016 1.016)){justify}))\n'
             f'(property "Footprint" {q(fp)} (at {n(x)} {n(y)} 0) (effects (font (size 1.016 1.016)) hide))\n'
+            f'(property "Candidate_MPN" {q(mpn)} (at {n(x)} {n(y)} 0) (effects (font (size 1.016 1.016)) hide))\n'
             f'(instances (project "neuronic" (path "/{uid("neuronic")}' + ('' if self.name=='neuronic' else f'/{uid("sheet-"+self.name)}') + f'" (reference {q(ref)}) (unit 1)))))')
         theta=math.radians(angle)
         for num,px,py,pa in symbol_pins(LIB[lib]):
@@ -156,7 +187,7 @@ class Sheet:
         return p
     def save(self,root=False):
         lib='\n'.join(LIB[k] for k in sorted(self.used))
-        txt=f'(kicad_sch (version 20230121) (generator eeschema) (uuid {self.id}) (paper "A3")\n(title_block (title {q(self.title)}) (date "2026-10-24") (rev "A0-review") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))\n(lib_symbols\n{lib}\n)\n'+'\n'.join(self.items)
+        txt=f'(kicad_sch (version 20250114) (generator eeschema) (uuid {self.id}) (paper "A3")\n(title_block (title {q(self.title)}) (date "2026-11-15") (rev "{REVISION}") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))\n(lib_symbols\n{lib}\n)\n'+'\n'.join(self.items)
         if root: txt+='\n(sheet_instances (path "/" (page "1")))'
         txt+='\n)\n'
         (OUT/f'{self.name}.kicad_sch').write_text(txt)
@@ -168,18 +199,20 @@ RFP='Neuronic:R_0805_2012Metric'
 CFP='Neuronic:C_0805_2012Metric'
 
 def add_rc(sh,ref,value,net1,net2,x,y,xy,kind='R',rot=0,note=''):
-    return sh.part(ref,f'Device:{kind}',value,x,y,{'1':net1,'2':net2},RFP if kind=='R' else ('Neuronic:C_1210_3225Metric' if ref=='C24' else CFP),xy=xy,rot=rot,note=note)
+    if ref=='C24':kind='C_Polarized'
+    fp=RFP if kind=='R' else ('Neuronic:CP_EIA-3528-21_Kemet-B' if ref=='C24' else CFP)
+    return sh.part(ref,f'Device:{kind}',value,x,y,{'1':net1,'2':net2},fp,xy=xy,rot=rot,note=note)
 
 def make_design():
     root=Sheet('neuronic','01 - ADS1299 core and SPI interface',1)
     inp=Sheet('inputs','02 - Eight channels and shared reference',2)
     power=Sheet('power','03 - Battery regulators, decoupling and bias',3)
-    root.text('NEURONIC / A0 REVIEW CHECKPOINT',20,18,2)
+    root.text('NEURONIC / A0.1 REVIEW CHECKPOINT',20,18,2)
     root.text('8 synchronous channels, 10 contacts. One ADS1299 contains both PGAs and ADCs.',20,25)
-    root.text('Global labels connect sheets. Negative inputs tie to AVDD; enable SRB1 in MISC1 before normal acquisition.',20,32)
+    root.text('Shared reference wires directly to all negative inputs. MISC1=0x00; CHnSET.SRB2=0. SRB1/SRB2 are NC.',20,32)
     nets={}
-    for i in range(8):nets[str(16-2*i)]=f'EEG{i+1}';nets[str(15-2*i)]='AVDD_5V'
-    nets.update({'17':'REF_FILTERED','18':None,'19':'AVDD_5V','20':'GND','21':'AVDD_5V','22':'AVDD_5V','23':'GND',
+    for i in range(8):nets[str(16-2*i)]=f'EEG{i+1}';nets[str(15-2*i)]='REF_FILTERED'
+    nets.update({'17':None,'18':None,'19':'AVDD_5V','20':'GND','21':'AVDD_5V','22':'AVDD_5V','23':'GND',
         '24':'VREFP','25':'GND','26':'VCAP4','27':None,'28':'VCAP1','29':None,'30':'VCAP2','31':'GND','32':'GND',
         '33':'GND','34':'SPI_MOSI','35':'ADS_PWDN_N','36':'ADS_RESET_N','37':None,'38':'ADS_START','39':'ADS_CS_N',
         '40':'SPI_SCLK','41':'GND','42':'GPIO1_PD','43':'SPI_MISO','44':'GPIO2_PD','45':'GPIO3_PD','46':'GPIO4_PD',
@@ -189,17 +222,17 @@ def make_design():
     root.part('U1','Neuronic:ADS1299IPAG','ADS1299IPAG',155,105,nets,'Neuronic:TQFP-64_10x10mm_P0.5mm',xy=(95,90),note='TI SBAS499C pin functions, unipolar 5 V, internal clock/reference',mpn='ADS1299IPAG')
     root.part('J11','Connector_Generic:Conn_02x06_Odd_Even','MCU_3V3_IO_ONLY',312,65,
         {'1':'GND','2':'GND','3':'SPI_SCLK','4':'SPI_MOSI','5':'SPI_MISO','6':'ADS_CS_N',
-         '7':'ADS_DRDY_N','8':'ADS_RESET_N','9':'ADS_START','10':'ADS_PWDN_N','11':'DVDD_3V3','12':'GND'},
-        'Neuronic:PinHeader_2x06_P2.54mm_Vertical',xy=(130,86),note='Pin 11 is AFE logic reference only. Do not power the ESP32 from this LDO.')
+         '7':'ADS_DRDY_N','8':'ADS_RESET_N','9':'ADS_START','10':'ADS_PWDN_N','11':None,'12':'GND'},
+        'Neuronic:PinHeader_2x06_P2.54mm_Vertical',xy=(130,86),note='Pin 11 NC. Signals/GND only; separate controller supply.')
     root.text('J11: board-neutral connector; not an ESP32 dev-board footprint.',258,93)
-    root.text('3.3 V logic only. Pi GPIO uses the same voltage.',258,100)
+    root.text('Waveshare ESP32-S3-Nano; see hardware/interface.json.',258,100)
     root.text('External controller power/USB can join GND. No body-connected tests.',258,107)
     rnum=30
     for i,(net,rail) in enumerate([('ADS_CS_N','GND'),('ADS_RESET_N','GND'),('ADS_PWDN_N','GND'),('ADS_START','GND'),('SPI_SCLK','GND'),('SPI_MOSI','GND'),('CLKSEL_PU','DVDD_3V3'),('GPIO1_PD','GND'),('GPIO2_PD','GND'),('GPIO3_PD','GND'),('GPIO4_PD','GND')]):
         x=35+(i%6)*58;y=181+(i//6)*40
         add_rc(root,f'R{rnum+i}','100k' if i<6 else '10k',net,rail,x,y,(116+(i%4)*5,103+(i//4)*7))
     root.text('Default pulldowns keep host inputs low at startup. MCU must release PWDN/RESET and drive CS high after rails settle.',20,250)
-    root.text('CONFIG1=0x96 (250 SPS, internal clock output disabled); MISC1=0x20 (SRB1); BIASREF_INT enabled in normal mode.',20,257)
+    root.text('CONFIG1=0x96 (250 SPS, internal clock output disabled); MISC1=0x00; bias/lead-off disabled for initial bench tests.',20,257)
     for name,title,x in [('inputs','Input filters / CH1-8 / REF',25),('power','Power / bypass / bias drive',215)]:
         root.items.append(f'(sheet (at {x} 39.37) (size 170.18 12.7) (fields_autoplaced) (stroke (width 0.1524) (type default)) (fill (color 0 0 0 0)) (uuid {uid("sheet-"+name)}) (property "Sheetname" {q(title)} (at {x} 38 0) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "{name}.kicad_sch" (at {x} 53 0) (effects (font (size 1.27 1.27)) (justify left top))) (instances (project "neuronic" (path "/{root.id}" (page "{SHEETS[name].page}")))))')
 
@@ -220,24 +253,24 @@ def make_design():
         inp.wire((98.81,y),(156.19,y));inp.local_label(mid,112,y)
         inp.wire((163.81,y),(225,y));inp.wire((225,y),(245,y));inp.label(out,245,y,0)
         inp.wire((225,y),(225,y+2.54))
-        inp.items.append(f'(junction (at 225 {n(y)}) (diameter 0) (color 0 0 0 0) (uuid {inp.ident()}))')
+        inp.items.append(f'(junction (at {n(grid(225))} {n(grid(y))}) (diameter 0) (color 0 0 0 0) (uuid {inp.ident()}))')
         inp.wire((225,y+10.16),(225,y+13.97));inp.wire((225,y+13.97),(235.16,y+13.97));inp.label('GND',235.16,y+13.97,0)
         inp.part(f'D{i+1}','Neuronic:BAV199','BAV199',335,y,{'1':'GND','2':'AVDD_5V','3':out},'Neuronic:SOT-23',xy=(73.5,65+i*7),note='Clamp candidate only; not certified input protection',mpn='BAV199,215')
     inp.text('All 9 paths use the same nominal RC values; routing and parasitics still need review for common-mode rejection.',18,272)
 
-    power.text('BENCH POWER: 7-9 V battery pack -> independent 5 V analog and 3.3 V ADC logic LDOs',18,17,1.8)
+    power.text('BENCH POWER: 6 x AA alkaline candidate (7.2-10.2 V review envelope) -> 5 V / 3.3 V LDOs',18,17,1.8)
     power.text('ESP32 has its own supply. No onboard charging. Regulators must not supply ESP32 radio current.',18,25)
-    power.part('J12','Connector_Generic:Conn_01x02','BATTERY_7_TO_9V',40,48,{'1':'VBAT_RAW','2':'GND'},'Neuronic:PinHeader_1x02_P2.54mm_Vertical',xy=(130,61))
-    power.part('F1','Device:Polyfuse','100mA_HOLD_CANDIDATE',100,48,{'1':'VBAT_RAW','2':'VBAT_FUSED'},RFP,xy=(124,60),note='Choose exact voltage/current/thermal rating before release')
+    power.part('J12','Connector_Generic:Conn_01x02','BATTERY_6AA',40,48,{'1':'VBAT_RAW','2':'GND'},'Neuronic:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical',xy=(132,66),note='Candidate keyed battery connector; pin 1 positive, pin 2 ground; verify harness polarity')
+    power.part('F1','Device:Polyfuse','100mA_HOLD',100,48,{'1':'VBAT_RAW','2':'VBAT_FUSED'},'Neuronic:Fuse_1812_4532Metric',xy=(124,60),note='MF-MSMF010-2: 60V, 100mA hold / 300mA trip at 23C; AFE branch only, not body protection',mpn='MF-MSMF010-2')
     power.part('D10','Device:D_Schottky','SS14',162,48,{'2':'VBAT_FUSED','1':'VBAT_DIODE'},'Neuronic:D_SMA',xy=(117,60),note='Reverse polarity protection; verify thermal behavior',mpn='SS14')
     power.part('SW1','Switch:SW_SPST','POWER',220,48,{'1':'VBAT_DIODE','2':'VBAT'},'Neuronic:PinHeader_1x02_P2.54mm_Vertical',xy=(109,60),note='Header for an offboard SPST switch')
     for i,(value,rail) in enumerate([('MCP1703AT-5002E/DB','AVDD_5V'),('MCP1703AT-3302E/DB','DVDD_3V3')]):
         power.part(f'U{i+2}','Regulator_Linear:MCP1703Ax-330xxDB',value,95+155*i,86,{'1':'VBAT','2':'GND','3':rail},'Neuronic:SOT-223-3_TabPin2',xy=(109+i*14,72),note='Fixed output variant; matching footprint pin1 VIN pin2 GND pin3 VOUT',mpn=value)
     power.part('FLG1','power:PWR_FLAG','PWR_FLAG',330,48,{'1':'VBAT'})
     power.part('FLG2','power:PWR_FLAG','PWR_FLAG',365,48,{'1':'GND'})
-    bypass=[('C20','4.7uF 16V','VBAT','GND',(109,66)),('C21','4.7uF 10V','AVDD_5V','GND',(109,78)),
-        ('C22','4.7uF 16V','VBAT','GND',(123,66)),('C23','4.7uF 10V','DVDD_3V3','GND',(123,78)),
-        ('C24','100uF 6.3V','VCAP1','GND',(91,103)),('C25','1uF','VCAP2','GND',(96,103)),
+    bypass=[('C20','4.7uF 25V','VBAT','GND',(109,66)),('C21','1uF','AVDD_5V','GND',(109,78)),
+        ('C22','4.7uF 25V','VBAT','GND',(123,66)),('C23','4.7uF 25V','DVDD_3V3','GND',(123,78)),
+        ('C24','100uF 6.3V','VCAP1','GND',(91.5,104)),('C25','1uF','VCAP2','GND',(96,103)),
         ('C26','1uF','VCAP3','GND',(96,78)),('C27','100nF','VCAP3','GND',(100,78)),
         ('C28','1uF','VCAP4','GND',(87,103)),('C29','10uF','VREFP','GND',(83,100)),
         ('C30','100nF','VREFP','GND',(83,104))]
@@ -269,10 +302,12 @@ def bundle_libraries():
     for name in used:
         if name not in origins:raise FileNotFoundError(name)
         shutil.copyfile(origins[name],pretty/f'{name}.kicad_mod')
-    syms='\n'.join(v.replace('(symbol "Neuronic:', '(symbol "',1) for k,v in LIB.items() if k.startswith('Neuronic:'))
-    (OUT/'Neuronic.kicad_sym').write_text(f'(kicad_symbol_lib (version 20220914) (generator kicad_symbol_editor)\n{syms}\n)\n')
-    (OUT/'sym-lib-table').write_text('(sym_lib_table (lib (name "Neuronic")(type "KiCad")(uri "${KIPRJMOD}/Neuronic.kicad_sym")(options "")(descr "Local symbols")))\n')
-    (OUT/'fp-lib-table').write_text('(fp_lib_table (lib (name "Neuronic")(type "KiCad")(uri "${KIPRJMOD}/Neuronic.pretty")(options "")(descr "Bundled KiCad 7 footprints")))\n')
+    libraries=sorted({key.split(':')[0] for key in LIB})
+    for library in libraries:
+        syms='\n'.join(v.replace(f'(symbol "{library}:', '(symbol "',1) for k,v in LIB.items() if k.startswith(library+':'))
+        (OUT/f'{library}.kicad_sym').write_text(f'(kicad_symbol_lib (version 20241209) (generator kicad_symbol_editor)\n{syms}\n)\n')
+    (OUT/'sym-lib-table').write_text('(sym_lib_table\n'+''.join(f'(lib (name "{lib}")(type "KiCad")(uri "${{KIPRJMOD}}/{lib}.kicad_sym")(options "")(descr "Project symbol subset"))\n' for lib in libraries)+')\n')
+    (OUT/'fp-lib-table').write_text('(fp_lib_table (lib (name "Neuronic")(type "KiCad")(uri "${KIPRJMOD}/Neuronic.pretty")(options "")(descr "Bundled KiCad footprints")))\n')
     lic=ROOT/'hardware/licenses';lic.mkdir(exist_ok=True)
     for kind in ['symbols','footprints']:
         path=DATA.parent/f'doc/kicad-{kind}/copyright'
@@ -285,20 +320,27 @@ def save_project():
       'net_settings':{'classes':[{'name':'Default','clearance':0.2,'track_width':0.2,'via_diameter':0.6,'via_drill':0.3,'bus_width':12,'wire_width':6,'pcb_color':'rgba(0, 0, 0, 0.000)','schematic_color':'rgba(0, 0, 0, 0.000)'}],'meta':{'version':3}},
       'schematic':{'meta':{'version':1}},
       'erc':{'erc_exclusions':[]},
-      'text_variables':{'REVISION':'A0 - UNROUTED REVIEW'}}
+      'text_variables':{'REVISION':'A0.1 - UNROUTED REVIEW'}}
     (OUT/'neuronic.kicad_pro').write_text(json.dumps(pro,indent=2)+'\n')
 
 def save_bom():
     d=ROOT/'hardware/bom';d.mkdir(exist_ok=True)
     with (d/'bom-review.csv').open('w',newline='') as f:
-        w=csv.writer(f);w.writerow(['Reference','Value','Footprint','Proposed_MPN','Review_notes'])
+        w=csv.writer(f,lineterminator="\n");w.writerow(['Reference','Value','Footprint','Proposed_MPN','Review_notes'])
         for p in PARTS:w.writerow([p['ref'],p['value'],p['fp'],p['mpn'] or 'TBD - do not order',p['note']])
-    (ROOT/'hardware/design.json').write_text(json.dumps({'revision':'A0-review','state':'placed-unrouted-bench-only','parts':PARTS,'ads_pin_names':PIN_NAMES},indent=2)+'\n')
+    (ROOT/'hardware/design.json').write_text(json.dumps({'revision':REVISION,'state':'placed-unrouted-bench-only','parts':PARTS,'ads_pin_names':PIN_NAMES},indent=2)+'\n')
 
 def board():
     import pcbnew as k
+    import xml.etree.ElementTree as ET
+    # Use KiCad's real NC net names, including pin names, for full parity DRC.
+    with tempfile.TemporaryDirectory() as temporary:
+        netfile=Path(temporary)/'net.xml'
+        subprocess.run(['kicad-cli','sch','export','netlist','--format','kicadxml','-o',str(netfile),str(OUT/'neuronic.kicad_sch')],check=True)
+        pin_nets={(node.attrib['ref'],node.attrib['pin']):net.attrib['name']
+                  for net in ET.parse(netfile).findall('nets/net') for node in net.findall('node')}
     b=k.BOARD();b.SetCopperLayerCount(4)
-    netnames=sorted({v for p in PARTS for v in p['nets'].values() if v})
+    netnames=sorted(set(pin_nets.values()))
     nets={}
     for name in netnames:
         net=k.NETINFO_ITEM(b,name);b.Add(net);nets[name]=net
@@ -311,7 +353,7 @@ def board():
         fp.SetPosition(k.VECTOR2I(k.FromMM(p['xy'][0]),k.FromMM(p['xy'][1])))
         fp.SetOrientationDegrees(p['rot'])
         for pad in fp.Pads():
-            net=p['nets'].get(pad.GetNumber())
+            net=pin_nets.get((p['ref'],pad.GetNumber()))
             if net:pad.SetNet(nets[net])
         b.Add(fp)
         fp.Reference().SetTextSize(k.VECTOR2I(k.FromMM(0.8),k.FromMM(0.8)))
@@ -321,19 +363,26 @@ def board():
     # Board is deliberately a placement checkpoint: no inferred tracks or planes.
     for a,c in [((50,55),(138,55)),((138,55),(138,135)),((138,135),(50,135)),((50,135),(50,55))]:
         s=k.PCB_SHAPE();s.SetShape(k.SHAPE_T_SEGMENT);s.SetLayer(k.Edge_Cuts);s.SetWidth(k.FromMM(0.05));s.SetStart(k.VECTOR2I(k.FromMM(a[0]),k.FromMM(a[1])));s.SetEnd(k.VECTOR2I(k.FromMM(c[0]),k.FromMM(c[1])));b.Add(s)
-    for text,xy,size in [('NEURONIC A0 / UNROUTED', (93,58),1),('BENCH ONLY / NO BODY CONNECTION',(93,132),0.9),('CH1-8 / REF',(63,59),0.8),('MCU 3V3 IO',(128,112),0.8)]:
+    for text,xy,size in [('NEURONIC A0.1 / UNROUTED', (93,58),1),('BENCH ONLY / NO BODY CONNECTION',(93,132),0.9),('CH1-8 / REF',(63,59),0.8),('MCU 3V3 IO',(128,112),0.8)]:
         t=k.PCB_TEXT(b);t.SetText(text);t.SetPosition(k.VECTOR2I(k.FromMM(xy[0]),k.FromMM(xy[1])));t.SetTextSize(k.VECTOR2I(k.FromMM(size),k.FromMM(size)));t.SetTextThickness(k.FromMM(0.12));t.SetLayer(k.F_SilkS);b.Add(t)
     for num,xy in enumerate([(53,58),(135,58),(135,132),(53,132)]):
-        fp=k.FootprintLoad(str(OUT/'Neuronic.pretty'),'MountingHole_2.7mm_M2.5');fp.SetReference(f'H{num+1}');fp.SetValue('M2.5');fp.SetFPID(k.LIB_ID('Neuronic','MountingHole_2.7mm_M2.5'));fp.SetPosition(k.VECTOR2I(k.FromMM(xy[0]),k.FromMM(xy[1])));fp.Reference().SetVisible(False);fp.Value().SetVisible(False);b.Add(fp)
+        fp=k.FootprintLoad(str(OUT/'Neuronic.pretty'),'MountingHole_2.7mm_M2.5');fp.SetReference(f'H{num+1}');fp.SetValue('M2.5');fp.SetFPID(k.LIB_ID('Neuronic','MountingHole_2.7mm_M2.5'));fp.SetPosition(k.VECTOR2I(k.FromMM(xy[0]),k.FromMM(xy[1])));fp.Reference().SetVisible(False);fp.Value().SetVisible(False);fp.SetAttributes(k.FP_BOARD_ONLY | k.FP_EXCLUDE_FROM_BOM | k.FP_EXCLUDE_FROM_POS_FILES);b.Add(fp)
     b.BuildConnectivity()
     k.SaveBoard(str(OUT/'neuronic.kicad_pcb'),b)
     reports=ROOT/'hardware/validation';reports.mkdir(exist_ok=True)
-    loaded=k.LoadBoard(str(OUT/'neuronic.kicad_pcb'))
-    ok=k.WriteDRCReport(loaded,str(reports/'drc-placement.txt'),k.EDA_UNITS_MILLIMETRES,True)
-    print(f'PCB loaded by KiCad {k.GetBuildVersion()}, DRC report written: {ok}')
+    k.LoadBoard(str(OUT/'neuronic.kicad_pcb'))
+    print(f'PCB saved and reloaded by KiCad {k.GetBuildVersion()}; run validate_kicad.py for DRC.')
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--board',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--board',action='store_true');parser.add_argument('--overwrite',action='store_true');args=parser.parse_args()
+    if (OUT/'neuronic.kicad_sch').exists() and not args.overwrite:
+        parser.error('Existing design: commit edits first and explicitly pass --overwrite.')
+    pcb=OUT/'neuronic.kicad_pcb'
+    if args.board and pcb.exists():
+        import pcbnew as k
+        existing=k.LoadBoard(str(pcb))
+        if len(existing.GetTracks()) or existing.GetAreaCount():
+            parser.error('Refusing to replace a PCB containing tracks, vias or zones. Preserve and edit that PCB in KiCad.')
     initialize();make_design();bundle_libraries();save_project();save_bom()
     if args.board:board()
     print(f'Generated {len(PARTS)} components, 3 schematic sheets and BOM at {OUT}')

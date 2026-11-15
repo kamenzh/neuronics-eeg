@@ -1,5 +1,5 @@
 {
-  "revision": "A0-review",
+  "revision": "A0.1-review",
   "state": "placed-unrouted-bench-only",
   "parts": [
     {
@@ -8,22 +8,22 @@
       "value": "ADS1299IPAG",
       "nets": {
         "16": "EEG1",
-        "15": "AVDD_5V",
+        "15": "REF_FILTERED",
         "14": "EEG2",
-        "13": "AVDD_5V",
+        "13": "REF_FILTERED",
         "12": "EEG3",
-        "11": "AVDD_5V",
+        "11": "REF_FILTERED",
         "10": "EEG4",
-        "9": "AVDD_5V",
+        "9": "REF_FILTERED",
         "8": "EEG5",
-        "7": "AVDD_5V",
+        "7": "REF_FILTERED",
         "6": "EEG6",
-        "5": "AVDD_5V",
+        "5": "REF_FILTERED",
         "4": "EEG7",
-        "3": "AVDD_5V",
+        "3": "REF_FILTERED",
         "2": "EEG8",
-        "1": "AVDD_5V",
-        "17": "REF_FILTERED",
+        "1": "REF_FILTERED",
+        "17": null,
         "18": null,
         "19": "AVDD_5V",
         "20": "GND",
@@ -78,7 +78,7 @@
         90
       ],
       "rot": 0,
-      "note": "TI SBAS499C pin functions, unipolar 5 V, internal clock/reference",
+      "note": "TI SBAS499C pin functions, unipolar 5 V, internal clock/reference; ADS1299IPAGR is reel packaging of the same PAG device; one IC total",
       "mpn": "ADS1299IPAG",
       "sheet": "neuronic",
       "uuid": "1d78f5a4-670b-5d43-b66d-e817a944dd9d"
@@ -98,7 +98,7 @@
         "8": "ADS_RESET_N",
         "9": "ADS_START",
         "10": "ADS_PWDN_N",
-        "11": "DVDD_3V3",
+        "11": null,
         "12": "GND"
       },
       "fp": "Neuronic:PinHeader_2x06_P2.54mm_Vertical",
@@ -107,8 +107,8 @@
         86
       ],
       "rot": 0,
-      "note": "Pin 11 is AFE logic reference only. Do not power the ESP32 from this LDO.",
-      "mpn": "",
+      "note": "Pin 11 NC. Signals/GND only; separate controller supply.",
+      "mpn": "61301221121",
       "sheet": "neuronic",
       "uuid": "63e5f4a2-b11b-511b-ada5-91834f363141"
     },
@@ -126,8 +126,8 @@
         103
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-07100KL",
       "sheet": "neuronic",
       "uuid": "3f19546f-df08-5946-9a14-4affbafca351"
     },
@@ -145,8 +145,8 @@
         103
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-07100KL",
       "sheet": "neuronic",
       "uuid": "283eee7f-83e0-51af-bbc9-4f432150ff32"
     },
@@ -164,8 +164,8 @@
         103
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-07100KL",
       "sheet": "neuronic",
       "uuid": "ce44d336-c277-5797-8269-e87d06d91711"
     },
@@ -183,8 +183,8 @@
         103
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-07100KL",
       "sheet": "neuronic",
       "uuid": "80fc2584-9344-5a4f-ac2e-b6fcbdd45d17"
     },
@@ -202,8 +202,8 @@
         110
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-07100KL",
       "sheet": "neuronic",
       "uuid": "7c78c625-a4a2-5ced-8bf2-91688841e2f7"
     },
@@ -221,8 +221,8 @@
         110
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-07100KL",
       "sheet": "neuronic",
       "uuid": "7f62b4bc-71f8-5a35-8b98-2059aba3a4d1"
     },
@@ -240,8 +240,8 @@
         110
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
       "uuid": "3d630532-8cc2-5431-a223-d4fd4e02770d"
     },
@@ -259,8 +259,8 @@
         110
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
       "uuid": "b5f55863-e092-5f8d-b719-9fc730927c74"
     },
@@ -278,8 +278,8 @@
         117
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
       "uuid": "8dec5370-1cff-504c-bd29-9486d0472f40"
     },
@@ -297,8 +297,8 @@
         117
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
       "uuid": "e9385b34-817d-55c4-b608-c67b442d13e4"
     },
@@ -316,8 +316,8 @@
         117
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
       "uuid": "b0a3d05d-1a36-5374-8617-242bf5691c45"
     },
@@ -334,8 +334,8 @@
         65
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision",
-      "mpn": "",
+      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
+      "mpn": "61300111121",
       "sheet": "inputs",
       "uuid": "ca444771-fef7-534d-a1e3-8eddef82ade5"
     },
@@ -353,8 +353,8 @@
         65
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "1da75846-d3f5-5bab-a143-a5f9e58bbfc6"
     },
@@ -372,8 +372,8 @@
         65
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "39337229-bb4e-5d28-b186-99cabe1cd319"
     },
@@ -391,8 +391,8 @@
         65
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor",
-      "mpn": "",
+      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C102J5GACTU",
       "sheet": "inputs",
       "uuid": "815d2fd3-3b7d-5202-a857-bae8691b26b2"
     },
@@ -411,7 +411,7 @@
         65
       ],
       "rot": 0,
-      "note": "Clamp candidate only; not certified input protection",
+      "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
       "mpn": "BAV199,215",
       "sheet": "inputs",
       "uuid": "dc6bb9cc-4e71-5c65-835d-faf90a70e72f"
@@ -429,8 +429,8 @@
         72
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision",
-      "mpn": "",
+      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
+      "mpn": "61300111121",
       "sheet": "inputs",
       "uuid": "2e68d078-186f-5cb6-9841-168bd9eed1f2"
     },
@@ -448,8 +448,8 @@
         72
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "e7fa5676-b46f-5260-afa2-983682bc7e0f"
     },
@@ -467,8 +467,8 @@
         72
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "9c736448-46d7-5ed8-b3a9-33584deb3b01"
     },
@@ -486,8 +486,8 @@
         72
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor",
-      "mpn": "",
+      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C102J5GACTU",
       "sheet": "inputs",
       "uuid": "62b842e7-d8a3-5c41-ac2c-5a62ca04eea9"
     },
@@ -506,7 +506,7 @@
         72
       ],
       "rot": 0,
-      "note": "Clamp candidate only; not certified input protection",
+      "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
       "mpn": "BAV199,215",
       "sheet": "inputs",
       "uuid": "daaac1b2-1232-5832-9af9-1eb43674965d"
@@ -524,8 +524,8 @@
         79
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision",
-      "mpn": "",
+      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
+      "mpn": "61300111121",
       "sheet": "inputs",
       "uuid": "6b0e4943-9211-52b1-8710-40164e00c482"
     },
@@ -543,8 +543,8 @@
         79
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "0feb846c-0761-5e52-bc5d-dcaf09316a81"
     },
@@ -562,8 +562,8 @@
         79
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "a62dad11-8661-521d-9cee-efba542e75f8"
     },
@@ -581,8 +581,8 @@
         79
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor",
-      "mpn": "",
+      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C102J5GACTU",
       "sheet": "inputs",
       "uuid": "2c3967b0-2c85-5ca8-91fb-e300ee822df2"
     },
@@ -601,7 +601,7 @@
         79
       ],
       "rot": 0,
-      "note": "Clamp candidate only; not certified input protection",
+      "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
       "mpn": "BAV199,215",
       "sheet": "inputs",
       "uuid": "9cef6c0d-723f-5833-aeaf-b38625b5cf64"
@@ -619,8 +619,8 @@
         86
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision",
-      "mpn": "",
+      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
+      "mpn": "61300111121",
       "sheet": "inputs",
       "uuid": "1328a76a-aa71-5de1-b666-e3347092adb2"
     },
@@ -638,8 +638,8 @@
         86
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "dcdb46be-b923-592e-8ad9-4f6a5e1f76df"
     },
@@ -657,8 +657,8 @@
         86
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "7254eed4-a350-5443-a812-50e724d770d8"
     },
@@ -676,8 +676,8 @@
         86
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor",
-      "mpn": "",
+      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C102J5GACTU",
       "sheet": "inputs",
       "uuid": "d6300a51-a9f0-5109-8da8-c80f323db6c5"
     },
@@ -696,7 +696,7 @@
         86
       ],
       "rot": 0,
-      "note": "Clamp candidate only; not certified input protection",
+      "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
       "mpn": "BAV199,215",
       "sheet": "inputs",
       "uuid": "bdaab4bf-ed7a-5493-bb81-532a99e19eeb"
@@ -714,8 +714,8 @@
         93
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision",
-      "mpn": "",
+      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
+      "mpn": "61300111121",
       "sheet": "inputs",
       "uuid": "0c27e9dc-29b1-55c7-9a3a-f1ef3c7218de"
     },
@@ -733,8 +733,8 @@
         93
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "ab9e2a1d-f406-5fc3-b067-bff58eb7d9af"
     },
@@ -752,8 +752,8 @@
         93
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "b403a41e-62e6-5b02-9d47-8c0d543b0f29"
     },
@@ -771,8 +771,8 @@
         93
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor",
-      "mpn": "",
+      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C102J5GACTU",
       "sheet": "inputs",
       "uuid": "52b5258a-0b43-5347-82b3-132e03045332"
     },
@@ -791,7 +791,7 @@
         93
       ],
       "rot": 0,
-      "note": "Clamp candidate only; not certified input protection",
+      "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
       "mpn": "BAV199,215",
       "sheet": "inputs",
       "uuid": "1546228b-830b-5c1e-b9d5-5e1343d53aa0"
@@ -809,8 +809,8 @@
         100
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision",
-      "mpn": "",
+      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
+      "mpn": "61300111121",
       "sheet": "inputs",
       "uuid": "34fc5357-ec0f-5f58-8f32-02ef2e8a9f26"
     },
@@ -828,8 +828,8 @@
         100
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "64c1a9ce-e480-5ee4-853f-0d3ae36f83f2"
     },
@@ -847,8 +847,8 @@
         100
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "7a1aaa8d-80a5-5874-9869-135c6129fc80"
     },
@@ -866,8 +866,8 @@
         100
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor",
-      "mpn": "",
+      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C102J5GACTU",
       "sheet": "inputs",
       "uuid": "410a0c5e-bcee-5187-b48c-e7f0a8796f01"
     },
@@ -886,7 +886,7 @@
         100
       ],
       "rot": 0,
-      "note": "Clamp candidate only; not certified input protection",
+      "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
       "mpn": "BAV199,215",
       "sheet": "inputs",
       "uuid": "886b151d-af49-5987-b27f-60a22c210d0b"
@@ -904,8 +904,8 @@
         107
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision",
-      "mpn": "",
+      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
+      "mpn": "61300111121",
       "sheet": "inputs",
       "uuid": "b9be75e9-c33a-5fe6-98cd-972df1d64fed"
     },
@@ -923,8 +923,8 @@
         107
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "28873bf5-fc6e-5f39-85f4-1e778ccf0cb4"
     },
@@ -942,8 +942,8 @@
         107
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "e9778dc3-1a4a-553b-b6a9-3e14bd368ed8"
     },
@@ -961,8 +961,8 @@
         107
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor",
-      "mpn": "",
+      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C102J5GACTU",
       "sheet": "inputs",
       "uuid": "f4ebee2d-45eb-5b40-96b2-ae9db9edbc9f"
     },
@@ -981,7 +981,7 @@
         107
       ],
       "rot": 0,
-      "note": "Clamp candidate only; not certified input protection",
+      "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
       "mpn": "BAV199,215",
       "sheet": "inputs",
       "uuid": "01369e1d-a4d3-5977-b130-33e6639bfcc4"
@@ -999,8 +999,8 @@
         114
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision",
-      "mpn": "",
+      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
+      "mpn": "61300111121",
       "sheet": "inputs",
       "uuid": "f2578509-69d4-5600-ad63-a7819d66980e"
     },
@@ -1018,8 +1018,8 @@
         114
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "4023ac2e-0145-59bc-b5f1-ed12643167e2"
     },
@@ -1037,8 +1037,8 @@
         114
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "fd945c21-ae1d-5914-9933-5bf0bb4b6060"
     },
@@ -1056,8 +1056,8 @@
         114
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor",
-      "mpn": "",
+      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C102J5GACTU",
       "sheet": "inputs",
       "uuid": "5054c6db-6ae8-5ec7-94c8-21df2d70b609"
     },
@@ -1076,7 +1076,7 @@
         114
       ],
       "rot": 0,
-      "note": "Clamp candidate only; not certified input protection",
+      "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
       "mpn": "BAV199,215",
       "sheet": "inputs",
       "uuid": "471b71d9-e379-50cf-b6de-a656b3920564"
@@ -1094,8 +1094,8 @@
         121
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision",
-      "mpn": "",
+      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
+      "mpn": "61300111121",
       "sheet": "inputs",
       "uuid": "89b7be3b-a9f6-559d-b86c-fd4e862bc899"
     },
@@ -1113,8 +1113,8 @@
         121
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "60b25c42-edb0-5e0e-b7b9-58c39cce6db0"
     },
@@ -1132,8 +1132,8 @@
         121
       ],
       "rot": 90,
-      "note": "Input series resistor, 1%",
-      "mpn": "",
+      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
       "uuid": "41f78dfc-b49f-580c-81dc-6a3924597179"
     },
@@ -1151,8 +1151,8 @@
         121
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor",
-      "mpn": "",
+      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C102J5GACTU",
       "sheet": "inputs",
       "uuid": "a0bca73f-9668-5c0e-a69f-d654482479c5"
     },
@@ -1171,7 +1171,7 @@
         121
       ],
       "rot": 0,
-      "note": "Clamp candidate only; not certified input protection",
+      "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
       "mpn": "BAV199,215",
       "sheet": "inputs",
       "uuid": "0c333930-9900-5f92-b4ea-0c1201abaead"
@@ -1179,38 +1179,38 @@
     {
       "ref": "J12",
       "lib": "Connector_Generic:Conn_01x02",
-      "value": "BATTERY_7_TO_9V",
+      "value": "BATTERY_6AA",
       "nets": {
         "1": "VBAT_RAW",
         "2": "GND"
       },
-      "fp": "Neuronic:PinHeader_1x02_P2.54mm_Vertical",
+      "fp": "Neuronic:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
       "xy": [
-        130,
-        61
+        132,
+        66
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Candidate keyed battery connector; pin 1 positive, pin 2 ground; verify harness polarity; Harness requires matching XHP-2 housing and wire-appropriate contacts; do not infer polarity from wire color",
+      "mpn": "B2B-XH-A(LF)(SN)",
       "sheet": "power",
       "uuid": "2ea121ce-6928-55f5-bdea-a7c3605be7a7"
     },
     {
       "ref": "F1",
       "lib": "Device:Polyfuse",
-      "value": "100mA_HOLD_CANDIDATE",
+      "value": "100mA_HOLD",
       "nets": {
         "1": "VBAT_RAW",
         "2": "VBAT_FUSED"
       },
-      "fp": "Neuronic:R_0805_2012Metric",
+      "fp": "Neuronic:Fuse_1812_4532Metric",
       "xy": [
         124,
         60
       ],
       "rot": 0,
-      "note": "Choose exact voltage/current/thermal rating before release",
-      "mpn": "",
+      "note": "MF-MSMF010-2: 60V, 100mA hold / 300mA trip at 23C; AFE branch only, not body protection",
+      "mpn": "MF-MSMF010-2",
       "sheet": "power",
       "uuid": "be43af05-a17f-5546-9934-1ec0f57e5057"
     },
@@ -1228,8 +1228,8 @@
         60
       ],
       "rot": 0,
-      "note": "Reverse polarity protection; verify thermal behavior",
-      "mpn": "SS14",
+      "note": "Reverse polarity protection; verify thermal behavior; Check forward drop at AFE load and reverse leakage",
+      "mpn": "SS14-E3/61T",
       "sheet": "power",
       "uuid": "18df0d1e-ac74-53b4-b0ac-e11882612cab"
     },
@@ -1247,8 +1247,8 @@
         60
       ],
       "rot": 0,
-      "note": "Header for an offboard SPST switch",
-      "mpn": "",
+      "note": "Header for an offboard SPST switch; This MPN buys the PCB header, not the external switch",
+      "mpn": "61300211121",
       "sheet": "power",
       "uuid": "4711dd50-1339-553f-82a3-e40a21833e6a"
     },
@@ -1295,7 +1295,7 @@
     {
       "ref": "C20",
       "lib": "Device:C",
-      "value": "4.7uF 16V",
+      "value": "4.7uF 25V",
       "nets": {
         "1": "VBAT",
         "2": "GND"
@@ -1306,15 +1306,15 @@
         66
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C475K3RACTU",
       "sheet": "power",
       "uuid": "e68f4a3e-9363-593a-86a2-414289561dd2"
     },
     {
       "ref": "C21",
       "lib": "Device:C",
-      "value": "4.7uF 10V",
+      "value": "1uF 25V",
       "nets": {
         "1": "AVDD_5V",
         "2": "GND"
@@ -1325,15 +1325,15 @@
         78
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C105K3RACTU",
       "sheet": "power",
       "uuid": "0b8fa811-87b1-565c-8165-7e9909779e05"
     },
     {
       "ref": "C22",
       "lib": "Device:C",
-      "value": "4.7uF 16V",
+      "value": "4.7uF 25V",
       "nets": {
         "1": "VBAT",
         "2": "GND"
@@ -1344,15 +1344,15 @@
         66
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C475K3RACTU",
       "sheet": "power",
       "uuid": "35b284e0-0430-5856-a9c6-0a26b24a94a1"
     },
     {
       "ref": "C23",
       "lib": "Device:C",
-      "value": "4.7uF 10V",
+      "value": "4.7uF 25V",
       "nets": {
         "1": "DVDD_3V3",
         "2": "GND"
@@ -1363,34 +1363,34 @@
         78
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C475K3RACTU",
       "sheet": "power",
       "uuid": "d9a4c9a4-2a4b-59b9-afc4-bed01ad5fa60"
     },
     {
       "ref": "C24",
-      "lib": "Device:C",
+      "lib": "Device:C_Polarized",
       "value": "100uF 6.3V",
       "nets": {
         "1": "VCAP1",
         "2": "GND"
       },
-      "fp": "Neuronic:C_1210_3225Metric",
+      "fp": "Neuronic:CP_EIA-3528-21_Kemet-B",
       "xy": [
-        91,
-        103
+        91.5,
+        104
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Polarized: pad1 VCAP1 positive; verify leakage/startup/surge and derating for this internal rail",
+      "mpn": "T491B107M006AT",
       "sheet": "power",
       "uuid": "2f79a893-0c85-5e64-9abb-973574485eae"
     },
     {
       "ref": "C25",
       "lib": "Device:C",
-      "value": "1uF",
+      "value": "1uF 25V",
       "nets": {
         "1": "VCAP2",
         "2": "GND"
@@ -1401,15 +1401,15 @@
         103
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C105K3RACTU",
       "sheet": "power",
       "uuid": "9a835b4d-2a15-5a3b-8ea6-358ffcbdcbd9"
     },
     {
       "ref": "C26",
       "lib": "Device:C",
-      "value": "1uF",
+      "value": "1uF 25V",
       "nets": {
         "1": "VCAP3",
         "2": "GND"
@@ -1420,15 +1420,15 @@
         78
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C105K3RACTU",
       "sheet": "power",
       "uuid": "62db20ee-4fff-5c1c-b6b3-c272aee05207"
     },
     {
       "ref": "C27",
       "lib": "Device:C",
-      "value": "100nF",
+      "value": "100nF 50V",
       "nets": {
         "1": "VCAP3",
         "2": "GND"
@@ -1439,15 +1439,15 @@
         78
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C104K5RACTU",
       "sheet": "power",
       "uuid": "f4d57264-9224-53d9-bc9f-80f6e18e0cb7"
     },
     {
       "ref": "C28",
       "lib": "Device:C",
-      "value": "1uF",
+      "value": "1uF 25V",
       "nets": {
         "1": "VCAP4",
         "2": "GND"
@@ -1458,34 +1458,34 @@
         103
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C105K3RACTU",
       "sheet": "power",
       "uuid": "a29e5219-f158-5282-a48a-5d031dce3eb8"
     },
     {
       "ref": "C29",
       "lib": "Device:C",
-      "value": "10uF",
+      "value": "22uF 25V",
       "nets": {
         "1": "VREFP",
         "2": "GND"
       },
-      "fp": "Neuronic:C_0805_2012Metric",
+      "fp": "Neuronic:C_1206_3216Metric",
       "xy": [
         83,
         100
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Reference bypass: still must demonstrate >=10uF effective at 4.5V including tolerance, temperature and aging",
+      "mpn": "GRM31CR61E226KE15L",
       "sheet": "power",
       "uuid": "e8bdfa87-3cae-5dd3-8b34-3917139b4026"
     },
     {
       "ref": "C30",
       "lib": "Device:C",
-      "value": "100nF",
+      "value": "100nF 50V",
       "nets": {
         "1": "VREFP",
         "2": "GND"
@@ -1496,15 +1496,15 @@
         104
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C104K5RACTU",
       "sheet": "power",
       "uuid": "b03cfd81-3b40-53cb-a755-435b6d13b67f"
     },
     {
       "ref": "C31",
       "lib": "Device:C",
-      "value": "1uF",
+      "value": "1uF 25V",
       "nets": {
         "1": "AVDD_5V",
         "2": "GND"
@@ -1515,15 +1515,15 @@
         94
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C105K3RACTU",
       "sheet": "power",
       "uuid": "7d6327b4-c36c-512d-97bc-38de9ccc33c0"
     },
     {
       "ref": "C32",
       "lib": "Device:C",
-      "value": "1uF",
+      "value": "1uF 25V",
       "nets": {
         "1": "AVDD_5V",
         "2": "GND"
@@ -1534,15 +1534,15 @@
         90
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C105K3RACTU",
       "sheet": "power",
       "uuid": "6c4a051f-d7e0-5d6c-9644-4de6ede6ab4f"
     },
     {
       "ref": "C33",
       "lib": "Device:C",
-      "value": "1uF",
+      "value": "1uF 25V",
       "nets": {
         "1": "AVDD_5V",
         "2": "GND"
@@ -1553,15 +1553,15 @@
         86
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C105K3RACTU",
       "sheet": "power",
       "uuid": "727d4b7c-45c1-5334-90db-ba6748db9350"
     },
     {
       "ref": "C34",
       "lib": "Device:C",
-      "value": "1uF",
+      "value": "1uF 25V",
       "nets": {
         "1": "AVDD_5V",
         "2": "GND"
@@ -1572,15 +1572,15 @@
         78
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C105K3RACTU",
       "sheet": "power",
       "uuid": "b667f400-8728-500a-bf69-34f81f22374f"
     },
     {
       "ref": "C35",
       "lib": "Device:C",
-      "value": "1uF",
+      "value": "1uF 25V",
       "nets": {
         "1": "AVDD_5V",
         "2": "GND"
@@ -1591,15 +1591,15 @@
         78
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C105K3RACTU",
       "sheet": "power",
       "uuid": "c8eb77ae-9d4e-5541-91eb-e386aad44454"
     },
     {
       "ref": "C36",
       "lib": "Device:C",
-      "value": "1uF",
+      "value": "1uF 25V",
       "nets": {
         "1": "AVDD_5V",
         "2": "GND"
@@ -1610,15 +1610,15 @@
         86
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C105K3RACTU",
       "sheet": "power",
       "uuid": "2f51b4d8-53c0-59b1-b3c6-b35237e7bf70"
     },
     {
       "ref": "C37",
       "lib": "Device:C",
-      "value": "10uF",
+      "value": "10uF 25V",
       "nets": {
         "1": "AVDD_5V",
         "2": "GND"
@@ -1629,15 +1629,15 @@
         94
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C106K3PACTU",
       "sheet": "power",
       "uuid": "d9dd43b3-5476-5ed9-8881-c17344eebfff"
     },
     {
       "ref": "C38",
       "lib": "Device:C",
-      "value": "100nF",
+      "value": "100nF 50V",
       "nets": {
         "1": "AVDD_5V",
         "2": "GND"
@@ -1648,15 +1648,15 @@
         90
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C104K5RACTU",
       "sheet": "power",
       "uuid": "1768e314-d1e1-5260-9377-56002dc696f5"
     },
     {
       "ref": "C39",
       "lib": "Device:C",
-      "value": "1uF",
+      "value": "1uF 25V",
       "nets": {
         "1": "DVDD_3V3",
         "2": "GND"
@@ -1667,15 +1667,15 @@
         98
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C105K3RACTU",
       "sheet": "power",
       "uuid": "7ab55853-6277-5006-b879-c9319389c91a"
     },
     {
       "ref": "C40",
       "lib": "Device:C",
-      "value": "1uF",
+      "value": "1uF 25V",
       "nets": {
         "1": "DVDD_3V3",
         "2": "GND"
@@ -1686,15 +1686,15 @@
         102
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C105K3RACTU",
       "sheet": "power",
       "uuid": "d6948258-3599-5c7b-b34a-791475a4fb62"
     },
     {
       "ref": "C41",
       "lib": "Device:C",
-      "value": "100nF",
+      "value": "100nF 50V",
       "nets": {
         "1": "DVDD_3V3",
         "2": "GND"
@@ -1705,8 +1705,8 @@
         106
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review",
-      "mpn": "",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C104K5RACTU",
       "sheet": "power",
       "uuid": "413239de-acf8-51cc-a8a1-dfbd3c047a5b"
     },
@@ -1724,8 +1724,8 @@
         72
       ],
       "rot": 0,
-      "note": "Bias feedback, candidate compensation must be checked with cable/electrode model",
-      "mpn": "",
+      "note": "Bias feedback, candidate compensation must be checked with cable/electrode model; Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-071ML",
       "sheet": "power",
       "uuid": "870d9589-f263-5193-8262-5c0043ad2ead"
     },
@@ -1743,8 +1743,8 @@
         72
       ],
       "rot": 0,
-      "note": "",
-      "mpn": "",
+      "note": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C152J5GACTU",
       "sheet": "power",
       "uuid": "cd2857f6-23d2-59ea-a910-d918cb2e5189"
     },
@@ -1762,8 +1762,8 @@
         114
       ],
       "rot": 90,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-07499KL",
       "sheet": "power",
       "uuid": "e994d005-08d7-57c4-aa4c-315872357b5f"
     },
@@ -1781,8 +1781,8 @@
         128
       ],
       "rot": 90,
-      "note": "",
-      "mpn": "",
+      "note": "Check pulse/fault stress and excess noise in final analog design",
+      "mpn": "RC0805FR-07499KL",
       "sheet": "power",
       "uuid": "de6aa466-42f6-590b-8b27-9824cb0a695a"
     },
@@ -1799,8 +1799,8 @@
         128
       ],
       "rot": 0,
-      "note": "Bias output. Not protective earth. Bench connector only.",
-      "mpn": "",
+      "note": "Bias output. Not protective earth. Bench connector only.; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
+      "mpn": "61300111121",
       "sheet": "power",
       "uuid": "e9bb80b1-f942-512d-9b65-9f964dfd8b47"
     }

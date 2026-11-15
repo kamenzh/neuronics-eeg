@@ -30,7 +30,6 @@ for ref,c in comps.items():
     for pad in fp.Pads():
         pin=pad.GetNumber();want=expected.get((ref,pin),'');got=pad.GetNetname()
         check_count+=1
-        if want.startswith('unconnected-'):want=''
         if got!=want:issues.append(f'{ref}.{pin}: PCB={got!r}, netlist={want!r}')
 actual_ids=set(fps)-set(comps)
 if actual_ids!={'H1','H2','H3','H4'}:issues.append(f'Unexpected extra footprints: {sorted(actual_ids)}')

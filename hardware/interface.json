@@ -1,0 +1,150 @@
+{
+  "revision": "A0.1-review",
+  "controller": {
+    "model": "Waveshare ESP32-S3-Nano",
+    "owned": true,
+    "source": "https://docs.waveshare.com/ESP32-S3-Nano",
+    "schematic": "https://files.waveshare.com/wiki/ESP32-S3-Nano/ESP32-S3-Nano-Schematic.pdf",
+    "pin_numbering": "native ESP32 GPIO, not Arduino Nano pin numbers",
+    "sclk_note": "GPIO5/D2 explicitly remapped, avoids GPIO48/D13 SCK LED switching; configure SPI pins explicitly",
+    "reserved_gpio": [
+      0,
+      3,
+      19,
+      20,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      43,
+      44,
+      45,
+      46,
+      48
+    ]
+  },
+  "j11": [
+    {
+      "pin": 1,
+      "net": "GND",
+      "gpio": null,
+      "board_label": "GND"
+    },
+    {
+      "pin": 2,
+      "net": "GND",
+      "gpio": null,
+      "board_label": "GND"
+    },
+    {
+      "pin": 3,
+      "net": "SPI_SCLK",
+      "gpio": 5,
+      "board_label": "D2"
+    },
+    {
+      "pin": 4,
+      "net": "SPI_MOSI",
+      "gpio": 38,
+      "board_label": "D11"
+    },
+    {
+      "pin": 5,
+      "net": "SPI_MISO",
+      "gpio": 47,
+      "board_label": "D12"
+    },
+    {
+      "pin": 6,
+      "net": "ADS_CS_N",
+      "gpio": 21,
+      "board_label": "D10"
+    },
+    {
+      "pin": 7,
+      "net": "ADS_DRDY_N",
+      "gpio": 18,
+      "board_label": "D9"
+    },
+    {
+      "pin": 8,
+      "net": "ADS_RESET_N",
+      "gpio": 17,
+      "board_label": "D8"
+    },
+    {
+      "pin": 9,
+      "net": "ADS_START",
+      "gpio": 10,
+      "board_label": "D7"
+    },
+    {
+      "pin": 10,
+      "net": "ADS_PWDN_N",
+      "gpio": 9,
+      "board_label": "D6"
+    },
+    {
+      "pin": 11,
+      "net": null,
+      "gpio": null,
+      "board_label": "NC"
+    },
+    {
+      "pin": 12,
+      "net": "GND",
+      "gpio": null,
+      "board_label": "GND"
+    }
+  ],
+  "acquisition": {
+    "channels": 8,
+    "sample_rate_sps": 250,
+    "initial_gain": 12,
+    "frame_bytes": 27,
+    "spi_mode": 1,
+    "initial_spi_hz": 1000000,
+    "misc1": 0,
+    "srb2_enabled": false,
+    "initial_bias_enabled": false,
+    "initial_lead_off_enabled": false
+  },
+  "electrodes": {
+    "vendor": "Sino-k",
+    "listed_model": "SGE117DN",
+    "url": "https://www.sinokmed.com/collections/ecg-cables/products/eeg-cable-10-leadwires-golden-plated-cup-electrodes?variant=42757052924081",
+    "owned": true,
+    "contacts": 10,
+    "roles": {
+      "recording": 8,
+      "reference": 1,
+      "bias": 1
+    },
+    "connector_status": "UNRESOLVED: listing/photo do not provide a dimensioned mating connector drawing; confirm physical plug before selecting sockets",
+    "pcb_connectors": "J1-J8 channels; J9 reference; J10 bias; present headers are bench placeholders"
+  },
+  "power": {
+    "afe_battery_candidate": "6xAA alkaline",
+    "review_input_range_v": [
+      7.2,
+      10.2
+    ],
+    "afe_analog_budget_ma": 30,
+    "afe_digital_budget_ma": 10,
+    "controller_input": "Separate protected battery branch to Nano VIN; no power from J11",
+    "nano_documented_vin_range_v": [
+      6,
+      21
+    ],
+    "status": "Candidate topology only; battery harness/branch fuse/switch, voltage at VIN under radio bursts and noise tests remain open",
+    "recording_concept": "Self-contained battery and wireless; no USB, charger or mains-connected instruments when electrodes are on a person; only after final safety review"
+  }
+}

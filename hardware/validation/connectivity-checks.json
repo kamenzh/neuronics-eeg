@@ -1,6 +1,6 @@
 {
-  "passed": 404,
-  "total": 404,
+  "passed": 436,
+  "total": 436,
   "checks": [
     {
       "name": "All 91 physical components exported by KiCad",
@@ -15,7 +15,7 @@
       "passed": true
     },
     {
-      "name": "U1.15 -> AVDD_5V",
+      "name": "U1.15 -> REF_FILTERED",
       "passed": true
     },
     {
@@ -23,7 +23,7 @@
       "passed": true
     },
     {
-      "name": "U1.13 -> AVDD_5V",
+      "name": "U1.13 -> REF_FILTERED",
       "passed": true
     },
     {
@@ -31,7 +31,7 @@
       "passed": true
     },
     {
-      "name": "U1.11 -> AVDD_5V",
+      "name": "U1.11 -> REF_FILTERED",
       "passed": true
     },
     {
@@ -39,7 +39,7 @@
       "passed": true
     },
     {
-      "name": "U1.9 -> AVDD_5V",
+      "name": "U1.9 -> REF_FILTERED",
       "passed": true
     },
     {
@@ -47,7 +47,7 @@
       "passed": true
     },
     {
-      "name": "U1.7 -> AVDD_5V",
+      "name": "U1.7 -> REF_FILTERED",
       "passed": true
     },
     {
@@ -55,7 +55,7 @@
       "passed": true
     },
     {
-      "name": "U1.5 -> AVDD_5V",
+      "name": "U1.5 -> REF_FILTERED",
       "passed": true
     },
     {
@@ -63,7 +63,7 @@
       "passed": true
     },
     {
-      "name": "U1.3 -> AVDD_5V",
+      "name": "U1.3 -> REF_FILTERED",
       "passed": true
     },
     {
@@ -71,11 +71,11 @@
       "passed": true
     },
     {
-      "name": "U1.1 -> AVDD_5V",
+      "name": "U1.1 -> REF_FILTERED",
       "passed": true
     },
     {
-      "name": "U1.17 -> REF_FILTERED",
+      "name": "U1.17 -> NC",
       "passed": true
     },
     {
@@ -311,7 +311,7 @@
       "passed": true
     },
     {
-      "name": "J11.11 -> DVDD_3V3",
+      "name": "J11.11 -> NC",
       "passed": true
     },
     {
@@ -1423,7 +1423,35 @@
       "passed": true
     },
     {
-      "name": "TI pin contract U1.17",
+      "name": "TI pin contract U1.1",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.3",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.5",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.7",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.9",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.11",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.13",
+      "passed": true
+    },
+    {
+      "name": "TI pin contract U1.15",
       "passed": true
     },
     {
@@ -1611,7 +1639,107 @@
       "passed": true
     },
     {
-      "name": "3.3 V logic reference is not 5 V",
+      "name": "J11 pin 11 carries no power",
+      "passed": true
+    },
+    {
+      "name": "Unused SRB pin 17 is NC",
+      "passed": true
+    },
+    {
+      "name": "Unused SRB pin 18 is NC",
+      "passed": true
+    },
+    {
+      "name": "Controller header J11.1",
+      "passed": true
+    },
+    {
+      "name": "Controller header J11.2",
+      "passed": true
+    },
+    {
+      "name": "Controller header J11.3",
+      "passed": true
+    },
+    {
+      "name": "Controller header J11.4",
+      "passed": true
+    },
+    {
+      "name": "Controller header J11.5",
+      "passed": true
+    },
+    {
+      "name": "Controller header J11.6",
+      "passed": true
+    },
+    {
+      "name": "Controller header J11.7",
+      "passed": true
+    },
+    {
+      "name": "Controller header J11.8",
+      "passed": true
+    },
+    {
+      "name": "Controller header J11.9",
+      "passed": true
+    },
+    {
+      "name": "Controller header J11.10",
+      "passed": true
+    },
+    {
+      "name": "Controller header J11.12",
+      "passed": true
+    },
+    {
+      "name": "Eight distinct controller signals",
+      "passed": true
+    },
+    {
+      "name": "No reserved GPIO used",
+      "passed": true
+    },
+    {
+      "name": "Verified Nano label/GPIO J11.3",
+      "passed": true
+    },
+    {
+      "name": "Verified Nano label/GPIO J11.4",
+      "passed": true
+    },
+    {
+      "name": "Verified Nano label/GPIO J11.5",
+      "passed": true
+    },
+    {
+      "name": "Verified Nano label/GPIO J11.6",
+      "passed": true
+    },
+    {
+      "name": "Verified Nano label/GPIO J11.7",
+      "passed": true
+    },
+    {
+      "name": "Verified Nano label/GPIO J11.8",
+      "passed": true
+    },
+    {
+      "name": "Verified Nano label/GPIO J11.9",
+      "passed": true
+    },
+    {
+      "name": "Verified Nano label/GPIO J11.10",
+      "passed": true
+    },
+    {
+      "name": "Direct shared reference firmware contract",
+      "passed": true
+    },
+    {
+      "name": "VCAP1 polarized capacitor orientation",
       "passed": true
     },
     {

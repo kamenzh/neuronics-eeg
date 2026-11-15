@@ -1,0 +1,321 @@
+{
+  "revision": "A0.1-review",
+  "purpose": "Candidate PCB components; no stock, price or manufacturing approval implied",
+  "groups": [
+    {
+      "references": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R36",
+        "R37",
+        "R38",
+        "R39",
+        "R40"
+      ],
+      "mpn": "RC0805FR-0710KL",
+      "manufacturer": "Yageo",
+      "specification": "10 kohm, 1%, 0805, 0.125W",
+      "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710KL",
+      "status": "candidate_not_order_release",
+      "review": "Check pulse/fault stress and excess noise in final analog design"
+    },
+    {
+      "references": [
+        "R30",
+        "R31",
+        "R32",
+        "R33",
+        "R34",
+        "R35"
+      ],
+      "mpn": "RC0805FR-07100KL",
+      "manufacturer": "Yageo",
+      "specification": "100 kohm, 1%, 0805, 0.125W",
+      "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07100KL",
+      "status": "candidate_not_order_release",
+      "review": "Check pulse/fault stress and excess noise in final analog design"
+    },
+    {
+      "references": [
+        "R20"
+      ],
+      "mpn": "RC0805FR-071ML",
+      "manufacturer": "Yageo",
+      "specification": "1 Mohm, 1%, 0805, 0.125W",
+      "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-071ML",
+      "status": "candidate_not_order_release",
+      "review": "Check pulse/fault stress and excess noise in final analog design"
+    },
+    {
+      "references": [
+        "R21",
+        "R22"
+      ],
+      "mpn": "RC0805FR-07499KL",
+      "manufacturer": "Yageo",
+      "specification": "499 kohm, 1%, 0805, 0.125W",
+      "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07499KL",
+      "status": "candidate_not_order_release",
+      "review": "Check pulse/fault stress and excess noise in final analog design"
+    },
+    {
+      "references": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9"
+      ],
+      "mpn": "C0805C102J5GACTU",
+      "manufacturer": "KEMET",
+      "specification": "1nF, 5%, 50V, C0G, 0805",
+      "source": "https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU",
+      "status": "candidate_not_order_release",
+      "value": "1nF C0G",
+      "review": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"
+    },
+    {
+      "references": [
+        "C10"
+      ],
+      "mpn": "C0805C152J5GACTU",
+      "manufacturer": "KEMET",
+      "specification": "1.5nF, 5%, 50V, C0G, 0805",
+      "source": "https://search.kemet.com/component-documentation/download/specsheet/C0805C152J5GACTU",
+      "status": "candidate_not_order_release",
+      "value": "1.5nF C0G",
+      "review": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"
+    },
+    {
+      "references": [
+        "C21",
+        "C25",
+        "C26",
+        "C28",
+        "C31",
+        "C32",
+        "C33",
+        "C34",
+        "C35",
+        "C36",
+        "C39",
+        "C40"
+      ],
+      "mpn": "C0805C105K3RACTU",
+      "manufacturer": "KEMET",
+      "specification": "1uF, 10%, 25V, X7R, 0805",
+      "source": "https://search.kemet.com/component-documentation/download/specsheet/C0805C105K3RACTU",
+      "status": "candidate_not_order_release",
+      "value": "1uF 25V",
+      "review": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"
+    },
+    {
+      "references": [
+        "C27",
+        "C30",
+        "C38",
+        "C41"
+      ],
+      "mpn": "C0805C104K5RACTU",
+      "manufacturer": "KEMET",
+      "specification": "100nF, 10%, 50V, X7R, 0805",
+      "source": "https://search.kemet.com/component-documentation/download/specsheet/C0805C104K5RACTU",
+      "status": "candidate_not_order_release",
+      "value": "100nF 50V",
+      "review": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"
+    },
+    {
+      "references": [
+        "C20",
+        "C22",
+        "C23"
+      ],
+      "mpn": "C0805C475K3RACTU",
+      "manufacturer": "KEMET",
+      "specification": "4.7uF, 10%, 25V, X7R, 0805",
+      "source": "https://search.kemet.com/component-documentation/download/specsheet/C0805C475K3RACTU",
+      "status": "candidate_not_order_release",
+      "value": "4.7uF 25V",
+      "review": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"
+    },
+    {
+      "references": [
+        "C37"
+      ],
+      "mpn": "C0805C106K3PACTU",
+      "manufacturer": "KEMET",
+      "specification": "10uF, 10%, 25V, X5R, 0805",
+      "source": "https://search.kemet.com/component-documentation/download/specsheet/C0805C106K3PACTU",
+      "status": "candidate_not_order_release",
+      "value": "10uF 25V",
+      "review": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"
+    },
+    {
+      "references": [
+        "C29"
+      ],
+      "mpn": "GRM31CR61E226KE15L",
+      "manufacturer": "Murata",
+      "specification": "22uF, 10%, 25V, X5R, 1206",
+      "source": "https://ds.murata.com/simsurfing/mlcc.html?partnumbers=%5B%22GRM31CR61E226KE15%22%5D",
+      "status": "candidate_not_order_release",
+      "value": "22uF 25V",
+      "footprint": "Neuronic:C_1206_3216Metric",
+      "review": "Reference bypass: still must demonstrate >=10uF effective at 4.5V including tolerance, temperature and aging"
+    },
+    {
+      "references": [
+        "C24"
+      ],
+      "mpn": "T491B107M006AT",
+      "manufacturer": "KEMET",
+      "specification": "100uF, 20%, 6.3V, tantalum, B/3528-21",
+      "source": "https://search.kemet.com/component-documentation/download/specsheet/T491B107M006AT",
+      "status": "candidate_not_order_release",
+      "review": "Polarized: pad1 VCAP1 positive; verify leakage/startup/surge and derating for this internal rail"
+    },
+    {
+      "references": [
+        "U1"
+      ],
+      "mpn": "ADS1299IPAG",
+      "manufacturer": "Texas Instruments",
+      "specification": "8 channels, TQFP64/PAG, 0.5mm pitch",
+      "source": "https://www.ti.com/lit/ds/symlink/ads1299.pdf",
+      "status": "candidate_not_order_release",
+      "review": "ADS1299IPAGR is reel packaging of the same PAG device; one IC total"
+    },
+    {
+      "references": [
+        "U2"
+      ],
+      "mpn": "MCP1703AT-5002E/DB",
+      "manufacturer": "Microchip",
+      "specification": "SOT-223; 1 VIN, 2/tab GND, 3 VOUT",
+      "source": "https://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf",
+      "status": "candidate_not_order_release"
+    },
+    {
+      "references": [
+        "U3"
+      ],
+      "mpn": "MCP1703AT-3302E/DB",
+      "manufacturer": "Microchip",
+      "specification": "SOT-223; 1 VIN, 2/tab GND, 3 VOUT",
+      "source": "https://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf",
+      "status": "candidate_not_order_release"
+    },
+    {
+      "references": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "D8",
+        "D9"
+      ],
+      "mpn": "BAV199,215",
+      "manufacturer": "Nexperia",
+      "specification": "Dual series low leakage diode, SOT-23",
+      "source": "https://assets.nexperia.com/documents/data-sheet/BAV199.pdf",
+      "status": "candidate_not_order_release",
+      "review": "Not a proven ADS1299 absolute-maximum clamp or body-protection solution"
+    },
+    {
+      "references": [
+        "D10"
+      ],
+      "mpn": "SS14-E3/61T",
+      "manufacturer": "Vishay",
+      "specification": "40V, 1A Schottky, SMA",
+      "source": "https://www.vishay.com/docs/88746/ss12.pdf",
+      "status": "candidate_not_order_release",
+      "review": "Check forward drop at AFE load and reverse leakage"
+    },
+    {
+      "references": [
+        "F1"
+      ],
+      "mpn": "MF-MSMF010-2",
+      "manufacturer": "Bourns",
+      "specification": "1812, 60V, 0.10A hold, 0.30A trip at 23C",
+      "source": "https://www.bourns.com/docs/product-datasheets/mf-msmf.pdf",
+      "status": "candidate_not_order_release"
+    },
+    {
+      "references": [
+        "J12"
+      ],
+      "mpn": "B2B-XH-A(LF)(SN)",
+      "manufacturer": "JST",
+      "specification": "2-pin, 2.50mm, vertical XH",
+      "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+      "status": "candidate_not_order_release",
+      "review": "Harness requires matching XHP-2 housing and wire-appropriate contacts; do not infer polarity from wire color"
+    },
+    {
+      "references": [
+        "J11"
+      ],
+      "mpn": "61301221121",
+      "manufacturer": "Wurth Elektronik",
+      "specification": "2x6, 2.54mm, vertical male header",
+      "source": "https://www.we-online.com/components/products/datasheet/61301221121.pdf",
+      "status": "candidate_not_order_release"
+    },
+    {
+      "references": [
+        "J1",
+        "J2",
+        "J3",
+        "J4",
+        "J5",
+        "J6",
+        "J7",
+        "J8",
+        "J9",
+        "J10"
+      ],
+      "mpn": "61300111121",
+      "manufacturer": "Wurth Elektronik",
+      "specification": "1x1, 2.54mm, vertical male header",
+      "source": "https://www.we-online.com/components/products/datasheet/61300111121.pdf",
+      "status": "candidate_not_order_release",
+      "review": "Bench placeholder ONLY; does not mate to the Sino-k electrode plug"
+    },
+    {
+      "references": [
+        "SW1"
+      ],
+      "mpn": "61300211121",
+      "manufacturer": "Wurth Elektronik",
+      "specification": "1x2, 2.54mm header for offboard SPST switch",
+      "source": "https://www.we-online.com/components/products/datasheet/61300211121.pdf",
+      "status": "candidate_not_order_release",
+      "review": "This MPN buys the PCB header, not the external switch"
+    }
+  ]
+}

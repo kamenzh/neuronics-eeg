@@ -1,7 +1,7 @@
 # Neuronic: your first PCB, step by step
 
 **Start with `hardware/kicad/neuronic.kicad_pro`.** This package contains a real,
-editable KiCad project and a reproducible generator. Revision A0 is a **bench-only,
+editable KiCad project and a reproducible generator. Revision A0.1 is a **bench-only,
 placed but unrouted review checkpoint**. It is not ready to order or wear.
 
 ## 1. What a custom PCB actually involves
@@ -35,7 +35,7 @@ connection that still needs copper; it is not an existing track.
 5. Use the mouse wheel to zoom, `M` to move, `R` to rotate and `E` to edit.
    Press `Esc` to exit a tool. Use **View -> 3D Viewer** or `Alt+3` for 3D.
 
-The files were loaded and exported using KiCad 7.0.11. Newer versions can upgrade
+The files were loaded and exported using KiCad 9.0.2. Newer versions can upgrade
 them when saving; keep the upgraded project in Git together. Do not expect an
 older KiCad version to reopen files saved by a newer version.
 
@@ -47,7 +47,7 @@ installed. That does not establish whether the footprint is physically correct.
 
 The eight channel contacts pass through two 10 kohm resistors, an RF capacitor
 and candidate low-leakage clamps. The ADS1299 measures them relative to the ninth
-contact through SRB1. A tenth contact is the current-limited bias output.
+contact wired directly to all eight negative inputs. A tenth contact is the current-limited bias output.
 
 The ADS1299 contains eight programmable amplifiers and eight simultaneous 24-bit
 converters. The ESP32 receives **digital samples**, not an analog EEG voltage.
@@ -55,15 +55,15 @@ At 250 samples/s, a frame has 3 status bytes and 8 x 3 channel bytes: 27 bytes,
 or 6,750 raw bytes/s before packet headers. Keep counters and acquisition timing.
 
 This revision uses unipolar 5 V analog power and 3.3 V ADC digital power, with a
-7-9 V battery input. The internal bias reference is approximately 2.5 V. This
+six-AA alkaline battery candidate (7.2–10.2 V calculation envelope). The internal bias reference is approximately 2.5 V. This
 matters: a signal can be within the voltage rails yet violate the amplifier's
 common-mode or differential range. A unipolar design is a deliberate departure
 from references using +/-2.5 V; their connections cannot be copied blindly.
 
 `J11` is a generic 12-pin connector, not a footprint for any particular ESP32
-development board. Pin 11 is the ADC's logic reference; **it must not power an
-ESP32 radio**. A specific ESP32 board, its GPIO assignments and battery supply
-remain to be selected. Use short wiring for SPI and position the radio away
+development board. **Pin 11 is NC and must stay unwired.** The selected controller
+is the owned Waveshare ESP32-S3-Nano; its GPIO map and candidate separate battery
+branch are in `docs/CONTROLLER_AND_ELECTRODES.md`. Use short wiring for SPI and position the radio away
 from the electrode inputs. Do not connect EEG to the ESP32's internal ADC.
 
 ## 4. How to vibe-code hardware properly
@@ -82,7 +82,8 @@ Use AI to propose small, reviewable changes with evidence:
 An example prompt is in `docs/VIBE_CODING_PROMPT.md`. The generator is
 `tools/generate_hardware.py`; it uses deterministic IDs so component identity is
 stable across runs. It writes the schematic, custom symbols, footprint bundle,
-BOM and, with `--board`, the PCB placement. **Regeneration overwrites GUI edits.**
+BOM and, with `--board`, the PCB placement. **Regeneration requires --overwrite and overwrites schematic/placement edits.
+Boards containing tracks, vias or zones are refused even with that flag.**
 After hand routing, keep the PCB as the source of truth or explicitly teach the
 generator to preserve it. Do not regenerate over your only routed board.
 
@@ -101,7 +102,7 @@ Resolve `docs/REVIEW_BLOCKERS.md` first. In particular:
 - Review clamp behavior, current paths, aggregate leakage and bias stability.
 - Verify regulator parts, capacitance under DC bias, thermal limits and shutdown
   behavior. The power circuit is not yet measured to be quiet enough for EEG.
-- Select the controller board and solve programming/charging access physically.
+- Verify the selected Nano wiring and solve programming/battery access physically.
 - Rework placement around actual pin locations: decoupling capacitors must have
   short loops, and AVDD1/AVSS1 return paths need particular care.
 
@@ -131,7 +132,7 @@ edges and missing connections. Press `B` to refill zones after editing copper.
 For an order candidate, require zero unrouted connections and no unexplained
 errors; justify any remaining warnings individually.
 
-For KiCad 8 or newer, the supplied runner can collect CLI checks:
+For KiCad 9, the supplied runner can collect CLI checks:
 
 ```powershell
 # Replace 9.0 with the version actually installed on your computer.
@@ -139,7 +140,7 @@ py tools/validate_kicad.py --kicad-cli "C:\Program Files\KiCad\9.0\bin\kicad-cli
 ```
 
 The script deliberately exits with failure if ERC/DRC finds violations or the
-required checks are unavailable. This A0 board is expected to fail DRC because
+required checks are unavailable. This A0.1 board is expected to fail DRC because
 it has no tracks. `hardware/validation/STATUS.md` records the actual results.
 
 For deeper checks, compare every IC pin and physical package against its
@@ -157,3 +158,5 @@ before considering body connection. Put measured results in
 
 Only after the review and routing are complete should we make a fabrication
 package. This checkpoint intentionally has no order-ready Gerbers.
+
+The complete next-step sequence is in [NEXT_STEPS](NEXT_STEPS.md).

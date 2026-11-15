@@ -3,9 +3,14 @@
 An open development project for an affordable eight-channel EEG acquisition
 PCB, ESP32 wireless streaming and PC-based signal processing and classification.
 
-**Current revision: A0 — schematic and unrouted placement for bench review.**
+**Current revision: A0.1 — schematic and unrouted placement for bench review.**
 There is no manufactured or body-validated Neuronic board yet. This repository
 contains genuine KiCad source, not a manufacturing release.
+
+**Controller selected: use the Waveshare ESP32-S3-Nano you already own.**
+The Sino-k SGE117DN ten-lead set is recorded; matching electrode sockets still
+need verification. See [the wiring and power plan](docs/CONTROLLER_AND_ELECTRODES.md)
+and [the step-by-step roadmap](docs/NEXT_STEPS.md).
 
 **First time using KiCad? Read [START_HERE](docs/START_HERE.md).** Open
 [`hardware/kicad/neuronic.kicad_pro`](hardware/kicad/neuronic.kicad_pro) in KiCad.
@@ -22,15 +27,15 @@ flowchart TD
     V["Battery and regulators"] --> A
 ```
 
-| Parameter | A0 design target |
+| Parameter | A0.1 design target |
 | --- | --- |
 | Recording channels | 8 simultaneous |
 | Contacts | 8 recording + 1 reference + 1 bias |
 | Front end | ADS1299IPAG, programmable gain, 24-bit output |
 | Initial rate | 250 samples/s/channel |
 | Analog / ADC digital supplies | 5 V / 3.3 V |
-| Input power | External 7-9 V battery pack; no charger |
-| Controller interface | Generic 12-pin 3.3 V SPI header |
+| Input power | 6 x AA alkaline candidate; no charger |
+| Controller interface | Waveshare ESP32-S3-Nano via 12-pin 3.3 V SPI header |
 | PCB | 88 x 80 mm, four copper layers, placed and unrouted |
 
 The ADS1299 already supplies the amplification and conversion. An additional
@@ -42,7 +47,9 @@ a claim of noise-free resolution, and more gain can reduce offset headroom.
 | Path | Contents |
 | --- | --- |
 | `hardware/kicad/` | Main project, three schematic sheets, PCB, custom symbols and bundled footprints |
-| `hardware/bom/` | Per-component review BOM; not an order list |
+| `hardware/bom/` | Per-component and grouped candidate MPN lists; not an order release |
+| `hardware/parts.json` | Editable candidate component catalog |
+| `hardware/interface.json` | Selected controller GPIO, electrode and power contract |
 | `hardware/design.json` | Generated component/net/placement record |
 | `hardware/validation/` | Exported netlist, connectivity audit, DRC, RC calculation and sheet previews |
 | `hardware/fabrication/` | Release policy; no order-ready Gerbers |
@@ -66,12 +73,14 @@ footprints and an independent physical pin contract. They do not prove analog
 performance, layout quality or body safety.
 
 ```bash
-python tools/check_design.py
-python tools/simulate_input.py
-python tools/validate_kicad.py --kicad-cli /path/to/kicad-cli
+/usr/bin/python3 tools/validate_kicad.py
+python3 tools/prepare_bom.py
+python3 tools/review_electrical.py
+python3 tools/simulate_input.py
+/usr/bin/python3 -m unittest discover -s tests -v
 ```
 
-The last command requires KiCad 8 or newer for CLI ERC/DRC. This unrouted
+Validation uses KiCad 9; on Linux use its compatible `/usr/bin/python3` for pcbnew. This unrouted
 checkpoint is expected to fail release checks; errors are not excluded to
 make the output look clean. GUI ERC/DRC instructions are in the beginner guide.
 
@@ -82,7 +91,8 @@ make the output look clean. GUI ERC/DRC instructions are in the beginner guide.
 - [x] Export and audit connectivity; perform limited ideal RC calculation.
 - [ ] Close input-protection, connector, bias-loop and power-review blockers.
 - [ ] Complete layout, plane design, routing, ERC and schematic-parity DRC.
-- [ ] Select exact stocked parts and compare delivered assembly quotes.
+- [x] Select exact candidate PCB MPNs and the owned controller.
+- [ ] Verify procurement details and compare delivered bare-board quotes.
 - [ ] Fabricate a small prototype batch and complete bench tests.
 - [ ] Implement and verify acquisition, raw recording and loss accounting.
 - [ ] Review final body-connected design before scalp testing.
@@ -95,7 +105,7 @@ experiment. Intentional command classification follows measured signal quality.
 EEG does not directly reveal arbitrary thoughts. Eye and muscle artifacts must
 be checked, and train/test data must be separated by complete trials/sessions.
 
-This is a body-connected engineering project, not a diagnostic device. A0 is
+This is a body-connected engineering project, not a diagnostic device. A0.1 is
 for bench development only. Do not attach it to a person. Final electrode
 protection and fault paths need qualified review before any scalp recording.
 Battery power, ERC and DRC alone do not establish safety. During approved

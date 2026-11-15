@@ -1,6 +1,6 @@
 # Manufacturing release gate
 
-A0 has no order-ready fabrication files. Do not use a PCB viewer's ability to
+A0.1 has no order-ready fabrication files. Do not use a PCB viewer's ability to
 export Gerbers as evidence that the board is complete.
 
 After the named design blockers close and schematic/layout reviews pass,
