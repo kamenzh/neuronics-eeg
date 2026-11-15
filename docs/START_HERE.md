@@ -1,7 +1,10 @@
+> **Current revision: A0.3.** Read [the changes](REVIEW_FIXES_A0_3.md) and
+> [revised J11 wiring](POWER_HARNESS_A0_3.md) before using this project.
+
 # Neuronic: your first PCB, step by step
 
 **Start with `hardware/kicad/neuronic.kicad_pro`.** This package contains a real,
-editable KiCad project and a reproducible generator. Revision A0.2 is a **routed bench-development checkpoint**. It is not ready to order or wear.
+editable KiCad project and a reproducible generator. Revision A0.3 is a **routed bench-development checkpoint**. It is not ready to order or wear.
 
 ## 1. What a custom PCB actually involves
 
@@ -27,10 +30,11 @@ connection that still needs copper; it is not an existing track.
 2. In KiCad, select **File -> Open Existing Project** and open
    `hardware/kicad/neuronic.kicad_pro`.
 3. Open `neuronic.kicad_sch`. The main sheet contains the ADS1299 and controller
-   connector. Enter the `Input filters` and `Power` child sheets to inspect those
-   circuits. The page navigator can also select a sheet.
+   connector. Enter the input, power and interface child sheets to inspect those
+   circuits. There are four sheets in total; the page navigator can select them.
 4. Open `neuronic.kicad_pcb`. You should see the ADS1299 in the middle, inputs on
-   the left, regulators and SPI connector on the right, and thin ratsnest lines.
+   the left, regulators and buffered SPI interface on the right, and real copper
+   tracks, vias and filled ground planes. This checkpoint has no unrouted nets.
 5. Use the mouse wheel to zoom, `M` to move, `R` to rotate and `E` to edit.
    Press `Esc` to exit a tool. Use **View -> 3D Viewer** or `Alt+3` for 3D.
 
@@ -45,8 +49,9 @@ installed. That does not establish whether the footprint is physically correct.
 ## 3. What this circuit does
 
 The eight channel contacts pass through two 10 kohm resistors, an RF capacitor
-and candidate low-leakage clamps. The ADS1299 measures them relative to the ninth
-contact wired directly to all eight negative inputs. A tenth contact is the current-limited bias output.
+and candidate low-leakage clamps. The ADS1299 measures them relative to the
+filtered ninth contact, shared by all eight negative inputs. A tenth contact is
+the current-limited bias output.
 
 The ADS1299 contains eight programmable amplifiers and eight simultaneous 24-bit
 converters. The ESP32 receives **digital samples**, not an analog EEG voltage.
@@ -60,7 +65,7 @@ common-mode or differential range. A unipolar design is a deliberate departure
 from references using +/-2.5 V; their connections cannot be copied blindly.
 
 `J11` is a generic 12-pin connector, not a footprint for any particular ESP32
-development board. **Pin 11 is NC and must stay unwired.** The selected controller
+development board. **A0.3 pin 11 = Nano 3V3; pin 12 = GPIO6 enable, formerly GND.** The selected controller
 is the owned Waveshare ESP32-S3-Nano; its GPIO map and candidate separate battery
 branch are in `docs/CONTROLLER_AND_ELECTRODES.md`. Use short wiring for SPI and position the radio away
 from the electrode inputs. Do not connect EEG to the ESP32's internal ADC.
@@ -92,21 +97,23 @@ the PCB also needs KiCad's `pcbnew` Python module; on Linux this is commonly
 available to the distribution's `/usr/bin/python3`. A normal Windows Python
 installation may not find `pcbnew`. Use the KiCad GUI for layout if needed.
 
-## 5. Finish the design before routing everything
+## 5. Review the routed design before ordering
 
 Resolve `docs/REVIEW_BLOCKERS.md` first. In particular:
 
-- Check the gold-cup lead plug dimensions and choose real touchproof connectors.
-  The ten pin headers are bench placeholders, not the final electrode interface.
+- Check a real gold-cup lead against the selected P1 36619 / 8R003661901F
+  touchproof socket. The board now has ten socket footprints; their revised
+  plated slots still need fabricator acceptance and a physical fit check.
 - Review clamp behavior, current paths, aggregate leakage and bias stability.
 - Verify regulator parts, capacitance under DC bias, thermal limits and shutdown
   behavior. The power circuit is not yet measured to be quiet enough for EEG.
 - Verify the selected Nano wiring and solve programming/battery access physically.
-- Rework placement around actual pin locations: decoupling capacitors must have
-  short loops, and AVDD1/AVSS1 return paths need particular care.
+- Inspect the revised reference, decoupling and AVDD1 routes against the
+  independent A0.3 review. The shorter paths and separate AVDD1 branch have been
+  checked geometrically; noise and transient behavior still need measurements.
 
-For routing, use a four-layer board as a starting constraint: signal/components,
-continuous ground, power/low-speed routing, and secondary signals. Keep the
+The routed board uses four layers: front components/signals, a dedicated In1
+ground plane, In2 crossovers with ground fill, and back signals. Keep the
 ground plane continuous under sensitive signals and route return currents away
 from the analog input region. Do not split ground simply because nets are
 called "analog" and "digital". Plan where radio/switching return currents flow.
@@ -155,7 +162,7 @@ microvolt test signals -> sample timing/wireless -> electrical safety review
 before considering body connection. Put measured results in
 `hardware/validation/measurements/` with the hardware revision and conditions.
 
-Only after the review and routing are complete should we make a fabrication
-package. This checkpoint intentionally has no order-ready Gerbers.
+Only after the remaining manufacturing review should we freeze and inspect a
+bench fabrication package. This checkpoint has no order-ready Gerbers.
 
 The complete next-step sequence is in [NEXT_STEPS](NEXT_STEPS.md).

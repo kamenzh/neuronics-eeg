@@ -3,9 +3,13 @@ test_preserves_tracks (test_workflow_guards.GeneratorGuards.test_preserves_track
 test_preserves_vias (test_workflow_guards.GeneratorGuards.test_preserves_vias) ... ok
 test_preserves_zones (test_workflow_guards.GeneratorGuards.test_preserves_zones) ... ok
 test_requires_explicit_overwrite (test_workflow_guards.GeneratorGuards.test_requires_explicit_overwrite) ... ok
+test_changed_schematic_and_dsn_rejected (test_workflow_guards.RoutingImportGuards.test_changed_schematic_and_dsn_rejected) ... ok
+test_failed_drc_preserves_original_board (test_workflow_guards.RoutingImportGuards.test_failed_drc_preserves_original_board) ... ok
+test_old_session_and_changed_digest_rejected (test_workflow_guards.RoutingImportGuards.test_old_session_and_changed_digest_rejected) ... ok
+test_stale_board_rejected_without_write (test_workflow_guards.RoutingImportGuards.test_stale_board_rejected_without_write) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 1.508s
+Ran 9 tests in 1.462s
 
 OK
 version: exit 0

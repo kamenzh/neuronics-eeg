@@ -1,3 +1,28 @@
+# Routing evidence and current workflow
+
+**Current board: A0.3.** See [A0.3 routing provenance](a0_3/README.md).
+The files at this directory's root are historical A0.2 intermediates. Neither
+those nor the A0.3 partial pass reconstruct the final saved PCB.
+
+`tools/route_hardware.py export` creates a DSN and source-hash manifest for the
+current board. `import` requires that manifest, the matching session base name
+and an explicit session SHA-256. It imports/refills in a disposable project copy,
+requires full schematic-parity DRC and a reserved In1 plane, then preserves a
+pre-import backup before writing the working board. Stale or failing candidates
+leave the board unchanged. `fill` refills saved KiCad zones.
+
+```bash
+/usr/bin/python3 tools/route_hardware.py export --output-dir /tmp/neuronic-routing-job
+# After routing/review, compute the session digest and use the produced manifest:
+/usr/bin/python3 tools/route_hardware.py import --manifest /path/job.json --session /path/job.ses --session-sha256 ACTUAL_SHA256
+```
+
+The former `seed` action was removed: its old fixed coordinates no longer fit
+the revised placement. Modify the authoritative board deliberately in KiCad.
+No routing workflow establishes noise performance, fabrication or body approval.
+
+---
+
 # A0.2 routing evidence
 
 The authoritative, manually reviewed copper is `../kicad/neuronic.kicad_pcb`.
@@ -47,10 +72,8 @@ the silkscreen clear; `pcb-assembly.svg/png` and the CAD identify them for revie
   altered layer activation were discarded. Final layer use is checked against
   actual saved KiCad copper by `tools/check_routing.py`.
 
-`tools/route_hardware.py seed` is for an empty placement checkpoint only and
-refuses existing copper. `import --session ...` is an explicit editing operation;
-run it only on an intentional working copy. `fill` refills saved zones. A
-successful import says nothing about completeness until full validation passes.
+The A0.2 workflow used a seed command and an unguarded SES import. Both are
+superseded by the version-bound A0.3 workflow described above.
 
 ## Still to review physically
 

@@ -21,7 +21,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'hardware/kicad'
 DATA = Path(os.environ.get('KICAD_DATA', '/usr/share/kicad'))
 NS = uuid.UUID('b314a604-c394-4051-a09e-9626c22cb806')
-REVISION = 'A0.2-routed-bench'
+REVISION = 'A0.3-review-fixes'
+CAD_REVISION = REVISION.split('-')[0]
 def uid(key): return str(uuid.uuid5(NS, key))
 def q(s): return json.dumps(str(s))
 def n(x): return f'{x:.4f}'.rstrip('0').rstrip('.') if x else '0'
@@ -104,6 +105,15 @@ def initialize():
     LIB['Neuronic:ADS1299IPAG'] = custom_symbol('ADS1299IPAG', pins, 20.32, 43.18,
         'TI ADS1299 eight-channel PAG64; pin numbers checked against SBAS499C table 6')
     LIB['Neuronic:TPS7A24_FIXED'] = custom_symbol('TPS7A24_FIXED', [('1','IN','power_in',-12.7,5.08,0),('2','GND','power_in',0,-10.16,90),('3','EN','input',-12.7,-2.54,0),('4','NC_GND','passive',5.08,-10.16,90),('5','OUT','power_out',12.7,5.08,180)],10.16,7.62,'TI TPS7A24 DBV fixed pin contract, SBVS386E table 5-1')
+    LIB['Neuronic:TXU0304_PW'] = custom_symbol('TXU0304_PW', [
+        ('1','VCCA','power_in',-15.24,15.24,0),('2','A1','input',-15.24,10.16,0),
+        ('3','A2','input',-15.24,5.08,0),('4','A3','input',-15.24,0,0),
+        ('5','A4Y','tri_state',-15.24,-5.08,0),('6','NC','no_connect',-7.62,-20.32,90),
+        ('7','GND','power_in',0,-20.32,90),('8','OE','input',-15.24,-15.24,0),
+        ('9','NC','no_connect',7.62,-20.32,90),('10','B4','input',15.24,-5.08,180),
+        ('11','B3Y','tri_state',15.24,0,180),('12','B2Y','tri_state',15.24,5.08,180),
+        ('13','B1Y','tri_state',15.24,10.16,180),('14','VCCB','power_in',15.24,15.24,180)],
+        12.7,17.78,'TI TXU0304 PW14, SCES935A Table 6-1; A host, B AFE; not galvanic isolation')
     LIB['Neuronic:BAV199'] = custom_symbol('BAV199', [
         ('1','A1','passive',-7.62,2.54,0), ('2','K2','passive',7.62,2.54,180),
         ('3','K1_A2','passive',0,-7.62,90)],5.08,5.08,
@@ -188,7 +198,7 @@ class Sheet:
         return p
     def save(self,root=False):
         lib='\n'.join(LIB[k] for k in sorted(self.used))
-        txt=f'(kicad_sch (version 20250114) (generator eeschema) (uuid {self.id}) (paper "A3")\n(title_block (title {q(self.title)}) (date "2026-11-15") (rev "{REVISION}") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))\n(lib_symbols\n{lib}\n)\n'+'\n'.join(self.items)
+        txt=f'(kicad_sch (version 20250114) (generator eeschema) (uuid {self.id}) (paper "A3")\n(title_block (title {q(self.title)}) (date "2026-11-15") (rev "{CAD_REVISION}") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))\n(lib_symbols\n{lib}\n)\n'+'\n'.join(self.items)
         if root: txt+='\n(sheet_instances (path "/" (page "1")))'
         txt+='\n)\n'
         (OUT/f'{self.name}.kicad_sch').write_text(txt)
@@ -205,12 +215,13 @@ def add_rc(sh,ref,value,net1,net2,x,y,xy,kind='R',rot=0,note=''):
     return sh.part(ref,f'Device:{kind}',value,x,y,{'1':net1,'2':net2},fp,xy=xy,rot=rot,note=note)
 
 def make_design():
+    io=Sheet('interface','04 - Power-off protected host interface',4)
     root=Sheet('neuronic','01 - ADS1299 core and SPI interface',1)
     inp=Sheet('inputs','02 - Eight channels and shared reference',2)
     power=Sheet('power','03 - Battery regulators, decoupling and bias',3)
-    root.text('NEURONIC / A0.2 BENCH REVIEW',20,18,2)
+    root.text('NEURONIC / A0.3 BENCH REVIEW',20,18,2)
     root.text('8 synchronous channels, 10 contacts. One ADS1299 contains both PGAs and ADCs.',20,25)
-    root.text('Shared reference wires directly to all negative inputs. MISC1=0x00; CHnSET.SRB2=0. SRB1/SRB2 are NC.',20,32)
+    root.text('Filtered reference is shared by all negative inputs. MISC1=0x00; CHnSET.SRB2=0. SRB1/SRB2 are NC.',20,32)
     nets={}
     for i in range(8):nets[str(16-2*i)]=f'EEG{i+1}';nets[str(15-2*i)]='REF_FILTERED'
     nets.update({'17':None,'18':None,'19':'AVDD_5V','20':'GND','21':'AVDD_5V','22':'AVDD_5V','23':'GND',
@@ -222,20 +233,41 @@ def make_design():
         '60':None,'61':'BIASINV','62':'GND','63':'BIASOUT','64':None})
     root.part('U1','Neuronic:ADS1299IPAG','ADS1299IPAG',155,105,nets,'Neuronic:TQFP-64_10x10mm_P0.5mm',xy=(95,90),note='TI SBAS499C pin functions, unipolar 5 V, internal clock/reference',mpn='ADS1299IPAG')
     root.part('J11','Connector_Generic:Conn_02x06_Odd_Even','MCU_3V3_IO_ONLY',312,65,
-        {'1':'GND','2':'GND','3':'SPI_SCLK','4':'SPI_MOSI','5':'SPI_MISO','6':'ADS_CS_N',
-         '7':'ADS_DRDY_N','8':'ADS_RESET_N','9':'ADS_START','10':'ADS_PWDN_N','11':None,'12':'GND'},
-        'Neuronic:PinHeader_2x06_P2.54mm_Vertical',xy=(130,86),note='Pin 11 NC. Signals/GND only; separate controller supply.')
+        {'1':'GND','2':'GND','3':'HOST_SPI_SCLK','4':'HOST_SPI_MOSI','5':'HOST_SPI_MISO','6':'HOST_ADS_CS_N',
+         '7':'HOST_ADS_DRDY_N','8':'HOST_ADS_RESET_N','9':'HOST_ADS_START','10':'HOST_ADS_PWDN_N','11':'HOST_3V3','12':'IF_EN'},
+        'Neuronic:PinHeader_2x06_P2.54mm_Vertical',xy=(130,86),note='A0.3: pin11 host 3V3, pin12 GPIO6 interface enable. Common GND; power-off protection is not isolation.')
     root.text('J11: board-neutral connector; not an ESP32 dev-board footprint.',258,93)
     root.text('Waveshare ESP32-S3-Nano; see hardware/interface.json.',258,100)
     root.text('External controller power/USB can join GND. No body-connected tests.',258,107)
     rnum=30
     for i,(net,rail) in enumerate([('ADS_CS_N','GND'),('ADS_RESET_N','GND'),('ADS_PWDN_N','GND'),('ADS_START','GND'),('SPI_SCLK','GND'),('SPI_MOSI','GND'),('CLKSEL_PU','DVDD_3V3'),('GPIO1_PD','GND'),('GPIO2_PD','GND'),('GPIO3_PD','GND'),('GPIO4_PD','GND')]):
         x=35+(i%6)*58;y=181+(i//6)*40
-        add_rc(root,f'R{rnum+i}','100k' if i<6 else '10k',net,rail,x,y,(116+(i%4)*5,103+(i//4)*7))
-    root.text('Default pulldowns keep host inputs low at startup. MCU must release PWDN/RESET and drive CS high after rails settle.',20,250)
+        add_rc(root,f'R{rnum+i}','10k',net,rail,x,y,(116+(i%4)*5,103+(i//4)*7))
+    root.text('Default pulldowns keep ADC controls low at startup. MCU must release PWDN/RESET and drive CS high after rails settle.',20,250)
     root.text('CONFIG1=0x96 (250 SPS, internal clock output disabled); MISC1=0x00; bias/lead-off disabled for initial bench tests.',20,257)
-    for name,title,x in [('inputs','Input filters / CH1-8 / REF',25),('power','Power / bypass / bias drive',215)]:
-        root.items.append(f'(sheet (at {x} 39.37) (size 170.18 12.7) (fields_autoplaced) (stroke (width 0.1524) (type default)) (fill (color 0 0 0 0)) (uuid {uid("sheet-"+name)}) (property "Sheetname" {q(title)} (at {x} 38 0) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "{name}.kicad_sch" (at {x} 53 0) (effects (font (size 1.27 1.27)) (justify left top))) (instances (project "neuronic" (path "/{root.id}" (page "{SHEETS[name].page}")))))')
+    for name,title,x in [('inputs','Input filters / CH1-8 / REF',25),('power','Power / bypass / bias drive',215),('interface','Interface / power-off buffers',215)]:
+        sheet_y=39.37 if name!='interface' else 132.08
+        root.items.append(f'(sheet (at {x} {sheet_y}) (size 170.18 12.7) (fields_autoplaced) (stroke (width 0.1524) (type default)) (fill (color 0 0 0 0)) (uuid {uid("sheet-"+name)}) (property "Sheetname" {q(title)} (at {x} {sheet_y-1.37} 0) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "{name}.kicad_sch" (at {x} {sheet_y+13.63} 0) (effects (font (size 1.27 1.27)) (justify left top))) (instances (project "neuronic" (path "/{root.id}" (page "{SHEETS[name].page}")))))')
+
+    io.text('A0.3 / POWER-OFF BUFFERING - SHARED GROUND, NOT GALVANIC ISOLATION',18,18,1.8)
+    io.text('J11.11 = Nano 3V3. J11.12 = GPIO6 / D3, enable HIGH only after supplies settle. Default disabled.',18,26)
+    io.text('Two TXU0304PW devices: six host outputs and two ADC outputs. Series resistors at all buffer outputs; verify placement and edges.',18,33)
+    for j,(ref,host,afe) in enumerate([
+      ('U4',['SPI_SCLK','SPI_MOSI','ADS_CS_N','SPI_MISO'],['SPI_SCLK','SPI_MOSI','ADS_CS_N','SPI_MISO']),
+      ('U5',['ADS_RESET_N','ADS_START','ADS_PWDN_N','ADS_DRDY_N'],['ADS_RESET_N','ADS_START','ADS_PWDN_N','ADS_DRDY_N'])]):
+        x=100+195*j
+        nets={'1':'HOST_3V3','2':'HOST_'+host[0],'3':'HOST_'+host[1],'4':'HOST_'+host[2],
+              '5':'BUF_HOST_'+host[3],'6':None,'7':'GND','8':'IF_EN','9':None,
+              '10':afe[3],'11':'BUF_'+afe[2],'12':'BUF_'+afe[1],'13':'BUF_'+afe[0],'14':'DVDD_3V3'}
+        io.part(ref,'Neuronic:TXU0304_PW','TXU0304PWR',x,85,nets,'Neuronic:TSSOP-14_4.4x5mm_P0.65mm',xy=(120,88+j*15),rot=180)
+        for i,net in enumerate(afe[:3]):
+            add_rc(io,f'R{41+j*3+i}','33R','BUF_'+net,net,50+110*i,145+j*28,(115,84+j*15+i*2.2))
+        add_rc(io,f'R{47+j}','33R','BUF_HOST_'+host[3],'HOST_'+host[3],60+195*j,210,(125,88+j*15))
+    add_rc(io,'R49','10k','IF_EN','GND',360,210,(127,108))
+    for j,(ref,net) in enumerate([('C43','HOST_3V3'),('C44','HOST_3V3'),('C45','DVDD_3V3'),('C46','DVDD_3V3')]):
+        add_rc(io,ref,'100nF',net,'GND',50+100*j,246,(120+j*3,110),kind='C')
+    io.part('FLG3','power:PWR_FLAG','PWR_FLAG',30,80,{'1':'HOST_3V3'})
+    io.text('No USB or grounded instruments during any future body-connected use. No body use approved for this prototype.',18,275)
 
     inp.text('INPUT NETWORKS: P1 36619 touchproof jacks; verify physical cable fit before fabrication',18,16,1.8)
     inp.text('20k series + 1nF shunt: nominal RF pole 7.96 kHz. This is not the EEG bandpass. ADS1299 digital filter is still required.',18,24)
@@ -273,7 +305,7 @@ def make_design():
         ('C22','4.7uF 25V','VBAT','GND',(123,66)),('C23','4.7uF 25V','DVDD_3V3','GND',(123,78)),
         ('C24','100uF 6.3V','VCAP1','GND',(91.5,104)),('C25','1uF','VCAP2','GND',(96,103)),
         ('C26','1uF','VCAP3','GND',(96,78)),('C27','100nF','VCAP3','GND',(100,78)),
-        ('C28','1uF','VCAP4','GND',(87,103)),('C29','10uF','VREFP','GND',(83,100)),
+        ('C28','1uF','VCAP4','GND',(87,103)),('C29','22uF','VREFP','GND',(83,100)),('C42','22uF','VREFP','GND',(83,104)),
         ('C30','100nF','VREFP','GND',(83,104))]
     # Individual bypass capacitors for all supply pins, plus bulk capacitance.
     analogpos=[(83,94),(83,90),(83,86),(87,78),(91,78),(104,86)]
@@ -296,30 +328,109 @@ def make_design():
     return PARTS
 
 def apply_placement():
-    """A0.2 routing start placement; final routed CAD is the authority."""
+    """A0.3 starting placement; saved routed CAD remains authoritative."""
     fixed={
-      'U1':(100,92,0),'J11':(131,88,0),'J12':(126,65,0),
-      'F1':(121,60,0),'D10':(112,60,0),'SW1':(104,60,0),
-      'U2':(110,71,0),'U3':(124,71,0),'C20':(106,70,90),'C21':(114,70,90),
-      'C22':(120,70,90),'C23':(128,72,90),
-      'C24':(105,107,270),'C25':(109,101,270),'C26':(103,78,0),'C27':(103,75.5,0),
-      'C28':(100,105,270),'C29':(94.5,108,0),'C30':(94.5,103,270),
-      'C31':(97.3,101,270),'C32':(100.1,101,270),'C33':(102.9,101,270),
-      'C34':(98,82,90),'C35':(101,82,90),'C36':(104,82,90),
-      'C37':(115,78,0),'C38':(115,81,0),'C39':(110,88.25,0),
-      'C40':(110,83,90),'C41':(113,84,90),'R20':(93,81,0),'C10':(93,78,0),
-      'R21':(82,124,0),'R22':(72,129.2,0),'R36':(107,85,0)}
-    for i in range(9):
-        row=7-i if i<8 else 8
-        sy=61+row*8.2
-        fy=77+row*4 if i<8 else 113
-        fixed.update({f'R{2*i+1}':(71,sy,0),f'R{2*i+2}':(75,sy,0),
-                      f'D{i+1}':(83.5,fy,0),f'C{i+1}':(89,fy,0)})
-    for i,ref in enumerate(['R30','R31','R32','R33','R34','R35','R37','R38','R39','R40']):
-        fixed[ref]=(114+(i%3)*5,96+(i//3)*4,0)
+        'U1': (100, 92, 0),
+        'J11': (131, 88, 0),
+        'J12': (126, 65, 0),
+        'F1': (121, 60, 0),
+        'D10': (112, 60, 0),
+        'SW1': (104, 60, 0),
+        'U2': (110, 71, 0),
+        'U3': (124, 71, 0),
+        'C20': (106, 70, 90),
+        'C21': (114, 70, 90),
+        'C22': (120, 70, 90),
+        'C23': (128, 72, 90),
+        'C24': (104, 104.7, 270),
+        'C25': (106.2, 98.7, 0),
+        'C26': (100, 83, 180),
+        'C27': (100, 80.8, 180),
+        'C28': (100.75, 104, 270),
+        'C29': (101.5, 100.4, 0),
+        'C30': (98.15, 100.8, 270),
+        'C31': (96.1, 100.4, 270),
+        'C32': (96.1, 104, 270),
+        'C33': (93.8, 102.2, 270),
+        'C34': (96, 84.2, 180),
+        'C35': (96.5, 81.5, 180),
+        'C36': (103.5, 83.7, 0),
+        'C37': (110, 78, 0),
+        'C38': (110, 81, 0),
+        'C39': (108.6, 88.25, 0),
+        'C40': (104.5, 80.8, 90),
+        'C41': (110, 84.5, 0),
+        'R20': (93, 81, 0),
+        'C10': (93, 78, 0),
+        'R21': (82, 124, 0),
+        'R22': (72, 129.2, 0),
+        'R36': (107, 82, 90),
+        'R1': (71, 118.39999999999999, 0),
+        'R2': (75, 118.39999999999999, 0),
+        'D1': (83.5, 105, 0),
+        'C1': (89, 105, 0),
+        'R3': (71, 110.19999999999999, 0),
+        'R4': (75, 110.19999999999999, 0),
+        'D2': (83.5, 101, 0),
+        'C2': (89, 101, 0),
+        'R5': (71, 102.0, 0),
+        'R6': (75, 102.0, 0),
+        'D3': (83.5, 97, 0),
+        'C3': (89, 97, 0),
+        'R7': (71, 93.8, 0),
+        'R8': (75, 93.8, 0),
+        'D4': (83.5, 93, 0),
+        'C4': (89, 93, 0),
+        'R9': (71, 85.6, 0),
+        'R10': (75, 85.6, 0),
+        'D5': (83.5, 89, 0),
+        'C5': (89, 89, 0),
+        'R11': (71, 77.4, 0),
+        'R12': (75, 77.4, 0),
+        'D6': (83.5, 85, 0),
+        'C6': (89, 85, 0),
+        'R13': (71, 69.2, 0),
+        'R14': (75, 69.2, 0),
+        'D7': (83.5, 81, 0),
+        'C7': (89, 81, 0),
+        'R15': (71, 61.0, 0),
+        'R16': (75, 61.0, 0),
+        'D8': (83.5, 77, 0),
+        'C8': (89, 77, 0),
+        'R17': (71, 126.6, 0),
+        'R18': (75, 126.6, 0),
+        'D9': (83.5, 113, 0),
+        'C9': (89, 113, 0),
+        'R30': (109.5, 94, 0),
+        'R31': (109.5, 96.5, 0),
+        'R32': (110.2, 99.8, 0),
+        'R33': (110.2, 102.3, 0),
+        'R34': (109.5, 106, 0),
+        'R35': (109.5, 108.4, 0),
+        'R37': (114, 112, 0),
+        'R38': (119, 112, 0),
+        'R39': (124, 112, 0),
+        'R40': (129, 112, 0),
+        'C42': (99, 108.2, 0),
+        'U4': (120, 88, 180),
+        'U5': (120, 103, 180),
+        'C43': (125, 90, 90),
+        'C44': (125, 105, 90),
+        'C45': (115, 90, 90),
+        'C46': (115, 105, 90),
+        'R41': (114, 87.3, 0),
+        'R42': (114, 85.1, 0),
+        'R43': (114, 82.9, 0),
+        'R44': (114, 102.3, 0),
+        'R45': (114, 100.1, 0),
+        'R46': (114, 97.9, 0),
+        'R47': (126.7, 87.35, 0),
+        'R48': (126.7, 102.35, 0),
+        'R49': (127, 108, 0),
+    }
     for p in PARTS:
-        if p['ref'] in fixed:
-            x,y,rot=fixed[p['ref']];p['xy']=(x,y);p['rot']=rot
+        if p["ref"] in fixed:
+            x,y,rot=fixed[p["ref"]];p["xy"]=(x,y);p["rot"]=rot
 
 def bundle_libraries():
     used=sorted({p['fp'].split(':')[1] for p in PARTS} | {'MountingHole_2.7mm_M2.5'})
@@ -351,14 +462,19 @@ def save_project():
       'schematic':{'meta':{'version':1}},
       'erc':{'erc_exclusions':[]},
       'text_variables':{'REVISION':'A0.2 - BENCH REVIEW'}}
-    (OUT/'neuronic.kicad_pro').write_text(json.dumps(pro,indent=2)+'\n')
+    target=OUT/'neuronic.kicad_pro'
+    if target.exists():
+        pro=json.loads(target.read_text())
+        pro['board']['design_settings']['rules'].update(min_track_width=0.15,min_clearance=0.2,min_copper_edge_clearance=0.5)
+        pro.setdefault('text_variables',{})['REVISION']=REVISION
+    target.write_text(json.dumps(pro,indent=2)+'\n')
 
 def save_bom():
     d=ROOT/'hardware/bom';d.mkdir(exist_ok=True)
     with (d/'bom-review.csv').open('w',newline='') as f:
         w=csv.writer(f,lineterminator="\n");w.writerow(['Reference','Value','Footprint','Proposed_MPN','Review_notes'])
         for p in PARTS:w.writerow([p['ref'],p['value'],p['fp'],p['mpn'] or 'TBD - do not order',p['note']])
-    (ROOT/'hardware/design.json').write_text(json.dumps({'revision':REVISION,'state':'placed-unrouted-bench-only','parts':PARTS,'ads_pin_names':PIN_NAMES},indent=2)+'\n')
+    (ROOT/'hardware/design.json').write_text(json.dumps({'revision':REVISION,'state':'source-netlist-and-placement-record; see saved PCB and validation/STATUS.md','parts':PARTS,'ads_pin_names':PIN_NAMES},indent=2)+'\n')
 
 def board():
     import pcbnew as k
@@ -393,7 +509,7 @@ def board():
     # Board is deliberately a placement checkpoint: no inferred tracks or planes.
     for a,c in [((50,55),(138,55)),((138,55),(138,145)),((138,145),(50,145)),((50,145),(50,55))]:
         s=k.PCB_SHAPE();s.SetShape(k.SHAPE_T_SEGMENT);s.SetLayer(k.Edge_Cuts);s.SetWidth(k.FromMM(0.05));s.SetStart(k.VECTOR2I(k.FromMM(a[0]),k.FromMM(a[1])));s.SetEnd(k.VECTOR2I(k.FromMM(c[0]),k.FromMM(c[1])));b.Add(s)
-    for text,xy,size in [('NEURONIC A0.2 / BENCH', (109,138),1),('BENCH ONLY / NO BODY CONNECTION',(93,141),0.9),('8CH + REF + BIAS',(70,138),0.8),('MCU 3V3 IO',(128,112),0.8)]:
+    for text,xy,size in [('NEURONIC A0.3 / BENCH', (109,138),1),('BENCH ONLY / NO BODY CONNECTION',(93,141),0.9),('8CH + REF + BIAS',(70,138),0.8),('MCU 3V3 IO',(128,112),0.8)]:
         t=k.PCB_TEXT(b);t.SetText(text);t.SetPosition(k.VECTOR2I(k.FromMM(xy[0]),k.FromMM(xy[1])));t.SetTextSize(k.VECTOR2I(k.FromMM(size),k.FromMM(size)));t.SetTextThickness(k.FromMM(0.12));t.SetLayer(k.F_SilkS);b.Add(t)
     for num,xy in enumerate([(87,58),(135,58),(135,142),(73,142)]):
         fp=k.FootprintLoad(str(OUT/'Neuronic.pretty'),'MountingHole_2.7mm_M2.5');fp.SetReference(f'H{num+1}');fp.SetValue('M2.5');fp.SetFPID(k.LIB_ID('Neuronic','MountingHole_2.7mm_M2.5'));fp.SetPosition(k.VECTOR2I(k.FromMM(xy[0]),k.FromMM(xy[1])));fp.Reference().SetVisible(False);fp.Value().SetVisible(False);fp.SetAttributes(k.FP_BOARD_ONLY | k.FP_EXCLUDE_FROM_BOM | k.FP_EXCLUDE_FROM_POS_FILES);b.Add(fp)
@@ -415,6 +531,6 @@ def main():
             parser.error('Refusing to replace a PCB containing tracks, vias or zones. Preserve and edit that PCB in KiCad.')
     initialize();make_design();bundle_libraries();save_project();save_bom()
     if args.board:board()
-    print(f'Generated {len(PARTS)} components, 3 schematic sheets and BOM at {OUT}')
+    print(f'Generated {len(PARTS)} components, 4 schematic sheets and BOM at {OUT}')
 
 if __name__=='__main__':main()

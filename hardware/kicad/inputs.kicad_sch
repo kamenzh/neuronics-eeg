@@ -1,5 +1,5 @@
 (kicad_sch (version 20250114) (generator eeschema) (uuid 6e7bb7d3-b150-53d7-83f9-4af88e21e5b2) (paper "A3")
-(title_block (title "02 - Eight channels and shared reference") (date "2026-11-15") (rev "A0.2-routed-bench") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))
+(title_block (title "02 - Eight channels and shared reference") (date "2026-11-15") (rev "A0.3") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))
 (lib_symbols
 (symbol "Connector_Generic:Conn_01x01"
 		(pin_names

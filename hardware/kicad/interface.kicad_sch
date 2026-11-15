@@ -1,0 +1,625 @@
+(kicad_sch (version 20250114) (generator eeschema) (uuid daf2cb48-0ad5-5394-b260-e30d50af7104) (paper "A3")
+(title_block (title "04 - Power-off protected host interface") (date "2026-11-15") (rev "A0.3") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))
+(lib_symbols
+(symbol "Device:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Device:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Neuronic:TXU0304_PW" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 0 0) (effects (font (size 1.27 1.27))))
+(property "Value" "TXU0304_PW" (at 0 0 0) (effects (font (size 1.27 1.27))))
+(property "ki_description" "TI TXU0304 PW14, SCES935A Table 6-1; A host, B AFE; not galvanic isolation" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+(symbol "TXU0304_PW_0_1" (rectangle (start -12.7 17.78) (end 12.7 -17.78) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "TXU0304_PW_1_1"
+(pin power_in line (at -15.24 15.24 0) (length 2.54) (name "VCCA" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+(pin input line (at -15.24 10.16 0) (length 2.54) (name "A1" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+(pin input line (at -15.24 5.08 0) (length 2.54) (name "A2" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+(pin input line (at -15.24 0 0) (length 2.54) (name "A3" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))
+(pin tri_state line (at -15.24 -5.08 0) (length 2.54) (name "A4Y" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))
+(pin no_connect line (at -7.62 -20.32 90) (length 2.54) (name "NC" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))
+(pin power_in line (at 0 -20.32 90) (length 2.54) (name "GND" (effects (font (size 1.016 1.016)))) (number "7" (effects (font (size 1.016 1.016)))))
+(pin input line (at -15.24 -15.24 0) (length 2.54) (name "OE" (effects (font (size 1.016 1.016)))) (number "8" (effects (font (size 1.016 1.016)))))
+(pin no_connect line (at 7.62 -20.32 90) (length 2.54) (name "NC" (effects (font (size 1.016 1.016)))) (number "9" (effects (font (size 1.016 1.016)))))
+(pin input line (at 15.24 -5.08 180) (length 2.54) (name "B4" (effects (font (size 1.016 1.016)))) (number "10" (effects (font (size 1.016 1.016)))))
+(pin tri_state line (at 15.24 0 180) (length 2.54) (name "B3Y" (effects (font (size 1.016 1.016)))) (number "11" (effects (font (size 1.016 1.016)))))
+(pin tri_state line (at 15.24 5.08 180) (length 2.54) (name "B2Y" (effects (font (size 1.016 1.016)))) (number "12" (effects (font (size 1.016 1.016)))))
+(pin tri_state line (at 15.24 10.16 180) (length 2.54) (name "B1Y" (effects (font (size 1.016 1.016)))) (number "13" (effects (font (size 1.016 1.016)))))
+(pin power_in line (at 15.24 15.24 180) (length 2.54) (name "VCCB" (effects (font (size 1.016 1.016)))) (number "14" (effects (font (size 1.016 1.016)))))
+))
+(symbol "power:PWR_FLAG"
+		(power)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
+(text "A0.3 / POWER-OFF BUFFERING - SHARED GROUND, NOT GALVANIC ISOLATION" (at 18 18 0) (effects (font (size 1.8 1.8)) (justify left)) (uuid 59c59f7e-4101-5fce-ac39-98918429a4f0))
+(text "J11.11 = Nano 3V3. J11.12 = GPIO6 / D3, enable HIGH only after supplies settle. Default disabled." (at 18 26 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid 718d3747-a560-5299-ba06-6c804fb3ccbf))
+(text "Two TXU0304PW devices: six host outputs and two ADC outputs. Series resistors at all buffer outputs; verify placement and edges." (at 18 33 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid 310e1099-4c61-506f-80f6-472431a19212))
+(symbol (lib_id "Neuronic:TXU0304_PW") (at 100.33 85.09 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid e20f37c9-ae4e-5fb8-b84a-7c503bd4b2c7)
+(property "Reference" "U4" (at 102.87 80.01 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "TXU0304PWR" (at 102.87 82.55 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:TSSOP-14_4.4x5mm_P0.65mm" (at 100.33 85.09 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "TXU0304PWR" (at 100.33 85.09 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "U4") (unit 1)))))
+(wire (pts (xy 85.09 69.85) (xy 80.01 69.85)) (stroke (width 0) (type default)) (uuid 0256834b-0658-569a-9256-fb2c729c558f))
+(global_label "HOST_3V3" (shape bidirectional) (at 80.01 69.85 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 97c7a297-229d-509e-a9c4-82bd71c69509) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 80.01 69.85 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 85.09 74.93) (xy 80.01 74.93)) (stroke (width 0) (type default)) (uuid 695da21d-4c96-5d0c-930e-093ef7e7fa03))
+(global_label "HOST_SPI_SCLK" (shape bidirectional) (at 80.01 74.93 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 68215148-845f-510b-bff7-8ecca979b526) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 80.01 74.93 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 85.09 80.01) (xy 80.01 80.01)) (stroke (width 0) (type default)) (uuid 5de66fac-38d0-5a1a-888c-8ceda03ad404))
+(global_label "HOST_SPI_MOSI" (shape bidirectional) (at 80.01 80.01 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 35b16bae-0783-5883-9982-83e255c65893) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 80.01 80.01 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 85.09 85.09) (xy 80.01 85.09)) (stroke (width 0) (type default)) (uuid a666c22e-f83d-573b-bed8-8cb5804b77bd))
+(global_label "HOST_ADS_CS_N" (shape bidirectional) (at 80.01 85.09 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 3834b028-b269-575b-82ea-1905fe5d3e27) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 80.01 85.09 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 85.09 90.17) (xy 80.01 90.17)) (stroke (width 0) (type default)) (uuid 98eb0a47-7b83-5183-902d-b6c303689c48))
+(global_label "BUF_HOST_SPI_MISO" (shape bidirectional) (at 80.01 90.17 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid c743d528-b750-527b-a94f-c2c891686887) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 80.01 90.17 180) (effects (font (size 1.016 1.016)) hide)))
+(no_connect (at 92.71 105.41) (uuid e2d5df58-fa3c-5ee7-982f-bc59de2e0175))
+(wire (pts (xy 100.33 105.41) (xy 100.33 110.49)) (stroke (width 0) (type default)) (uuid af37bdc4-54f5-567a-8acb-c6465e309330))
+(wire (pts (xy 100.33 110.49) (xy 105.41 110.49)) (stroke (width 0) (type default)) (uuid 16840f98-5aea-503a-9dd6-bdcac9d1c16f))
+(global_label "GND" (shape bidirectional) (at 105.41 110.49 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 6a0359c1-a952-5559-9af6-c5219adefabe) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 105.41 110.49 0) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 85.09 100.33) (xy 80.01 100.33)) (stroke (width 0) (type default)) (uuid 72c68d35-e792-5ff3-8829-a27be98d3077))
+(global_label "IF_EN" (shape bidirectional) (at 80.01 100.33 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid a215fe8d-8704-55af-83f8-f06240c725f0) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 80.01 100.33 180) (effects (font (size 1.016 1.016)) hide)))
+(no_connect (at 107.95 105.41) (uuid 13be4191-f527-5721-8a23-d3b308dfa2d9))
+(wire (pts (xy 115.57 90.17) (xy 120.65 90.17)) (stroke (width 0) (type default)) (uuid 44fa0360-59b3-5855-94b6-07c6581ac4d5))
+(global_label "SPI_MISO" (shape bidirectional) (at 120.65 90.17 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 7f7259e2-aefb-5738-9232-baee4f1df60b) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 120.65 90.17 0) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 115.57 85.09) (xy 120.65 85.09)) (stroke (width 0) (type default)) (uuid c97dac3f-75bf-5564-8ea9-151a27aabb42))
+(global_label "BUF_ADS_CS_N" (shape bidirectional) (at 120.65 85.09 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid bd3d27c2-5403-5510-81dc-f4b263151e37) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 120.65 85.09 0) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 115.57 80.01) (xy 120.65 80.01)) (stroke (width 0) (type default)) (uuid bc0b33ed-1343-59cf-9931-d27b54ed2a9e))
+(global_label "BUF_SPI_MOSI" (shape bidirectional) (at 120.65 80.01 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 8f9aecc2-40fa-5038-87dd-9c82a60f0be3) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 120.65 80.01 0) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 115.57 74.93) (xy 120.65 74.93)) (stroke (width 0) (type default)) (uuid 66dc1b68-fcfa-53d0-adb9-120f42427619))
+(global_label "BUF_SPI_SCLK" (shape bidirectional) (at 120.65 74.93 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 3cf63de4-a58c-547b-b751-5db36aeaf4c4) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 120.65 74.93 0) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 115.57 69.85) (xy 120.65 69.85)) (stroke (width 0) (type default)) (uuid b2585aa8-ce09-5d00-80ed-9435d395cb97))
+(global_label "DVDD_3V3" (shape bidirectional) (at 120.65 69.85 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid d8e7050b-c6ec-5fc9-83c5-a30468fdde6f) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 120.65 69.85 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:R") (at 49.53 144.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid caeea25d-ec09-51f6-8680-5c9ae6ff57f1)
+(property "Reference" "R41" (at 52.07 142.24 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "33R" (at 52.07 144.78 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:R_0805_2012Metric" (at 49.53 144.78 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "RC0805FR-0733RL" (at 49.53 144.78 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "R41") (unit 1)))))
+(wire (pts (xy 49.53 140.97) (xy 49.53 135.89)) (stroke (width 0) (type default)) (uuid 3552532b-4458-5907-b79e-476a9e3135ca))
+(wire (pts (xy 49.53 135.89) (xy 44.45 135.89)) (stroke (width 0) (type default)) (uuid 318cec4b-0a51-588a-a3e7-cfea617ecfdd))
+(global_label "BUF_SPI_SCLK" (shape bidirectional) (at 44.45 135.89 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 690d07fc-efd2-591c-a4dd-750cdbb62018) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 44.45 135.89 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 49.53 148.59) (xy 49.53 153.67)) (stroke (width 0) (type default)) (uuid 2cc64496-e44f-5548-86a9-e4080515999c))
+(wire (pts (xy 49.53 153.67) (xy 54.61 153.67)) (stroke (width 0) (type default)) (uuid 44d3a93f-0dc7-5f10-b14f-513b805b4880))
+(global_label "SPI_SCLK" (shape bidirectional) (at 54.61 153.67 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 3c1b0ea2-ef64-538d-a66d-4868d3be206d) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 54.61 153.67 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:R") (at 160.02 144.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid e7bfa1c6-1707-57ea-9256-0391fa9f23f5)
+(property "Reference" "R42" (at 162.56 142.24 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "33R" (at 162.56 144.78 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:R_0805_2012Metric" (at 160.02 144.78 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "RC0805FR-0733RL" (at 160.02 144.78 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "R42") (unit 1)))))
+(wire (pts (xy 160.02 140.97) (xy 160.02 135.89)) (stroke (width 0) (type default)) (uuid 06e01207-ddb3-5436-87f2-2f3cff71403f))
+(wire (pts (xy 160.02 135.89) (xy 154.94 135.89)) (stroke (width 0) (type default)) (uuid 74ab016c-ec9c-56d5-af73-f9c439c57a93))
+(global_label "BUF_SPI_MOSI" (shape bidirectional) (at 154.94 135.89 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid bcfbede3-0ed7-5977-af29-f82883eae6a9) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 154.94 135.89 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 160.02 148.59) (xy 160.02 153.67)) (stroke (width 0) (type default)) (uuid 19d9cf59-15e6-5f96-9d2c-98a4b3e9462d))
+(wire (pts (xy 160.02 153.67) (xy 165.1 153.67)) (stroke (width 0) (type default)) (uuid b4f01dc9-26c4-55de-a95e-3a9653d6d0b7))
+(global_label "SPI_MOSI" (shape bidirectional) (at 165.1 153.67 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 87dc918c-8715-5a73-8131-93bd926a7480) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 165.1 153.67 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:R") (at 270.51 144.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid fc69cf3f-677b-5dc0-906b-8922500878a6)
+(property "Reference" "R43" (at 273.05 142.24 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "33R" (at 273.05 144.78 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:R_0805_2012Metric" (at 270.51 144.78 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "RC0805FR-0733RL" (at 270.51 144.78 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "R43") (unit 1)))))
+(wire (pts (xy 270.51 140.97) (xy 270.51 135.89)) (stroke (width 0) (type default)) (uuid af74db92-7ea1-5d50-b701-2b3e99ec8dfc))
+(wire (pts (xy 270.51 135.89) (xy 265.43 135.89)) (stroke (width 0) (type default)) (uuid 437eae74-2c47-5ffc-9081-018bb8e7ee57))
+(global_label "BUF_ADS_CS_N" (shape bidirectional) (at 265.43 135.89 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid e3b226d0-ec89-5806-90f8-48c3acdd285e) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 265.43 135.89 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 270.51 148.59) (xy 270.51 153.67)) (stroke (width 0) (type default)) (uuid d43b7f4f-81ce-5b37-bcbe-eb67fbaf5cc4))
+(wire (pts (xy 270.51 153.67) (xy 275.59 153.67)) (stroke (width 0) (type default)) (uuid 3f55ffca-08ee-507d-a786-aa5e08266f2d))
+(global_label "ADS_CS_N" (shape bidirectional) (at 275.59 153.67 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 311b1c90-9132-5cd9-9ee5-df23468da409) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 275.59 153.67 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:R") (at 59.69 209.55 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 6489fc6a-ed8e-52ad-93c3-a7cdabd9d3cb)
+(property "Reference" "R47" (at 62.23 207.01 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "33R" (at 62.23 209.55 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:R_0805_2012Metric" (at 59.69 209.55 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "RC0805FR-0733RL" (at 59.69 209.55 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "R47") (unit 1)))))
+(wire (pts (xy 59.69 205.74) (xy 59.69 200.66)) (stroke (width 0) (type default)) (uuid ab249dcb-56f2-5054-89b7-f07ad2db6a89))
+(wire (pts (xy 59.69 200.66) (xy 54.61 200.66)) (stroke (width 0) (type default)) (uuid b611ead5-1064-5440-8b25-8ce72199b7d8))
+(global_label "BUF_HOST_SPI_MISO" (shape bidirectional) (at 54.61 200.66 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid b03a0fe2-f8a9-51d3-9695-82ea877fd25b) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 54.61 200.66 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 59.69 213.36) (xy 59.69 218.44)) (stroke (width 0) (type default)) (uuid 8053805a-639e-578c-92b9-5208e807f3b3))
+(wire (pts (xy 59.69 218.44) (xy 64.77 218.44)) (stroke (width 0) (type default)) (uuid 362570ab-5c51-537a-9dff-c0c8b456e17e))
+(global_label "HOST_SPI_MISO" (shape bidirectional) (at 64.77 218.44 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid eac674b4-3ed9-5d62-b757-1fafa323a9f2) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 64.77 218.44 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Neuronic:TXU0304_PW") (at 294.64 85.09 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 30110925-eda2-5278-a2ad-53e49fb9860b)
+(property "Reference" "U5" (at 297.18 80.01 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "TXU0304PWR" (at 297.18 82.55 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:TSSOP-14_4.4x5mm_P0.65mm" (at 294.64 85.09 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "TXU0304PWR" (at 294.64 85.09 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "U5") (unit 1)))))
+(wire (pts (xy 279.4 69.85) (xy 274.32 69.85)) (stroke (width 0) (type default)) (uuid 8884b890-5374-50c2-bce3-91c06273fbfa))
+(global_label "HOST_3V3" (shape bidirectional) (at 274.32 69.85 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 3f8860be-f4bb-555b-b212-7c853f9a6e0e) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 274.32 69.85 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 279.4 74.93) (xy 274.32 74.93)) (stroke (width 0) (type default)) (uuid 17140016-3740-5d10-9426-1c322cf1807a))
+(global_label "HOST_ADS_RESET_N" (shape bidirectional) (at 274.32 74.93 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid f3d8c816-dad8-554e-940f-60477b4bdc6b) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 274.32 74.93 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 279.4 80.01) (xy 274.32 80.01)) (stroke (width 0) (type default)) (uuid 715471db-5f92-5d9a-8ad5-46093f5ef00e))
+(global_label "HOST_ADS_START" (shape bidirectional) (at 274.32 80.01 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid e19e06c9-c325-5a26-8984-24fd009ab607) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 274.32 80.01 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 279.4 85.09) (xy 274.32 85.09)) (stroke (width 0) (type default)) (uuid 8ae14482-ab9e-57f4-b066-c8b19bda3e18))
+(global_label "HOST_ADS_PWDN_N" (shape bidirectional) (at 274.32 85.09 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 7d794e59-04ed-5312-ad9b-c05898965d35) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 274.32 85.09 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 279.4 90.17) (xy 274.32 90.17)) (stroke (width 0) (type default)) (uuid 61208923-f4aa-5f22-98a0-93e2604a0b0b))
+(global_label "BUF_HOST_ADS_DRDY_N" (shape bidirectional) (at 274.32 90.17 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 4632ab83-8d96-5ce7-8009-46df7fc4b045) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 274.32 90.17 180) (effects (font (size 1.016 1.016)) hide)))
+(no_connect (at 287.02 105.41) (uuid 9fefec45-8fa0-5f99-a4be-ffa4243c5ad2))
+(wire (pts (xy 294.64 105.41) (xy 294.64 110.49)) (stroke (width 0) (type default)) (uuid 7d6000a9-d8e6-5e4a-bdea-dbb628f28918))
+(wire (pts (xy 294.64 110.49) (xy 299.72 110.49)) (stroke (width 0) (type default)) (uuid fecfc8d2-5bf7-587b-acc8-90028b24778b))
+(global_label "GND" (shape bidirectional) (at 299.72 110.49 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 82c8dfbe-197b-55d4-89d6-2c82dc14999f) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 299.72 110.49 0) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 279.4 100.33) (xy 274.32 100.33)) (stroke (width 0) (type default)) (uuid 3c723616-12a7-5a4a-9016-81e198a998c2))
+(global_label "IF_EN" (shape bidirectional) (at 274.32 100.33 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid e98cf944-18df-53d1-9222-d7c5f289015a) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 274.32 100.33 180) (effects (font (size 1.016 1.016)) hide)))
+(no_connect (at 302.26 105.41) (uuid 386682a2-fef1-5ab3-910b-4ee0f91426a0))
+(wire (pts (xy 309.88 90.17) (xy 314.96 90.17)) (stroke (width 0) (type default)) (uuid 86c366bf-436d-5d03-ae1f-5baa56efb417))
+(global_label "ADS_DRDY_N" (shape bidirectional) (at 314.96 90.17 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid ae9c9a7c-906c-59d4-8702-d3ecf9087914) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 314.96 90.17 0) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 309.88 85.09) (xy 314.96 85.09)) (stroke (width 0) (type default)) (uuid 4c67f848-6846-5c3b-bd61-d9c12737a92c))
+(global_label "BUF_ADS_PWDN_N" (shape bidirectional) (at 314.96 85.09 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 276c9c74-825c-5d0c-8a4b-ec0f762f0b7f) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 314.96 85.09 0) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 309.88 80.01) (xy 314.96 80.01)) (stroke (width 0) (type default)) (uuid 27858da9-88fd-5f2c-8254-4c3827b04d26))
+(global_label "BUF_ADS_START" (shape bidirectional) (at 314.96 80.01 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 80ebed0d-f428-53e7-93be-084556deafb8) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 314.96 80.01 0) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 309.88 74.93) (xy 314.96 74.93)) (stroke (width 0) (type default)) (uuid a49068eb-9486-5a45-a501-3e660c377179))
+(global_label "BUF_ADS_RESET_N" (shape bidirectional) (at 314.96 74.93 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 72adaa92-5f7a-5f41-9877-b9e67d875cd7) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 314.96 74.93 0) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 309.88 69.85) (xy 314.96 69.85)) (stroke (width 0) (type default)) (uuid 8122bf60-b172-5402-92cb-988abc55efa6))
+(global_label "DVDD_3V3" (shape bidirectional) (at 314.96 69.85 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 1e4e2adf-1dde-57b1-a9fd-c123dbab0848) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 314.96 69.85 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:R") (at 49.53 172.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 60dce70d-98b7-55c6-8ec8-c79063f54164)
+(property "Reference" "R44" (at 52.07 170.18 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "33R" (at 52.07 172.72 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:R_0805_2012Metric" (at 49.53 172.72 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "RC0805FR-0733RL" (at 49.53 172.72 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "R44") (unit 1)))))
+(wire (pts (xy 49.53 168.91) (xy 49.53 163.83)) (stroke (width 0) (type default)) (uuid 0ef32403-9069-5cb4-addb-a1b875ffefd1))
+(wire (pts (xy 49.53 163.83) (xy 44.45 163.83)) (stroke (width 0) (type default)) (uuid 37db7580-611a-5ebc-b509-7c884c578c0b))
+(global_label "BUF_ADS_RESET_N" (shape bidirectional) (at 44.45 163.83 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 055be532-44b0-55a0-8005-f57c6f884538) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 44.45 163.83 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 49.53 176.53) (xy 49.53 181.61)) (stroke (width 0) (type default)) (uuid f73d7285-875d-59cd-8246-eea46cd95a4d))
+(wire (pts (xy 49.53 181.61) (xy 54.61 181.61)) (stroke (width 0) (type default)) (uuid 21852cb6-ddfa-584b-b067-ccfd24b22d18))
+(global_label "ADS_RESET_N" (shape bidirectional) (at 54.61 181.61 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 37328b70-c311-5e79-aec9-1e063c020f0e) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 54.61 181.61 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:R") (at 160.02 172.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 51209388-c982-55cf-840d-c1ca6f6e550e)
+(property "Reference" "R45" (at 162.56 170.18 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "33R" (at 162.56 172.72 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:R_0805_2012Metric" (at 160.02 172.72 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "RC0805FR-0733RL" (at 160.02 172.72 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "R45") (unit 1)))))
+(wire (pts (xy 160.02 168.91) (xy 160.02 163.83)) (stroke (width 0) (type default)) (uuid 6bb27178-2e02-5274-9710-907a9985a80f))
+(wire (pts (xy 160.02 163.83) (xy 154.94 163.83)) (stroke (width 0) (type default)) (uuid a02b642e-ac5e-56ac-9817-3f5b90ac8e0a))
+(global_label "BUF_ADS_START" (shape bidirectional) (at 154.94 163.83 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 7c9e710b-51ac-5c7d-95e1-18f7fb061a73) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 154.94 163.83 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 160.02 176.53) (xy 160.02 181.61)) (stroke (width 0) (type default)) (uuid 5b999e06-8eb1-54a1-aa65-72d8b169760e))
+(wire (pts (xy 160.02 181.61) (xy 165.1 181.61)) (stroke (width 0) (type default)) (uuid 5d84611c-0848-5e7a-9700-06259f554bb3))
+(global_label "ADS_START" (shape bidirectional) (at 165.1 181.61 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 81912d10-82b7-5fed-8967-a99bd524baae) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 165.1 181.61 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:R") (at 270.51 172.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 2e35c2fd-f20f-5315-9ce3-d1480354d7c3)
+(property "Reference" "R46" (at 273.05 170.18 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "33R" (at 273.05 172.72 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:R_0805_2012Metric" (at 270.51 172.72 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "RC0805FR-0733RL" (at 270.51 172.72 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "R46") (unit 1)))))
+(wire (pts (xy 270.51 168.91) (xy 270.51 163.83)) (stroke (width 0) (type default)) (uuid 0bf53abe-bada-5832-809a-a47536f9a311))
+(wire (pts (xy 270.51 163.83) (xy 265.43 163.83)) (stroke (width 0) (type default)) (uuid ea9b2fc2-676c-5196-ac90-6c4fb4f2bebd))
+(global_label "BUF_ADS_PWDN_N" (shape bidirectional) (at 265.43 163.83 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 190203ac-f414-595a-9e41-1f044245aaf5) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 265.43 163.83 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 270.51 176.53) (xy 270.51 181.61)) (stroke (width 0) (type default)) (uuid 7a2047e5-e904-53eb-b6c2-f5b18b352ca4))
+(wire (pts (xy 270.51 181.61) (xy 275.59 181.61)) (stroke (width 0) (type default)) (uuid 87f1c54d-0c39-5083-af43-a158b2127811))
+(global_label "ADS_PWDN_N" (shape bidirectional) (at 275.59 181.61 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid fe5b2059-16fb-535a-aa80-c639bc1d0018) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 275.59 181.61 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:R") (at 255.27 209.55 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid a0f46416-b4f4-51e1-9423-0f50b82993be)
+(property "Reference" "R48" (at 257.81 207.01 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "33R" (at 257.81 209.55 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:R_0805_2012Metric" (at 255.27 209.55 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "RC0805FR-0733RL" (at 255.27 209.55 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "R48") (unit 1)))))
+(wire (pts (xy 255.27 205.74) (xy 255.27 200.66)) (stroke (width 0) (type default)) (uuid 8556dd9f-a172-5302-bb26-122b4ab9c14f))
+(wire (pts (xy 255.27 200.66) (xy 250.19 200.66)) (stroke (width 0) (type default)) (uuid b4ebd57d-004e-5eea-a9ec-c4c5412b7ece))
+(global_label "BUF_HOST_ADS_DRDY_N" (shape bidirectional) (at 250.19 200.66 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid ddd321b7-c5ee-52c8-bf5c-b4c6143010bd) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 250.19 200.66 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 255.27 213.36) (xy 255.27 218.44)) (stroke (width 0) (type default)) (uuid 9aa00de7-a78b-5607-b917-ebbf50687ed2))
+(wire (pts (xy 255.27 218.44) (xy 260.35 218.44)) (stroke (width 0) (type default)) (uuid cce5dbf4-4ea0-540b-9652-455a708dc1e8))
+(global_label "HOST_ADS_DRDY_N" (shape bidirectional) (at 260.35 218.44 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid e5a7d1cf-7d4c-5c96-9a17-317c62c821fb) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 260.35 218.44 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:R") (at 359.41 209.55 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 13c9dd87-b675-5e47-b05b-c84ed941c804)
+(property "Reference" "R49" (at 361.95 207.01 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "10k" (at 361.95 209.55 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:R_0805_2012Metric" (at 359.41 209.55 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "RC0805FR-0710KL" (at 359.41 209.55 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "R49") (unit 1)))))
+(wire (pts (xy 359.41 205.74) (xy 359.41 200.66)) (stroke (width 0) (type default)) (uuid 3dc36fc1-88f3-555f-bb6c-4721eb987806))
+(wire (pts (xy 359.41 200.66) (xy 354.33 200.66)) (stroke (width 0) (type default)) (uuid 93b7ca0a-2f3c-53fc-be7c-a8a45528edde))
+(global_label "IF_EN" (shape bidirectional) (at 354.33 200.66 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid e4a78b5d-2feb-5442-8ac4-6bb7a0639b3b) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 354.33 200.66 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 359.41 213.36) (xy 359.41 218.44)) (stroke (width 0) (type default)) (uuid 0ab73598-90c7-5291-82e4-4b3d246ffa56))
+(wire (pts (xy 359.41 218.44) (xy 364.49 218.44)) (stroke (width 0) (type default)) (uuid 9a19b88b-7d58-5bda-b528-9c24a535a55f))
+(global_label "GND" (shape bidirectional) (at 364.49 218.44 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 7aa0a2c6-fdf5-5df7-b62a-364accf12f50) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 364.49 218.44 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:C") (at 49.53 246.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 7fed7cd7-7ec0-5832-8105-08f5a9c00923)
+(property "Reference" "C43" (at 52.07 243.84 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "100nF 50V" (at 52.07 246.38 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:C_0805_2012Metric" (at 49.53 246.38 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "C0805C104K5RACTU" (at 49.53 246.38 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "C43") (unit 1)))))
+(wire (pts (xy 49.53 242.57) (xy 49.53 237.49)) (stroke (width 0) (type default)) (uuid 1d3140ee-6f8a-522c-a229-8dd9dfaffa6c))
+(wire (pts (xy 49.53 237.49) (xy 44.45 237.49)) (stroke (width 0) (type default)) (uuid cea5714f-5af4-5a63-8c78-df853e103529))
+(global_label "HOST_3V3" (shape bidirectional) (at 44.45 237.49 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 4ab8fdc0-45b5-5021-86d0-adaf2f2bec63) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 44.45 237.49 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 49.53 250.19) (xy 49.53 255.27)) (stroke (width 0) (type default)) (uuid 9a7210f9-1a79-56f9-b094-65b058e139ca))
+(wire (pts (xy 49.53 255.27) (xy 54.61 255.27)) (stroke (width 0) (type default)) (uuid 804f59a4-1e70-5d9b-900d-b50c415377f3))
+(global_label "GND" (shape bidirectional) (at 54.61 255.27 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid e2e6a30a-52cd-55bd-a447-f7a5ad205bb3) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 54.61 255.27 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:C") (at 149.86 246.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 46a2ef0a-356f-52a5-9d5a-6e0f30bd6462)
+(property "Reference" "C44" (at 152.4 243.84 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "100nF 50V" (at 152.4 246.38 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:C_0805_2012Metric" (at 149.86 246.38 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "C0805C104K5RACTU" (at 149.86 246.38 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "C44") (unit 1)))))
+(wire (pts (xy 149.86 242.57) (xy 149.86 237.49)) (stroke (width 0) (type default)) (uuid 4711d8e0-6e25-5433-9b20-ba630fabcd43))
+(wire (pts (xy 149.86 237.49) (xy 144.78 237.49)) (stroke (width 0) (type default)) (uuid de806510-a30d-5f8b-b62e-8f509877aed9))
+(global_label "HOST_3V3" (shape bidirectional) (at 144.78 237.49 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 36cab089-7279-5711-bb93-906c97c60625) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 144.78 237.49 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 149.86 250.19) (xy 149.86 255.27)) (stroke (width 0) (type default)) (uuid 7dfdd3bf-bb31-5965-9963-5ad1a8b0f2f1))
+(wire (pts (xy 149.86 255.27) (xy 154.94 255.27)) (stroke (width 0) (type default)) (uuid eba57d37-d1b4-590e-8ec3-d216b7f4af40))
+(global_label "GND" (shape bidirectional) (at 154.94 255.27 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid de75b1ac-395c-5bd0-b0f4-ceb645febd95) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 154.94 255.27 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:C") (at 250.19 246.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 764f41dd-5929-5ff7-ac5d-ceeccd273741)
+(property "Reference" "C45" (at 252.73 243.84 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "100nF 50V" (at 252.73 246.38 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:C_0805_2012Metric" (at 250.19 246.38 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "C0805C104K5RACTU" (at 250.19 246.38 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "C45") (unit 1)))))
+(wire (pts (xy 250.19 242.57) (xy 250.19 237.49)) (stroke (width 0) (type default)) (uuid e58ab178-5424-5eb5-ba58-707a66178651))
+(wire (pts (xy 250.19 237.49) (xy 245.11 237.49)) (stroke (width 0) (type default)) (uuid aa532b6c-ef22-5084-aeb0-deb177c4e2f8))
+(global_label "DVDD_3V3" (shape bidirectional) (at 245.11 237.49 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid c14ade6e-c940-511c-a7dd-06f4f82ebcd2) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 245.11 237.49 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 250.19 250.19) (xy 250.19 255.27)) (stroke (width 0) (type default)) (uuid 2a4e6746-e12a-5ed6-acc4-92d3fd3f7da4))
+(wire (pts (xy 250.19 255.27) (xy 255.27 255.27)) (stroke (width 0) (type default)) (uuid ab124ca6-3a9c-5dda-94b8-cce6d17d003e))
+(global_label "GND" (shape bidirectional) (at 255.27 255.27 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid a4ee6003-4f51-54b2-973c-935bd4624ed8) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 255.27 255.27 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "Device:C") (at 350.52 246.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid f62fcac6-179b-50a6-a81f-9b4e8feed363)
+(property "Reference" "C46" (at 353.06 243.84 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "100nF 50V" (at 353.06 246.38 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Neuronic:C_0805_2012Metric" (at 350.52 246.38 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "C0805C104K5RACTU" (at 350.52 246.38 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "C46") (unit 1)))))
+(wire (pts (xy 350.52 242.57) (xy 350.52 237.49)) (stroke (width 0) (type default)) (uuid e5a14909-d51d-5aad-8c61-49bbf8760edc))
+(wire (pts (xy 350.52 237.49) (xy 345.44 237.49)) (stroke (width 0) (type default)) (uuid e38d0e95-2415-5679-8387-3c5f3d110c55))
+(global_label "DVDD_3V3" (shape bidirectional) (at 345.44 237.49 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid 47e00624-6e51-5e77-95c4-30959efc88cb) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 345.44 237.49 180) (effects (font (size 1.016 1.016)) hide)))
+(wire (pts (xy 350.52 250.19) (xy 350.52 255.27)) (stroke (width 0) (type default)) (uuid fd2f541d-f18d-5ea7-8264-85a168e0e6c2))
+(wire (pts (xy 350.52 255.27) (xy 355.6 255.27)) (stroke (width 0) (type default)) (uuid 68569503-f9ec-5a1c-9560-4c46f5640a00))
+(global_label "GND" (shape bidirectional) (at 355.6 255.27 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid c6c385a7-53e9-5f87-a8ea-21a051f6878d) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 355.6 255.27 0) (effects (font (size 1.016 1.016)) hide)))
+(symbol (lib_id "power:PWR_FLAG") (at 30.48 80.01 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 7c17b597-5503-5884-a1e1-5297ca0ef7ae)
+(property "Reference" "FLG3" (at 33.02 74.93 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "PWR_FLAG" (at 33.02 77.47 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "" (at 30.48 80.01 0) (effects (font (size 1.016 1.016)) hide))
+(property "Candidate_MPN" "" (at 30.48 80.01 0) (effects (font (size 1.016 1.016)) hide))
+(instances (project "neuronic" (path "/00011c75-8068-5c2a-a0dd-e7a40761679d/105dbd14-d09a-5988-8cb9-0d47670b07e5" (reference "FLG3") (unit 1)))))
+(wire (pts (xy 30.48 80.01) (xy 30.48 85.09)) (stroke (width 0) (type default)) (uuid 0a68c312-747c-5d08-bee3-3fe9c639e77b))
+(wire (pts (xy 30.48 85.09) (xy 35.56 85.09)) (stroke (width 0) (type default)) (uuid 12b05c3e-2f96-50ef-aa73-a0359a119343))
+(global_label "HOST_3V3" (shape bidirectional) (at 35.56 85.09 0) (effects (font (size 1.016 1.016)) (justify left)) (uuid 885b96f5-642f-57fe-9ccc-fe2a50ad3d00) (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 35.56 85.09 0) (effects (font (size 1.016 1.016)) hide)))
+(text "No USB or grounded instruments during any future body-connected use. No body use approved for this prototype." (at 18 275 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid 8673afa6-9f7f-5c92-9ab0-dc0e958fb52f))
+)

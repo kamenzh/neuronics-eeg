@@ -34,7 +34,7 @@ box is not a passed test.
 - Select 3.3 V SPI mode 1, MSB first, initially at a conservative clock such as
   1 MHz. Verify setup/hold and command decode timing against the datasheet.
 - Issue SDATAC before register writes/reads. Read ID; for the eight-channel
-  ADS1299 the expected ID is 0x3E, subject to the datasheet's field definition.
+  ADS1299 check `(ID & 0x1F) == 0x1E`; revision bits may vary.
   Read back every register written and log it.
 - Configure all eight channels for the internal test source with bias and
   lead-off excitation disabled. Use the datasheet's test waveform amplitude,
@@ -61,8 +61,8 @@ box is not a passed test.
   headroom. Test larger offsets and overload recovery within allowed limits.
 - Repeat noise and test-signal captures with the ESP32 radio off and streaming.
   Check burst-correlated artifacts. Do not increase gain just to enlarge plots.
-- A simulation must model sources it claims to test. `simulate_input.py` only
-  checks one ideal RC path; it does not model the ADC or bias-loop stability.
+- A simulation must model sources it claims to test. `simulate_input.py` checks ideal RC response, mismatch and illustrative load
+  sensitivities; it does not model the ADC or prove bias-loop stability.
 
 ## Timing and wireless integrity
 
@@ -88,3 +88,36 @@ For each test save: PCB revision and serial, firmware commit, instrument models,
 supply and current limit, sample rate, gain, register dump, input fixture,
 raw-data path, processing settings, expected result, observed result, pass/fail
 reason and reviewer/date. Store recordings privately by default.
+
+## A0.3 additions and first bench goals
+
+Use [POWER_HARNESS_A0_3.md](POWER_HARNESS_A0_3.md) for the changed J11 pins and
+buffer sequence. Test both supply orders, host-only, AFE-only, disconnected
+buffer supplies, slow discharge, brownout and controller reset. Record supply,
+pin and reverse currents; the part's power-off feature is not a measurement.
+
+For a first research prototype, use the following **development goals**, not
+claimed performance: input-referred RMS noise ≤1 µV over a documented 0.5–40 Hz
+band; ≥60 dB common-mode rejection at 50/60 Hz with balanced fixture impedances;
+no unexplained data loss during a ten-minute internal-test recording. Record
+failures honestly and revise the design if these goals are not met.
+
+Measure common-mode conversion using a low-energy fixture at a valid ~2.5 V
+common mode, initially with 10 mV amplitude, then 100 mV if there is no clipping.
+Compare equal source resistances, a 5 kΩ imbalance and a 50 kΩ imbalance. Add
+known 0.5/1/5 nF cable loads as separate conditions. Keep raw 50/60 Hz content; a
+notch filter must not conceal the result. The imbalance cases characterize
+robustness and may fail the balanced-fixture goal. The shared-reference loading
+model is a sensitivity estimate, not a guaranteed ADC CMRR prediction.
+
+Bias remains disabled until an explicit load/feedback model and test fixture are
+reviewed. Then examine settling, oscillation, disconnect/reconnect and overload
+recovery with a recorded bias-sense mask. The simple 1 MΩ/1.5 nF feedback corner
+is not a phase-margin result. Analog clamp/rail injection needs a current-limited
+fixture reviewed for device stress; do not apply an uncontrolled voltage to an
+input to see whether the protection survives.
+
+Probe reference/VCAP startup with suitably high impedance. Scope SCLK and START
+at the buffer output and receiving ADC, because the 33 Ω resistors are not all
+electrically adjacent to their drivers. Compare radio-off/on behavior. All of
+these tests are still unperformed; none permit a person to be connected.

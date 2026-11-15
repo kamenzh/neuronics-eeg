@@ -1,5 +1,5 @@
 ** Drc report for neuronic.kicad_pcb **
-** Created on 2026-11-15T17:55:56+0100 **
+** Created on 2026-11-15T19:55:07+0100 **
 
 ** Found 0 DRC violations **
 

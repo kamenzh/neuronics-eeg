@@ -71,4 +71,45 @@ class FailedExport(unittest.TestCase):
             self.assertFalse(result['manufacture_ready'])
             self.assertEqual([r['status'] for r in result['results'] if r['check'] in ['connectivity','board parity']],['NOT_RUN','NOT_RUN'])
 
+
+class RoutingImportGuards(unittest.TestCase):
+    def setUp(self):
+        spec=importlib.util.spec_from_file_location('route',ROOT/'tools/route_hardware.py')
+        self.module=importlib.util.module_from_spec(spec);spec.loader.exec_module(self.module)
+        self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
+        self.root=Path(self.tmp.name);self.project=self.root/'hardware/kicad';self.project.mkdir(parents=True)
+        self.board=self.project/'neuronic.kicad_pcb';k.SaveBoard(str(self.board),k.BOARD())
+        (self.project/'neuronic.kicad_sch').write_text('fixture schematic')
+        self.session=self.root/'test.ses';self.session.write_text('(session test (base_design test))')
+        self.dsn=self.root/'test.dsn';self.dsn.write_text('(pcb test)')
+        self.manifest=self.root/'test.json'
+        self.data={'schema':1,'board_sha256':self.module.digest(self.board),
+                   'dependency_sha256':{str(p.relative_to(self.root)):self.module.digest(p) for p in self.module.dependencies(self.root)},
+                   'dsn_file':'test.dsn','dsn_sha256':self.module.digest(self.dsn),'design_id':'test'}
+        self.manifest.write_text(json.dumps(self.data));self.session_hash=self.module.digest(self.session)
+    def verify(self):
+        return self.module.verify_import_inputs(self.root,self.board,self.session,self.manifest,self.session_hash)
+    def test_stale_board_rejected_without_write(self):
+        self.board.write_text(self.board.read_text()+'\n# later manual edit\n')
+        before=self.board.read_bytes()
+        with self.assertRaisesRegex(ValueError,'Source board changed'):self.verify()
+        self.assertEqual(before,self.board.read_bytes())
+    def test_old_session_and_changed_digest_rejected(self):
+        self.session.write_text('(session old (base_design old))')
+        with self.assertRaisesRegex(ValueError,'SHA-256'):self.verify()
+        self.session_hash=self.module.digest(self.session)
+        with self.assertRaisesRegex(ValueError,'different routing export'):self.verify()
+    def test_changed_schematic_and_dsn_rejected(self):
+        schematic=self.project/'neuronic.kicad_sch';original=schematic.read_text();schematic.write_text('different circuit')
+        with self.assertRaisesRegex(ValueError,'Schematic'):self.verify()
+        schematic.write_text(original);self.dsn.write_text('different routing input')
+        with self.assertRaisesRegex(ValueError,'DSN changed'):self.verify()
+    def test_failed_drc_preserves_original_board(self):
+        before=self.board.read_bytes()
+        with patch.object(k,'ImportSpecctraSES',return_value=True),patch.object(k,'ZONE_FILLER'),\
+             patch.object(subprocess,'run',return_value=subprocess.CompletedProcess([],5,'Found missing connections','')):
+            with self.assertRaisesRegex(RuntimeError,'failed full DRC'):
+                self.module.import_checked(self.root,self.board,self.session,self.manifest,self.session_hash)
+        self.assertEqual(before,self.board.read_bytes())
+
 if __name__=='__main__':unittest.main()

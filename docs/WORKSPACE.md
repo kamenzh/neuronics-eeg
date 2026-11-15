@@ -2,13 +2,14 @@
 
 Upstream: https://github.com/kamenzh/neuronics-eeg
 
-A0.2 follows the published A0.1 checkpoint `1b0b3a11e555164f0fccab73d3814518bf575570`.
-It selects P1 touchproof sockets, revises power to TPS7A24 regulators and adds
-routed copper with fresh validation. See Git history for the resulting commit.
+A0.3 implements the main circuit/layout changes proposed in the independent
+review of A0.2 hardware commit `558886f`. The A0.2 review checkpoint was
+`0d6456d`; historical reports remain in the repo. The new work is on
+`hardware/a0.3-review-fixes`, with explicit remaining release gates.
 
-Open `hardware/kicad/neuronic.kicad_pro` in KiCad 9 and keep the bundled libraries
-with it. The routed PCB is authoritative: preserve it and edit in KiCad. The
-source generator refuses to replace existing copper. No manufacturing package
-or body-use approval is implied; read `hardware/validation/STATUS.md`.
+Open `hardware/kicad/neuronic.kicad_pro` in KiCad 9 with its bundled libraries.
+The saved PCB is authoritative. Preserve and edit that routed board; the source
+generator refuses to replace copper. Use the revised J11 cable contract.
 
-Old starter material remains in Git history and `docs/archive/`.
+No manufacturing package or body-use approval is implied. Read
+`hardware/validation/STATUS.md` and `docs/NEXT_STEPS.md`.

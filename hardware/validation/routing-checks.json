@@ -14,12 +14,16 @@
       "passed": true
     },
     {
+      "name": "All expected digital nets contain copper",
+      "passed": true
+    },
+    {
       "name": "Host digital signals stay right of x=103mm, away from left-side inputs",
       "passed": true
     }
   ],
-  "tracks": 537,
-  "vias": 87,
+  "tracks": 1181,
+  "vias": 123,
   "zones": [
     {
       "net": "GND",
@@ -33,78 +37,77 @@
     }
   ],
   "tracks_by_layer": {
-    "F.Cu": 496,
-    "In2.Cu": 21,
-    "B.Cu": 20
+    "F.Cu": 720,
+    "In2.Cu": 146,
+    "B.Cu": 315
   },
   "nets": {
     "ADS_CS_N": {
-      "track_length_mm": 30.974,
-      "via_count": 1,
-      "layers": [
-        "F.Cu",
-        "In2.Cu"
-      ],
-      "x_min_mm": 105.6625,
-      "x_max_mm": 133.54
-    },
-    "ADS_DRDY_N": {
-      "track_length_mm": 34.848,
-      "via_count": 1,
-      "layers": [
-        "F.Cu",
-        "In2.Cu"
-      ],
-      "x_min_mm": 103.3983,
-      "x_max_mm": 131.0
-    },
-    "ADS_PWDN_N": {
-      "track_length_mm": 45.492,
-      "via_count": 1,
-      "layers": [
-        "F.Cu",
-        "In2.Cu"
-      ],
-      "x_min_mm": 105.6625,
-      "x_max_mm": 134.7472
-    },
-    "ADS_RESET_N": {
-      "track_length_mm": 50.313,
-      "via_count": 1,
-      "layers": [
-        "F.Cu",
-        "In2.Cu"
-      ],
-      "x_min_mm": 105.6625,
-      "x_max_mm": 134.7105
-    },
-    "ADS_START": {
-      "track_length_mm": 29.893,
-      "via_count": 1,
-      "layers": [
-        "F.Cu",
-        "In2.Cu"
-      ],
-      "x_min_mm": 105.6625,
-      "x_max_mm": 131.0
-    },
-    "AVDD_5V": {
-      "track_length_mm": 191.905,
+      "track_length_mm": 16.524,
       "via_count": 2,
       "layers": [
         "F.Cu",
         "In2.Cu"
       ],
-      "x_min_mm": 75.0666,
-      "x_max_mm": 114.05
+      "x_min_mm": 105.6625,
+      "x_max_mm": 114.9125
     },
-    "BIASINV": {
-      "track_length_mm": 9.943,
+    "ADS_DRDY_N": {
+      "track_length_mm": 26.191,
+      "via_count": 2,
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "x_min_mm": 104.5,
+      "x_max_mm": 118.4
+    },
+    "ADS_PWDN_N": {
+      "track_length_mm": 13.268,
       "via_count": 0,
       "layers": [
         "F.Cu"
       ],
-      "x_min_mm": 93.9125,
+      "x_min_mm": 105.6625,
+      "x_max_mm": 114.9125
+    },
+    "ADS_RESET_N": {
+      "track_length_mm": 13.642,
+      "via_count": 2,
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "x_min_mm": 105.6625,
+      "x_max_mm": 114.9125
+    },
+    "ADS_START": {
+      "track_length_mm": 17.73,
+      "via_count": 2,
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "x_min_mm": 105.6625,
+      "x_max_mm": 114.9125
+    },
+    "AVDD_5V": {
+      "track_length_mm": 215.741,
+      "via_count": 2,
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "x_min_mm": 75.0553,
+      "x_max_mm": 114.0
+    },
+    "BIASINV": {
+      "track_length_mm": 12.293,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 93.2756,
       "x_max_mm": 97.75
     },
     "BIASOUT": {
@@ -126,14 +129,88 @@
       "x_min_mm": 71.0875,
       "x_max_mm": 82.9125
     },
-    "CLKSEL_PU": {
-      "track_length_mm": 4.985,
+    "BUF_ADS_CS_N": {
+      "track_length_mm": 7.712,
       "via_count": 0,
       "layers": [
         "F.Cu"
       ],
+      "x_min_mm": 113.0875,
+      "x_max_mm": 117.1375
+    },
+    "BUF_ADS_PWDN_N": {
+      "track_length_mm": 10.029,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 113.0875,
+      "x_max_mm": 117.1375
+    },
+    "BUF_ADS_RESET_N": {
+      "track_length_mm": 11.294,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 113.0875,
+      "x_max_mm": 118.1962
+    },
+    "BUF_ADS_START": {
+      "track_length_mm": 22.035,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 108.4678,
+      "x_max_mm": 118.6066
+    },
+    "BUF_HOST_ADS_DRDY_N": {
+      "track_length_mm": 2.925,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 122.8625,
+      "x_max_mm": 125.7875
+    },
+    "BUF_HOST_SPI_MISO": {
+      "track_length_mm": 2.925,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 122.8625,
+      "x_max_mm": 125.7875
+    },
+    "BUF_SPI_MOSI": {
+      "track_length_mm": 10.493,
+      "via_count": 2,
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "x_min_mm": 112.0,
+      "x_max_mm": 118.2
+    },
+    "BUF_SPI_SCLK": {
+      "track_length_mm": 11.257,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 113.0875,
+      "x_max_mm": 118.1775
+    },
+    "CLKSEL_PU": {
+      "track_length_mm": 6.731,
+      "via_count": 2,
+      "layers": [
+        "F.Cu",
+        "In2.Cu"
+      ],
       "x_min_mm": 102.25,
-      "x_max_mm": 106.0875
+      "x_max_mm": 107.0
     },
     "CONTACT_1": {
       "track_length_mm": 3.062,
@@ -226,9 +303,10 @@
       "x_max_mm": 70.0875
     },
     "DVDD_3V3": {
-      "track_length_mm": 43.907,
-      "via_count": 0,
+      "track_length_mm": 76.407,
+      "via_count": 4,
       "layers": [
+        "B.Cu",
         "F.Cu"
       ],
       "x_min_mm": 103.25,
@@ -245,7 +323,7 @@
       "x_max_mm": 94.3375
     },
     "EEG2": {
-      "track_length_mm": 30.517,
+      "track_length_mm": 30.518,
       "via_count": 0,
       "layers": [
         "F.Cu"
@@ -281,7 +359,7 @@
       "x_max_mm": 94.3375
     },
     "EEG6": {
-      "track_length_mm": 24.964,
+      "track_length_mm": 24.967,
       "via_count": 0,
       "layers": [
         "F.Cu"
@@ -299,7 +377,7 @@
       "x_max_mm": 94.3375
     },
     "EEG8": {
-      "track_length_mm": 37.965,
+      "track_length_mm": 41.577,
       "via_count": 0,
       "layers": [
         "F.Cu"
@@ -308,50 +386,147 @@
       "x_max_mm": 94.3375
     },
     "GND": {
-      "track_length_mm": 115.226,
-      "via_count": 61,
+      "track_length_mm": 78.085,
+      "via_count": 73,
       "layers": [
         "F.Cu"
       ],
-      "x_min_mm": 80.5235,
-      "x_max_mm": 128.0
+      "x_min_mm": 81.663,
+      "x_max_mm": 130.812
     },
     "GPIO1_PD": {
-      "track_length_mm": 19.928,
-      "via_count": 0,
+      "track_length_mm": 26.062,
+      "via_count": 2,
       "layers": [
+        "B.Cu",
         "F.Cu"
       ],
-      "x_min_mm": 105.6625,
-      "x_max_mm": 113.905
+      "x_min_mm": 104.4,
+      "x_max_mm": 113.1
     },
     "GPIO2_PD": {
-      "track_length_mm": 22.866,
-      "via_count": 0,
-      "layers": [
-        "F.Cu"
-      ],
-      "x_min_mm": 105.6625,
-      "x_max_mm": 118.0875
-    },
-    "GPIO3_PD": {
-      "track_length_mm": 26.396,
-      "via_count": 0,
-      "layers": [
-        "F.Cu"
-      ],
-      "x_min_mm": 105.6625,
-      "x_max_mm": 123.0875
-    },
-    "GPIO4_PD": {
-      "track_length_mm": 24.839,
+      "track_length_mm": 29.117,
       "via_count": 2,
       "layers": [
         "B.Cu",
         "F.Cu"
       ],
       "x_min_mm": 105.6625,
-      "x_max_mm": 113.0875
+      "x_max_mm": 118.1
+    },
+    "GPIO3_PD": {
+      "track_length_mm": 31.338,
+      "via_count": 3,
+      "layers": [
+        "B.Cu",
+        "F.Cu",
+        "In2.Cu"
+      ],
+      "x_min_mm": 104.5,
+      "x_max_mm": 123.1
+    },
+    "GPIO4_PD": {
+      "track_length_mm": 34.965,
+      "via_count": 2,
+      "layers": [
+        "F.Cu",
+        "In2.Cu"
+      ],
+      "x_min_mm": 105.6625,
+      "x_max_mm": 128.1
+    },
+    "HOST_3V3": {
+      "track_length_mm": 30.118,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 121.0134,
+      "x_max_mm": 131.0
+    },
+    "HOST_ADS_CS_N": {
+      "track_length_mm": 20.177,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 121.8049,
+      "x_max_mm": 133.54
+    },
+    "HOST_ADS_DRDY_N": {
+      "track_length_mm": 8.133,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 127.6125,
+      "x_max_mm": 131.0
+    },
+    "HOST_ADS_PWDN_N": {
+      "track_length_mm": 17.889,
+      "via_count": 1,
+      "layers": [
+        "F.Cu",
+        "In2.Cu"
+      ],
+      "x_min_mm": 121.8168,
+      "x_max_mm": 133.54
+    },
+    "HOST_ADS_RESET_N": {
+      "track_length_mm": 19.866,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 121.4151,
+      "x_max_mm": 133.54
+    },
+    "HOST_ADS_START": {
+      "track_length_mm": 13.18,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 122.8625,
+      "x_max_mm": 131.0
+    },
+    "HOST_SPI_MISO": {
+      "track_length_mm": 7.133,
+      "via_count": 1,
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "x_min_mm": 127.6125,
+      "x_max_mm": 131.0
+    },
+    "HOST_SPI_MOSI": {
+      "track_length_mm": 14.065,
+      "via_count": 1,
+      "layers": [
+        "F.Cu",
+        "In2.Cu"
+      ],
+      "x_min_mm": 121.6,
+      "x_max_mm": 133.54
+    },
+    "HOST_SPI_SCLK": {
+      "track_length_mm": 8.651,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 122.8625,
+      "x_max_mm": 131.0
+    },
+    "IF_EN": {
+      "track_length_mm": 40.077,
+      "via_count": 0,
+      "layers": [
+        "F.Cu"
+      ],
+      "x_min_mm": 117.1,
+      "x_max_mm": 133.54
     },
     "INPUT_RMID_1": {
       "track_length_mm": 2.175,
@@ -435,8 +610,8 @@
       "x_max_mm": 74.0875
     },
     "REF_FILTERED": {
-      "track_length_mm": 71.775,
-      "via_count": 8,
+      "track_length_mm": 71.774,
+      "via_count": 9,
       "layers": [
         "B.Cu",
         "F.Cu"
@@ -445,42 +620,43 @@
       "x_max_mm": 96.4
     },
     "SPI_MISO": {
-      "track_length_mm": 26.511,
-      "via_count": 1,
-      "layers": [
-        "B.Cu",
-        "F.Cu"
-      ],
-      "x_min_mm": 105.6625,
-      "x_max_mm": 131.0
-    },
-    "SPI_MOSI": {
-      "track_length_mm": 51.091,
+      "track_length_mm": 18.806,
       "via_count": 0,
       "layers": [
         "F.Cu"
       ],
       "x_min_mm": 105.6625,
-      "x_max_mm": 135.2153
+      "x_max_mm": 118.8
     },
-    "SPI_SCLK": {
-      "track_length_mm": 36.572,
-      "via_count": 2,
+    "SPI_MOSI": {
+      "track_length_mm": 34.737,
+      "via_count": 3,
       "layers": [
         "B.Cu",
-        "F.Cu"
+        "F.Cu",
+        "In2.Cu"
       ],
-      "x_min_mm": 105.6625,
-      "x_max_mm": 132.2101
+      "x_min_mm": 103.3,
+      "x_max_mm": 114.9125
+    },
+    "SPI_SCLK": {
+      "track_length_mm": 28.444,
+      "via_count": 4,
+      "layers": [
+        "F.Cu",
+        "In2.Cu"
+      ],
+      "x_min_mm": 104.4,
+      "x_max_mm": 114.9125
     },
     "VBAT": {
-      "track_length_mm": 32.721,
+      "track_length_mm": 32.722,
       "via_count": 0,
       "layers": [
         "F.Cu"
       ],
       "x_min_mm": 104.0,
-      "x_max_mm": 123.8763
+      "x_max_mm": 123.876
     },
     "VBAT_DIODE": {
       "track_length_mm": 6.0,
@@ -492,13 +668,13 @@
       "x_max_mm": 110.0
     },
     "VBAT_FUSED": {
-      "track_length_mm": 10.803,
+      "track_length_mm": 10.804,
       "via_count": 0,
       "layers": [
         "F.Cu"
       ],
       "x_min_mm": 114.0,
-      "x_max_mm": 123.1375
+      "x_max_mm": 123.138
     },
     "VBAT_RAW": {
       "track_length_mm": 9.209,
@@ -506,54 +682,53 @@
       "layers": [
         "F.Cu"
       ],
-      "x_min_mm": 118.8625,
+      "x_min_mm": 118.862,
       "x_max_mm": 126.0
     },
     "VCAP1": {
-      "track_length_mm": 9.753,
+      "track_length_mm": 6.951,
       "via_count": 0,
       "layers": [
         "F.Cu"
       ],
       "x_min_mm": 101.75,
-      "x_max_mm": 105.0
+      "x_max_mm": 104.0
     },
     "VCAP2": {
-      "track_length_mm": 7.706,
+      "track_length_mm": 3.566,
       "via_count": 0,
       "layers": [
         "F.Cu"
       ],
       "x_min_mm": 102.75,
-      "x_max_mm": 109.0
+      "x_max_mm": 105.25
     },
     "VCAP3": {
-      "track_length_mm": 11.376,
+      "track_length_mm": 5.62,
       "via_count": 0,
       "layers": [
         "F.Cu"
       ],
       "x_min_mm": 100.75,
-      "x_max_mm": 102.05
+      "x_max_mm": 100.95
     },
     "VCAP4": {
-      "track_length_mm": 8.524,
+      "track_length_mm": 5.553,
       "via_count": 0,
       "layers": [
         "F.Cu"
       ],
-      "x_min_mm": 99.0153,
-      "x_max_mm": 101.1615
+      "x_min_mm": 100.75,
+      "x_max_mm": 100.95
     },
     "VREFP": {
-      "track_length_mm": 14.4,
-      "via_count": 2,
+      "track_length_mm": 14.214,
+      "via_count": 0,
       "layers": [
-        "F.Cu",
-        "In2.Cu"
+        "F.Cu"
       ],
-      "x_min_mm": 92.9608,
-      "x_max_mm": 99.75
+      "x_min_mm": 97.525,
+      "x_max_mm": 100.025
     }
   },
   "scope": "Copper inventory and coarse region checks. Not a noise, return-current, fault or impedance validation."

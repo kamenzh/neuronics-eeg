@@ -1,19 +1,20 @@
-# Remaining hardware work — A0.2
+# Remaining hardware work — A0.3
 
 | ID | Current state | Remaining evidence |
 | --- | --- | --- |
-| HW-01 | P1 36619 / 8R003661901F selected; derived footprint added | Actual Sino-k plug/sample mating, hole fit, enclosure retention |
-| HW-02 | Bounded DC clamp/injection calculation documented | ESD/transient behavior, leakage/noise and powered/unpowered rail injection |
-| HW-03 | Body-current protection unresolved | Rail-to-contact and aggregate current, short/open failures, USB/power paths; 20k alone is insufficient evidence |
-| HW-04 | Bias loop candidate | Cable/electrode simulator, settling/stability and recovery measurements |
-| HW-05 | TPS7A24 power revision and DC margin review complete | Effective capacitance, startup/noise/temperature, reverse current and battery harness |
-| HW-06 | Owned Nano and GPIO map selected | Protected controller branch, radio-burst droop, EMI, power sequencing/interlock |
-| HW-07 | Analog/digital placement refined | Detailed independent layout review and measured noise/return behavior |
-| HW-08 | Copper routing added | Current completeness and DRC evidence in validation/STATUS.md; fabricator stack-up still to be selected |
-| HW-09 | Automated checks executed | Fresh saved-board reports; they do not establish physical safety/performance |
-| HW-10 | Exact candidate PCB BOM | Verify source/stock/footprints, off-board parts, bare-board delivered quote |
-| HW-11 | No physical tests performed | Bench log tied to PCB/firmware revisions |
-| HW-12 | Body-use review not passed | Qualified review of final assembled hardware and all external connections |
+| HW-01 | P1 36619 selected; slot/hole tolerance model revised | Real Sino-k plug/socket mating, coupon solder fit, fabricator acceptance, enclosure support |
+| HW-02 | Bounded DC clamp calculation | ESD/transients, leakage, powered/unpowered analog rail injection |
+| HW-03 | Body-current protection unresolved | Rail-to-contact/aggregate current, faults, USB/power paths; 20k alone is insufficient |
+| HW-04 | Bias-loop candidate, disabled for initial tests | Electrode/cable model, stability and recovery measurements |
+| HW-05 | Local supplies/reference rerouted; extra reference capacitor | Effective capacitance, cold/aged startup, noise, stability and temperature |
+| HW-06 | Power-off tolerant GPIO buffers + harness candidate | Brownout/power orders, final holder/switch, inrush/fuse/drop tests and radio interference |
+| HW-07 | Independent changed-layout review complete | Physical noise/returns, CMRR, buffer-series-resistor edge behavior |
+| HW-08 | Complete copper, fresh clean full DRC | Named fabricator stack-up and exported manufacturing-file inspection |
+| HW-09 | Stronger workflow guards and evidence hashes | Checks remain limited to their documented scope |
+| HW-10 | 107 candidate PCB components | Exact stock/source review, offboard parts and delivered bare-board quote |
+| HW-11 | No board or firmware acquisition test yet | Built firmware/receiver and measured bench log tied to revisions |
+| HW-12 | No body-use approval | Qualified assembled-system review including enclosure and external connections |
 
-Sockets replace the old bench pin headers. A touchproof connector does not make
-the circuit safe for body connection. USB/shared grounds are not isolated.
+See [implemented changes](REVIEW_FIXES_A0_3.md), [independent criticism](INDEPENDENT_REVIEW_A0_3.md)
+and [the next-step roadmap](NEXT_STEPS.md). A touchproof jack and battery power do
+not qualify the complete device for a person. Do not attach the current prototype.

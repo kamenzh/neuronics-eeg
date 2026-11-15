@@ -1,38 +1,39 @@
-# From A0.2 to an assembled prototype
+# From A0.3 to an assembled prototype
 
-A0.2 selects the touchproof sockets, revises the regulators, documents bounded
-protection/power calculations, and adds copper routing. The owned Waveshare
-ESP32-S3-Nano and Sino-k ten-lead set remain the system choices.
+A0.3 has a revised circuit and real copper routing. The main A0.2 review fixes
+are implemented; a manufactured, working EEG device does not exist yet.
+Use the owned Waveshare ESP32-S3-Nano and the full eight-channel ADS1299.
 
-The [independent A0.2 review](INDEPENDENT_REVIEW_A0_2.md) has now reproduced the
-automated checks and identified actionable issues. The reviewed hardware is
-still commit `558886f`; the review itself does not apply its proposed fixes.
-Do not order the current board yet. Close the likely causes of a second board
-order first, especially core power/reference routing and connector fit.
+The next work has two tracks: physical connector/manufacturing checks, and
+acquisition firmware. Neither requires buying an assembled PCB.
 
-| Next step | Completion evidence |
-| --- | --- |
-| Correct the ADS1299 supply and bypass layout | Separate charge-pump supply branch; short local reference/VCAP/supply connections; reviewed return paths |
-| Correct default digital logic margins | Revised R30-R35 values and a worst-case LOW-level calculation including host leakage |
-| Verify socket and capacitor assumptions | Actual cable mates with P1 36619 sample; hole-fit/enclosure check; effective capacitor data |
-| Resolve remaining circuit and harness decisions | Input-filter/reference matching, bias-loop test model, protection fault paths, battery/controller branch protection and power-off behavior; resolve choices that affect copper before fabrication |
-| Verify the revised design | Fresh ERC, full schematic-parity DRC, connectivity checks and independent review of the changed copper; selected manufacturer stack-up |
-| Prepare a bench-only fabrication release | Independent Gerber/drill inspection, exact BOM, assembly drawings and delivered bare-board quote |
-| Order bare boards and solder components | Optical inspection, continuity/polarity checks, no shorts; no person connected |
-| Bring up power and firmware | Rails/current/temperature/startup, SPI register readback, internal test, loss-counted streaming |
-| Measure acquisition | Shorted-input noise, calibrated microvolt source, bias-loop response, radio interference and fault tests |
-| Resolve body-connected protection | Qualified review of assembled electronics, cable/enclosure, aggregate leakage, faults and USB/charging paths |
-| Record EEG and evaluate control | Repeatable data first; artifact checks and held-out-session classification before robotic-arm commands |
+| Order | Work | Who can do it | Evidence needed |
+| --- | --- | --- | --- |
+| 1 | Verify the actual Sino-k lead fits a P1 36619 / 8R003661901F socket | Kamen with a real sample | Comfortable insertion/retention, correct contact, photos/measurements; no forcing |
+| 2 | Verify the revised three-hole footprint and enclosure clearance | Kamen + chosen fabricator | Approved slot/hole tolerances; socket coupon/sample solder fit and mechanical support |
+| 3 | Finish manufacturing review | CAD reviewer + fabricator | Confirm 4-layer stack-up, process rules, BOM availability, hand-assembly access and remaining analog concerns |
+| 4 | Implement bench acquisition firmware and PC recorder | Codex can do this in the repo | Pinned successful build, register readback, test/short modes, timestamps, loss accounting and protocol tests |
+| 5 | Export and inspect a bench fabrication package | Codex + independent reviewer | Gerber/drill inspection, plated slots, exact BOM, assembly drawing, test map and recorded source hashes |
+| 6 | Choose a delivered bare-board quote | Kamen | Board-only price + shipping + tax; confirm affordable total before ordering |
+| 7 | Assemble one board | Kamen, preferably with an experienced soldering helper | Magnified solder inspection, continuity/polarity tests, no rail short |
+| 8 | Power and acquire on the bench | Kamen with the documented fixture | Rails, startup, reference, temperature, internal test, noise, calibrated input and radio/loss measurements |
+| 9 | Resolve any measured hardware weaknesses | Codex + electronics reviewer | CMRR/reference matching, bias-loop/cable behavior, rail injection and fault analysis; revise if needed |
+| 10 | Complete a separate body-connected safety review | Qualified electronics/safety reviewer | Assembled system, cable/enclosure, aggregate leakage, faults and external power paths covered |
+| 11 | Record EEG, then evaluate a control model | Kamen + Codex | Repeatable signal first; held-out-session classification and artifact checks before robotic control |
 
-See `hardware/validation/STATUS.md` for the original CAD checkpoint and
-`hardware/validation/independent-a0_2/` for fresh review evidence. The earlier
-`PROTECTION_POWER_REVIEW_A0_2.md` records the original design decisions; the
-independent review adds criticism and does not supersede unperformed physical tests.
-Firmware may proceed alongside physical verification using `hardware/interface.json`.
-No physical board, acquisition firmware or trained mind-control classifier is
-claimed by this checkpoint.
+**The practical next item for Kamen is one real socket sample, not a PCB order.**
+The plug family is still an assumption. A nominal drawing match cannot replace
+that inexpensive physical check. Codex can develop firmware while the sample
+and fabricator checks are pending.
 
-`.kicad_sch` defines the circuit; `.kicad_pcb` now contains real copper.
-`design.json` is an audit record, not a fabrication file. The routed KiCad board
-is authoritative for placement and routing. The generator refuses to overwrite
-tracks/vias/zones; preserve and edit that board. Re-run validation after changes.
+The [review-fix record](REVIEW_FIXES_A0_3.md),
+[harness/pinout](POWER_HARNESS_A0_3.md) and
+[current validation status](../hardware/validation/STATUS.md) distinguish completed
+software checks from physical measurements. Historical A0.2 findings remain in
+[the independent review](INDEPENDENT_REVIEW_A0_2.md).
+
+`.kicad_sch` defines the circuit; `.kicad_pcb` contains placement and copper.
+`design.json` records the generated component/net/starting placement data; it is
+not a manufacturing file. Preserve the routed CAD. Generation refuses a board
+with copper; a router import now requires a matching export and clean candidate
+DRC. Passing either tool is not a body-use approval.

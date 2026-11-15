@@ -1,5 +1,5 @@
 {
-  "revision": "A0.2-routed-bench",
+  "revision": "A0.3-review-fixes",
   "controller": {
     "model": "Waveshare ESP32-S3-Nano",
     "owned": true,
@@ -46,63 +46,63 @@
     },
     {
       "pin": 3,
-      "net": "SPI_SCLK",
+      "net": "HOST_SPI_SCLK",
       "gpio": 5,
       "board_label": "D2"
     },
     {
       "pin": 4,
-      "net": "SPI_MOSI",
+      "net": "HOST_SPI_MOSI",
       "gpio": 38,
       "board_label": "D11"
     },
     {
       "pin": 5,
-      "net": "SPI_MISO",
+      "net": "HOST_SPI_MISO",
       "gpio": 47,
       "board_label": "D12"
     },
     {
       "pin": 6,
-      "net": "ADS_CS_N",
+      "net": "HOST_ADS_CS_N",
       "gpio": 21,
       "board_label": "D10"
     },
     {
       "pin": 7,
-      "net": "ADS_DRDY_N",
+      "net": "HOST_ADS_DRDY_N",
       "gpio": 18,
       "board_label": "D9"
     },
     {
       "pin": 8,
-      "net": "ADS_RESET_N",
+      "net": "HOST_ADS_RESET_N",
       "gpio": 17,
       "board_label": "D8"
     },
     {
       "pin": 9,
-      "net": "ADS_START",
+      "net": "HOST_ADS_START",
       "gpio": 10,
       "board_label": "D7"
     },
     {
       "pin": 10,
-      "net": "ADS_PWDN_N",
+      "net": "HOST_ADS_PWDN_N",
       "gpio": 9,
       "board_label": "D6"
     },
     {
       "pin": 11,
-      "net": null,
+      "net": "HOST_3V3",
       "gpio": null,
-      "board_label": "NC"
+      "board_label": "3V3"
     },
     {
       "pin": 12,
-      "net": "GND",
-      "gpio": null,
-      "board_label": "GND"
+      "net": "IF_EN",
+      "gpio": 6,
+      "board_label": "D3"
     }
   ],
   "acquisition": {
@@ -128,7 +128,7 @@
       "reference": 1,
       "bias": 1
     },
-    "connector_status": "DIN 42802 1.5 mm touchproof assumed per user; selected P1 36619 / 8R003661901F. Physical sample mating and hole fit unverified.",
+    "connector_status": "1.5 mm DIN 42802 assumed; P1 36619 candidate. Revised tolerance-based slots; physical cable fit and fabricator confirmation remain required.",
     "pcb_connectors": "J1-J8 channels; J9 reference; J10 bias. P1 36619 right-angle PCB jacks; isolated dummy legs.",
     "socket_mpn": "8R003661901F",
     "socket_drawing": "https://catalog.p1tec.com/dash50/36619_dash50.pdf"
@@ -141,14 +141,28 @@
     ],
     "afe_analog_budget_ma": 30,
     "afe_digital_budget_ma": 10,
-    "controller_input": "Separate protected battery branch to Nano VIN; no power from J11",
+    "controller_input": "Separate protected battery branch to Nano VIN; Nano 3V3 to J11.11 supplies buffer A ports only",
     "nano_documented_vin_range_v": [
       6,
       21
     ],
-    "status": "Candidate topology only; battery harness/branch fuse/switch, voltage at VIN under radio bursts and noise tests remain open",
+    "status": "See docs/POWER_HARNESS_A0_3.md; star battery branches and master switch, bench-only. Physical droop/thermal/power-order tests pending.",
     "recording_concept": "Self-contained battery and wireless; no USB, charger or mains-connected instruments when electrodes are on a person; only after final safety review",
     "ldo_analog": "TPS7A2450DBVR",
     "ldo_digital": "TPS7A2433DBVR"
+  },
+  "buffer": {
+    "mpn": "TXU0304PWR",
+    "references": [
+      "U4",
+      "U5"
+    ],
+    "host_rail": "HOST_3V3",
+    "afe_rail": "DVDD_3V3",
+    "enable_gpio": 6,
+    "enable_active_high": true,
+    "default_disabled": true,
+    "galvanic_isolation": false,
+    "note": "A0.3 cable change: pin11 host 3V3; pin12 GPIO6 enable, no longer GND. Pins1/2 common GND. Host supply powers only buffer A ports."
   }
 }

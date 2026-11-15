@@ -1,8 +1,4 @@
-# A0.2 update
-
-P1 36619 / 8R003661901F touchproof jacks now replace the headers. DIN 42802 is the user-supplied working assumption; physical fit remains unverified. See [socket and power review](PROTECTION_POWER_REVIEW_A0_2.md). Regulators are now TPS7A2450DBVR and TPS7A2433DBVR. GPIO assignments below remain valid.
-
-# Owned hardware and interface — A0.2
+# Owned hardware and interface — A0.3
 
 **Use the Waveshare ESP32-S3-Nano already owned by Kamen. No new controller is needed.**
 This is an external controller connected by short wires to J11, not a module
@@ -28,18 +24,22 @@ The source of truth is `hardware/interface.json`. Board labels are not raw GPIO
 numbers. ESP-IDF uses the GPIO column. If using Arduino's Nano ESP32 board profile,
 select native GPIO numbering or translate deliberately; do not mix the two schemes.
 
-| J11 pin | AFE net | Nano printed label | ESP32 GPIO | Direction at Nano |
-| --- | --- | --- | --- | --- |
-| 1, 2, 12 | GND | GND | — | Common return |
-| 3 | SPI_SCLK | D2 | 5 | Output |
-| 4 | SPI_MOSI | D11 | 38 | Output |
-| 5 | SPI_MISO | D12 | 47 | Input |
-| 6 | ADS_CS_N | D10 | 21 | Output |
-| 7 | ADS_DRDY_N | D9 | 18 | Input / falling-edge interrupt |
-| 8 | ADS_RESET_N | D8 | 17 | Output |
-| 9 | ADS_START | D7 | 10 | Output |
-| 10 | ADS_PWDN_N | D6 | 9 | Output |
-| 11 | No connection | Leave unwired | — | No power |
+**A0.3 cable change: pin 11 = Nano 3V3, pin 12 = GPIO6 enable (formerly GND).**
+
+| J11 pin | Net | Nano label | Native GPIO |
+| --- | --- | --- | --- |
+| 1 | GND | GND | — |
+| 2 | GND | GND | — |
+| 3 | HOST_SPI_SCLK | D2 | 5 |
+| 4 | HOST_SPI_MOSI | D11 | 38 |
+| 5 | HOST_SPI_MISO | D12 | 47 |
+| 6 | HOST_ADS_CS_N | D10 | 21 |
+| 7 | HOST_ADS_DRDY_N | D9 | 18 |
+| 8 | HOST_ADS_RESET_N | D8 | 17 |
+| 9 | HOST_ADS_START | D7 | 10 |
+| 10 | HOST_ADS_PWDN_N | D6 | 9 |
+| 11 | HOST_3V3 | 3V3 | — |
+| 12 | IF_EN | D3 | 6 |
 
 SCLK is deliberately remapped to D2/GPIO5 using the GPIO matrix, rather than the
 board's usual D13/GPIO48, which also drives the onboard SCK LED. Explicitly set
@@ -52,8 +52,9 @@ Initial target gain is 12, eight enabled channels, 250 SPS. The schematic connec
 REF_FILTERED directly to all eight INxN pins: MISC1=0x00 and CHnSET.SRB2=0.
 Start with internal test/shorted-input modes, bias and lead-off disabled.
 Verify register readback and TI startup timing before enabling conversions.
-Do not drive an unpowered AFE: leaving J11 pin 11 empty does not prevent
-backfeeding through SPI/GPIO protection diodes.
+U4/U5 provide power-off tolerant buffering with separate supply ports; keep IF_EN LOW
+until supplies and GPIO states are established. Analog injection and brownout still
+need physical tests. These buffers are not galvanic isolation.
 
 ## Power concept
 
@@ -65,10 +66,11 @@ switched branch to **VIN**. Do not connect this pack to Nano 3V3 or VBUS.
 
 Waveshare documents 6–21 V at VIN and an onboard MP2322 buck regulator; the
 candidate battery range is compatible in principle, so a separate 5 V buck is
-not assumed necessary. Wiring, branch fuse, switch arrangement and worst-case
-VIN during radio bursts remain to be designed and tested. F1's 100 mA hold
+not assumed necessary. The [A0.3 harness candidate](POWER_HARNESS_A0_3.md) now defines the branch fuses,
+master switch, polarity diode and power-order test plan. Actual holder/switch
+selection, inrush, voltage drop and radio-burst behavior remain to be verified. F1's 100 mA hold
 rating is for the AFE branch only and must not carry the Nano radio load.
-The AFE 5 V and 3.3 V LDOs supply only the ADC circuitry. All returns are common;
+The AFE 5 V and 3.3 V LDOs supply the ADC and the AFE-side buffer ports only. All returns are common;
 this is **not galvanic isolation**.
 
 USB is for programming/bench testing with every electrode disconnected from a
@@ -84,11 +86,11 @@ The page lists **SGE117DN**, ten gold-plated cup electrode leadwires. Allocate
 eight measurement channels and one ADS1299. BIAS is an output, not protective
 earth; REF is the shared measurement reference, not the PCB ground connection.
 
-The user identifies the plugs as probably 1.5 mm touchproof DIN 42802. A0.2
+The user identifies the plugs as probably 1.5 mm touchproof DIN 42802. A0.3
 uses P1 Technologies 36619 / 8R003661901F right-angle PCB jacks at J1-J10.
 The old pin headers are gone. Confirm actual plug mating, the candidate drill
 pattern and enclosure access with a sample before fabrication; see the
-[A0.2 socket review](PROTECTION_POWER_REVIEW_A0_2.md). Lead colors do not define
+[A0.3 socket worksheet](REVIEW_FIXES_A0_3.md). Lead colors do not define
 scalp positions: label and verify each lead-to-channel assignment.
 
 The linked description says “cable diameter:1.9m”; that is ambiguous and is not

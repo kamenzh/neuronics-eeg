@@ -19,10 +19,30 @@
     "1000000.0": -41.98447229192784
   },
   "series_resistor_thermal_noise_0_5_to_40_hz_uV_rms_300K": 0.1144052119442117,
-  "ideal_ads1299_input_range_V_at_gain_24_VREF_4_5": [
-    -0.1875,
-    0.1875
+  "initial_gain": 12,
+  "ideal_input_range_V_at_VREF_4_5": [
+    -0.375,
+    0.375
   ],
-  "ideal_code_step_nV_at_gain_24_VREF_4_5": 22.35174445530706,
+  "ideal_code_step_nV_at_VREF_4_5": 44.70348891061412,
+  "two_input_resistor_noise_0_5_to_40_hz_uV_rms_300K": 0.1617934023376726,
+  "tolerance_only_common_mode_rejection_db": {
+    "10": 76.43219157789959,
+    "40": 64.39119843809027,
+    "50": 62.45312218758467,
+    "60": 60.86964883155022,
+    "125": 54.49613028426421
+  },
+  "illustrative_shared_input_capacitance_rejection_db": {
+    "50": 61.11425099535996,
+    "60": 59.53080606168258
+  },
+  "shared_capacitance_qualification": "Sensitivity example only: 20pF per input modeled as a shunt, not a guaranteed ADC common-mode capacitance model; electrode/cable loading and bias omitted.",
+  "bias_output_rc_pole_hz_illustrative": {
+    "0.5": 318.9477817472852,
+    "1": 159.4738908736426,
+    "5": 31.894778174728525
+  },
+  "bias_pole_qualification": "Output RC only, not bias-loop phase margin or stability proof.",
   "interpretation": "The RF filter barely attenuates 50/60 Hz. Use suitable digital processing after conversion; do not expect this RC to remove mains interference."
 }

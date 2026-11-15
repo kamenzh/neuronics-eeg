@@ -1,5 +1,5 @@
 {
-  "revision": "A0.2-routed-bench",
+  "revision": "A0.3-review-fixes",
   "purpose": "Candidate PCB components; no stock, price or manufacturing approval implied",
   "groups": [
     {
@@ -44,12 +44,13 @@
         "R34",
         "R35"
       ],
-      "mpn": "RC0805FR-07100KL",
+      "mpn": "RC0805FR-0710KL",
       "manufacturer": "Yageo",
-      "specification": "100 kohm, 1%, 0805, 0.125W",
-      "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07100KL",
+      "specification": "10k, 1%, 0805, 0.125W",
+      "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710KL",
       "status": "candidate_not_order_release",
-      "review": "Check pulse/fault stress and excess noise in final analog design"
+      "review": "10k gives <=0.122V for 12uA combined ADC/buffer leakage; verify host startup and rail sequencing",
+      "value": "10k"
     },
     {
       "references": [
@@ -108,7 +109,6 @@
     },
     {
       "references": [
-        "C21",
         "C25",
         "C26",
         "C28",
@@ -134,7 +134,11 @@
         "C27",
         "C30",
         "C38",
-        "C41"
+        "C41",
+        "C43",
+        "C44",
+        "C45",
+        "C46"
       ],
       "mpn": "C0805C104K5RACTU",
       "manufacturer": "KEMET",
@@ -148,7 +152,8 @@
       "references": [
         "C20",
         "C22",
-        "C23"
+        "C23",
+        "C21"
       ],
       "mpn": "C0805C475K3RACTU",
       "manufacturer": "KEMET",
@@ -172,16 +177,17 @@
     },
     {
       "references": [
-        "C29"
+        "C29",
+        "C42"
       ],
-      "mpn": "GRM31CR61E226KE15L",
-      "manufacturer": "Murata",
-      "specification": "22uF, 10%, 25V, X5R, 1206",
-      "source": "https://ds.murata.com/simsurfing/mlcc.html?partnumbers=%5B%22GRM31CR61E226KE15%22%5D",
+      "mpn": "C1210C226K3RACTU",
+      "manufacturer": "KEMET",
+      "specification": "22uF, 10%, 25V X7R, 1210; two fitted in parallel",
+      "source": "https://search.kemet.com/component-documentation/download/specsheet/C1210C226K3RACTU",
       "status": "candidate_not_order_release",
       "value": "22uF 25V",
-      "footprint": "Neuronic:C_1206_3216Metric",
-      "review": "Reference bypass: still must demonstrate >=10uF effective at 4.5V including tolerance, temperature and aging"
+      "footprint": "Neuronic:C_1210_3225Metric",
+      "review": "Two fitted. Manufacturer typical DC-bias curve inspected; bounded design estimate >20uF combined. Physical operating-value/startup verification still required."
     },
     {
       "references": [
@@ -310,7 +316,7 @@
       "specification": "36619 black right-angle PCB jack; 1.5 mm touchproof DIN 42802 Type BU",
       "source": "https://catalog.p1tec.com/?FILTER_CLEAR=&FILTER_FCOMPONENT=36619",
       "status": "candidate_not_order_release",
-      "review": "Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "review": "A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required.",
       "footprint": "Neuronic:P1_36619_Touchproof_RA"
     },
     {
@@ -323,6 +329,51 @@
       "source": "https://www.we-online.com/components/products/datasheet/61300211121.pdf",
       "status": "candidate_not_order_release",
       "review": "This MPN buys the PCB header, not the external switch"
+    },
+    {
+      "references": [
+        "U4",
+        "U5"
+      ],
+      "mpn": "TXU0304PWR",
+      "manufacturer": "Texas Instruments",
+      "value": "TXU0304PWR",
+      "specification": "3 A-to-B + 1 B-to-A buffer, dual supply, Ioff/VCC disconnect, TSSOP-14",
+      "source": "https://www.ti.com/lit/ds/symlink/txu0304.pdf",
+      "footprint": "Neuronic:TSSOP-14_4.4x5mm_P0.65mm",
+      "status": "candidate_not_order_release",
+      "review": "A=host 3.3V, B=AFE 3.3V, OE controlled on J11.12. Common ground; NOT galvanic isolation."
+    },
+    {
+      "references": [
+        "R41",
+        "R42",
+        "R43",
+        "R44",
+        "R45",
+        "R46",
+        "R47",
+        "R48"
+      ],
+      "mpn": "RC0805FR-0733RL",
+      "manufacturer": "Yageo",
+      "value": "33R",
+      "specification": "33 ohm, 1%, 0805",
+      "source": "https://www.yageo.com/en/Chart/Download/pdf/RC0805.pdf",
+      "status": "candidate_not_order_release",
+      "review": "Source damping at buffer outputs; not a safety current limiter."
+    },
+    {
+      "references": [
+        "R49"
+      ],
+      "mpn": "RC0805FR-0710KL",
+      "manufacturer": "Yageo",
+      "value": "10k",
+      "specification": "10k, 1%, 0805",
+      "source": "https://www.yageo.com/en/Chart/Download/pdf/RC0805.pdf",
+      "status": "candidate_not_order_release",
+      "review": "Buffer OE default disabled."
     }
   ]
 }

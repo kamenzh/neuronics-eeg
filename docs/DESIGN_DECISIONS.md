@@ -1,3 +1,7 @@
+> **A0.3 update:** this decision history is supplemented by
+> [the review fixes](REVIEW_FIXES_A0_3.md) and [new harness/pinout](POWER_HARNESS_A0_3.md).
+> Where the original A0.2 text differs, those current records govern.
+
 # Design decisions — A0.2, 2026-11-15
 
 See [the socket/protection/power review](PROTECTION_POWER_REVIEW_A0_2.md) for the current calculation limits and physical checks.

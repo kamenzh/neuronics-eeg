@@ -1,0 +1,13 @@
+{
+  "revision": "A0.3",
+  "purpose": "Intermediate routing pass only; not the final board and not an import job for route_hardware.py",
+  "sha256": {
+    "partial-pass.dsn": "3c37f344831c422bb2052d08c61cc42dbcf04a72045d1a4cef2b060511a87bf0",
+    "partial-pass.ses": "36052d94e05fd8a939d5e1e8c10b35da415e5e95fe22a2c61ce2af1fc08bb1fd"
+  },
+  "upstream_freerouting_version": "2.1.0",
+  "upstream_jar_sha256": "2c07d58f75dac03782664081e7a58b41c25400d871a9fcf166a2ea6fe60d5def",
+  "reserved_layer": "In1.Cu omitted from intermediate router geometry; retained as filled GND in final KiCad board",
+  "subsequent_edits": "Preserved seeded local analog routes; completed remaining routes with local geometric path searches and manual corrections; removed redundant ground traces and dangling/duplicate items; enlarged socket slots; verified final KiCad PCB separately.",
+  "authoritative_board": "hardware/kicad/neuronic.kicad_pcb"
+}

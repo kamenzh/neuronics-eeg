@@ -23,7 +23,14 @@ dvdd_min,dvdd_max=3.3*(1-error),3.3*(1+error)
 input_min_r=2*10000*.99;bias_min_r=2*499000*.99
 fault_v=10.2
 cmax=sum(analog.values())*1.1*1.15
+reference_estimate=2*22*.75*.9*.85*.9*.9
+pull_low_v=10000*1.01*12e-6
+slot_corner=math.hypot(1.2954/2+.254+.15-(4.1-2)/2,.762/2+.254+.15)
 calculations={
+ 'reference_nominal_uF':44,'reference_estimated_corner_uF_not_guaranteed':reference_estimate,
+ 'control_low_v_with_adc_and_buffer_leakage':pull_low_v,'control_vil_ceiling_v':dvdd_min*.2,
+ 'six_high_control_pulls_current_ma':6*dvdd_max/(10000*.99)*1000,
+ 'dummy_slot_corner_radius_mm_conditional':slot_corner,'dummy_slot_available_radius_mm_conditional':1.0,
  'avdd_direct_caps_uF':analog,'avdd_nominal_uF':sum(analog.values()),'avdd_upper_uF_before_bias_aging':cmax,
  'dvdd_direct_caps_uF':digital,'dvdd_nominal_uF':sum(digital.values()),
  'afe_ldo_min_input_v_conditional':vin_min,'analog_output_range_v':[avdd_min,avdd_max],
@@ -45,6 +52,9 @@ calculations={
  'bias_5_1v_one_resistor_short_ua':avdd_max/(bias_min_r/2)*1e6,
  'two_20k_paths_resistor_noise_uv_rms_100hz_300k':math.sqrt(4*1.380649e-23*300*40000*100)*1e6}
 checks=[
+ ('10k control LOW calculation below ADC VIL',pull_low_v<dvdd_min*.2),
+ ('Reference engineering estimate exceeds 10uF; not a guaranteed minimum',reference_estimate>10),
+ ('Conditional socket capsule corner fits assumed finished slot',slot_corner<1),
  ('TPS7A24 analog output budget inside ADS1299 recommended 4.75-5.25V',avdd_min>=4.75 and avdd_max<=5.25),
  ('TPS7A24 digital output budget inside ADS1299 recommended 1.8-3.6V',dvdd_min>=1.8 and dvdd_max<=3.6),
  ('Conditional input exceeds nominal+0.5V regulation test boundary',vin_min>=5.5),
@@ -55,11 +65,13 @@ checks=[
  ('Eight-channel frame size',a['frame_bytes']==3+3*a['channels']),
  ('Ideal SPI frame fits sample period',a['frame_bytes']*8/a['initial_spi_hz']<1/a['sample_rate_sps'])]
 result={'revision':design['revision'],'manufacture_ready':False,'body_connection_approved':False,
- 'sources':{'adc':'https://www.ti.com/lit/ds/symlink/ads1299.pdf','ldo':'https://www.ti.com/lit/ds/symlink/tps7a24.pdf'},
+ 'sources':{'adc':'https://www.ti.com/lit/ds/symlink/ads1299.pdf','ldo':'https://www.ti.com/lit/ds/symlink/tps7a24.pdf','buffer':'https://www.ti.com/lit/ds/symlink/txu0304.pdf','reference_capacitor':'https://search.kemet.com/component-documentation/download/specsheet/C1210C226K3RACTU','socket':'https://catalog.p1tec.com/dash50/36619_dash50.pdf'},
  'assumptions':{'battery_min_max_v':[vmin,vmax],'afe_current_a':load,'fuse_resistance_upper_ohm':15,'diode_drop_allowance_v':.5,'harness_switch_drop_allowance_v':.1,'ldo_total_output_error_budget':error,'ldo_dropout_max_at_200ma_v':.25,'capacitor_positive_tolerance':.1,'capacitor_positive_temperature_allowance':.15,'low_energy_dc_fault_voltage_v':fault_v,'resistor_negative_tolerance':.01,'thermal_model':'TI JEDEC board, not this layout; physical thermal measurements required'},
  'calculations':calculations,
  'conditional_checks':[{'name':n,'passed':bool(ok)} for n,ok in checks],
- 'open_items':['Effective minimum capacitance, cold/aged startup and stability measurements required','C29 must retain >=10uF at 4.5V including temperature/tolerance/aging','TPS7A24 noise/overshoot and ADC PSRR must be assessed in assembled board','Battery limits are assumptions, not discharge limits or an automatic cutoff','Nano branch protection, VIN radio-burst droop and interference require validation','BAV199 does not guarantee rail +/-0.3V clamping: TI internal clamps may conduct first','Injection-current calculation does not prove rails can sink current or establish acceptable body current','Power-off analog and GPIO injection can back-power rails and violate LDO VOUT <= VIN+0.3V; no live inputs with board off','20k input paths allow hundreds of microamps in a rail-to-contact fault; not a qualified body protection design','Bias resistor fault bounds, aggregate leakage, cable compensation and ESD tests remain open','No mains, defibrillator or IEC patient-protection compliance claim']}
+ 'reference_estimate_factors':{'count':2,'nominal_each_uF':22,'dc_bias_retention_from_typical_curve_allowance':.75,'negative_tolerance_retention':.9,'temperature_retention':.85,'aging_retention_assumption':.9,'extra_small_signal_ac_retention_assumption':.9,'qualification':'Typical curve and engineering allowances; NOT a guaranteed minimum. Measure actual effective C, startup and settling.'},
+ 'socket_assumptions':{'finished_slot_min_mm':[4.1,2.0],'nominal_slot_mm':[4.2,2.1],'relative_hole_position_per_axis_mm':.15,'leg_position_per_axis_mm':.254,'qualification':'Fabricator acceptance and real socket/cable sample required; nominal slot length meets the published JLC 2:1 guidance, pending actual process acceptance.'},
+ 'open_items':['Effective minimum capacitance, cold/aged startup and stability measurements required','C29+C42 together must retain >=10uF at 4.5V including operating conditions','TPS7A24 noise/overshoot and ADC PSRR must be assessed in assembled board','Battery limits are assumptions, not discharge limits or an automatic cutoff','Nano branch protection, VIN radio-burst droop and interference require validation','BAV199 does not guarantee rail +/-0.3V clamping: TI internal clamps may conduct first','Injection-current calculation does not prove rails can sink current or establish acceptable body current','Analog injection can still back-power AVDD and violate LDO VOUT <= VIN+0.3V; no live analog inputs with board off','Buffers address direct GPIO backfeed, but power-order/brownout/disconnected-supply tests remain open; no galvanic isolation','20k input paths allow hundreds of microamps in a rail-to-contact fault; not a qualified body protection design','Bias resistor fault bounds, aggregate leakage, cable compensation and ESD tests remain open','No mains, defibrillator or IEC patient-protection compliance claim']}
 (ROOT/'hardware/validation/electrical-review.json').write_text(json.dumps(result,indent=2)+'\n')
 print(f'Conditional calculations: {sum(ok for _,ok in checks)}/{len(checks)}; manufacturing/body readiness remains false')
 raise SystemExit(0 if all(ok for _,ok in checks) else 1)

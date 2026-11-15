@@ -1,9 +1,9 @@
 {
-  "passed": 462,
-  "total": 462,
+  "passed": 573,
+  "total": 573,
   "checks": [
     {
-      "name": "All 91 physical components exported by KiCad",
+      "name": "All 107 physical components exported by KiCad",
       "passed": true
     },
     {
@@ -279,43 +279,43 @@
       "passed": true
     },
     {
-      "name": "J11.3 -> SPI_SCLK",
+      "name": "J11.3 -> HOST_SPI_SCLK",
       "passed": true
     },
     {
-      "name": "J11.4 -> SPI_MOSI",
+      "name": "J11.4 -> HOST_SPI_MOSI",
       "passed": true
     },
     {
-      "name": "J11.5 -> SPI_MISO",
+      "name": "J11.5 -> HOST_SPI_MISO",
       "passed": true
     },
     {
-      "name": "J11.6 -> ADS_CS_N",
+      "name": "J11.6 -> HOST_ADS_CS_N",
       "passed": true
     },
     {
-      "name": "J11.7 -> ADS_DRDY_N",
+      "name": "J11.7 -> HOST_ADS_DRDY_N",
       "passed": true
     },
     {
-      "name": "J11.8 -> ADS_RESET_N",
+      "name": "J11.8 -> HOST_ADS_RESET_N",
       "passed": true
     },
     {
-      "name": "J11.9 -> ADS_START",
+      "name": "J11.9 -> HOST_ADS_START",
       "passed": true
     },
     {
-      "name": "J11.10 -> ADS_PWDN_N",
+      "name": "J11.10 -> HOST_ADS_PWDN_N",
       "passed": true
     },
     {
-      "name": "J11.11 -> NC",
+      "name": "J11.11 -> HOST_3V3",
       "passed": true
     },
     {
-      "name": "J11.12 -> GND",
+      "name": "J11.12 -> IF_EN",
       "passed": true
     },
     {
@@ -448,6 +448,282 @@
     },
     {
       "name": "R40.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U4 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "U4.1 -> HOST_3V3",
+      "passed": true
+    },
+    {
+      "name": "U4.2 -> HOST_SPI_SCLK",
+      "passed": true
+    },
+    {
+      "name": "U4.3 -> HOST_SPI_MOSI",
+      "passed": true
+    },
+    {
+      "name": "U4.4 -> HOST_ADS_CS_N",
+      "passed": true
+    },
+    {
+      "name": "U4.5 -> BUF_HOST_SPI_MISO",
+      "passed": true
+    },
+    {
+      "name": "U4.6 -> NC",
+      "passed": true
+    },
+    {
+      "name": "U4.7 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U4.8 -> IF_EN",
+      "passed": true
+    },
+    {
+      "name": "U4.9 -> NC",
+      "passed": true
+    },
+    {
+      "name": "U4.10 -> SPI_MISO",
+      "passed": true
+    },
+    {
+      "name": "U4.11 -> BUF_ADS_CS_N",
+      "passed": true
+    },
+    {
+      "name": "U4.12 -> BUF_SPI_MOSI",
+      "passed": true
+    },
+    {
+      "name": "U4.13 -> BUF_SPI_SCLK",
+      "passed": true
+    },
+    {
+      "name": "U4.14 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "R41 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R41.1 -> BUF_SPI_SCLK",
+      "passed": true
+    },
+    {
+      "name": "R41.2 -> SPI_SCLK",
+      "passed": true
+    },
+    {
+      "name": "R42 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R42.1 -> BUF_SPI_MOSI",
+      "passed": true
+    },
+    {
+      "name": "R42.2 -> SPI_MOSI",
+      "passed": true
+    },
+    {
+      "name": "R43 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R43.1 -> BUF_ADS_CS_N",
+      "passed": true
+    },
+    {
+      "name": "R43.2 -> ADS_CS_N",
+      "passed": true
+    },
+    {
+      "name": "R47 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R47.1 -> BUF_HOST_SPI_MISO",
+      "passed": true
+    },
+    {
+      "name": "R47.2 -> HOST_SPI_MISO",
+      "passed": true
+    },
+    {
+      "name": "U5 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "U5.1 -> HOST_3V3",
+      "passed": true
+    },
+    {
+      "name": "U5.2 -> HOST_ADS_RESET_N",
+      "passed": true
+    },
+    {
+      "name": "U5.3 -> HOST_ADS_START",
+      "passed": true
+    },
+    {
+      "name": "U5.4 -> HOST_ADS_PWDN_N",
+      "passed": true
+    },
+    {
+      "name": "U5.5 -> BUF_HOST_ADS_DRDY_N",
+      "passed": true
+    },
+    {
+      "name": "U5.6 -> NC",
+      "passed": true
+    },
+    {
+      "name": "U5.7 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U5.8 -> IF_EN",
+      "passed": true
+    },
+    {
+      "name": "U5.9 -> NC",
+      "passed": true
+    },
+    {
+      "name": "U5.10 -> ADS_DRDY_N",
+      "passed": true
+    },
+    {
+      "name": "U5.11 -> BUF_ADS_PWDN_N",
+      "passed": true
+    },
+    {
+      "name": "U5.12 -> BUF_ADS_START",
+      "passed": true
+    },
+    {
+      "name": "U5.13 -> BUF_ADS_RESET_N",
+      "passed": true
+    },
+    {
+      "name": "U5.14 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "R44 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R44.1 -> BUF_ADS_RESET_N",
+      "passed": true
+    },
+    {
+      "name": "R44.2 -> ADS_RESET_N",
+      "passed": true
+    },
+    {
+      "name": "R45 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R45.1 -> BUF_ADS_START",
+      "passed": true
+    },
+    {
+      "name": "R45.2 -> ADS_START",
+      "passed": true
+    },
+    {
+      "name": "R46 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R46.1 -> BUF_ADS_PWDN_N",
+      "passed": true
+    },
+    {
+      "name": "R46.2 -> ADS_PWDN_N",
+      "passed": true
+    },
+    {
+      "name": "R48 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R48.1 -> BUF_HOST_ADS_DRDY_N",
+      "passed": true
+    },
+    {
+      "name": "R48.2 -> HOST_ADS_DRDY_N",
+      "passed": true
+    },
+    {
+      "name": "R49 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R49.1 -> IF_EN",
+      "passed": true
+    },
+    {
+      "name": "R49.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C43 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C43.1 -> HOST_3V3",
+      "passed": true
+    },
+    {
+      "name": "C43.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C44 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C44.1 -> HOST_3V3",
+      "passed": true
+    },
+    {
+      "name": "C44.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C45 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C45.1 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "C45.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "C46 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C46.1 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "C46.2 -> GND",
       "passed": true
     },
     {
@@ -1207,6 +1483,18 @@
       "passed": true
     },
     {
+      "name": "C42 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "C42.1 -> VREFP",
+      "passed": true
+    },
+    {
+      "name": "C42.2 -> GND",
+      "passed": true
+    },
+    {
       "name": "C30 footprint matches schematic",
       "passed": true
     },
@@ -1743,7 +2031,155 @@
       "passed": true
     },
     {
-      "name": "J11 pin 11 carries no power",
+      "name": "J11 pin 11 powers buffer host ports only",
+      "passed": true
+    },
+    {
+      "name": "J11 pin 12 is interface enable",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U4.1",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U4.2",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U4.3",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U4.4",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U4.5",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U4.7",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U4.8",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U4.10",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U4.11",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U4.12",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U4.13",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U4.14",
+      "passed": true
+    },
+    {
+      "name": "U4.6 NC",
+      "passed": true
+    },
+    {
+      "name": "U4.9 NC",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U5.1",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U5.2",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U5.3",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U5.4",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U5.5",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U5.7",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U5.8",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U5.10",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U5.11",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U5.12",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U5.13",
+      "passed": true
+    },
+    {
+      "name": "TI TXU0304 PW contract U5.14",
+      "passed": true
+    },
+    {
+      "name": "U5.6 NC",
+      "passed": true
+    },
+    {
+      "name": "U5.9 NC",
+      "passed": true
+    },
+    {
+      "name": "R30 10k default-low value",
+      "passed": true
+    },
+    {
+      "name": "R31 10k default-low value",
+      "passed": true
+    },
+    {
+      "name": "R32 10k default-low value",
+      "passed": true
+    },
+    {
+      "name": "R33 10k default-low value",
+      "passed": true
+    },
+    {
+      "name": "R34 10k default-low value",
+      "passed": true
+    },
+    {
+      "name": "R35 10k default-low value",
+      "passed": true
+    },
+    {
+      "name": "R49 10k default-low value",
+      "passed": true
+    },
+    {
+      "name": "Two parallel reference bulk capacitors",
       "passed": true
     },
     {
@@ -1795,11 +2231,15 @@
       "passed": true
     },
     {
+      "name": "Controller header J11.11",
+      "passed": true
+    },
+    {
       "name": "Controller header J11.12",
       "passed": true
     },
     {
-      "name": "Eight distinct controller signals",
+      "name": "Nine distinct controller signals including enable",
       "passed": true
     },
     {
@@ -1836,6 +2276,10 @@
     },
     {
       "name": "Verified Nano label/GPIO J11.10",
+      "passed": true
+    },
+    {
+      "name": "Verified Nano label/GPIO J11.12",
       "passed": true
     },
     {

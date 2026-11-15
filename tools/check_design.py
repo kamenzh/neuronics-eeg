@@ -22,7 +22,7 @@ def check(name,condition):
     if not condition: print('FAIL:',name)
 
 parts={p['ref']:p for p in src['parts']}
-check('All 91 physical components exported by KiCad',set(parts)==set(comps) and len(parts)==91)
+check('All 107 physical components exported by KiCad',set(parts)==set(comps) and len(parts)==107)
 for p in parts.values():
     check(f"{p['ref']} footprint matches schematic",comps[p['ref']].findtext('footprint')==p['fp'])
     for pin,net in p['nets'].items():
@@ -52,7 +52,21 @@ for i in range(1,10):
     check(f'Clamp D{i}: A1=GND / K2=5V / midpoint=signal',
       actual.get((f'D{i}','1'))=='GND' and actual.get((f'D{i}','2'))=='AVDD_5V' and
       actual.get((f'D{i}','3'))==(f'EEG{i}' if i<9 else 'REF_FILTERED'))
-check('J11 pin 11 carries no power',actual.get(('J11','11'),'').startswith('unconnected-'))
+check('J11 pin 11 powers buffer host ports only',actual.get(('J11','11'))=='HOST_3V3')
+check('J11 pin 12 is interface enable',actual.get(('J11','12'))=='IF_EN')
+buffer_contract={
+ 'U4':{'1':'HOST_3V3','2':'HOST_SPI_SCLK','3':'HOST_SPI_MOSI','4':'HOST_ADS_CS_N',
+       '5':'BUF_HOST_SPI_MISO','7':'GND','8':'IF_EN','10':'SPI_MISO',
+       '11':'BUF_ADS_CS_N','12':'BUF_SPI_MOSI','13':'BUF_SPI_SCLK','14':'DVDD_3V3'},
+ 'U5':{'1':'HOST_3V3','2':'HOST_ADS_RESET_N','3':'HOST_ADS_START','4':'HOST_ADS_PWDN_N',
+       '5':'BUF_HOST_ADS_DRDY_N','7':'GND','8':'IF_EN','10':'ADS_DRDY_N',
+       '11':'BUF_ADS_PWDN_N','12':'BUF_ADS_START','13':'BUF_ADS_RESET_N','14':'DVDD_3V3'}}
+for ref,contract in buffer_contract.items():
+    for pin,net in contract.items():check(f'TI TXU0304 PW contract {ref}.{pin}',actual.get((ref,pin))==net)
+    for pin in ['6','9']:check(f'{ref}.{pin} NC',actual.get((ref,pin),'').startswith('unconnected-'))
+for ref in ['R30','R31','R32','R33','R34','R35','R49']:
+    check(f'{ref} 10k default-low value',comps[ref].findtext('value')=='10k')
+check('Two parallel reference bulk capacitors',all(actual.get((r,'1'))=='VREFP' and actual.get((r,'2'))=='GND' for r in ['C29','C42']))
 for pin in ['17','18']:
     check(f'Unused SRB pin {pin} is NC',actual.get(('U1',pin),'').startswith('unconnected-'))
 interface=json.loads((ROOT/'hardware/interface.json').read_text())
@@ -60,9 +74,9 @@ for entry in interface['j11']:
     if entry['net']:
         check(f"Controller header J11.{entry['pin']}",actual.get(('J11',str(entry['pin'])))==entry['net'])
 gpios=[p['gpio'] for p in interface['j11'] if p['gpio'] is not None]
-check('Eight distinct controller signals',len(gpios)==len(set(gpios))==8)
+check('Nine distinct controller signals including enable',len(gpios)==len(set(gpios))==9)
 check('No reserved GPIO used',not(set(gpios)&set(interface['controller']['reserved_gpio'])))
-native_contract={3:(5,'D2'),4:(38,'D11'),5:(47,'D12'),6:(21,'D10'),7:(18,'D9'),8:(17,'D8'),9:(10,'D7'),10:(9,'D6')}
+native_contract={3:(5,'D2'),4:(38,'D11'),5:(47,'D12'),6:(21,'D10'),7:(18,'D9'),8:(17,'D8'),9:(10,'D7'),10:(9,'D6'),12:(6,'D3')}
 for entry in interface['j11']:
     if entry['pin'] in native_contract:
         check(f"Verified Nano label/GPIO J11.{entry['pin']}",(entry['gpio'],entry['board_label'])==native_contract[entry['pin']])

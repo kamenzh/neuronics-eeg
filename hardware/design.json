@@ -1,6 +1,6 @@
 {
-  "revision": "A0.2-routed-bench",
-  "state": "routed-bench-review-not-manufacturing-release",
+  "revision": "A0.3-review-fixes",
+  "state": "source-netlist-and-placement-record; see saved PCB and validation/STATUS.md",
   "parts": [
     {
       "ref": "U1",
@@ -90,16 +90,16 @@
       "nets": {
         "1": "GND",
         "2": "GND",
-        "3": "SPI_SCLK",
-        "4": "SPI_MOSI",
-        "5": "SPI_MISO",
-        "6": "ADS_CS_N",
-        "7": "ADS_DRDY_N",
-        "8": "ADS_RESET_N",
-        "9": "ADS_START",
-        "10": "ADS_PWDN_N",
-        "11": null,
-        "12": "GND"
+        "3": "HOST_SPI_SCLK",
+        "4": "HOST_SPI_MOSI",
+        "5": "HOST_SPI_MISO",
+        "6": "HOST_ADS_CS_N",
+        "7": "HOST_ADS_DRDY_N",
+        "8": "HOST_ADS_RESET_N",
+        "9": "HOST_ADS_START",
+        "10": "HOST_ADS_PWDN_N",
+        "11": "HOST_3V3",
+        "12": "IF_EN"
       },
       "fp": "Neuronic:PinHeader_2x06_P2.54mm_Vertical",
       "xy": [
@@ -107,7 +107,7 @@
         88
       ],
       "rot": 0,
-      "note": "Pin 11 NC. Signals/GND only; separate controller supply.",
+      "note": "A0.3: pin11 host 3V3, pin12 GPIO6 interface enable. Common GND; power-off protection is not isolation.",
       "mpn": "61301221121",
       "sheet": "neuronic",
       "uuid": "63e5f4a2-b11b-511b-ada5-91834f363141"
@@ -115,114 +115,114 @@
     {
       "ref": "R30",
       "lib": "Device:R",
-      "value": "100k",
+      "value": "10k",
       "nets": {
         "1": "ADS_CS_N",
         "2": "GND"
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        114,
-        96
+        109.5,
+        94
       ],
       "rot": 0,
-      "note": "Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-07100KL",
+      "note": "10k gives <=0.122V for 12uA combined ADC/buffer leakage; verify host startup and rail sequencing",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
       "uuid": "3f19546f-df08-5946-9a14-4affbafca351"
     },
     {
       "ref": "R31",
       "lib": "Device:R",
-      "value": "100k",
+      "value": "10k",
       "nets": {
         "1": "ADS_RESET_N",
         "2": "GND"
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        119,
-        96
+        109.5,
+        96.5
       ],
       "rot": 0,
-      "note": "Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-07100KL",
+      "note": "10k gives <=0.122V for 12uA combined ADC/buffer leakage; verify host startup and rail sequencing",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
       "uuid": "283eee7f-83e0-51af-bbc9-4f432150ff32"
     },
     {
       "ref": "R32",
       "lib": "Device:R",
-      "value": "100k",
+      "value": "10k",
       "nets": {
         "1": "ADS_PWDN_N",
         "2": "GND"
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        124,
-        96
+        110.2,
+        99.8
       ],
       "rot": 0,
-      "note": "Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-07100KL",
+      "note": "10k gives <=0.122V for 12uA combined ADC/buffer leakage; verify host startup and rail sequencing",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
       "uuid": "ce44d336-c277-5797-8269-e87d06d91711"
     },
     {
       "ref": "R33",
       "lib": "Device:R",
-      "value": "100k",
+      "value": "10k",
       "nets": {
         "1": "ADS_START",
         "2": "GND"
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        114,
-        100
+        110.2,
+        102.3
       ],
       "rot": 0,
-      "note": "Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-07100KL",
+      "note": "10k gives <=0.122V for 12uA combined ADC/buffer leakage; verify host startup and rail sequencing",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
       "uuid": "80fc2584-9344-5a4f-ac2e-b6fcbdd45d17"
     },
     {
       "ref": "R34",
       "lib": "Device:R",
-      "value": "100k",
+      "value": "10k",
       "nets": {
         "1": "SPI_SCLK",
         "2": "GND"
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        119,
-        100
+        109.5,
+        106
       ],
       "rot": 0,
-      "note": "Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-07100KL",
+      "note": "10k gives <=0.122V for 12uA combined ADC/buffer leakage; verify host startup and rail sequencing",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
       "uuid": "7c78c625-a4a2-5ced-8bf2-91688841e2f7"
     },
     {
       "ref": "R35",
       "lib": "Device:R",
-      "value": "100k",
+      "value": "10k",
       "nets": {
         "1": "SPI_MOSI",
         "2": "GND"
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        124,
-        100
+        109.5,
+        108.4
       ],
       "rot": 0,
-      "note": "Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-07100KL",
+      "note": "10k gives <=0.122V for 12uA combined ADC/buffer leakage; verify host startup and rail sequencing",
+      "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
       "uuid": "7f62b4bc-71f8-5a35-8b98-2059aba3a4d1"
     },
@@ -237,9 +237,9 @@
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
         107,
-        85
+        82
       ],
-      "rot": 0,
+      "rot": 90,
       "note": "Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
@@ -256,7 +256,7 @@
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
         114,
-        104
+        112
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -275,7 +275,7 @@
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
         119,
-        104
+        112
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -294,7 +294,7 @@
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
         124,
-        104
+        112
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -312,14 +312,323 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        114,
-        108
+        129,
+        112
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "neuronic",
       "uuid": "b0a3d05d-1a36-5374-8617-242bf5691c45"
+    },
+    {
+      "ref": "U4",
+      "lib": "Neuronic:TXU0304_PW",
+      "value": "TXU0304PWR",
+      "nets": {
+        "1": "HOST_3V3",
+        "2": "HOST_SPI_SCLK",
+        "3": "HOST_SPI_MOSI",
+        "4": "HOST_ADS_CS_N",
+        "5": "BUF_HOST_SPI_MISO",
+        "6": null,
+        "7": "GND",
+        "8": "IF_EN",
+        "9": null,
+        "10": "SPI_MISO",
+        "11": "BUF_ADS_CS_N",
+        "12": "BUF_SPI_MOSI",
+        "13": "BUF_SPI_SCLK",
+        "14": "DVDD_3V3"
+      },
+      "fp": "Neuronic:TSSOP-14_4.4x5mm_P0.65mm",
+      "xy": [
+        120,
+        88
+      ],
+      "rot": 180,
+      "note": "A=host 3.3V, B=AFE 3.3V, OE controlled on J11.12. Common ground; NOT galvanic isolation.",
+      "mpn": "TXU0304PWR",
+      "sheet": "interface",
+      "uuid": "e20f37c9-ae4e-5fb8-b84a-7c503bd4b2c7"
+    },
+    {
+      "ref": "R41",
+      "lib": "Device:R",
+      "value": "33R",
+      "nets": {
+        "1": "BUF_SPI_SCLK",
+        "2": "SPI_SCLK"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        114,
+        87.3
+      ],
+      "rot": 0,
+      "note": "Source damping at buffer outputs; not a safety current limiter.",
+      "mpn": "RC0805FR-0733RL",
+      "sheet": "interface",
+      "uuid": "caeea25d-ec09-51f6-8680-5c9ae6ff57f1"
+    },
+    {
+      "ref": "R42",
+      "lib": "Device:R",
+      "value": "33R",
+      "nets": {
+        "1": "BUF_SPI_MOSI",
+        "2": "SPI_MOSI"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        114,
+        85.1
+      ],
+      "rot": 0,
+      "note": "Source damping at buffer outputs; not a safety current limiter.",
+      "mpn": "RC0805FR-0733RL",
+      "sheet": "interface",
+      "uuid": "e7bfa1c6-1707-57ea-9256-0391fa9f23f5"
+    },
+    {
+      "ref": "R43",
+      "lib": "Device:R",
+      "value": "33R",
+      "nets": {
+        "1": "BUF_ADS_CS_N",
+        "2": "ADS_CS_N"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        114,
+        82.9
+      ],
+      "rot": 0,
+      "note": "Source damping at buffer outputs; not a safety current limiter.",
+      "mpn": "RC0805FR-0733RL",
+      "sheet": "interface",
+      "uuid": "fc69cf3f-677b-5dc0-906b-8922500878a6"
+    },
+    {
+      "ref": "R47",
+      "lib": "Device:R",
+      "value": "33R",
+      "nets": {
+        "1": "BUF_HOST_SPI_MISO",
+        "2": "HOST_SPI_MISO"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        126.7,
+        87.35
+      ],
+      "rot": 0,
+      "note": "Source damping at buffer outputs; not a safety current limiter.",
+      "mpn": "RC0805FR-0733RL",
+      "sheet": "interface",
+      "uuid": "6489fc6a-ed8e-52ad-93c3-a7cdabd9d3cb"
+    },
+    {
+      "ref": "U5",
+      "lib": "Neuronic:TXU0304_PW",
+      "value": "TXU0304PWR",
+      "nets": {
+        "1": "HOST_3V3",
+        "2": "HOST_ADS_RESET_N",
+        "3": "HOST_ADS_START",
+        "4": "HOST_ADS_PWDN_N",
+        "5": "BUF_HOST_ADS_DRDY_N",
+        "6": null,
+        "7": "GND",
+        "8": "IF_EN",
+        "9": null,
+        "10": "ADS_DRDY_N",
+        "11": "BUF_ADS_PWDN_N",
+        "12": "BUF_ADS_START",
+        "13": "BUF_ADS_RESET_N",
+        "14": "DVDD_3V3"
+      },
+      "fp": "Neuronic:TSSOP-14_4.4x5mm_P0.65mm",
+      "xy": [
+        120,
+        103
+      ],
+      "rot": 180,
+      "note": "A=host 3.3V, B=AFE 3.3V, OE controlled on J11.12. Common ground; NOT galvanic isolation.",
+      "mpn": "TXU0304PWR",
+      "sheet": "interface",
+      "uuid": "30110925-eda2-5278-a2ad-53e49fb9860b"
+    },
+    {
+      "ref": "R44",
+      "lib": "Device:R",
+      "value": "33R",
+      "nets": {
+        "1": "BUF_ADS_RESET_N",
+        "2": "ADS_RESET_N"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        114,
+        102.3
+      ],
+      "rot": 0,
+      "note": "Source damping at buffer outputs; not a safety current limiter.",
+      "mpn": "RC0805FR-0733RL",
+      "sheet": "interface",
+      "uuid": "60dce70d-98b7-55c6-8ec8-c79063f54164"
+    },
+    {
+      "ref": "R45",
+      "lib": "Device:R",
+      "value": "33R",
+      "nets": {
+        "1": "BUF_ADS_START",
+        "2": "ADS_START"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        114,
+        100.1
+      ],
+      "rot": 0,
+      "note": "Source damping at buffer outputs; not a safety current limiter.",
+      "mpn": "RC0805FR-0733RL",
+      "sheet": "interface",
+      "uuid": "51209388-c982-55cf-840d-c1ca6f6e550e"
+    },
+    {
+      "ref": "R46",
+      "lib": "Device:R",
+      "value": "33R",
+      "nets": {
+        "1": "BUF_ADS_PWDN_N",
+        "2": "ADS_PWDN_N"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        114,
+        97.9
+      ],
+      "rot": 0,
+      "note": "Source damping at buffer outputs; not a safety current limiter.",
+      "mpn": "RC0805FR-0733RL",
+      "sheet": "interface",
+      "uuid": "2e35c2fd-f20f-5315-9ce3-d1480354d7c3"
+    },
+    {
+      "ref": "R48",
+      "lib": "Device:R",
+      "value": "33R",
+      "nets": {
+        "1": "BUF_HOST_ADS_DRDY_N",
+        "2": "HOST_ADS_DRDY_N"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        126.7,
+        102.35
+      ],
+      "rot": 0,
+      "note": "Source damping at buffer outputs; not a safety current limiter.",
+      "mpn": "RC0805FR-0733RL",
+      "sheet": "interface",
+      "uuid": "a0f46416-b4f4-51e1-9423-0f50b82993be"
+    },
+    {
+      "ref": "R49",
+      "lib": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "IF_EN",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        127,
+        108
+      ],
+      "rot": 0,
+      "note": "Buffer OE default disabled.",
+      "mpn": "RC0805FR-0710KL",
+      "sheet": "interface",
+      "uuid": "13c9dd87-b675-5e47-b05b-c84ed941c804"
+    },
+    {
+      "ref": "C43",
+      "lib": "Device:C",
+      "value": "100nF 50V",
+      "nets": {
+        "1": "HOST_3V3",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        125,
+        90
+      ],
+      "rot": 90,
+      "note": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C104K5RACTU",
+      "sheet": "interface",
+      "uuid": "7fed7cd7-7ec0-5832-8105-08f5a9c00923"
+    },
+    {
+      "ref": "C44",
+      "lib": "Device:C",
+      "value": "100nF 50V",
+      "nets": {
+        "1": "HOST_3V3",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        125,
+        105
+      ],
+      "rot": 90,
+      "note": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C104K5RACTU",
+      "sheet": "interface",
+      "uuid": "46a2ef0a-356f-52a5-9d5a-6e0f30bd6462"
+    },
+    {
+      "ref": "C45",
+      "lib": "Device:C",
+      "value": "100nF 50V",
+      "nets": {
+        "1": "DVDD_3V3",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        115,
+        90
+      ],
+      "rot": 90,
+      "note": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C104K5RACTU",
+      "sheet": "interface",
+      "uuid": "764f41dd-5929-5ff7-ac5d-ceeccd273741"
+    },
+    {
+      "ref": "C46",
+      "lib": "Device:C",
+      "value": "100nF 50V",
+      "nets": {
+        "1": "DVDD_3V3",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_0805_2012Metric",
+      "xy": [
+        115,
+        105
+      ],
+      "rot": 90,
+      "note": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
+      "mpn": "C0805C104K5RACTU",
+      "sheet": "interface",
+      "uuid": "f62fcac6-179b-50a6-a81f-9b4e8feed363"
     },
     {
       "ref": "J1",
@@ -334,7 +643,7 @@
         118.39999999999999
       ],
       "rot": 0,
-      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required.",
       "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "ca444771-fef7-534d-a1e3-8eddef82ade5"
@@ -429,7 +738,7 @@
         110.19999999999999
       ],
       "rot": 0,
-      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required.",
       "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "2e68d078-186f-5cb6-9841-168bd9eed1f2"
@@ -524,7 +833,7 @@
         102.0
       ],
       "rot": 0,
-      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required.",
       "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "6b0e4943-9211-52b1-8710-40164e00c482"
@@ -619,7 +928,7 @@
         93.8
       ],
       "rot": 0,
-      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required.",
       "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "1328a76a-aa71-5de1-b666-e3347092adb2"
@@ -714,7 +1023,7 @@
         85.6
       ],
       "rot": 0,
-      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required.",
       "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "0c27e9dc-29b1-55c7-9a3a-f1ef3c7218de"
@@ -809,7 +1118,7 @@
         77.4
       ],
       "rot": 0,
-      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required.",
       "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "34fc5357-ec0f-5f58-8f32-02ef2e8a9f26"
@@ -904,7 +1213,7 @@
         69.2
       ],
       "rot": 0,
-      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required.",
       "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "b9be75e9-c33a-5fe6-98cd-972df1d64fed"
@@ -999,7 +1308,7 @@
         61.0
       ],
       "rot": 0,
-      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required.",
       "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "f2578509-69d4-5600-ad63-a7819d66980e"
@@ -1094,7 +1403,7 @@
         126.6
       ],
       "rot": 0,
-      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required.",
       "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "89b7be3b-a9f6-559d-b86c-fd4e862bc899"
@@ -1318,7 +1627,7 @@
     {
       "ref": "C21",
       "lib": "Device:C",
-      "value": "1uF 25V",
+      "value": "4.7uF 25V",
       "nets": {
         "1": "AVDD_5V",
         "2": "GND"
@@ -1330,7 +1639,7 @@
       ],
       "rot": 90,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
-      "mpn": "C0805C105K3RACTU",
+      "mpn": "C0805C475K3RACTU",
       "sheet": "power",
       "uuid": "0b8fa811-87b1-565c-8165-7e9909779e05"
     },
@@ -1382,8 +1691,8 @@
       },
       "fp": "Neuronic:CP_EIA-3528-21_Kemet-B",
       "xy": [
-        105,
-        107
+        104,
+        104.7
       ],
       "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Polarized: pad1 VCAP1 positive; verify leakage/startup/surge and derating for this internal rail",
@@ -1401,10 +1710,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        109,
-        101
+        106.2,
+        98.7
       ],
-      "rot": 270,
+      "rot": 0,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1420,10 +1729,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        103,
-        78
+        100,
+        83
       ],
-      "rot": 0,
+      "rot": 180,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1439,10 +1748,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        103,
-        75.5
+        100,
+        80.8
       ],
-      "rot": 0,
+      "rot": 180,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C104K5RACTU",
       "sheet": "power",
@@ -1458,8 +1767,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        100,
-        105
+        100.75,
+        104
       ],
       "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1475,16 +1784,35 @@
         "1": "VREFP",
         "2": "GND"
       },
-      "fp": "Neuronic:C_1206_3216Metric",
+      "fp": "Neuronic:C_1210_3225Metric",
       "xy": [
-        94.5,
-        108
+        101.5,
+        100.4
       ],
       "rot": 0,
-      "note": "Final MPN, voltage bias capacitance and placement require review; Reference bypass: still must demonstrate >=10uF effective at 4.5V including tolerance, temperature and aging",
-      "mpn": "GRM31CR61E226KE15L",
+      "note": "Final MPN, voltage bias capacitance and placement require review; Two fitted. Manufacturer typical DC-bias curve inspected; bounded design estimate >20uF combined. Physical operating-value/startup verification still required.",
+      "mpn": "C1210C226K3RACTU",
       "sheet": "power",
       "uuid": "e8bdfa87-3cae-5dd3-8b34-3917139b4026"
+    },
+    {
+      "ref": "C42",
+      "lib": "Device:C",
+      "value": "22uF 25V",
+      "nets": {
+        "1": "VREFP",
+        "2": "GND"
+      },
+      "fp": "Neuronic:C_1210_3225Metric",
+      "xy": [
+        99,
+        108.2
+      ],
+      "rot": 0,
+      "note": "Final MPN, voltage bias capacitance and placement require review; Two fitted. Manufacturer typical DC-bias curve inspected; bounded design estimate >20uF combined. Physical operating-value/startup verification still required.",
+      "mpn": "C1210C226K3RACTU",
+      "sheet": "power",
+      "uuid": "d54eb347-f701-5562-b677-9e7c24473450"
     },
     {
       "ref": "C30",
@@ -1496,8 +1824,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        94.5,
-        103
+        98.15,
+        100.8
       ],
       "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1515,8 +1843,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        97.3,
-        101
+        96.1,
+        100.4
       ],
       "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1534,8 +1862,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        100.1,
-        101
+        96.1,
+        104
       ],
       "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1553,8 +1881,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        102.9,
-        101
+        93.8,
+        102.2
       ],
       "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1572,10 +1900,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        98,
-        82
+        96,
+        84.2
       ],
-      "rot": 90,
+      "rot": 180,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1591,10 +1919,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        101,
-        82
+        96.5,
+        81.5
       ],
-      "rot": 90,
+      "rot": 180,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1610,10 +1938,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        104,
-        82
+        103.5,
+        83.7
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1629,7 +1957,7 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        115,
+        110,
         78
       ],
       "rot": 0,
@@ -1648,7 +1976,7 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        115,
+        110,
         81
       ],
       "rot": 0,
@@ -1667,7 +1995,7 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        110,
+        108.6,
         88.25
       ],
       "rot": 0,
@@ -1686,8 +2014,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        110,
-        83
+        104.5,
+        80.8
       ],
       "rot": 90,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1705,10 +2033,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        113,
-        84
+        110,
+        84.5
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C104K5RACTU",
       "sheet": "power",
@@ -1803,7 +2131,7 @@
         134.8
       ],
       "rot": 0,
-      "note": "Bias output, not protective earth. Same P1 jack; fit requires verification.; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "note": "Bias output, not protective earth. Same P1 jack; fit requires verification.; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required.",
       "mpn": "8R003661901F",
       "sheet": "power",
       "uuid": "e9bb80b1-f942-512d-9b65-9f964dfd8b47"
@@ -1874,18 +2202,5 @@
     "62": "BIASIN",
     "63": "BIASOUT",
     "64": "RESERVED"
-  },
-  "pcb": {
-    "width_mm": 88,
-    "height_mm": 90,
-    "copper_layers": 4,
-    "layer_plan": {
-      "F.Cu": "components and signal/power tracks",
-      "In1.Cu": "dedicated GND plane; no tracks",
-      "In2.Cu": "crossovers plus GND fill",
-      "B.Cu": "signal tracks"
-    },
-    "manufacture_ready": false,
-    "body_connection_approved": false
   }
 }

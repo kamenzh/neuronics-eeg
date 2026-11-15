@@ -49,6 +49,7 @@ def main():
     run('ERC',[cli,'sch','erc','--exit-code-violations','-o',str(out/'erc.txt'),str(project.with_suffix('.kicad_sch'))])
     run('DRC',[cli,'pcb','drc','--schematic-parity','--exit-code-violations','-o',str(out/'drc.txt'),str(project.with_suffix('.kicad_pcb'))])
     paths=sorted(p for p in (ROOT/'hardware/kicad').rglob('*') if p.is_file() and (p.suffix in {'.kicad_sch','.kicad_pcb','.kicad_pro','.kicad_sym','.kicad_mod'} or p.name in {'fp-lib-table','sym-lib-table'}))+[ROOT/'hardware/design.json',ROOT/'hardware/interface.json',ROOT/'hardware/parts.json']
+    paths+=sorted((ROOT/'tools').glob('*.py'))+sorted((ROOT/'tests').glob('*.py'))
     hashes={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths if p.is_file()}
     passed=all(r['returncode']==0 for r in records)
     (out/'cli-checks.json').write_text(json.dumps({'kicad_version':version,'input_sha256':hashes,'results':records,'automated_checks_passed':passed,'manufacture_ready':False,'scope':'Automated checks only. Analog/body review and physical tests are separate requirements.'},indent=2)+'\n')

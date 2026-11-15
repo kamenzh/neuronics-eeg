@@ -2,13 +2,14 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/3a280c114457/neuronic/hardware/kicad/neuronic.kicad_sch</source>
-    <date>2026-11-15T17:55:53+0100</date>
+    <date>2026-11-15T19:55:04+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
+    <textvar name="REVISION">A0.3-review-fixes</textvar>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>01 - ADS1299 core and SPI interface</title>
         <company>Neuronic</company>
-        <rev>A0.2-routed-bench</rev>
+        <rev>A0.3</rev>
         <date>2026-11-15</date>
         <source>neuronic.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
@@ -26,7 +27,7 @@
       <title_block>
         <title>02 - Eight channels and shared reference</title>
         <company>Neuronic</company>
-        <rev>A0.2-routed-bench</rev>
+        <rev>A0.3</rev>
         <date>2026-11-15</date>
         <source>inputs.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
@@ -44,9 +45,27 @@
       <title_block>
         <title>03 - Battery regulators, decoupling and bias</title>
         <company>Neuronic</company>
-        <rev>A0.2-routed-bench</rev>
+        <rev>A0.3</rev>
         <date>2026-11-15</date>
         <source>power.kicad_sch</source>
+        <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/">
+      <title_block>
+        <title>04 - Power-off protected host interface</title>
+        <company>Neuronic</company>
+        <rev>A0.3</rev>
+        <date>2026-11-15</date>
+        <source>interface.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
@@ -79,16 +98,16 @@
       <tstamps>63e5f4a2-b11b-511b-ada5-91834f363141</tstamps>
     </comp>
     <comp ref="R30">
-      <value>100k</value>
+      <value>10k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-07100KL</field>
+        <field name="Candidate_MPN">RC0805FR-0710KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-07100KL"/>
+      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="neuronic.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -97,16 +116,16 @@
       <tstamps>3f19546f-df08-5946-9a14-4affbafca351</tstamps>
     </comp>
     <comp ref="R31">
-      <value>100k</value>
+      <value>10k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-07100KL</field>
+        <field name="Candidate_MPN">RC0805FR-0710KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-07100KL"/>
+      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="neuronic.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -115,16 +134,16 @@
       <tstamps>283eee7f-83e0-51af-bbc9-4f432150ff32</tstamps>
     </comp>
     <comp ref="R32">
-      <value>100k</value>
+      <value>10k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-07100KL</field>
+        <field name="Candidate_MPN">RC0805FR-0710KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-07100KL"/>
+      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="neuronic.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -133,16 +152,16 @@
       <tstamps>ce44d336-c277-5797-8269-e87d06d91711</tstamps>
     </comp>
     <comp ref="R33">
-      <value>100k</value>
+      <value>10k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-07100KL</field>
+        <field name="Candidate_MPN">RC0805FR-0710KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-07100KL"/>
+      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="neuronic.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -151,16 +170,16 @@
       <tstamps>80fc2584-9344-5a4f-ac2e-b6fcbdd45d17</tstamps>
     </comp>
     <comp ref="R34">
-      <value>100k</value>
+      <value>10k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-07100KL</field>
+        <field name="Candidate_MPN">RC0805FR-0710KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-07100KL"/>
+      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="neuronic.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -169,16 +188,16 @@
       <tstamps>7c78c625-a4a2-5ced-8bf2-91688841e2f7</tstamps>
     </comp>
     <comp ref="R35">
-      <value>100k</value>
+      <value>10k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-07100KL</field>
+        <field name="Candidate_MPN">RC0805FR-0710KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-07100KL"/>
+      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="neuronic.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1121,16 +1140,16 @@
       <tstamps>e68f4a3e-9363-593a-86a2-414289561dd2</tstamps>
     </comp>
     <comp ref="C21">
-      <value>1uF 25V</value>
+      <value>4.7uF 25V</value>
       <footprint>Neuronic:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">C0805C105K3RACTU</field>
+        <field name="Candidate_MPN">C0805C475K3RACTU</field>
         <field name="Footprint">Neuronic:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Candidate_MPN" value="C0805C105K3RACTU"/>
+      <property name="Candidate_MPN" value="C0805C475K3RACTU"/>
       <property name="Sheetname" value="Power / bypass / bias drive"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -1266,15 +1285,15 @@
     </comp>
     <comp ref="C29">
       <value>22uF 25V</value>
-      <footprint>Neuronic:C_1206_3216Metric</footprint>
+      <footprint>Neuronic:C_1210_3225Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">GRM31CR61E226KE15L</field>
-        <field name="Footprint">Neuronic:C_1206_3216Metric</field>
+        <field name="Candidate_MPN">C1210C226K3RACTU</field>
+        <field name="Footprint">Neuronic:C_1210_3225Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Candidate_MPN" value="GRM31CR61E226KE15L"/>
+      <property name="Candidate_MPN" value="C1210C226K3RACTU"/>
       <property name="Sheetname" value="Power / bypass / bias drive"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -1498,6 +1517,24 @@
       <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
       <tstamps>413239de-acf8-51cc-a8a1-dfbd3c047a5b</tstamps>
     </comp>
+    <comp ref="C42">
+      <value>22uF 25V</value>
+      <footprint>Neuronic:C_1210_3225Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">C1210C226K3RACTU</field>
+        <field name="Footprint">Neuronic:C_1210_3225Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Candidate_MPN" value="C1210C226K3RACTU"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>d54eb347-f701-5562-b677-9e7c24473450</tstamps>
+    </comp>
     <comp ref="D10">
       <value>SS14</value>
       <footprint>Neuronic:D_SMA</footprint>
@@ -1672,6 +1709,272 @@
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
       <tstamps>5caff16a-83ae-576c-939b-27b4fe449cfc</tstamps>
+    </comp>
+    <comp ref="C43">
+      <value>100nF 50V</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">C0805C104K5RACTU</field>
+        <field name="Footprint">Neuronic:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Candidate_MPN" value="C0805C104K5RACTU"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>7fed7cd7-7ec0-5832-8105-08f5a9c00923</tstamps>
+    </comp>
+    <comp ref="C44">
+      <value>100nF 50V</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">C0805C104K5RACTU</field>
+        <field name="Footprint">Neuronic:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Candidate_MPN" value="C0805C104K5RACTU"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>46a2ef0a-356f-52a5-9d5a-6e0f30bd6462</tstamps>
+    </comp>
+    <comp ref="C45">
+      <value>100nF 50V</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">C0805C104K5RACTU</field>
+        <field name="Footprint">Neuronic:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Candidate_MPN" value="C0805C104K5RACTU"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>764f41dd-5929-5ff7-ac5d-ceeccd273741</tstamps>
+    </comp>
+    <comp ref="C46">
+      <value>100nF 50V</value>
+      <footprint>Neuronic:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">C0805C104K5RACTU</field>
+        <field name="Footprint">Neuronic:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Candidate_MPN" value="C0805C104K5RACTU"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>f62fcac6-179b-50a6-a81f-9b4e8feed363</tstamps>
+    </comp>
+    <comp ref="R41">
+      <value>33R</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">RC0805FR-0733RL</field>
+        <field name="Footprint">Neuronic:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Candidate_MPN" value="RC0805FR-0733RL"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>caeea25d-ec09-51f6-8680-5c9ae6ff57f1</tstamps>
+    </comp>
+    <comp ref="R42">
+      <value>33R</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">RC0805FR-0733RL</field>
+        <field name="Footprint">Neuronic:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Candidate_MPN" value="RC0805FR-0733RL"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>e7bfa1c6-1707-57ea-9256-0391fa9f23f5</tstamps>
+    </comp>
+    <comp ref="R43">
+      <value>33R</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">RC0805FR-0733RL</field>
+        <field name="Footprint">Neuronic:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Candidate_MPN" value="RC0805FR-0733RL"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>fc69cf3f-677b-5dc0-906b-8922500878a6</tstamps>
+    </comp>
+    <comp ref="R44">
+      <value>33R</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">RC0805FR-0733RL</field>
+        <field name="Footprint">Neuronic:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Candidate_MPN" value="RC0805FR-0733RL"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>60dce70d-98b7-55c6-8ec8-c79063f54164</tstamps>
+    </comp>
+    <comp ref="R45">
+      <value>33R</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">RC0805FR-0733RL</field>
+        <field name="Footprint">Neuronic:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Candidate_MPN" value="RC0805FR-0733RL"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>51209388-c982-55cf-840d-c1ca6f6e550e</tstamps>
+    </comp>
+    <comp ref="R46">
+      <value>33R</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">RC0805FR-0733RL</field>
+        <field name="Footprint">Neuronic:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Candidate_MPN" value="RC0805FR-0733RL"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>2e35c2fd-f20f-5315-9ce3-d1480354d7c3</tstamps>
+    </comp>
+    <comp ref="R47">
+      <value>33R</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">RC0805FR-0733RL</field>
+        <field name="Footprint">Neuronic:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Candidate_MPN" value="RC0805FR-0733RL"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>6489fc6a-ed8e-52ad-93c3-a7cdabd9d3cb</tstamps>
+    </comp>
+    <comp ref="R48">
+      <value>33R</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">RC0805FR-0733RL</field>
+        <field name="Footprint">Neuronic:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Candidate_MPN" value="RC0805FR-0733RL"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>a0f46416-b4f4-51e1-9423-0f50b82993be</tstamps>
+    </comp>
+    <comp ref="R49">
+      <value>10k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Footprint">Neuronic:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>13c9dd87-b675-5e47-b05b-c84ed941c804</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>TXU0304PWR</value>
+      <footprint>Neuronic:TSSOP-14_4.4x5mm_P0.65mm</footprint>
+      <fields>
+        <field name="Candidate_MPN">TXU0304PWR</field>
+        <field name="Footprint">Neuronic:TSSOP-14_4.4x5mm_P0.65mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Neuronic" part="TXU0304_PW" description="TI TXU0304 PW14, SCES935A Table 6-1; A host, B AFE; not galvanic isolation"/>
+      <property name="Candidate_MPN" value="TXU0304PWR"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>e20f37c9-ae4e-5fb8-b84a-7c503bd4b2c7</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>TXU0304PWR</value>
+      <footprint>Neuronic:TSSOP-14_4.4x5mm_P0.65mm</footprint>
+      <fields>
+        <field name="Candidate_MPN">TXU0304PWR</field>
+        <field name="Footprint">Neuronic:TSSOP-14_4.4x5mm_P0.65mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Neuronic" part="TXU0304_PW" description="TI TXU0304 PW14, SCES935A Table 6-1; A host, B AFE; not galvanic isolation"/>
+      <property name="Candidate_MPN" value="TXU0304PWR"/>
+      <property name="Sheetname" value="Interface / power-off buffers"/>
+      <property name="Sheetfile" value="interface.kicad_sch"/>
+      <sheetpath names="/Interface / power-off buffers/" tstamps="/105dbd14-d09a-5988-8cb9-0d47670b07e5/"/>
+      <tstamps>30110925-eda2-5278-a2ad-53e49fb9860b</tstamps>
     </comp>
   </components>
   <libparts>
@@ -1940,6 +2243,32 @@
         <pin num="5" name="OUT" type="power_out"/>
       </pins>
     </libpart>
+    <libpart lib="Neuronic" part="TXU0304_PW">
+      <description>TI TXU0304 PW14, SCES935A Table 6-1; A host, B AFE; not galvanic isolation</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TXU0304_PW</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">TI TXU0304 PW14, SCES935A Table 6-1; A host, B AFE; not galvanic isolation</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCCA" type="power_in"/>
+        <pin num="2" name="A1" type="input"/>
+        <pin num="3" name="A2" type="input"/>
+        <pin num="4" name="A3" type="input"/>
+        <pin num="5" name="A4Y" type="tri_state"/>
+        <pin num="6" name="NC" type="no_connect"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="OE" type="input"/>
+        <pin num="9" name="NC" type="no_connect"/>
+        <pin num="10" name="B4" type="input"/>
+        <pin num="11" name="B3Y" type="tri_state"/>
+        <pin num="12" name="B2Y" type="tri_state"/>
+        <pin num="13" name="B1Y" type="tri_state"/>
+        <pin num="14" name="VCCB" type="power_in"/>
+      </pins>
+    </libpart>
     <libpart lib="Switch" part="SW_SPST">
       <description>Single Pole Single Throw (SPST) switch</description>
       <docs>~</docs>
@@ -1972,27 +2301,27 @@
   </libraries>
   <nets>
     <net code="1" name="ADS_CS_N" class="Default">
-      <node ref="J11" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="R30" pin="1" pintype="passive"/>
+      <node ref="R43" pin="2" pintype="passive"/>
       <node ref="U1" pin="39" pinfunction="~{CS}" pintype="input"/>
     </net>
     <net code="2" name="ADS_DRDY_N" class="Default">
-      <node ref="J11" pin="7" pinfunction="Pin_7" pintype="passive"/>
       <node ref="U1" pin="47" pinfunction="~{DRDY}" pintype="output"/>
+      <node ref="U5" pin="10" pinfunction="B4" pintype="input"/>
     </net>
     <net code="3" name="ADS_PWDN_N" class="Default">
-      <node ref="J11" pin="10" pinfunction="Pin_10" pintype="passive"/>
       <node ref="R32" pin="1" pintype="passive"/>
+      <node ref="R46" pin="2" pintype="passive"/>
       <node ref="U1" pin="35" pinfunction="~{PWDN}" pintype="input"/>
     </net>
     <net code="4" name="ADS_RESET_N" class="Default">
-      <node ref="J11" pin="8" pinfunction="Pin_8" pintype="passive"/>
       <node ref="R31" pin="1" pintype="passive"/>
+      <node ref="R44" pin="2" pintype="passive"/>
       <node ref="U1" pin="36" pinfunction="~{RESET}" pintype="input"/>
     </net>
     <net code="5" name="ADS_START" class="Default">
-      <node ref="J11" pin="9" pinfunction="Pin_9" pintype="passive"/>
       <node ref="R33" pin="1" pintype="passive"/>
+      <node ref="R45" pin="2" pintype="passive"/>
       <node ref="U1" pin="38" pinfunction="START" pintype="input"/>
     </net>
     <net code="6" name="AVDD_5V" class="Default">
@@ -2037,109 +2366,145 @@
       <node ref="R21" pin="2" pintype="passive"/>
       <node ref="R22" pin="1" pintype="passive"/>
     </net>
-    <net code="10" name="CLKSEL_PU" class="Default">
+    <net code="10" name="BUF_ADS_CS_N" class="Default">
+      <node ref="R43" pin="1" pintype="passive"/>
+      <node ref="U4" pin="11" pinfunction="B3Y" pintype="tri_state"/>
+    </net>
+    <net code="11" name="BUF_ADS_PWDN_N" class="Default">
+      <node ref="R46" pin="1" pintype="passive"/>
+      <node ref="U5" pin="11" pinfunction="B3Y" pintype="tri_state"/>
+    </net>
+    <net code="12" name="BUF_ADS_RESET_N" class="Default">
+      <node ref="R44" pin="1" pintype="passive"/>
+      <node ref="U5" pin="13" pinfunction="B1Y" pintype="tri_state"/>
+    </net>
+    <net code="13" name="BUF_ADS_START" class="Default">
+      <node ref="R45" pin="1" pintype="passive"/>
+      <node ref="U5" pin="12" pinfunction="B2Y" pintype="tri_state"/>
+    </net>
+    <net code="14" name="BUF_HOST_ADS_DRDY_N" class="Default">
+      <node ref="R48" pin="1" pintype="passive"/>
+      <node ref="U5" pin="5" pinfunction="A4Y" pintype="tri_state"/>
+    </net>
+    <net code="15" name="BUF_HOST_SPI_MISO" class="Default">
+      <node ref="R47" pin="1" pintype="passive"/>
+      <node ref="U4" pin="5" pinfunction="A4Y" pintype="tri_state"/>
+    </net>
+    <net code="16" name="BUF_SPI_MOSI" class="Default">
+      <node ref="R42" pin="1" pintype="passive"/>
+      <node ref="U4" pin="12" pinfunction="B2Y" pintype="tri_state"/>
+    </net>
+    <net code="17" name="BUF_SPI_SCLK" class="Default">
+      <node ref="R41" pin="1" pintype="passive"/>
+      <node ref="U4" pin="13" pinfunction="B1Y" pintype="tri_state"/>
+    </net>
+    <net code="18" name="CLKSEL_PU" class="Default">
       <node ref="R36" pin="1" pintype="passive"/>
       <node ref="U1" pin="52" pinfunction="CLKSEL" pintype="input"/>
     </net>
-    <net code="11" name="CONTACT_1" class="Default">
+    <net code="19" name="CONTACT_1" class="Default">
       <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
     </net>
-    <net code="12" name="CONTACT_2" class="Default">
+    <net code="20" name="CONTACT_2" class="Default">
       <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R3" pin="1" pintype="passive"/>
     </net>
-    <net code="13" name="CONTACT_3" class="Default">
+    <net code="21" name="CONTACT_3" class="Default">
       <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R5" pin="1" pintype="passive"/>
     </net>
-    <net code="14" name="CONTACT_4" class="Default">
+    <net code="22" name="CONTACT_4" class="Default">
       <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R7" pin="1" pintype="passive"/>
     </net>
-    <net code="15" name="CONTACT_5" class="Default">
+    <net code="23" name="CONTACT_5" class="Default">
       <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R9" pin="1" pintype="passive"/>
     </net>
-    <net code="16" name="CONTACT_6" class="Default">
+    <net code="24" name="CONTACT_6" class="Default">
       <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R11" pin="1" pintype="passive"/>
     </net>
-    <net code="17" name="CONTACT_7" class="Default">
+    <net code="25" name="CONTACT_7" class="Default">
       <node ref="J7" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R13" pin="1" pintype="passive"/>
     </net>
-    <net code="18" name="CONTACT_8" class="Default">
+    <net code="26" name="CONTACT_8" class="Default">
       <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R15" pin="1" pintype="passive"/>
     </net>
-    <net code="19" name="CONTACT_BIAS" class="Default">
+    <net code="27" name="CONTACT_BIAS" class="Default">
       <node ref="J10" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R22" pin="2" pintype="passive"/>
     </net>
-    <net code="20" name="CONTACT_REF" class="Default">
+    <net code="28" name="CONTACT_REF" class="Default">
       <node ref="J9" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R17" pin="1" pintype="passive"/>
     </net>
-    <net code="21" name="DVDD_3V3" class="Default">
+    <net code="29" name="DVDD_3V3" class="Default">
       <node ref="C23" pin="1" pintype="passive"/>
       <node ref="C39" pin="1" pintype="passive"/>
       <node ref="C40" pin="1" pintype="passive"/>
       <node ref="C41" pin="1" pintype="passive"/>
+      <node ref="C45" pin="1" pintype="passive"/>
+      <node ref="C46" pin="1" pintype="passive"/>
       <node ref="R36" pin="2" pintype="passive"/>
       <node ref="U1" pin="48" pinfunction="DVDD" pintype="power_in"/>
       <node ref="U1" pin="50" pinfunction="DVDD" pintype="power_in"/>
       <node ref="U3" pin="5" pinfunction="OUT" pintype="power_out"/>
+      <node ref="U4" pin="14" pinfunction="VCCB" pintype="power_in"/>
+      <node ref="U5" pin="14" pinfunction="VCCB" pintype="power_in"/>
     </net>
-    <net code="22" name="EEG1" class="Default">
+    <net code="30" name="EEG1" class="Default">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="D1" pin="3" pinfunction="K1_A2" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
       <node ref="U1" pin="16" pinfunction="IN1P" pintype="input"/>
     </net>
-    <net code="23" name="EEG2" class="Default">
+    <net code="31" name="EEG2" class="Default">
       <node ref="C2" pin="1" pintype="passive"/>
       <node ref="D2" pin="3" pinfunction="K1_A2" pintype="passive"/>
       <node ref="R4" pin="2" pintype="passive"/>
       <node ref="U1" pin="14" pinfunction="IN2P" pintype="input"/>
     </net>
-    <net code="24" name="EEG3" class="Default">
+    <net code="32" name="EEG3" class="Default">
       <node ref="C3" pin="1" pintype="passive"/>
       <node ref="D3" pin="3" pinfunction="K1_A2" pintype="passive"/>
       <node ref="R6" pin="2" pintype="passive"/>
       <node ref="U1" pin="12" pinfunction="IN3P" pintype="input"/>
     </net>
-    <net code="25" name="EEG4" class="Default">
+    <net code="33" name="EEG4" class="Default">
       <node ref="C4" pin="1" pintype="passive"/>
       <node ref="D4" pin="3" pinfunction="K1_A2" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
       <node ref="U1" pin="10" pinfunction="IN4P" pintype="input"/>
     </net>
-    <net code="26" name="EEG5" class="Default">
+    <net code="34" name="EEG5" class="Default">
       <node ref="C5" pin="1" pintype="passive"/>
       <node ref="D5" pin="3" pinfunction="K1_A2" pintype="passive"/>
       <node ref="R10" pin="2" pintype="passive"/>
       <node ref="U1" pin="8" pinfunction="IN5P" pintype="input"/>
     </net>
-    <net code="27" name="EEG6" class="Default">
+    <net code="35" name="EEG6" class="Default">
       <node ref="C6" pin="1" pintype="passive"/>
       <node ref="D6" pin="3" pinfunction="K1_A2" pintype="passive"/>
       <node ref="R12" pin="2" pintype="passive"/>
       <node ref="U1" pin="6" pinfunction="IN6P" pintype="input"/>
     </net>
-    <net code="28" name="EEG7" class="Default">
+    <net code="36" name="EEG7" class="Default">
       <node ref="C7" pin="1" pintype="passive"/>
       <node ref="D7" pin="3" pinfunction="K1_A2" pintype="passive"/>
       <node ref="R14" pin="2" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="IN7P" pintype="input"/>
     </net>
-    <net code="29" name="EEG8" class="Default">
+    <net code="37" name="EEG8" class="Default">
       <node ref="C8" pin="1" pintype="passive"/>
       <node ref="D8" pin="3" pinfunction="K1_A2" pintype="passive"/>
       <node ref="R16" pin="2" pintype="passive"/>
       <node ref="U1" pin="2" pinfunction="IN8P" pintype="input"/>
     </net>
-    <net code="30" name="GND" class="Default">
+    <net code="38" name="GND" class="Default">
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="C20" pin="2" pintype="passive"/>
@@ -2166,6 +2531,11 @@
       <node ref="C4" pin="2" pintype="passive"/>
       <node ref="C40" pin="2" pintype="passive"/>
       <node ref="C41" pin="2" pintype="passive"/>
+      <node ref="C42" pin="2" pintype="passive"/>
+      <node ref="C43" pin="2" pintype="passive"/>
+      <node ref="C44" pin="2" pintype="passive"/>
+      <node ref="C45" pin="2" pintype="passive"/>
+      <node ref="C46" pin="2" pintype="passive"/>
       <node ref="C5" pin="2" pintype="passive"/>
       <node ref="C6" pin="2" pintype="passive"/>
       <node ref="C7" pin="2" pintype="passive"/>
@@ -2181,7 +2551,6 @@
       <node ref="D8" pin="1" pinfunction="A1" pintype="passive"/>
       <node ref="D9" pin="1" pinfunction="A1" pintype="passive"/>
       <node ref="J11" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="J11" pin="12" pinfunction="Pin_12" pintype="passive"/>
       <node ref="J11" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="J12" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="R30" pin="2" pintype="passive"/>
@@ -2194,6 +2563,7 @@
       <node ref="R38" pin="2" pintype="passive"/>
       <node ref="R39" pin="2" pintype="passive"/>
       <node ref="R40" pin="2" pintype="passive"/>
+      <node ref="R49" pin="2" pintype="passive"/>
       <node ref="U1" pin="20" pinfunction="AVSS" pintype="power_in"/>
       <node ref="U1" pin="23" pinfunction="AVSS" pintype="power_in"/>
       <node ref="U1" pin="25" pinfunction="VREFN" pintype="input"/>
@@ -2211,60 +2581,107 @@
       <node ref="U2" pin="4" pinfunction="NC_GND" pintype="passive"/>
       <node ref="U3" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="U3" pin="4" pinfunction="NC_GND" pintype="passive"/>
+      <node ref="U4" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="7" pinfunction="GND" pintype="power_in"/>
     </net>
-    <net code="31" name="GPIO1_PD" class="Default">
+    <net code="39" name="GPIO1_PD" class="Default">
       <node ref="R37" pin="1" pintype="passive"/>
       <node ref="U1" pin="42" pinfunction="GPIO1" pintype="bidirectional"/>
     </net>
-    <net code="32" name="GPIO2_PD" class="Default">
+    <net code="40" name="GPIO2_PD" class="Default">
       <node ref="R38" pin="1" pintype="passive"/>
       <node ref="U1" pin="44" pinfunction="GPIO2" pintype="bidirectional"/>
     </net>
-    <net code="33" name="GPIO3_PD" class="Default">
+    <net code="41" name="GPIO3_PD" class="Default">
       <node ref="R39" pin="1" pintype="passive"/>
       <node ref="U1" pin="45" pinfunction="GPIO3" pintype="bidirectional"/>
     </net>
-    <net code="34" name="GPIO4_PD" class="Default">
+    <net code="42" name="GPIO4_PD" class="Default">
       <node ref="R40" pin="1" pintype="passive"/>
       <node ref="U1" pin="46" pinfunction="GPIO4" pintype="bidirectional"/>
     </net>
-    <net code="35" name="INPUT_RMID_1" class="Default">
+    <net code="43" name="HOST_3V3" class="Default">
+      <node ref="C43" pin="1" pintype="passive"/>
+      <node ref="C44" pin="1" pintype="passive"/>
+      <node ref="J11" pin="11" pinfunction="Pin_11" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="VCCA" pintype="power_in"/>
+      <node ref="U5" pin="1" pinfunction="VCCA" pintype="power_in"/>
+    </net>
+    <net code="44" name="HOST_ADS_CS_N" class="Default">
+      <node ref="J11" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U4" pin="4" pinfunction="A3" pintype="input"/>
+    </net>
+    <net code="45" name="HOST_ADS_DRDY_N" class="Default">
+      <node ref="J11" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="R48" pin="2" pintype="passive"/>
+    </net>
+    <net code="46" name="HOST_ADS_PWDN_N" class="Default">
+      <node ref="J11" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="U5" pin="4" pinfunction="A3" pintype="input"/>
+    </net>
+    <net code="47" name="HOST_ADS_RESET_N" class="Default">
+      <node ref="J11" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="U5" pin="2" pinfunction="A1" pintype="input"/>
+    </net>
+    <net code="48" name="HOST_ADS_START" class="Default">
+      <node ref="J11" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="A2" pintype="input"/>
+    </net>
+    <net code="49" name="HOST_SPI_MISO" class="Default">
+      <node ref="J11" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R47" pin="2" pintype="passive"/>
+    </net>
+    <net code="50" name="HOST_SPI_MOSI" class="Default">
+      <node ref="J11" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U4" pin="3" pinfunction="A2" pintype="input"/>
+    </net>
+    <net code="51" name="HOST_SPI_SCLK" class="Default">
+      <node ref="J11" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="A1" pintype="input"/>
+    </net>
+    <net code="52" name="IF_EN" class="Default">
+      <node ref="J11" pin="12" pinfunction="Pin_12" pintype="passive"/>
+      <node ref="R49" pin="1" pintype="passive"/>
+      <node ref="U4" pin="8" pinfunction="OE" pintype="input"/>
+      <node ref="U5" pin="8" pinfunction="OE" pintype="input"/>
+    </net>
+    <net code="53" name="INPUT_RMID_1" class="Default">
       <node ref="R1" pin="2" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
     </net>
-    <net code="36" name="INPUT_RMID_2" class="Default">
+    <net code="54" name="INPUT_RMID_2" class="Default">
       <node ref="R3" pin="2" pintype="passive"/>
       <node ref="R4" pin="1" pintype="passive"/>
     </net>
-    <net code="37" name="INPUT_RMID_3" class="Default">
+    <net code="55" name="INPUT_RMID_3" class="Default">
       <node ref="R5" pin="2" pintype="passive"/>
       <node ref="R6" pin="1" pintype="passive"/>
     </net>
-    <net code="38" name="INPUT_RMID_4" class="Default">
+    <net code="56" name="INPUT_RMID_4" class="Default">
       <node ref="R7" pin="2" pintype="passive"/>
       <node ref="R8" pin="1" pintype="passive"/>
     </net>
-    <net code="39" name="INPUT_RMID_5" class="Default">
+    <net code="57" name="INPUT_RMID_5" class="Default">
       <node ref="R10" pin="1" pintype="passive"/>
       <node ref="R9" pin="2" pintype="passive"/>
     </net>
-    <net code="40" name="INPUT_RMID_6" class="Default">
+    <net code="58" name="INPUT_RMID_6" class="Default">
       <node ref="R11" pin="2" pintype="passive"/>
       <node ref="R12" pin="1" pintype="passive"/>
     </net>
-    <net code="41" name="INPUT_RMID_7" class="Default">
+    <net code="59" name="INPUT_RMID_7" class="Default">
       <node ref="R13" pin="2" pintype="passive"/>
       <node ref="R14" pin="1" pintype="passive"/>
     </net>
-    <net code="42" name="INPUT_RMID_8" class="Default">
+    <net code="60" name="INPUT_RMID_8" class="Default">
       <node ref="R15" pin="2" pintype="passive"/>
       <node ref="R16" pin="1" pintype="passive"/>
     </net>
-    <net code="43" name="INPUT_RMID_9" class="Default">
+    <net code="61" name="INPUT_RMID_9" class="Default">
       <node ref="R17" pin="2" pintype="passive"/>
       <node ref="R18" pin="1" pintype="passive"/>
     </net>
-    <net code="44" name="REF_FILTERED" class="Default">
+    <net code="62" name="REF_FILTERED" class="Default">
       <node ref="C9" pin="1" pintype="passive"/>
       <node ref="D9" pin="3" pinfunction="K1_A2" pintype="passive"/>
       <node ref="R18" pin="2" pintype="passive"/>
@@ -2277,21 +2694,21 @@
       <node ref="U1" pin="7" pinfunction="IN5N" pintype="input"/>
       <node ref="U1" pin="9" pinfunction="IN4N" pintype="input"/>
     </net>
-    <net code="45" name="SPI_MISO" class="Default">
-      <node ref="J11" pin="5" pinfunction="Pin_5" pintype="passive"/>
+    <net code="63" name="SPI_MISO" class="Default">
       <node ref="U1" pin="43" pinfunction="DOUT" pintype="output"/>
+      <node ref="U4" pin="10" pinfunction="B4" pintype="input"/>
     </net>
-    <net code="46" name="SPI_MOSI" class="Default">
-      <node ref="J11" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    <net code="64" name="SPI_MOSI" class="Default">
       <node ref="R35" pin="1" pintype="passive"/>
+      <node ref="R42" pin="2" pintype="passive"/>
       <node ref="U1" pin="34" pinfunction="DIN" pintype="input"/>
     </net>
-    <net code="47" name="SPI_SCLK" class="Default">
-      <node ref="J11" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    <net code="65" name="SPI_SCLK" class="Default">
       <node ref="R34" pin="1" pintype="passive"/>
+      <node ref="R41" pin="2" pintype="passive"/>
       <node ref="U1" pin="40" pinfunction="SCLK" pintype="input"/>
     </net>
-    <net code="48" name="VBAT" class="Default">
+    <net code="66" name="VBAT" class="Default">
       <node ref="C20" pin="1" pintype="passive"/>
       <node ref="C22" pin="1" pintype="passive"/>
       <node ref="SW1" pin="2" pinfunction="B" pintype="passive"/>
@@ -2300,63 +2717,73 @@
       <node ref="U3" pin="1" pinfunction="IN" pintype="power_in"/>
       <node ref="U3" pin="3" pinfunction="EN" pintype="input"/>
     </net>
-    <net code="49" name="VBAT_DIODE" class="Default">
+    <net code="67" name="VBAT_DIODE" class="Default">
       <node ref="D10" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="SW1" pin="1" pinfunction="A" pintype="passive"/>
     </net>
-    <net code="50" name="VBAT_FUSED" class="Default">
+    <net code="68" name="VBAT_FUSED" class="Default">
       <node ref="D10" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="F1" pin="2" pintype="passive"/>
     </net>
-    <net code="51" name="VBAT_RAW" class="Default">
+    <net code="69" name="VBAT_RAW" class="Default">
       <node ref="F1" pin="1" pintype="passive"/>
       <node ref="J12" pin="1" pinfunction="Pin_1" pintype="passive"/>
     </net>
-    <net code="52" name="VCAP1" class="Default">
+    <net code="70" name="VCAP1" class="Default">
       <node ref="C24" pin="1" pintype="passive"/>
       <node ref="U1" pin="28" pinfunction="VCAP1" pintype="output"/>
     </net>
-    <net code="53" name="VCAP2" class="Default">
+    <net code="71" name="VCAP2" class="Default">
       <node ref="C25" pin="1" pintype="passive"/>
       <node ref="U1" pin="30" pinfunction="VCAP2" pintype="output"/>
     </net>
-    <net code="54" name="VCAP3" class="Default">
+    <net code="72" name="VCAP3" class="Default">
       <node ref="C26" pin="1" pintype="passive"/>
       <node ref="C27" pin="1" pintype="passive"/>
       <node ref="U1" pin="55" pinfunction="VCAP3" pintype="output"/>
     </net>
-    <net code="55" name="VCAP4" class="Default">
+    <net code="73" name="VCAP4" class="Default">
       <node ref="C28" pin="1" pintype="passive"/>
       <node ref="U1" pin="26" pinfunction="VCAP4" pintype="output"/>
     </net>
-    <net code="56" name="VREFP" class="Default">
+    <net code="74" name="VREFP" class="Default">
       <node ref="C29" pin="1" pintype="passive"/>
       <node ref="C30" pin="1" pintype="passive"/>
+      <node ref="C42" pin="1" pintype="passive"/>
       <node ref="U1" pin="24" pinfunction="VREFP" pintype="bidirectional"/>
     </net>
-    <net code="57" name="unconnected-(J11-Pin_11-Pad11)" class="Default">
-      <node ref="J11" pin="11" pinfunction="Pin_11" pintype="passive+no_connect"/>
-    </net>
-    <net code="58" name="unconnected-(U1-BIASREF-Pad60)" class="Default">
+    <net code="75" name="unconnected-(U1-BIASREF-Pad60)" class="Default">
       <node ref="U1" pin="60" pinfunction="BIASREF" pintype="input+no_connect"/>
     </net>
-    <net code="59" name="unconnected-(U1-CLK-Pad37)" class="Default">
+    <net code="76" name="unconnected-(U1-CLK-Pad37)" class="Default">
       <node ref="U1" pin="37" pinfunction="CLK" pintype="input+no_connect"/>
     </net>
-    <net code="60" name="unconnected-(U1-NC-Pad27)" class="Default">
+    <net code="77" name="unconnected-(U1-NC-Pad27)" class="Default">
       <node ref="U1" pin="27" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="61" name="unconnected-(U1-NC-Pad29)" class="Default">
+    <net code="78" name="unconnected-(U1-NC-Pad29)" class="Default">
       <node ref="U1" pin="29" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="62" name="unconnected-(U1-RESERVED-Pad64)" class="Default">
+    <net code="79" name="unconnected-(U1-RESERVED-Pad64)" class="Default">
       <node ref="U1" pin="64" pinfunction="RESERVED" pintype="no_connect"/>
     </net>
-    <net code="63" name="unconnected-(U1-SRB1-Pad17)" class="Default">
+    <net code="80" name="unconnected-(U1-SRB1-Pad17)" class="Default">
       <node ref="U1" pin="17" pinfunction="SRB1" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="64" name="unconnected-(U1-SRB2-Pad18)" class="Default">
+    <net code="81" name="unconnected-(U1-SRB2-Pad18)" class="Default">
       <node ref="U1" pin="18" pinfunction="SRB2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="82" name="unconnected-(U4-NC-Pad6)" class="Default">
+      <node ref="U4" pin="6" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="83" name="unconnected-(U4-NC-Pad9)" class="Default">
+      <node ref="U4" pin="9" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="84" name="unconnected-(U5-NC-Pad6)" class="Default">
+      <node ref="U5" pin="6" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="85" name="unconnected-(U5-NC-Pad9)" class="Default">
+      <node ref="U5" pin="9" pinfunction="NC" pintype="no_connect"/>
     </net>
   </nets>
 </export>
