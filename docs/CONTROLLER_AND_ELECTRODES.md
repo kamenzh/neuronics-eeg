@@ -1,4 +1,8 @@
-# Owned hardware and interface — A0.1
+# A0.2 update
+
+P1 36619 / 8R003661901F touchproof jacks now replace the headers. DIN 42802 is the user-supplied working assumption; physical fit remains unverified. See [socket and power review](PROTECTION_POWER_REVIEW_A0_2.md). Regulators are now TPS7A2450DBVR and TPS7A2433DBVR. GPIO assignments below remain valid.
+
+# Owned hardware and interface — A0.2
 
 **Use the Waveshare ESP32-S3-Nano already owned by Kamen. No new controller is needed.**
 This is an external controller connected by short wires to J11, not a module
@@ -44,7 +48,7 @@ flash/PSRAM, RGB LED pins and UART0. Keep the LED idle during acquisition.
 
 Use SPI mode 1 and initially 1 MHz. One ideal frame takes 216 us of the 4 ms
 sample period; command timing, scheduling and radio interference still need testing.
-Initial target gain is 12, eight enabled channels, 250 SPS. A0.1 connects
+Initial target gain is 12, eight enabled channels, 250 SPS. The schematic connects
 REF_FILTERED directly to all eight INxN pins: MISC1=0x00 and CHnSET.SRB2=0.
 Start with internal test/shorted-input modes, bias and lead-off disabled.
 Verify register readback and TI startup timing before enabling conversions.
@@ -80,13 +84,12 @@ The page lists **SGE117DN**, ten gold-plated cup electrode leadwires. Allocate
 eight measurement channels and one ADS1299. BIAS is an output, not protective
 earth; REF is the shared measurement reference, not the PCB ground connection.
 
-The listing/photo does not provide a dimensioned mating-connector drawing.
-Do not infer socket diameter, gender or pin numbering from a similar product
-called DIN 1.5 mm. Before replacing J1–J10, check the actual plug dimensions,
-obtain a matching touchproof socket drawing and test mating/continuity. Until
-then the KiCad pin headers remain **bench placeholders**, not compatible
-Sino-k sockets. Lead colors do not define scalp positions: label the selected
-lead-to-channel assignments and verify continuity before assembly/use.
+The user identifies the plugs as probably 1.5 mm touchproof DIN 42802. A0.2
+uses P1 Technologies 36619 / 8R003661901F right-angle PCB jacks at J1-J10.
+The old pin headers are gone. Confirm actual plug mating, the candidate drill
+pattern and enclosure access with a sample before fabrication; see the
+[A0.2 socket review](PROTECTION_POWER_REVIEW_A0_2.md). Lead colors do not define
+scalp positions: label and verify each lead-to-channel assignment.
 
 The linked description says “cable diameter:1.9m”; that is ambiguous and is not
 used as a verified length, diameter or cable-capacitance value in calculations.

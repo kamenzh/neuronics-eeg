@@ -42,6 +42,12 @@ pin_contract={
 for pin,net in pin_contract.items():check(f'TI pin contract U1.{pin}',actual.get(('U1',pin))==net)
 for pin in ['19','21','22','56','59']:check(f'Analog rail U1.{pin}',actual.get(('U1',pin))=='AVDD_5V')
 for pin in ['20','23','32','57','58']:check(f'Analog return U1.{pin}',actual.get(('U1',pin))=='GND')
+for ref,rail in [('U2','AVDD_5V'),('U3','DVDD_3V3')]:
+    for pin,net in {'1':'VBAT','2':'GND','3':'VBAT','4':'GND','5':rail}.items():
+        check(f'TI fixed TPS7A24 DBV contract {ref}.{pin}',actual.get((ref,pin))==net)
+    check(f'{ref} uses SOT-23-5 footprint',comps[ref].findtext('footprint')=='Neuronic:SOT-23-5')
+for i in range(1,11):
+    check(f'J{i} selected touchproof jack footprint',comps[f'J{i}'].findtext('footprint')=='Neuronic:P1_36619_Touchproof_RA')
 for i in range(1,10):
     check(f'Clamp D{i}: A1=GND / K2=5V / midpoint=signal',
       actual.get((f'D{i}','1'))=='GND' and actual.get((f'D{i}','2'))=='AVDD_5V' and

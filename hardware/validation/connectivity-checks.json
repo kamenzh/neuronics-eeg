@@ -1,6 +1,6 @@
 {
-  "passed": 436,
-  "total": 436,
+  "passed": 462,
+  "total": 462,
   "checks": [
     {
       "name": "All 91 physical components exported by KiCad",
@@ -1051,7 +1051,15 @@
       "passed": true
     },
     {
-      "name": "U2.3 -> AVDD_5V",
+      "name": "U2.3 -> VBAT",
+      "passed": true
+    },
+    {
+      "name": "U2.4 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U2.5 -> AVDD_5V",
       "passed": true
     },
     {
@@ -1067,7 +1075,15 @@
       "passed": true
     },
     {
-      "name": "U3.3 -> DVDD_3V3",
+      "name": "U3.3 -> VBAT",
+      "passed": true
+    },
+    {
+      "name": "U3.4 -> GND",
+      "passed": true
+    },
+    {
+      "name": "U3.5 -> DVDD_3V3",
       "passed": true
     },
     {
@@ -1600,6 +1616,94 @@
     },
     {
       "name": "Analog return U1.58",
+      "passed": true
+    },
+    {
+      "name": "TI fixed TPS7A24 DBV contract U2.1",
+      "passed": true
+    },
+    {
+      "name": "TI fixed TPS7A24 DBV contract U2.2",
+      "passed": true
+    },
+    {
+      "name": "TI fixed TPS7A24 DBV contract U2.3",
+      "passed": true
+    },
+    {
+      "name": "TI fixed TPS7A24 DBV contract U2.4",
+      "passed": true
+    },
+    {
+      "name": "TI fixed TPS7A24 DBV contract U2.5",
+      "passed": true
+    },
+    {
+      "name": "U2 uses SOT-23-5 footprint",
+      "passed": true
+    },
+    {
+      "name": "TI fixed TPS7A24 DBV contract U3.1",
+      "passed": true
+    },
+    {
+      "name": "TI fixed TPS7A24 DBV contract U3.2",
+      "passed": true
+    },
+    {
+      "name": "TI fixed TPS7A24 DBV contract U3.3",
+      "passed": true
+    },
+    {
+      "name": "TI fixed TPS7A24 DBV contract U3.4",
+      "passed": true
+    },
+    {
+      "name": "TI fixed TPS7A24 DBV contract U3.5",
+      "passed": true
+    },
+    {
+      "name": "U3 uses SOT-23-5 footprint",
+      "passed": true
+    },
+    {
+      "name": "J1 selected touchproof jack footprint",
+      "passed": true
+    },
+    {
+      "name": "J2 selected touchproof jack footprint",
+      "passed": true
+    },
+    {
+      "name": "J3 selected touchproof jack footprint",
+      "passed": true
+    },
+    {
+      "name": "J4 selected touchproof jack footprint",
+      "passed": true
+    },
+    {
+      "name": "J5 selected touchproof jack footprint",
+      "passed": true
+    },
+    {
+      "name": "J6 selected touchproof jack footprint",
+      "passed": true
+    },
+    {
+      "name": "J7 selected touchproof jack footprint",
+      "passed": true
+    },
+    {
+      "name": "J8 selected touchproof jack footprint",
+      "passed": true
+    },
+    {
+      "name": "J9 selected touchproof jack footprint",
+      "passed": true
+    },
+    {
+      "name": "J10 selected touchproof jack footprint",
       "passed": true
     },
     {

@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/3a280c114457/neuronic/hardware/kicad/neuronic.kicad_sch</source>
-    <date>2026-11-15T16:35:38+0100</date>
+    <date>2026-11-15T17:55:53+0100</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>01 - ADS1299 core and SPI interface</title>
         <company>Neuronic</company>
-        <rev>A0.1-review</rev>
+        <rev>A0.2-routed-bench</rev>
         <date>2026-11-15</date>
         <source>neuronic.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
@@ -26,7 +26,7 @@
       <title_block>
         <title>02 - Eight channels and shared reference</title>
         <company>Neuronic</company>
-        <rev>A0.1-review</rev>
+        <rev>A0.2-routed-bench</rev>
         <date>2026-11-15</date>
         <source>inputs.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
@@ -44,7 +44,7 @@
       <title_block>
         <title>03 - Battery regulators, decoupling and bias</title>
         <company>Neuronic</company>
-        <rev>A0.1-review</rev>
+        <rev>A0.2-routed-bench</rev>
         <date>2026-11-15</date>
         <source>power.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
@@ -599,16 +599,16 @@
       <tstamps>0c333930-9900-5f92-b4ea-0c1201abaead</tstamps>
     </comp>
     <comp ref="J1">
-      <value>CH1_BENCH</value>
-      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <value>CH1_TOUCHPROOF</value>
+      <footprint>Neuronic:P1_36619_Touchproof_RA</footprint>
       <fields>
-        <field name="Candidate_MPN">61300111121</field>
-        <field name="Footprint">Neuronic:PinHeader_1x01_P2.54mm_Vertical</field>
+        <field name="Candidate_MPN">8R003661901F</field>
+        <field name="Footprint">Neuronic:P1_36619_Touchproof_RA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Candidate_MPN" value="61300111121"/>
+      <property name="Candidate_MPN" value="8R003661901F"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -617,16 +617,16 @@
       <tstamps>ca444771-fef7-534d-a1e3-8eddef82ade5</tstamps>
     </comp>
     <comp ref="J2">
-      <value>CH2_BENCH</value>
-      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <value>CH2_TOUCHPROOF</value>
+      <footprint>Neuronic:P1_36619_Touchproof_RA</footprint>
       <fields>
-        <field name="Candidate_MPN">61300111121</field>
-        <field name="Footprint">Neuronic:PinHeader_1x01_P2.54mm_Vertical</field>
+        <field name="Candidate_MPN">8R003661901F</field>
+        <field name="Footprint">Neuronic:P1_36619_Touchproof_RA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Candidate_MPN" value="61300111121"/>
+      <property name="Candidate_MPN" value="8R003661901F"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -635,16 +635,16 @@
       <tstamps>2e68d078-186f-5cb6-9841-168bd9eed1f2</tstamps>
     </comp>
     <comp ref="J3">
-      <value>CH3_BENCH</value>
-      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <value>CH3_TOUCHPROOF</value>
+      <footprint>Neuronic:P1_36619_Touchproof_RA</footprint>
       <fields>
-        <field name="Candidate_MPN">61300111121</field>
-        <field name="Footprint">Neuronic:PinHeader_1x01_P2.54mm_Vertical</field>
+        <field name="Candidate_MPN">8R003661901F</field>
+        <field name="Footprint">Neuronic:P1_36619_Touchproof_RA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Candidate_MPN" value="61300111121"/>
+      <property name="Candidate_MPN" value="8R003661901F"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -653,16 +653,16 @@
       <tstamps>6b0e4943-9211-52b1-8710-40164e00c482</tstamps>
     </comp>
     <comp ref="J4">
-      <value>CH4_BENCH</value>
-      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <value>CH4_TOUCHPROOF</value>
+      <footprint>Neuronic:P1_36619_Touchproof_RA</footprint>
       <fields>
-        <field name="Candidate_MPN">61300111121</field>
-        <field name="Footprint">Neuronic:PinHeader_1x01_P2.54mm_Vertical</field>
+        <field name="Candidate_MPN">8R003661901F</field>
+        <field name="Footprint">Neuronic:P1_36619_Touchproof_RA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Candidate_MPN" value="61300111121"/>
+      <property name="Candidate_MPN" value="8R003661901F"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -671,16 +671,16 @@
       <tstamps>1328a76a-aa71-5de1-b666-e3347092adb2</tstamps>
     </comp>
     <comp ref="J5">
-      <value>CH5_BENCH</value>
-      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <value>CH5_TOUCHPROOF</value>
+      <footprint>Neuronic:P1_36619_Touchproof_RA</footprint>
       <fields>
-        <field name="Candidate_MPN">61300111121</field>
-        <field name="Footprint">Neuronic:PinHeader_1x01_P2.54mm_Vertical</field>
+        <field name="Candidate_MPN">8R003661901F</field>
+        <field name="Footprint">Neuronic:P1_36619_Touchproof_RA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Candidate_MPN" value="61300111121"/>
+      <property name="Candidate_MPN" value="8R003661901F"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -689,16 +689,16 @@
       <tstamps>0c27e9dc-29b1-55c7-9a3a-f1ef3c7218de</tstamps>
     </comp>
     <comp ref="J6">
-      <value>CH6_BENCH</value>
-      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <value>CH6_TOUCHPROOF</value>
+      <footprint>Neuronic:P1_36619_Touchproof_RA</footprint>
       <fields>
-        <field name="Candidate_MPN">61300111121</field>
-        <field name="Footprint">Neuronic:PinHeader_1x01_P2.54mm_Vertical</field>
+        <field name="Candidate_MPN">8R003661901F</field>
+        <field name="Footprint">Neuronic:P1_36619_Touchproof_RA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Candidate_MPN" value="61300111121"/>
+      <property name="Candidate_MPN" value="8R003661901F"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -707,16 +707,16 @@
       <tstamps>34fc5357-ec0f-5f58-8f32-02ef2e8a9f26</tstamps>
     </comp>
     <comp ref="J7">
-      <value>CH7_BENCH</value>
-      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <value>CH7_TOUCHPROOF</value>
+      <footprint>Neuronic:P1_36619_Touchproof_RA</footprint>
       <fields>
-        <field name="Candidate_MPN">61300111121</field>
-        <field name="Footprint">Neuronic:PinHeader_1x01_P2.54mm_Vertical</field>
+        <field name="Candidate_MPN">8R003661901F</field>
+        <field name="Footprint">Neuronic:P1_36619_Touchproof_RA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Candidate_MPN" value="61300111121"/>
+      <property name="Candidate_MPN" value="8R003661901F"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -725,16 +725,16 @@
       <tstamps>b9be75e9-c33a-5fe6-98cd-972df1d64fed</tstamps>
     </comp>
     <comp ref="J8">
-      <value>CH8_BENCH</value>
-      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <value>CH8_TOUCHPROOF</value>
+      <footprint>Neuronic:P1_36619_Touchproof_RA</footprint>
       <fields>
-        <field name="Candidate_MPN">61300111121</field>
-        <field name="Footprint">Neuronic:PinHeader_1x01_P2.54mm_Vertical</field>
+        <field name="Candidate_MPN">8R003661901F</field>
+        <field name="Footprint">Neuronic:P1_36619_Touchproof_RA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Candidate_MPN" value="61300111121"/>
+      <property name="Candidate_MPN" value="8R003661901F"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -743,16 +743,16 @@
       <tstamps>f2578509-69d4-5600-ad63-a7819d66980e</tstamps>
     </comp>
     <comp ref="J9">
-      <value>REF_BENCH</value>
-      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <value>REF_TOUCHPROOF</value>
+      <footprint>Neuronic:P1_36619_Touchproof_RA</footprint>
       <fields>
-        <field name="Candidate_MPN">61300111121</field>
-        <field name="Footprint">Neuronic:PinHeader_1x01_P2.54mm_Vertical</field>
+        <field name="Candidate_MPN">8R003661901F</field>
+        <field name="Footprint">Neuronic:P1_36619_Touchproof_RA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Candidate_MPN" value="61300111121"/>
+      <property name="Candidate_MPN" value="8R003661901F"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -1535,16 +1535,16 @@
       <tstamps>be43af05-a17f-5546-9934-1ec0f57e5057</tstamps>
     </comp>
     <comp ref="J10">
-      <value>BIAS_BENCH</value>
-      <footprint>Neuronic:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <value>BIAS_TOUCHPROOF</value>
+      <footprint>Neuronic:P1_36619_Touchproof_RA</footprint>
       <fields>
-        <field name="Candidate_MPN">61300111121</field>
-        <field name="Footprint">Neuronic:PinHeader_1x01_P2.54mm_Vertical</field>
+        <field name="Candidate_MPN">8R003661901F</field>
+        <field name="Footprint">Neuronic:P1_36619_Touchproof_RA</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Candidate_MPN" value="61300111121"/>
+      <property name="Candidate_MPN" value="8R003661901F"/>
       <property name="Sheetname" value="Power / bypass / bias drive"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -1642,38 +1642,34 @@
       <tstamps>4711dd50-1339-553f-82a3-e40a21833e6a</tstamps>
     </comp>
     <comp ref="U2">
-      <value>MCP1703AT-5002E/DB</value>
-      <footprint>Neuronic:SOT-223-3_TabPin2</footprint>
+      <value>TPS7A2450DBVR</value>
+      <footprint>Neuronic:SOT-23-5</footprint>
       <fields>
-        <field name="Candidate_MPN">MCP1703AT-5002E/DB</field>
-        <field name="Footprint">Neuronic:SOT-223-3_TabPin2</field>
+        <field name="Candidate_MPN">TPS7A2450DBVR</field>
+        <field name="Footprint">Neuronic:SOT-23-5</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="Regulator_Linear" part="MCP1703Ax-330xxDB" description="Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin&lt;=16V, SOT-223"/>
-      <property name="Candidate_MPN" value="MCP1703AT-5002E/DB"/>
+      <libsource lib="Neuronic" part="TPS7A24_FIXED" description="TI TPS7A24 DBV fixed pin contract, SBVS386E table 5-1"/>
+      <property name="Candidate_MPN" value="TPS7A2450DBVR"/>
       <property name="Sheetname" value="Power / bypass / bias drive"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
-      <property name="ki_keywords" value="REGULATOR LDO"/>
-      <property name="ki_fp_filters" value="SOT?223*TabPin2*"/>
       <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
       <tstamps>8d6735d3-0c88-59b4-af0f-a2c2c29a81e1</tstamps>
     </comp>
     <comp ref="U3">
-      <value>MCP1703AT-3302E/DB</value>
-      <footprint>Neuronic:SOT-223-3_TabPin2</footprint>
+      <value>TPS7A2433DBVR</value>
+      <footprint>Neuronic:SOT-23-5</footprint>
       <fields>
-        <field name="Candidate_MPN">MCP1703AT-3302E/DB</field>
-        <field name="Footprint">Neuronic:SOT-223-3_TabPin2</field>
+        <field name="Candidate_MPN">TPS7A2433DBVR</field>
+        <field name="Footprint">Neuronic:SOT-23-5</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="Regulator_Linear" part="MCP1703Ax-330xxDB" description="Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin&lt;=16V, SOT-223"/>
-      <property name="Candidate_MPN" value="MCP1703AT-3302E/DB"/>
+      <libsource lib="Neuronic" part="TPS7A24_FIXED" description="TI TPS7A24 DBV fixed pin contract, SBVS386E table 5-1"/>
+      <property name="Candidate_MPN" value="TPS7A2433DBVR"/>
       <property name="Sheetname" value="Power / bypass / bias drive"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
-      <property name="ki_keywords" value="REGULATOR LDO"/>
-      <property name="ki_fp_filters" value="SOT?223*TabPin2*"/>
       <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
       <tstamps>5caff16a-83ae-576c-939b-27b4fe449cfc</tstamps>
     </comp>
@@ -1927,23 +1923,21 @@
         <pin num="3" name="K1_A2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Regulator_Linear" part="MCP1703Ax-330xxDB">
-      <description>Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin&lt;=16V, SOT-223</description>
-      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf</docs>
-      <footprints>
-        <fp>SOT?223*TabPin2*</fp>
-      </footprints>
+    <libpart lib="Neuronic" part="TPS7A24_FIXED">
+      <description>TI TPS7A24 DBV fixed pin contract, SBVS386E table 5-1</description>
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">MCP1703Ax-330xxDB</field>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-223-3_TabPin2</field>
-        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf</field>
-        <field name="Description">Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin&lt;=16V, SOT-223</field>
+        <field name="Value">TPS7A24_FIXED</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">TI TPS7A24 DBV fixed pin contract, SBVS386E table 5-1</field>
       </fields>
       <pins>
-        <pin num="1" name="VI" type="power_in"/>
+        <pin num="1" name="IN" type="power_in"/>
         <pin num="2" name="GND" type="power_in"/>
-        <pin num="3" name="VO" type="power_out"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="NC_GND" type="passive"/>
+        <pin num="5" name="OUT" type="power_out"/>
       </pins>
     </libpart>
     <libpart lib="Switch" part="SW_SPST">
@@ -1971,9 +1965,6 @@
     </library>
     <library logical="Neuronic">
       <uri>/workspace/scratch/3a280c114457/neuronic/hardware/kicad/Neuronic.kicad_sym</uri>
-    </library>
-    <library logical="Regulator_Linear">
-      <uri>/workspace/scratch/3a280c114457/neuronic/hardware/kicad/Regulator_Linear.kicad_sym</uri>
     </library>
     <library logical="Switch">
       <uri>/workspace/scratch/3a280c114457/neuronic/hardware/kicad/Switch.kicad_sym</uri>
@@ -2029,7 +2020,7 @@
       <node ref="U1" pin="54" pinfunction="AVDD1" pintype="power_in"/>
       <node ref="U1" pin="56" pinfunction="AVDD" pintype="power_in"/>
       <node ref="U1" pin="59" pinfunction="AVDD" pintype="power_in"/>
-      <node ref="U2" pin="3" pinfunction="VO" pintype="power_out"/>
+      <node ref="U2" pin="5" pinfunction="OUT" pintype="power_out"/>
     </net>
     <net code="7" name="BIASINV" class="Default">
       <node ref="C10" pin="2" pintype="passive"/>
@@ -2098,7 +2089,7 @@
       <node ref="R36" pin="2" pintype="passive"/>
       <node ref="U1" pin="48" pinfunction="DVDD" pintype="power_in"/>
       <node ref="U1" pin="50" pinfunction="DVDD" pintype="power_in"/>
-      <node ref="U3" pin="3" pinfunction="VO" pintype="power_out"/>
+      <node ref="U3" pin="5" pinfunction="OUT" pintype="power_out"/>
     </net>
     <net code="22" name="EEG1" class="Default">
       <node ref="C1" pin="1" pintype="passive"/>
@@ -2217,7 +2208,9 @@
       <node ref="U1" pin="58" pinfunction="AVSS" pintype="power_in"/>
       <node ref="U1" pin="62" pinfunction="BIASIN" pintype="input"/>
       <node ref="U2" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="NC_GND" pintype="passive"/>
       <node ref="U3" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="4" pinfunction="NC_GND" pintype="passive"/>
     </net>
     <net code="31" name="GPIO1_PD" class="Default">
       <node ref="R37" pin="1" pintype="passive"/>
@@ -2302,8 +2295,10 @@
       <node ref="C20" pin="1" pintype="passive"/>
       <node ref="C22" pin="1" pintype="passive"/>
       <node ref="SW1" pin="2" pinfunction="B" pintype="passive"/>
-      <node ref="U2" pin="1" pinfunction="VI" pintype="power_in"/>
-      <node ref="U3" pin="1" pinfunction="VI" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="IN" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="EN" pintype="input"/>
+      <node ref="U3" pin="1" pinfunction="IN" pintype="power_in"/>
+      <node ref="U3" pin="3" pinfunction="EN" pintype="input"/>
     </net>
     <net code="49" name="VBAT_DIODE" class="Default">
       <node ref="D10" pin="1" pinfunction="K" pintype="passive"/>

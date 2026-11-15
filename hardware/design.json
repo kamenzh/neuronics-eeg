@@ -1,6 +1,6 @@
 {
-  "revision": "A0.1-review",
-  "state": "placed-unrouted-bench-only",
+  "revision": "A0.2-routed-bench",
+  "state": "routed-bench-review-not-manufacturing-release",
   "parts": [
     {
       "ref": "U1",
@@ -74,8 +74,8 @@
       },
       "fp": "Neuronic:TQFP-64_10x10mm_P0.5mm",
       "xy": [
-        95,
-        90
+        100,
+        92
       ],
       "rot": 0,
       "note": "TI SBAS499C pin functions, unipolar 5 V, internal clock/reference; ADS1299IPAGR is reel packaging of the same PAG device; one IC total",
@@ -103,8 +103,8 @@
       },
       "fp": "Neuronic:PinHeader_2x06_P2.54mm_Vertical",
       "xy": [
-        130,
-        86
+        131,
+        88
       ],
       "rot": 0,
       "note": "Pin 11 NC. Signals/GND only; separate controller supply.",
@@ -122,8 +122,8 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        116,
-        103
+        114,
+        96
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -141,8 +141,8 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        121,
-        103
+        119,
+        96
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -160,8 +160,8 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        126,
-        103
+        124,
+        96
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -179,8 +179,8 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        131,
-        103
+        114,
+        100
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -198,8 +198,8 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        116,
-        110
+        119,
+        100
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -217,8 +217,8 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        121,
-        110
+        124,
+        100
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -236,8 +236,8 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        126,
-        110
+        107,
+        85
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -255,8 +255,8 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        131,
-        110
+        114,
+        104
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -274,8 +274,8 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        116,
-        117
+        119,
+        104
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -293,8 +293,8 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        121,
-        117
+        124,
+        104
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -312,8 +312,8 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        126,
-        117
+        114,
+        108
       ],
       "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
@@ -324,18 +324,18 @@
     {
       "ref": "J1",
       "lib": "Connector_Generic:Conn_01x01",
-      "value": "CH1_BENCH",
+      "value": "CH1_TOUCHPROOF",
       "nets": {
         "1": "CONTACT_1"
       },
-      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "fp": "Neuronic:P1_36619_Touchproof_RA",
       "xy": [
-        57,
-        65
+        67.026,
+        118.39999999999999
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
-      "mpn": "61300111121",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "ca444771-fef7-534d-a1e3-8eddef82ade5"
     },
@@ -349,10 +349,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        64,
-        65
+        71,
+        118.39999999999999
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -368,10 +368,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        69,
-        65
+        75,
+        118.39999999999999
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -387,8 +387,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        78,
-        65
+        89,
+        105
       ],
       "rot": 0,
       "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -407,8 +407,8 @@
       },
       "fp": "Neuronic:SOT-23",
       "xy": [
-        73.5,
-        65
+        83.5,
+        105
       ],
       "rot": 0,
       "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
@@ -419,18 +419,18 @@
     {
       "ref": "J2",
       "lib": "Connector_Generic:Conn_01x01",
-      "value": "CH2_BENCH",
+      "value": "CH2_TOUCHPROOF",
       "nets": {
         "1": "CONTACT_2"
       },
-      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "fp": "Neuronic:P1_36619_Touchproof_RA",
       "xy": [
-        57,
-        72
+        67.026,
+        110.19999999999999
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
-      "mpn": "61300111121",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "2e68d078-186f-5cb6-9841-168bd9eed1f2"
     },
@@ -444,10 +444,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        64,
-        72
+        71,
+        110.19999999999999
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -463,10 +463,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        69,
-        72
+        75,
+        110.19999999999999
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -482,8 +482,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        78,
-        72
+        89,
+        101
       ],
       "rot": 0,
       "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -502,8 +502,8 @@
       },
       "fp": "Neuronic:SOT-23",
       "xy": [
-        73.5,
-        72
+        83.5,
+        101
       ],
       "rot": 0,
       "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
@@ -514,18 +514,18 @@
     {
       "ref": "J3",
       "lib": "Connector_Generic:Conn_01x01",
-      "value": "CH3_BENCH",
+      "value": "CH3_TOUCHPROOF",
       "nets": {
         "1": "CONTACT_3"
       },
-      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "fp": "Neuronic:P1_36619_Touchproof_RA",
       "xy": [
-        57,
-        79
+        67.026,
+        102.0
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
-      "mpn": "61300111121",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "6b0e4943-9211-52b1-8710-40164e00c482"
     },
@@ -539,10 +539,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        64,
-        79
+        71,
+        102.0
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -558,10 +558,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        69,
-        79
+        75,
+        102.0
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -577,8 +577,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        78,
-        79
+        89,
+        97
       ],
       "rot": 0,
       "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -597,8 +597,8 @@
       },
       "fp": "Neuronic:SOT-23",
       "xy": [
-        73.5,
-        79
+        83.5,
+        97
       ],
       "rot": 0,
       "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
@@ -609,18 +609,18 @@
     {
       "ref": "J4",
       "lib": "Connector_Generic:Conn_01x01",
-      "value": "CH4_BENCH",
+      "value": "CH4_TOUCHPROOF",
       "nets": {
         "1": "CONTACT_4"
       },
-      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "fp": "Neuronic:P1_36619_Touchproof_RA",
       "xy": [
-        57,
-        86
+        67.026,
+        93.8
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
-      "mpn": "61300111121",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "1328a76a-aa71-5de1-b666-e3347092adb2"
     },
@@ -634,10 +634,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        64,
-        86
+        71,
+        93.8
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -653,10 +653,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        69,
-        86
+        75,
+        93.8
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -672,8 +672,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        78,
-        86
+        89,
+        93
       ],
       "rot": 0,
       "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -692,8 +692,8 @@
       },
       "fp": "Neuronic:SOT-23",
       "xy": [
-        73.5,
-        86
+        83.5,
+        93
       ],
       "rot": 0,
       "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
@@ -704,18 +704,18 @@
     {
       "ref": "J5",
       "lib": "Connector_Generic:Conn_01x01",
-      "value": "CH5_BENCH",
+      "value": "CH5_TOUCHPROOF",
       "nets": {
         "1": "CONTACT_5"
       },
-      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "fp": "Neuronic:P1_36619_Touchproof_RA",
       "xy": [
-        57,
-        93
+        67.026,
+        85.6
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
-      "mpn": "61300111121",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "0c27e9dc-29b1-55c7-9a3a-f1ef3c7218de"
     },
@@ -729,10 +729,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        64,
-        93
+        71,
+        85.6
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -748,10 +748,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        69,
-        93
+        75,
+        85.6
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -767,8 +767,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        78,
-        93
+        89,
+        89
       ],
       "rot": 0,
       "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -787,8 +787,8 @@
       },
       "fp": "Neuronic:SOT-23",
       "xy": [
-        73.5,
-        93
+        83.5,
+        89
       ],
       "rot": 0,
       "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
@@ -799,18 +799,18 @@
     {
       "ref": "J6",
       "lib": "Connector_Generic:Conn_01x01",
-      "value": "CH6_BENCH",
+      "value": "CH6_TOUCHPROOF",
       "nets": {
         "1": "CONTACT_6"
       },
-      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "fp": "Neuronic:P1_36619_Touchproof_RA",
       "xy": [
-        57,
-        100
+        67.026,
+        77.4
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
-      "mpn": "61300111121",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "34fc5357-ec0f-5f58-8f32-02ef2e8a9f26"
     },
@@ -824,10 +824,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        64,
-        100
+        71,
+        77.4
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -843,10 +843,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        69,
-        100
+        75,
+        77.4
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -862,8 +862,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        78,
-        100
+        89,
+        85
       ],
       "rot": 0,
       "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -882,8 +882,8 @@
       },
       "fp": "Neuronic:SOT-23",
       "xy": [
-        73.5,
-        100
+        83.5,
+        85
       ],
       "rot": 0,
       "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
@@ -894,18 +894,18 @@
     {
       "ref": "J7",
       "lib": "Connector_Generic:Conn_01x01",
-      "value": "CH7_BENCH",
+      "value": "CH7_TOUCHPROOF",
       "nets": {
         "1": "CONTACT_7"
       },
-      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "fp": "Neuronic:P1_36619_Touchproof_RA",
       "xy": [
-        57,
-        107
+        67.026,
+        69.2
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
-      "mpn": "61300111121",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "b9be75e9-c33a-5fe6-98cd-972df1d64fed"
     },
@@ -919,10 +919,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        64,
-        107
+        71,
+        69.2
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -938,10 +938,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        69,
-        107
+        75,
+        69.2
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -957,8 +957,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        78,
-        107
+        89,
+        81
       ],
       "rot": 0,
       "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -977,8 +977,8 @@
       },
       "fp": "Neuronic:SOT-23",
       "xy": [
-        73.5,
-        107
+        83.5,
+        81
       ],
       "rot": 0,
       "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
@@ -989,18 +989,18 @@
     {
       "ref": "J8",
       "lib": "Connector_Generic:Conn_01x01",
-      "value": "CH8_BENCH",
+      "value": "CH8_TOUCHPROOF",
       "nets": {
         "1": "CONTACT_8"
       },
-      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "fp": "Neuronic:P1_36619_Touchproof_RA",
       "xy": [
-        57,
-        114
+        67.026,
+        61.0
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
-      "mpn": "61300111121",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "f2578509-69d4-5600-ad63-a7819d66980e"
     },
@@ -1014,10 +1014,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        64,
-        114
+        71,
+        61.0
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -1033,10 +1033,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        69,
-        114
+        75,
+        61.0
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -1052,8 +1052,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        78,
-        114
+        89,
+        77
       ],
       "rot": 0,
       "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1072,8 +1072,8 @@
       },
       "fp": "Neuronic:SOT-23",
       "xy": [
-        73.5,
-        114
+        83.5,
+        77
       ],
       "rot": 0,
       "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
@@ -1084,18 +1084,18 @@
     {
       "ref": "J9",
       "lib": "Connector_Generic:Conn_01x01",
-      "value": "REF_BENCH",
+      "value": "REF_TOUCHPROOF",
       "nets": {
         "1": "CONTACT_REF"
       },
-      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "fp": "Neuronic:P1_36619_Touchproof_RA",
       "xy": [
-        57,
-        121
+        67.026,
+        126.6
       ],
       "rot": 0,
-      "note": "Bench header; replace with verified electrode connector before wearable revision; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
-      "mpn": "61300111121",
+      "note": "P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "mpn": "8R003661901F",
       "sheet": "inputs",
       "uuid": "89b7be3b-a9f6-559d-b86c-fd4e862bc899"
     },
@@ -1109,10 +1109,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        64,
-        121
+        71,
+        126.6
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -1128,10 +1128,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        69,
-        121
+        75,
+        126.6
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-0710KL",
       "sheet": "inputs",
@@ -1147,8 +1147,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        78,
-        121
+        89,
+        113
       ],
       "rot": 0,
       "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1167,8 +1167,8 @@
       },
       "fp": "Neuronic:SOT-23",
       "xy": [
-        73.5,
-        121
+        83.5,
+        113
       ],
       "rot": 0,
       "note": "Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution",
@@ -1186,8 +1186,8 @@
       },
       "fp": "Neuronic:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
       "xy": [
-        132,
-        66
+        126,
+        65
       ],
       "rot": 0,
       "note": "Candidate keyed battery connector; pin 1 positive, pin 2 ground; verify harness polarity; Harness requires matching XHP-2 housing and wire-appropriate contacts; do not infer polarity from wire color",
@@ -1205,7 +1205,7 @@
       },
       "fp": "Neuronic:Fuse_1812_4532Metric",
       "xy": [
-        124,
+        121,
         60
       ],
       "rot": 0,
@@ -1224,7 +1224,7 @@
       },
       "fp": "Neuronic:D_SMA",
       "xy": [
-        117,
+        112,
         60
       ],
       "rot": 0,
@@ -1243,7 +1243,7 @@
       },
       "fp": "Neuronic:PinHeader_1x02_P2.54mm_Vertical",
       "xy": [
-        109,
+        104,
         60
       ],
       "rot": 0,
@@ -1254,41 +1254,45 @@
     },
     {
       "ref": "U2",
-      "lib": "Regulator_Linear:MCP1703Ax-330xxDB",
-      "value": "MCP1703AT-5002E/DB",
+      "lib": "Neuronic:TPS7A24_FIXED",
+      "value": "TPS7A2450DBVR",
       "nets": {
         "1": "VBAT",
         "2": "GND",
-        "3": "AVDD_5V"
+        "3": "VBAT",
+        "4": "GND",
+        "5": "AVDD_5V"
       },
-      "fp": "Neuronic:SOT-223-3_TabPin2",
+      "fp": "Neuronic:SOT-23-5",
       "xy": [
-        109,
-        72
+        110,
+        71
       ],
       "rot": 0,
-      "note": "Fixed output variant; matching footprint pin1 VIN pin2 GND pin3 VOUT",
-      "mpn": "MCP1703AT-5002E/DB",
+      "note": "Fixed DBV: 1 VIN, 2 GND, 3 EN=VIN, 4 NC=GND, 5 VOUT; Pin 1 IN, 2 GND, 3 EN tied to IN, 4 NC tied GND for thermal performance, 5 OUT. 2% combined accuracy budget. Measure rail noise/startup/reverse-current behavior.",
+      "mpn": "TPS7A2450DBVR",
       "sheet": "power",
       "uuid": "8d6735d3-0c88-59b4-af0f-a2c2c29a81e1"
     },
     {
       "ref": "U3",
-      "lib": "Regulator_Linear:MCP1703Ax-330xxDB",
-      "value": "MCP1703AT-3302E/DB",
+      "lib": "Neuronic:TPS7A24_FIXED",
+      "value": "TPS7A2433DBVR",
       "nets": {
         "1": "VBAT",
         "2": "GND",
-        "3": "DVDD_3V3"
+        "3": "VBAT",
+        "4": "GND",
+        "5": "DVDD_3V3"
       },
-      "fp": "Neuronic:SOT-223-3_TabPin2",
+      "fp": "Neuronic:SOT-23-5",
       "xy": [
-        123,
-        72
+        124,
+        71
       ],
       "rot": 0,
-      "note": "Fixed output variant; matching footprint pin1 VIN pin2 GND pin3 VOUT",
-      "mpn": "MCP1703AT-3302E/DB",
+      "note": "Fixed DBV: 1 VIN, 2 GND, 3 EN=VIN, 4 NC=GND, 5 VOUT; Pin 1 IN, 2 GND, 3 EN tied to IN, 4 NC tied GND for thermal performance, 5 OUT. 2% combined accuracy budget. Measure rail noise/startup/reverse-current behavior.",
+      "mpn": "TPS7A2433DBVR",
       "sheet": "power",
       "uuid": "5caff16a-83ae-576c-939b-27b4fe449cfc"
     },
@@ -1302,10 +1306,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        109,
-        66
+        106,
+        70
       ],
-      "rot": 0,
+      "rot": 90,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C475K3RACTU",
       "sheet": "power",
@@ -1321,10 +1325,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        109,
-        78
+        114,
+        70
       ],
-      "rot": 0,
+      "rot": 90,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1340,10 +1344,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        123,
-        66
+        120,
+        70
       ],
-      "rot": 0,
+      "rot": 90,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C475K3RACTU",
       "sheet": "power",
@@ -1359,10 +1363,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        123,
-        78
+        128,
+        72
       ],
-      "rot": 0,
+      "rot": 90,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C475K3RACTU",
       "sheet": "power",
@@ -1378,10 +1382,10 @@
       },
       "fp": "Neuronic:CP_EIA-3528-21_Kemet-B",
       "xy": [
-        91.5,
-        104
+        105,
+        107
       ],
-      "rot": 0,
+      "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Polarized: pad1 VCAP1 positive; verify leakage/startup/surge and derating for this internal rail",
       "mpn": "T491B107M006AT",
       "sheet": "power",
@@ -1397,10 +1401,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        96,
-        103
+        109,
+        101
       ],
-      "rot": 0,
+      "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1416,7 +1420,7 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        96,
+        103,
         78
       ],
       "rot": 0,
@@ -1435,8 +1439,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        100,
-        78
+        103,
+        75.5
       ],
       "rot": 0,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1454,10 +1458,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        87,
-        103
+        100,
+        105
       ],
-      "rot": 0,
+      "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1473,8 +1477,8 @@
       },
       "fp": "Neuronic:C_1206_3216Metric",
       "xy": [
-        83,
-        100
+        94.5,
+        108
       ],
       "rot": 0,
       "note": "Final MPN, voltage bias capacitance and placement require review; Reference bypass: still must demonstrate >=10uF effective at 4.5V including tolerance, temperature and aging",
@@ -1492,10 +1496,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        83,
-        104
+        94.5,
+        103
       ],
-      "rot": 0,
+      "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C104K5RACTU",
       "sheet": "power",
@@ -1511,10 +1515,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        83,
-        94
+        97.3,
+        101
       ],
-      "rot": 0,
+      "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1530,10 +1534,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        83,
-        90
+        100.1,
+        101
       ],
-      "rot": 0,
+      "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1549,10 +1553,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        83,
-        86
+        102.9,
+        101
       ],
-      "rot": 0,
+      "rot": 270,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1568,10 +1572,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        87,
-        78
+        98,
+        82
       ],
-      "rot": 0,
+      "rot": 90,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1587,10 +1591,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        91,
-        78
+        101,
+        82
       ],
-      "rot": 0,
+      "rot": 90,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1607,9 +1611,9 @@
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
         104,
-        86
+        82
       ],
-      "rot": 0,
+      "rot": 90,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1625,8 +1629,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        105,
-        94
+        115,
+        78
       ],
       "rot": 0,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1644,8 +1648,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        105,
-        90
+        115,
+        81
       ],
       "rot": 0,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1663,8 +1667,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        104,
-        98
+        110,
+        88.25
       ],
       "rot": 0,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1682,10 +1686,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        100,
-        102
+        110,
+        83
       ],
-      "rot": 0,
+      "rot": 90,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C105K3RACTU",
       "sheet": "power",
@@ -1701,10 +1705,10 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        100,
-        106
+        113,
+        84
       ],
-      "rot": 0,
+      "rot": 90,
       "note": "Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
       "mpn": "C0805C104K5RACTU",
       "sheet": "power",
@@ -1720,8 +1724,8 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        100,
-        72
+        93,
+        81
       ],
       "rot": 0,
       "note": "Bias feedback, candidate compensation must be checked with cable/electrode model; Check pulse/fault stress and excess noise in final analog design",
@@ -1739,8 +1743,8 @@
       },
       "fp": "Neuronic:C_0805_2012Metric",
       "xy": [
-        95,
-        72
+        93,
+        78
       ],
       "rot": 0,
       "note": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
@@ -1758,10 +1762,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        86,
-        114
+        82,
+        124
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-07499KL",
       "sheet": "power",
@@ -1777,10 +1781,10 @@
       },
       "fp": "Neuronic:R_0805_2012Metric",
       "xy": [
-        75,
-        128
+        72,
+        129.2
       ],
-      "rot": 90,
+      "rot": 0,
       "note": "Check pulse/fault stress and excess noise in final analog design",
       "mpn": "RC0805FR-07499KL",
       "sheet": "power",
@@ -1789,18 +1793,18 @@
     {
       "ref": "J10",
       "lib": "Connector_Generic:Conn_01x01",
-      "value": "BIAS_BENCH",
+      "value": "BIAS_TOUCHPROOF",
       "nets": {
         "1": "CONTACT_BIAS"
       },
-      "fp": "Neuronic:PinHeader_1x01_P2.54mm_Vertical",
+      "fp": "Neuronic:P1_36619_Touchproof_RA",
       "xy": [
-        57,
-        128
+        67.026,
+        134.8
       ],
       "rot": 0,
-      "note": "Bias output. Not protective earth. Bench connector only.; Bench placeholder ONLY; does not mate to the Sino-k electrode plug",
-      "mpn": "61300111121",
+      "note": "Bias output, not protective earth. Same P1 jack; fit requires verification.; Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "mpn": "8R003661901F",
       "sheet": "power",
       "uuid": "e9bb80b1-f942-512d-9b65-9f964dfd8b47"
     }
@@ -1870,5 +1874,18 @@
     "62": "BIASIN",
     "63": "BIASOUT",
     "64": "RESERVED"
+  },
+  "pcb": {
+    "width_mm": 88,
+    "height_mm": 90,
+    "copper_layers": 4,
+    "layer_plan": {
+      "F.Cu": "components and signal/power tracks",
+      "In1.Cu": "dedicated GND plane; no tracks",
+      "In2.Cu": "crossovers plus GND fill",
+      "B.Cu": "signal tracks"
+    },
+    "manufacture_ready": false,
+    "body_connection_approved": false
   }
 }

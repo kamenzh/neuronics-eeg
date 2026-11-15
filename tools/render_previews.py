@@ -14,8 +14,9 @@ with tempfile.TemporaryDirectory() as temp:
         if dest is None:raise ValueError(path.name)
         svg=OUT/f'schematics/{dest}.svg';svg.write_text('\n'.join(line.rstrip() for line in path.read_text().splitlines())+'\n')
         subprocess.run(['inkscape',str(svg),'--export-type=png','--export-width=2400','--export-filename='+str(svg.with_suffix('.png'))],check=True)
-svg=OUT/'pcb-placement.svg'
-subprocess.run(['kicad-cli','pcb','export','svg','--mode-single','--layers','F.Cu,F.Silkscreen,Edge.Cuts','--fit-page-to-board','--exclude-drawing-sheet','-o',str(svg),str(ROOT/'hardware/kicad/neuronic.kicad_pcb')],check=True)
-svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
-subprocess.run(['inkscape',str(svg),'--export-type=png','--export-width=1600','--export-background=#182334','--export-background-opacity=1','--export-filename='+str(svg.with_suffix('.png'))],check=True)
-print('Rendered 3 schematic sheets and placement-only PCB')
+for name,layers in [('pcb-routed','F.Cu,F.Silkscreen,Edge.Cuts'),('pcb-back','B.Cu,Edge.Cuts'),('pcb-inner2','In2.Cu,Edge.Cuts'),('pcb-assembly','F.Fab,Edge.Cuts')]:
+    svg=OUT/(name+'.svg')
+    subprocess.run(['kicad-cli','pcb','export','svg','--mode-single','--layers',layers,'--fit-page-to-board','--exclude-drawing-sheet','-o',str(svg),str(ROOT/'hardware/kicad/neuronic.kicad_pcb')],check=True)
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
+    subprocess.run(['inkscape',str(svg),'--export-type=png','--export-width=1600','--export-background=#182334','--export-background-opacity=1','--export-filename='+str(svg.with_suffix('.png'))],check=True)
+print('Rendered 3 schematic sheets, routed copper and assembly previews')

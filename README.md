@@ -3,13 +3,12 @@
 An open development project for an affordable eight-channel EEG acquisition
 PCB, ESP32 wireless streaming and PC-based signal processing and classification.
 
-**Current revision: A0.1 — schematic and unrouted placement for bench review.**
+**Current revision: A0.2 — routed bench-development PCB.**
 There is no manufactured or body-validated Neuronic board yet. This repository
 contains genuine KiCad source, not a manufacturing release.
 
 **Controller selected: use the Waveshare ESP32-S3-Nano you already own.**
-The Sino-k SGE117DN ten-lead set is recorded; matching electrode sockets still
-need verification. See [the wiring and power plan](docs/CONTROLLER_AND_ELECTRODES.md)
+The Sino-k SGE117DN ten-lead set is recorded; P1 36619 touchproof sockets are selected; physical plug fit still needs verification. See [the wiring and power plan](docs/CONTROLLER_AND_ELECTRODES.md)
 and [the step-by-step roadmap](docs/NEXT_STEPS.md).
 
 **First time using KiCad? Read [START_HERE](docs/START_HERE.md).** Open
@@ -27,7 +26,7 @@ flowchart TD
     V["Battery and regulators"] --> A
 ```
 
-| Parameter | A0.1 design target |
+| Parameter | A0.2 design target |
 | --- | --- |
 | Recording channels | 8 simultaneous |
 | Contacts | 8 recording + 1 reference + 1 bias |
@@ -36,7 +35,7 @@ flowchart TD
 | Analog / ADC digital supplies | 5 V / 3.3 V |
 | Input power | 6 x AA alkaline candidate; no charger |
 | Controller interface | Waveshare ESP32-S3-Nano via 12-pin 3.3 V SPI header |
-| PCB | 88 x 80 mm, four copper layers, placed and unrouted |
+| PCB | 88 x 90 mm, four copper layers, routed bench prototype |
 
 The ADS1299 already supplies the amplification and conversion. An additional
 high-gain analog amplifier chain is not assumed. Nominal ADC bit depth is not
@@ -80,9 +79,9 @@ python3 tools/simulate_input.py
 /usr/bin/python3 -m unittest discover -s tests -v
 ```
 
-Validation uses KiCad 9; on Linux use its compatible `/usr/bin/python3` for pcbnew. This unrouted
-checkpoint is expected to fail release checks; errors are not excluded to
-make the output look clean. GUI ERC/DRC instructions are in the beginner guide.
+Validation uses KiCad 9; on Linux use its compatible `/usr/bin/python3` for pcbnew. Read the current validation report for routing and CAD results; manufacturing and body-use approval remain separate. GUI ERC/DRC instructions are in the beginner guide.
+
+See [the socket/protection/power review](docs/PROTECTION_POWER_REVIEW_A0_2.md) for the changes and unresolved physical checks.
 
 ## Roadmap
 
@@ -90,7 +89,8 @@ make the output look clean. GUI ERC/DRC instructions are in the beginner guide.
 - [x] Create editable KiCad sheets, footprint bundle, BOM and placed PCB.
 - [x] Export and audit connectivity; perform limited ideal RC calculation.
 - [ ] Close input-protection, connector, bias-loop and power-review blockers.
-- [ ] Complete layout, plane design, routing, ERC and schematic-parity DRC.
+- [x] Complete a routed bench checkpoint with clean ERC and schematic-parity DRC.
+- [ ] Complete independent layout, physical fit and manufacturing-release review.
 - [x] Select exact candidate PCB MPNs and the owned controller.
 - [ ] Verify procurement details and compare delivered bare-board quotes.
 - [ ] Fabricate a small prototype batch and complete bench tests.
@@ -105,7 +105,7 @@ experiment. Intentional command classification follows measured signal quality.
 EEG does not directly reveal arbitrary thoughts. Eye and muscle artifacts must
 be checked, and train/test data must be separated by complete trials/sessions.
 
-This is a body-connected engineering project, not a diagnostic device. A0.1 is
+This is a body-connected engineering project, not a diagnostic device. A0.2 is
 for bench development only. Do not attach it to a person. Final electrode
 protection and fault paths need qualified review before any scalp recording.
 Battery power, ERC and DRC alone do not establish safety. During approved

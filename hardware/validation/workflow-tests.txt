@@ -5,7 +5,7 @@ test_preserves_zones (test_workflow_guards.GeneratorGuards.test_preserves_zones)
 test_requires_explicit_overwrite (test_workflow_guards.GeneratorGuards.test_requires_explicit_overwrite) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 1.414s
+Ran 5 tests in 1.508s
 
 OK
 version: exit 0

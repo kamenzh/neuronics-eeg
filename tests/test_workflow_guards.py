@@ -40,7 +40,7 @@ class GeneratorGuards(unittest.TestCase):
         t.SetStart(k.VECTOR2I(0,0));t.SetEnd(k.VECTOR2I(1000000,0));t.SetWidth(200000);b.Add(t)
         self.assert_copper_guard(b)
     def test_preserves_vias(self):
-        b=k.BOARD();v=k.PCB_VIA(b);v.SetPosition(k.VECTOR2I(0,0));v.SetWidth(600000,k.F_Cu);v.SetDrill(300000);b.Add(v)
+        b=k.BOARD();v=k.PCB_VIA(b);v.SetPosition(k.VECTOR2I(0,0));v.SetWidth(k.F_Cu,600000);v.SetDrill(300000);b.Add(v)
         self.assert_copper_guard(b)
     def test_preserves_zones(self):
         b=k.BOARD();z=k.ZONE(b);z.SetLayer(k.F_Cu)

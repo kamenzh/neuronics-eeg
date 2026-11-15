@@ -1,8 +1,7 @@
 # Neuronic: your first PCB, step by step
 
 **Start with `hardware/kicad/neuronic.kicad_pro`.** This package contains a real,
-editable KiCad project and a reproducible generator. Revision A0.1 is a **bench-only,
-placed but unrouted review checkpoint**. It is not ready to order or wear.
+editable KiCad project and a reproducible generator. Revision A0.2 is a **routed bench-development checkpoint**. It is not ready to order or wear.
 
 ## 1. What a custom PCB actually involves
 
@@ -140,7 +139,7 @@ py tools/validate_kicad.py --kicad-cli "C:\Program Files\KiCad\9.0\bin\kicad-cli
 ```
 
 The script deliberately exits with failure if ERC/DRC finds violations or the
-required checks are unavailable. This A0.1 board is expected to fail DRC because
+required checks are unavailable. The earlier A0.1 checkpoint failed DRC because
 it has no tracks. `hardware/validation/STATUS.md` records the actual results.
 
 For deeper checks, compare every IC pin and physical package against its

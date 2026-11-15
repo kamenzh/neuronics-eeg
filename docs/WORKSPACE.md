@@ -2,13 +2,13 @@
 
 Upstream: https://github.com/kamenzh/neuronics-eeg
 
-A0.1 is based on `b8af12f03bf256dca78ebfd285dcb80679491b1f` (A0 on main).
-This revision reconstructs earlier missing review changes and incorporates the
-user's owned Waveshare ESP32-S3-Nano and Sino-k SGE117DN electrode selection.
-See Git history for the published checkpoint; this document does not embed its
-own commit ID.
+A0.2 follows the published A0.1 checkpoint `1b0b3a11e555164f0fccab73d3814518bf575570`.
+It selects P1 touchproof sockets, revises power to TPS7A24 regulators and adds
+routed copper with fresh validation. See Git history for the resulting commit.
 
-Open `hardware/kicad/neuronic.kicad_pro` in KiCad 9. Keep bundled libraries with
-the project. Commit existing GUI edits before regeneration. The main files are
-real editable CAD, but the present PCB is unrouted and no fabrication package
-exists. Old starter content remains available in Git history and docs/archive.
+Open `hardware/kicad/neuronic.kicad_pro` in KiCad 9 and keep the bundled libraries
+with it. The routed PCB is authoritative: preserve it and edit in KiCad. The
+source generator refuses to replace existing copper. No manufacturing package
+or body-use approval is implied; read `hardware/validation/STATUS.md`.
+
+Old starter material remains in Git history and `docs/archive/`.

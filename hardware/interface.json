@@ -1,5 +1,5 @@
 {
-  "revision": "A0.1-review",
+  "revision": "A0.2-routed-bench",
   "controller": {
     "model": "Waveshare ESP32-S3-Nano",
     "owned": true,
@@ -128,8 +128,10 @@
       "reference": 1,
       "bias": 1
     },
-    "connector_status": "UNRESOLVED: listing/photo do not provide a dimensioned mating connector drawing; confirm physical plug before selecting sockets",
-    "pcb_connectors": "J1-J8 channels; J9 reference; J10 bias; present headers are bench placeholders"
+    "connector_status": "DIN 42802 1.5 mm touchproof assumed per user; selected P1 36619 / 8R003661901F. Physical sample mating and hole fit unverified.",
+    "pcb_connectors": "J1-J8 channels; J9 reference; J10 bias. P1 36619 right-angle PCB jacks; isolated dummy legs.",
+    "socket_mpn": "8R003661901F",
+    "socket_drawing": "https://catalog.p1tec.com/dash50/36619_dash50.pdf"
   },
   "power": {
     "afe_battery_candidate": "6xAA alkaline",
@@ -145,6 +147,8 @@
       21
     ],
     "status": "Candidate topology only; battery harness/branch fuse/switch, voltage at VIN under radio bursts and noise tests remain open",
-    "recording_concept": "Self-contained battery and wireless; no USB, charger or mains-connected instruments when electrodes are on a person; only after final safety review"
+    "recording_concept": "Self-contained battery and wireless; no USB, charger or mains-connected instruments when electrodes are on a person; only after final safety review",
+    "ldo_analog": "TPS7A2450DBVR",
+    "ldo_digital": "TPS7A2433DBVR"
   }
 }

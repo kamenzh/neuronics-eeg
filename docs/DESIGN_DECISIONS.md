@@ -1,4 +1,6 @@
-# Design decisions — A0.1, 2026-11-15
+# Design decisions — A0.2, 2026-11-15
+
+See [the socket/protection/power review](PROTECTION_POWER_REVIEW_A0_2.md) for the current calculation limits and physical checks.
 
 | Decision | Current choice | Reason and limitation |
 | --- | --- | --- |
@@ -11,7 +13,9 @@
 | Digital power | Separate 3.3 V LDO for AFE only | ESP32 must use its own correctly sized supply |
 | Battery | Six-AA alkaline candidate, 7.2–10.2V calculation envelope, no onboard charger | Exact pack, switch, connector and fuse require selection; no runtime claim |
 | Controller | Owned Waveshare ESP32-S3-Nano via J11 | GPIO/power contract in hardware/interface.json; J11.11 NC |
-| Layout | 88 x 80 mm, four copper layers | Initial placement only; stack-up, plane and routing review still required |
+| Layout | 88 x 90 mm, four copper layers, routed | In1 dedicated GND; In2 crossovers/ground fill; detailed layout and fabricator stack-up review remain |
+| Regulators | TPS7A2450DBVR / TPS7A2433DBVR | Fixed 5 V / 3.3 V; 2% additive output-error budget; noise/thermal/startup tests pending |
+| Sockets | P1 36619 / 8R003661901F | User-assumed 1.5 mm DIN 42802; derived footprint and physical mating still need verification |
 | Input filters | 2 x 10 kohm + 1 nF per input/reference | RF pole about 7.96 kHz; does not implement 0.5-40 Hz EEG filtering |
 | Clamps | BAV199 candidate rail clamps | Low leakage helps, but forward clamp voltage and fault paths are unresolved |
 | Bias | Internal midpoint, 1 M feedback parallel 1.5 nF, 2 x 499 kohm output | Candidate values; stability with electrodes/cables is not validated |
@@ -27,8 +31,8 @@ the relevant license and attribution; the main repo's existing MIT license
 does not relicense third-party design files.
 
 KiCad 9.0.2 library symbols are embedded in the sheets and a small set of
-unmodified standard footprints is bundled. Their notices and design-use
-exception are in `hardware/licenses/`. The custom ADS1299 and BAV199 symbols
+standard footprints plus the original derived P1 socket footprint is bundled. Their notices and design-use
+exception are in `hardware/licenses/`. The custom ADS1299, BAV199 and TPS7A24 symbols
 are explicit pin maps to support inspection, not vendor-validated libraries.
 
 ## Sources
@@ -40,11 +44,11 @@ are explicit pin maps to support inspection, not vendor-validated libraries.
   — an evaluation reference, explicitly not a patient interface.
 - Nexperia BAV199: https://assets.nexperia.com/documents/data-sheet/BAV199.pdf
   — pin 1 A1, pin 2 K2, pin 3 K1/A2; review worst-case leakage and clamp voltage.
-- Microchip MCP1703A product and datasheet:
-  https://www.microchip.com/en-us/product/MCP1703A
-  — final regulator choice, footprint and capacitor/thermal requirements must
-  be independently confirmed before release.
+- TI TPS7A24 datasheet: https://www.ti.com/lit/ds/symlink/tps7a24.pdf
+  — fixed-version pin contract, accuracy budget, capacitance and thermal checks.
+- P1 socket drawing: https://catalog.p1tec.com/dash50/36619_dash50.pdf
+  — original derived footprint, not a vendor-approved PCB land pattern.
 - KiCad getting started: https://docs.kicad.org/9.0/en/getting_started_in_kicad/getting_started_in_kicad.html
 - KiCad CLI: https://docs.kicad.org/9.0/en/cli/cli.html
 
-See [A0.1 review](SCHEMATIC_REVIEW_A0_1.md), [controller and electrodes](CONTROLLER_AND_ELECTRODES.md) and `hardware/parts.json` for current component sources.
+See [A0.2 review](PROTECTION_POWER_REVIEW_A0_2.md), [controller and electrodes](CONTROLLER_AND_ELECTRODES.md) and `hardware/parts.json` for current component sources.

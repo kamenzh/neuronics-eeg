@@ -1,34 +1,27 @@
-# From this checkpoint to a manufactured PCB
+# From A0.2 to an assembled prototype
 
-**Current state: A0.1 schematic plus preliminary component placement. Copper
-routing has not started.** One eight-channel ADS1299, the owned Waveshare
-ESP32-S3-Nano and the owned Sino-k ten-lead cup set are the selected system.
+A0.2 selects the touchproof sockets, revises the regulators, documents bounded
+protection/power calculations, and adds copper routing. The owned Waveshare
+ESP32-S3-Nano and Sino-k ten-lead set remain the system choices.
 
-| Step | Work | Completion evidence |
-| --- | --- | --- |
-| 1 — now | Finalize the electrode plug/socket pair and battery/USB/power harness; review protection, reference, bias and effective capacitors | Dimensioned connector drawings, documented electrical review and closed pre-layout blockers |
-| 2 | Refine the 4-layer placement around actual ADS1299 supply/input pins, Nano separation and enclosure access | Reviewed bypass loops, input/reference geometry and return-current plan |
-| 3 | Route copper, vias and ground/power zones using the chosen fabricator's stack-up/rules | Filled zones; zero unconnected connections; clean ERC and full schematic-parity DRC |
-| 4 | Review footprints/polarity, freeze BOM and compare bare-board delivered quotes | One consistent revision with verified sourcing and final assembly drawing |
-| 5 | Export Gerbers and drill files; inspect them in an independent viewer | Manufacturing ZIP with drill/board outline/masks/silkscreen and fabrication notes |
-| 6 | Order bare prototype boards and reviewed components; solder and inspect | Assembled board with no shorts/bridges and documented polarity/continuity checks |
-| 7 | Bring up power, then SPI/internal test, shorted inputs, microvolt test source, noise and wireless timing | Measured bench log tied to PCB/firmware revisions |
-| 8 | Complete final body-connected safety review | Reviewed protection, interconnects/enclosure and battery-only operating arrangement |
-| 9 | Record repeatable EEG and then develop command classification | Clean raw data with timestamps, artifact checks and held-out-session evaluation |
+| Next step | Completion evidence |
+| --- | --- |
+| Verify socket and capacitor assumptions | Actual cable mates with P1 36619 sample; hole-fit/enclosure check; effective capacitor data |
+| Review routed layout and external power harness | Pin-by-pin analog/return review, manufacturer stack-up, battery/controller branch protection, power-off behavior |
+| Prepare a bench-only fabrication release | Independent Gerber/drill inspection, exact BOM, assembly drawings and delivered bare-board quote |
+| Order bare boards and solder components | Optical inspection, continuity/polarity checks, no shorts; no person connected |
+| Bring up power and firmware | Rails/current/temperature/startup, SPI register readback, internal test, loss-counted streaming |
+| Measure acquisition | Shorted-input noise, calibrated microvolt source, bias-loop response, radio interference and fault tests |
+| Resolve body-connected protection | Qualified review of assembled electronics, cable/enclosure, aggregate leakage, faults and USB/charging paths |
+| Record EEG and evaluate control | Repeatable data first; artifact checks and held-out-session classification before robotic-arm commands |
 
-Firmware can proceed alongside steps 1–4 using `hardware/interface.json`: first
-register readback/internal test, then loss-counted raw streaming. It is not yet
-implemented. Robotic-arm control comes after reliable acquisition and measured
-classification; the eight-channel hardware alone does not produce arbitrary
-mind-controlled motion.
+See `hardware/validation/STATUS.md` for actual CAD results and
+`PROTECTION_POWER_REVIEW_A0_2.md` for the review's conclusions and limits.
+Firmware may proceed alongside physical verification using `hardware/interface.json`.
+No physical board, acquisition firmware or trained mind-control classifier is
+claimed by this checkpoint.
 
-**What the files mean:** `.kicad_sch` defines the electrical connections;
-`.kicad_pcb` holds physical placement and eventually copper. `design.json` is a
-generated audit record of parts/nets/placements, not a manufacturing file and
-not the sole editable circuit source. Circuit generation lives in
-`tools/generate_hardware.py`; part candidates in `hardware/parts.json`; the
-external controller/electrode contract in `hardware/interface.json`.
-
-The scripts generate or check files; they do not fabricate a board. Keep the
-KiCad GUI layout as the source of truth once routing begins. Generator safeguards
-prevent replacing a board containing tracks, vias or zones even with --overwrite.
+`.kicad_sch` defines the circuit; `.kicad_pcb` now contains real copper.
+`design.json` is an audit record, not a fabrication file. The routed KiCad board
+is authoritative for placement and routing. The generator refuses to overwrite
+tracks/vias/zones; preserve and edit that board. Re-run validation after changes.

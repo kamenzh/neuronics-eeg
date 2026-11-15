@@ -1,5 +1,5 @@
 {
-  "revision": "A0.1-review",
+  "revision": "A0.2-routed-bench",
   "purpose": "Candidate PCB components; no stock, price or manufacturing approval implied",
   "groups": [
     {
@@ -209,21 +209,27 @@
       "references": [
         "U2"
       ],
-      "mpn": "MCP1703AT-5002E/DB",
-      "manufacturer": "Microchip",
-      "specification": "SOT-223; 1 VIN, 2/tab GND, 3 VOUT",
-      "source": "https://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf",
-      "status": "candidate_not_order_release"
+      "mpn": "TPS7A2450DBVR",
+      "manufacturer": "Texas Instruments",
+      "specification": "5 V fixed, 18 V input, 200 mA, SOT-23-5",
+      "source": "https://www.ti.com/lit/ds/symlink/tps7a24.pdf",
+      "status": "candidate_not_order_release",
+      "value": "TPS7A2450DBVR",
+      "footprint": "Neuronic:SOT-23-5",
+      "review": "Pin 1 IN, 2 GND, 3 EN tied to IN, 4 NC tied GND for thermal performance, 5 OUT. 2% combined accuracy budget. Measure rail noise/startup/reverse-current behavior."
     },
     {
       "references": [
         "U3"
       ],
-      "mpn": "MCP1703AT-3302E/DB",
-      "manufacturer": "Microchip",
-      "specification": "SOT-223; 1 VIN, 2/tab GND, 3 VOUT",
-      "source": "https://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf",
-      "status": "candidate_not_order_release"
+      "mpn": "TPS7A2433DBVR",
+      "manufacturer": "Texas Instruments",
+      "specification": "3.3 V fixed, 18 V input, 200 mA, SOT-23-5",
+      "source": "https://www.ti.com/lit/ds/symlink/tps7a24.pdf",
+      "status": "candidate_not_order_release",
+      "value": "TPS7A2433DBVR",
+      "footprint": "Neuronic:SOT-23-5",
+      "review": "Pin 1 IN, 2 GND, 3 EN tied to IN, 4 NC tied GND for thermal performance, 5 OUT. 2% combined accuracy budget. Measure rail noise/startup/reverse-current behavior."
     },
     {
       "references": [
@@ -299,12 +305,13 @@
         "J9",
         "J10"
       ],
-      "mpn": "61300111121",
-      "manufacturer": "Wurth Elektronik",
-      "specification": "1x1, 2.54mm, vertical male header",
-      "source": "https://www.we-online.com/components/products/datasheet/61300111121.pdf",
+      "mpn": "8R003661901F",
+      "manufacturer": "P1 Technologies",
+      "specification": "36619 black right-angle PCB jack; 1.5 mm touchproof DIN 42802 Type BU",
+      "source": "https://catalog.p1tec.com/?FILTER_CLEAR=&FILTER_FCOMPONENT=36619",
       "status": "candidate_not_order_release",
-      "review": "Bench placeholder ONLY; does not mate to the Sino-k electrode plug"
+      "review": "Derived footprint from 36619-50 rev H. Sample plug fit, hole fit and enclosure access must be checked. Hand solder; not wave solder.",
+      "footprint": "Neuronic:P1_36619_Touchproof_RA"
     },
     {
       "references": [

@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'hardware/kicad'
 DATA = Path(os.environ.get('KICAD_DATA', '/usr/share/kicad'))
 NS = uuid.UUID('b314a604-c394-4051-a09e-9626c22cb806')
-REVISION = 'A0.1-review'
+REVISION = 'A0.2-routed-bench'
 def uid(key): return str(uuid.uuid5(NS, key))
 def q(s): return json.dumps(str(s))
 def n(x): return f'{x:.4f}'.rstrip('0').rstrip('.') if x else '0'
@@ -103,6 +103,7 @@ def initialize():
         pins.append((str(i), name, typ, -22.86 if side else 22.86, y, 0 if side else 180))
     LIB['Neuronic:ADS1299IPAG'] = custom_symbol('ADS1299IPAG', pins, 20.32, 43.18,
         'TI ADS1299 eight-channel PAG64; pin numbers checked against SBAS499C table 6')
+    LIB['Neuronic:TPS7A24_FIXED'] = custom_symbol('TPS7A24_FIXED', [('1','IN','power_in',-12.7,5.08,0),('2','GND','power_in',0,-10.16,90),('3','EN','input',-12.7,-2.54,0),('4','NC_GND','passive',5.08,-10.16,90),('5','OUT','power_out',12.7,5.08,180)],10.16,7.62,'TI TPS7A24 DBV fixed pin contract, SBVS386E table 5-1')
     LIB['Neuronic:BAV199'] = custom_symbol('BAV199', [
         ('1','A1','passive',-7.62,2.54,0), ('2','K2','passive',7.62,2.54,180),
         ('3','K1_A2','passive',0,-7.62,90)],5.08,5.08,
@@ -207,7 +208,7 @@ def make_design():
     root=Sheet('neuronic','01 - ADS1299 core and SPI interface',1)
     inp=Sheet('inputs','02 - Eight channels and shared reference',2)
     power=Sheet('power','03 - Battery regulators, decoupling and bias',3)
-    root.text('NEURONIC / A0.1 REVIEW CHECKPOINT',20,18,2)
+    root.text('NEURONIC / A0.2 BENCH REVIEW',20,18,2)
     root.text('8 synchronous channels, 10 contacts. One ADS1299 contains both PGAs and ADCs.',20,25)
     root.text('Shared reference wires directly to all negative inputs. MISC1=0x00; CHnSET.SRB2=0. SRB1/SRB2 are NC.',20,32)
     nets={}
@@ -236,16 +237,16 @@ def make_design():
     for name,title,x in [('inputs','Input filters / CH1-8 / REF',25),('power','Power / bypass / bias drive',215)]:
         root.items.append(f'(sheet (at {x} 39.37) (size 170.18 12.7) (fields_autoplaced) (stroke (width 0.1524) (type default)) (fill (color 0 0 0 0)) (uuid {uid("sheet-"+name)}) (property "Sheetname" {q(title)} (at {x} 38 0) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "{name}.kicad_sch" (at {x} 53 0) (effects (font (size 1.27 1.27)) (justify left top))) (instances (project "neuronic" (path "/{root.id}" (page "{SHEETS[name].page}")))))')
 
-    inp.text('INPUT NETWORKS: prototype pin headers, not the final touchproof electrode connectors',18,16,1.8)
+    inp.text('INPUT NETWORKS: P1 36619 touchproof jacks; verify physical cable fit before fabrication',18,16,1.8)
     inp.text('20k series + 1nF shunt: nominal RF pole 7.96 kHz. This is not the EEG bandpass. ADS1299 digital filter is still required.',18,24)
-    inp.text('BAV199 clamps are a bench starting point. Clamp voltage / input injection / leakage and fault protection remain UNREVIEWED.',18,31)
+    inp.text('BAV199 + 20k: bounded low-energy bench faults only. Power-off backfeeding / body fault currents are not qualified.',18,31)
     for i in range(9):
         y=47+i*24
         out=f'EEG{i+1}' if i<8 else 'REF_FILTERED'
         raw=f'CONTACT_{i+1}' if i<8 else 'CONTACT_REF'
         mid=f'INPUT_RMID_{i+1}'
         inp.text(f'CH{i+1}' if i<8 else 'REFERENCE',18,y-5)
-        inp.part(f'J{i+1}','Connector_Generic:Conn_01x01',f'CH{i+1}_BENCH' if i<8 else 'REF_BENCH',45,y,{'1':raw},'Neuronic:PinHeader_1x01_P2.54mm_Vertical',angle=180,xy=(57,65+i*7),note='Bench header; replace with verified electrode connector before wearable revision',labels=False)
+        inp.part(f'J{i+1}','Connector_Generic:Conn_01x01',f'CH{i+1}_TOUCHPROOF' if i<8 else 'REF_TOUCHPROOF',45,y,{'1':raw},'Neuronic:P1_36619_Touchproof_RA',angle=180,xy=(67.026,61+(7-i if i<8 else 8)*8.2),note='P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required',labels=False)
         inp.part(f'R{i*2+1}','Device:R','10k',95,y,{'1':raw,'2':mid},RFP,angle=90,xy=(64,65+i*7),rot=90,note='Input series resistor, 1%',labels=False)
         inp.part(f'R{i*2+2}','Device:R','10k',160,y,{'1':mid,'2':out},RFP,angle=90,xy=(69,65+i*7),rot=90,note='Input series resistor, 1%',labels=False)
         inp.part(f'C{i+1}','Device:C','1nF C0G',225,y+6.35,{'1':out,'2':'GND'},CFP,xy=(78,65+i*7),note='Matched C0G RF filter capacitor',labels=False)
@@ -264,8 +265,8 @@ def make_design():
     power.part('F1','Device:Polyfuse','100mA_HOLD',100,48,{'1':'VBAT_RAW','2':'VBAT_FUSED'},'Neuronic:Fuse_1812_4532Metric',xy=(124,60),note='MF-MSMF010-2: 60V, 100mA hold / 300mA trip at 23C; AFE branch only, not body protection',mpn='MF-MSMF010-2')
     power.part('D10','Device:D_Schottky','SS14',162,48,{'2':'VBAT_FUSED','1':'VBAT_DIODE'},'Neuronic:D_SMA',xy=(117,60),note='Reverse polarity protection; verify thermal behavior',mpn='SS14')
     power.part('SW1','Switch:SW_SPST','POWER',220,48,{'1':'VBAT_DIODE','2':'VBAT'},'Neuronic:PinHeader_1x02_P2.54mm_Vertical',xy=(109,60),note='Header for an offboard SPST switch')
-    for i,(value,rail) in enumerate([('MCP1703AT-5002E/DB','AVDD_5V'),('MCP1703AT-3302E/DB','DVDD_3V3')]):
-        power.part(f'U{i+2}','Regulator_Linear:MCP1703Ax-330xxDB',value,95+155*i,86,{'1':'VBAT','2':'GND','3':rail},'Neuronic:SOT-223-3_TabPin2',xy=(109+i*14,72),note='Fixed output variant; matching footprint pin1 VIN pin2 GND pin3 VOUT',mpn=value)
+    for i,(value,rail) in enumerate([('TPS7A2450DBVR','AVDD_5V'),('TPS7A2433DBVR','DVDD_3V3')]):
+        power.part(f'U{i+2}','Neuronic:TPS7A24_FIXED',value,95+155*i,86,{'1':'VBAT','2':'GND','3':'VBAT','4':'GND','5':rail},'Neuronic:SOT-23-5',xy=(109+i*14,72),note='Fixed DBV: 1 VIN, 2 GND, 3 EN=VIN, 4 NC=GND, 5 VOUT',mpn=value)
     power.part('FLG1','power:PWR_FLAG','PWR_FLAG',330,48,{'1':'VBAT'})
     power.part('FLG2','power:PWR_FLAG','PWR_FLAG',365,48,{'1':'GND'})
     bypass=[('C20','4.7uF 25V','VBAT','GND',(109,66)),('C21','1uF','AVDD_5V','GND',(109,78)),
@@ -288,16 +289,45 @@ def make_design():
     add_rc(power,'C10','1.5nF C0G','BIASOUT','BIASINV',125,259,(95,72),kind='C')
     add_rc(power,'R21','499k','BIASOUT','BIAS_LIMIT_MID',190,259,(86,114),rot=90)
     add_rc(power,'R22','499k','BIAS_LIMIT_MID','CONTACT_BIAS',260,259,(75,128),rot=90)
-    power.part('J10','Connector_Generic:Conn_01x01','BIAS_BENCH',345,225,{'1':'CONTACT_BIAS'},'Neuronic:PinHeader_1x01_P2.54mm_Vertical',xy=(57,128),note='Bias output. Not protective earth. Bench connector only.')
+    power.part('J10','Connector_Generic:Conn_01x01','BIAS_TOUCHPROOF',345,225,{'1':'CONTACT_BIAS'},'Neuronic:P1_36619_Touchproof_RA',xy=(67.026,134.8),note='Bias output, not protective earth. Same P1 jack; fit requires verification.')
     power.text('Do not infer patient safety from the two bias resistors. Input faults, aggregate leakage, clamps and USB paths remain open review items.',18,279)
+    apply_placement()
     for s in SHEETS.values():s.save(s is root)
     return PARTS
+
+def apply_placement():
+    """A0.2 routing start placement; final routed CAD is the authority."""
+    fixed={
+      'U1':(100,92,0),'J11':(131,88,0),'J12':(126,65,0),
+      'F1':(121,60,0),'D10':(112,60,0),'SW1':(104,60,0),
+      'U2':(110,71,0),'U3':(124,71,0),'C20':(106,70,90),'C21':(114,70,90),
+      'C22':(120,70,90),'C23':(128,72,90),
+      'C24':(105,107,270),'C25':(109,101,270),'C26':(103,78,0),'C27':(103,75.5,0),
+      'C28':(100,105,270),'C29':(94.5,108,0),'C30':(94.5,103,270),
+      'C31':(97.3,101,270),'C32':(100.1,101,270),'C33':(102.9,101,270),
+      'C34':(98,82,90),'C35':(101,82,90),'C36':(104,82,90),
+      'C37':(115,78,0),'C38':(115,81,0),'C39':(110,88.25,0),
+      'C40':(110,83,90),'C41':(113,84,90),'R20':(93,81,0),'C10':(93,78,0),
+      'R21':(82,124,0),'R22':(72,129.2,0),'R36':(107,85,0)}
+    for i in range(9):
+        row=7-i if i<8 else 8
+        sy=61+row*8.2
+        fy=77+row*4 if i<8 else 113
+        fixed.update({f'R{2*i+1}':(71,sy,0),f'R{2*i+2}':(75,sy,0),
+                      f'D{i+1}':(83.5,fy,0),f'C{i+1}':(89,fy,0)})
+    for i,ref in enumerate(['R30','R31','R32','R33','R34','R35','R37','R38','R39','R40']):
+        fixed[ref]=(114+(i%3)*5,96+(i//3)*4,0)
+    for p in PARTS:
+        if p['ref'] in fixed:
+            x,y,rot=fixed[p['ref']];p['xy']=(x,y);p['rot']=rot
 
 def bundle_libraries():
     used=sorted({p['fp'].split(':')[1] for p in PARTS} | {'MountingHole_2.7mm_M2.5'})
     pretty=OUT/'Neuronic.pretty';pretty.mkdir(exist_ok=True)
     origins={}
     for p in DATA.glob('footprints/*.pretty/*.kicad_mod'):
+        if p.stem in used:origins[p.stem]=p
+    for p in (ROOT/'hardware/footprints').glob('*.kicad_mod'):
         if p.stem in used:origins[p.stem]=p
     for name in used:
         if name not in origins:raise FileNotFoundError(name)
@@ -320,7 +350,7 @@ def save_project():
       'net_settings':{'classes':[{'name':'Default','clearance':0.2,'track_width':0.2,'via_diameter':0.6,'via_drill':0.3,'bus_width':12,'wire_width':6,'pcb_color':'rgba(0, 0, 0, 0.000)','schematic_color':'rgba(0, 0, 0, 0.000)'}],'meta':{'version':3}},
       'schematic':{'meta':{'version':1}},
       'erc':{'erc_exclusions':[]},
-      'text_variables':{'REVISION':'A0.1 - UNROUTED REVIEW'}}
+      'text_variables':{'REVISION':'A0.2 - BENCH REVIEW'}}
     (OUT/'neuronic.kicad_pro').write_text(json.dumps(pro,indent=2)+'\n')
 
 def save_bom():
@@ -361,11 +391,11 @@ def board():
         fp.Value().SetVisible(False)
         if p['ref']=='C20':fp.Reference().SetVisible(False)
     # Board is deliberately a placement checkpoint: no inferred tracks or planes.
-    for a,c in [((50,55),(138,55)),((138,55),(138,135)),((138,135),(50,135)),((50,135),(50,55))]:
+    for a,c in [((50,55),(138,55)),((138,55),(138,145)),((138,145),(50,145)),((50,145),(50,55))]:
         s=k.PCB_SHAPE();s.SetShape(k.SHAPE_T_SEGMENT);s.SetLayer(k.Edge_Cuts);s.SetWidth(k.FromMM(0.05));s.SetStart(k.VECTOR2I(k.FromMM(a[0]),k.FromMM(a[1])));s.SetEnd(k.VECTOR2I(k.FromMM(c[0]),k.FromMM(c[1])));b.Add(s)
-    for text,xy,size in [('NEURONIC A0.1 / UNROUTED', (93,58),1),('BENCH ONLY / NO BODY CONNECTION',(93,132),0.9),('CH1-8 / REF',(63,59),0.8),('MCU 3V3 IO',(128,112),0.8)]:
+    for text,xy,size in [('NEURONIC A0.2 / BENCH', (109,138),1),('BENCH ONLY / NO BODY CONNECTION',(93,141),0.9),('8CH + REF + BIAS',(70,138),0.8),('MCU 3V3 IO',(128,112),0.8)]:
         t=k.PCB_TEXT(b);t.SetText(text);t.SetPosition(k.VECTOR2I(k.FromMM(xy[0]),k.FromMM(xy[1])));t.SetTextSize(k.VECTOR2I(k.FromMM(size),k.FromMM(size)));t.SetTextThickness(k.FromMM(0.12));t.SetLayer(k.F_SilkS);b.Add(t)
-    for num,xy in enumerate([(53,58),(135,58),(135,132),(53,132)]):
+    for num,xy in enumerate([(87,58),(135,58),(135,142),(73,142)]):
         fp=k.FootprintLoad(str(OUT/'Neuronic.pretty'),'MountingHole_2.7mm_M2.5');fp.SetReference(f'H{num+1}');fp.SetValue('M2.5');fp.SetFPID(k.LIB_ID('Neuronic','MountingHole_2.7mm_M2.5'));fp.SetPosition(k.VECTOR2I(k.FromMM(xy[0]),k.FromMM(xy[1])));fp.Reference().SetVisible(False);fp.Value().SetVisible(False);fp.SetAttributes(k.FP_BOARD_ONLY | k.FP_EXCLUDE_FROM_BOM | k.FP_EXCLUDE_FROM_POS_FILES);b.Add(fp)
     b.BuildConnectivity()
     k.SaveBoard(str(OUT/'neuronic.kicad_pcb'),b)
