@@ -1,0 +1,28 @@
+{
+  "model": "Ideal 20 kohm series, 1 nF shunt, high impedance ADC input; one input path",
+  "limitations": [
+    "No ADS1299 SPICE model",
+    "No electrode impedance",
+    "No diode leakage or clamping model",
+    "No bias-loop stability model",
+    "No parasitic coupling, power noise or patient safety model"
+  ],
+  "rf_pole_hz": 7957.7471545947665,
+  "response_db": {
+    "0.5": -1.7145258279850926e-08,
+    "10": -6.858098152404291e-06,
+    "40": -0.00010972827088484521,
+    "50": -0.0001714492049482957,
+    "60": -0.00024688471094735383,
+    "125": -0.00107144650351237,
+    "8000": -3.0333593619813417,
+    "1000000.0": -41.98447229192784
+  },
+  "series_resistor_thermal_noise_0_5_to_40_hz_uV_rms_300K": 0.1144052119442117,
+  "ideal_ads1299_input_range_V_at_gain_24_VREF_4_5": [
+    -0.1875,
+    0.1875
+  ],
+  "ideal_code_step_nV_at_gain_24_VREF_4_5": 22.35174445530706,
+  "interpretation": "The RF filter barely attenuates 50/60 Hz. Use suitable digital processing after conversion; do not expect this RC to remove mains interference."
+}

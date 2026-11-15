@@ -1,0 +1,19 @@
+COMMAND: /usr/bin/python3 -m unittest discover -s tests -v
+EXIT: 0
+STDOUT:
+version: exit 0
+netlist: exit 2
+ERC: exit 2
+DRC: exit 2
+
+STDERR:
+test_failed_export_cannot_reuse_stale_passes (test_workflow_guards.FailedExport.test_failed_export_cannot_reuse_stale_passes) ... ok
+test_preserves_tracks (test_workflow_guards.GeneratorGuards.test_preserves_tracks) ... ok
+test_preserves_vias (test_workflow_guards.GeneratorGuards.test_preserves_vias) ... ok
+test_preserves_zones (test_workflow_guards.GeneratorGuards.test_preserves_zones) ... ok
+test_requires_explicit_overwrite (test_workflow_guards.GeneratorGuards.test_requires_explicit_overwrite) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.484s
+
+OK

@@ -1,0 +1,6 @@
+COMMAND: /usr/bin/python3 --version
+EXIT: 0
+STDOUT:
+Python 3.13.5
+
+STDERR:

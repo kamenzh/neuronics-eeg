@@ -1,0 +1,171 @@
+[
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02",
+    "started_utc": "2026-11-15T17:07:34.026336+00:00",
+    "exit_code": 0,
+    "stdout": "558886fb6f877d274462cd4d457188c72b215d7d\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02",
+    "started_utc": "2026-11-15T17:07:34.031454+00:00",
+    "exit_code": 0,
+    "stdout": "?? hardware/validation/independent-a0_2/\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "kicad-cli",
+      "--version"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02",
+    "started_utc": "2026-11-15T17:07:34.037297+00:00",
+    "exit_code": 0,
+    "stdout": "9.0.2\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-c",
+      "import pcbnew;print(pcbnew.GetBuildVersion())"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02",
+    "started_utc": "2026-11-15T17:07:34.320031+00:00",
+    "exit_code": 0,
+    "stdout": "9.0.2+dfsg-1\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "tools/validate_kicad.py"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02",
+    "started_utc": "2026-11-15T17:07:34.746818+00:00",
+    "exit_code": 0,
+    "stdout": "version: exit 0\nnetlist: exit 0\nconnectivity: exit 0\nConnectivity checks: 462/462\nboard parity: exit 0\nPCB pad/net parity: 370 checks, 0 issues\nERC: exit 0\nDRC: exit 0\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "tools/check_routing.py"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02",
+    "started_utc": "2026-11-15T17:07:39.422429+00:00",
+    "exit_code": 0,
+    "stdout": "537 tracks, 87 vias, 2 zones; routing checks 4/4\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "tools/review_electrical.py"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02",
+    "started_utc": "2026-11-15T17:07:39.886535+00:00",
+    "exit_code": 0,
+    "stdout": "Conditional calculations: 9/9; manufacturing/body readiness remains false\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "tools/simulate_input.py"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02",
+    "started_utc": "2026-11-15T17:07:39.939224+00:00",
+    "exit_code": 0,
+    "stdout": "RC pole: 7957.75 Hz; 50 Hz attenuation: -0.000171 dB\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02",
+    "started_utc": "2026-11-15T17:07:39.977662+00:00",
+    "exit_code": 0,
+    "stdout": "version: exit 0\nnetlist: exit 2\nERC: exit 2\nDRC: exit 2\n",
+    "stderr": "test_failed_export_cannot_reuse_stale_passes (test_workflow_guards.FailedExport.test_failed_export_cannot_reuse_stale_passes) ... ok\ntest_preserves_tracks (test_workflow_guards.GeneratorGuards.test_preserves_tracks) ... ok\ntest_preserves_vias (test_workflow_guards.GeneratorGuards.test_preserves_vias) ... ok\ntest_preserves_zones (test_workflow_guards.GeneratorGuards.test_preserves_zones) ... ok\ntest_requires_explicit_overwrite (test_workflow_guards.GeneratorGuards.test_requires_explicit_overwrite) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 1.484s\n\nOK\n"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "--version"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02",
+    "started_utc": "2026-11-15T17:25:09.919021+00:00",
+    "exit_code": 0,
+    "stdout": "Python 3.13.5\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "hardware/validation/independent-a0_2/inspect_actual_board.py"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02",
+    "started_utc": "2026-11-15T17:25:09.928766+00:00",
+    "exit_code": 0,
+    "stdout": "U1.19 C31.1 2.4082 0 \nU1.21 C32.1 4.2101 0 \nU1.22 C33.1 15.7666 0 \nU1.59 C34.1 3.6982 0 \nU1.56 C35.1 3.6983 0 \nU1.54 C36.1 4.6462 0 \nU1.48 C39.1 3.3875 0 \nU1.50 C40.1 13.378 0 \nU1.24 C29.1 14.3997 2 \nU1.24 C30.1 7.7856 2 \nU1.28 C24.1 9.7534 0 \nU1.30 C25.1 7.7055 0 \nU1.55 C26.1 8.876 0 \nU1.55 C27.1 11.376 0 \nU1.26 C28.1 8.5236 0 \nU1.54 U2.5 23.191 0 \nU1.56 U2.5 26.0428 0 \nU1.59 U2.5 32.7105 0 \nU1.22 U2.5 44.2123 0 \nU1.21 U2.5 44.4623 0 \nU1.19 U2.5 47.4335 0 \nU1.48 U3.5 30.3115 0 \nU1.50 U3.5 35.6085 0 \nU1.40 J11.3 34.6355 1 \nU1.34 J11.4 51.0914 0 \nU1.43 J11.5 26.5106 1 \nU1.39 J11.6 28.9963 1 \nU1.47 J11.7 34.8479 1 \nU1.36 J11.8 33.8271 1 \nU1.38 J11.9 27.3713 1 \nU1.35 J11.10 29.29 1 \nU1.1 C9.1 33.4233 2 \nU1.3 C9.1 32.4233 2 \nU1.5 C9.1 31.4233 2 \nU1.7 C9.1 30.4233 2 \nU1.9 C9.1 29.4233 2 \nU1.11 C9.1 28.4233 2 \nU1.13 C9.1 27.4233 2 \nU1.15 C9.1 24.3773 0 \nU1.16 C1.1 13.8813 0 \nU1.14 C2.1 13.111 0 \nU1.12 C3.1 7.6337 0 \nU1.10 C4.1 7.2514 0 \nU1.8 C5.1 7.4266 0 \nU1.6 C6.1 8.8502 0 \nU1.4 C7.1 13.5455 0 \nU1.2 C8.1 14.8209 0 \nNearest bypasses U1.19 [('C31.1', 2.4082), ('C32.1', 4.757), ('C33.1', 15.8135)]\nNearest bypasses U1.21 [('C31.1', 3.1619), ('C32.1', 4.2101), ('C33.1', 15.2666)]\nNearest bypasses U1.22 [('C31.1', 3.6619), ('C32.1', 4.7101), ('C34.1', 15.1999)]\nNearest bypasses U1.54 [('C36.1', 4.6462), ('C35.1', 6.5501), ('C34.1', 8.0501)]\nNearest bypasses U1.56 [('C35.1', 3.6983), ('C34.1', 5.1983), ('C36.1', 7.498)]\nNearest bypasses U1.59 [('C34.1', 3.6982), ('C35.1', 5.1982), ('C36.1', 14.1657)]\nNearest bypasses U1.48 [('C39.1', 3.3875), ('C40.1', 8.081), ('C41.1', 10.081)]\nNearest bypasses U1.50 [('C39.1', 8.6845), ('C40.1', 13.378), ('C41.1', 15.378)]\n64-pin names/PCB parity failures: 0 0\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "hardware/validation/independent-a0_2/independent_calculations.py"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02",
+    "started_utc": "2026-11-15T17:25:12.558515+00:00",
+    "exit_code": 0,
+    "stdout": "{\n  \"mechanical\": {\n    \"units\": \"mm\",\n    \"source\": \"https://catalog.p1tec.com/dash50/36619_dash50.pdf; revision H; inch dimensions control\",\n    \"assumptions\": \"Rigid unbent legs; independent full drawing tolerances can coincide. Finished hole tolerances not specified in project; -0.10 mm is illustrative only.\",\n    \"signal_max_diameter\": 1.7779999999999998,\n    \"dummy_max_width\": 1.2953999999999999,\n    \"dummy_max_thickness\": 0.7619999999999999,\n    \"dummy_max_diagonal\": 1.5028989187566806,\n    \"signal_radial_float_nominal_1_9_hole\": 0.061000000000000054,\n    \"signal_radial_float_1_8_min_hole\": 0.01100000000000012,\n    \"dummy_transverse_location_error\": 0.254,\n    \"dummy_required_hole_for_outward_y_tolerance\": 1.81410064770398,\n    \"dummy_x_float_at_nominal_hole\": 0.1676766001057427,\n    \"socket_signal_to_dummy_span_tolerance\": 0.254,\n    \"maximum_housing_width\": 6.604,\n    \"nominal_socket_pitch\": 8.2,\n    \"housing_gap_at_max_width\": 1.5959999999999992,\n    \"nominal_nose_overhang\": 0.5,\n    \"nose_overhang_dimension_only_range\": [\n      -0.008000000000000007,\n      1.008\n    ],\n    \"combined_signal_and_dummy_x_float_nominal_holes\": 0.22867660010574276\n  },\n  \"electrical\": {\n    \"assumptions\": \"Ideal linear RC, identical ideal common-mode drive, no electrode impedance, no bias feedback. ADC input C=20pF is a sensitivity model, not a guaranteed common-mode capacitance model or system CMRR.\",\n    \"cmrr_sensitivity\": [\n      {\n        \"case\": \"nominal discrete RC only\",\n        \"frequency_hz\": 50,\n        \"differential_per_common_mode\": 0.0,\n        \"cmrr_db\": null,\n        \"uV_differential_from_100mV_common_mode\": 0.0\n      },\n      {\n        \"case\": \"R and C opposite tolerance corners; no ADC capacitance\",\n        \"frequency_hz\": 50,\n        \"differential_per_common_mode\": 0.0007539523350991516,\n        \"cmrr_db\": 62.45312218758467,\n        \"uV_differential_from_100mV_common_mode\": 75.39523350991516\n      },\n      {\n        \"case\": \"illustrative 20 pF each ADC input; eight inputs on REF\",\n        \"frequency_hz\": 50,\n        \"differential_per_common_mode\": 0.0008796045156255898,\n        \"cmrr_db\": 61.11425099535996,\n        \"uV_differential_from_100mV_common_mode\": 87.96045156255899\n      },\n      {\n        \"case\": \"tolerance corners plus illustrative ADC input capacitance\",\n        \"frequency_hz\": 50,\n        \"differential_per_common_mode\": 0.0016448594798876483,\n        \"cmrr_db\": 55.67742395690732,\n        \"uV_differential_from_100mV_common_mode\": 164.48594798876485\n      },\n      {\n        \"case\": \"nominal discrete RC only\",\n        \"frequency_hz\": 60,\n        \"differential_per_common_mode\": 0.0,\n        \"cmrr_db\": null,\n        \"uV_differential_from_100mV_common_mode\": 0.0\n      },\n      {\n        \"case\": \"R and C opposite tolerance corners; no ADC capacitance\",\n        \"frequency_hz\": 60,\n        \"differential_per_common_mode\": 0.0009047270148964895,\n        \"cmrr_db\": 60.86964883155022,\n        \"uV_differential_from_100mV_common_mode\": 90.47270148964894\n      },\n      {\n        \"case\": \"illustrative 20 pF each ADC input; eight inputs on REF\",\n        \"frequency_hz\": 60,\n        \"differential_per_common_mode\": 0.0010555035465898244,\n        \"cmrr_db\": 59.53080606168258,\n        \"uV_differential_from_100mV_common_mode\": 105.55035465898244\n      },\n      {\n        \"case\": \"tolerance corners plus illustrative ADC input capacitance\",\n        \"frequency_hz\": 60,\n        \"differential_per_common_mode\": 0.00197378996588324,\n        \"cmrr_db\": 54.09398126342899,\n        \"uV_differential_from_100mV_common_mode\": 197.378996588324\n      }\n    ],\n    \"bias_feedback_pole_hz\": 106.1032953945969,\n    \"bias_998k_output_pole_hz\": {\n      \"1e-10\": 1594.738908736426,\n      \"5e-10\": 318.9477817472852,\n      \"1e-09\": 159.4738908736426,\n      \"5e-09\": 31.894778174728525\n    },\n    \"resistor_pair_differential_noise_uV_0_5_to_40Hz_300K\": 0.1617934023376726,\n    \"resistor_pair_differential_noise_uV_100Hz_300K\": 0.25743183952262005,\n    \"dc_fault_10_2V_one_19_8k_path_mA\": 0.5151515151515151,\n    \"dc_fault_10_2V_one_9_9k_path_mA\": 1.0303030303030303,\n    \"nine_19_8k_paths_10_2V_upper_sum_mA\": 4.636363636363637,\n    \"rail_5_1V_to_contact_19_8k_uA\": 257.57575757575756,\n    \"bias_5_1V_988_02k_uA\": 5.161838829173498,\n    \"bias_5_1V_494_01k_uA\": 10.323677658346996,\n    \"C29_required_bias_ac_aging_retention_after_tolerance_temperature\": 0.5941770647653,\n    \"C29_uF_before_bias_ac_aging_at_negative_tolerance_temperature\": 16.830000000000002,\n    \"ldo_additive_accuracy_rails\": {\n      \"5V\": [\n        4.9,\n        5.1\n      ],\n      \"3V3\": [\n        3.234,\n        3.366\n      ]\n    },\n    \"ldo_input_at_pack7_2V_load40mA_fuse15ohm_diode0_5V_harness0_1V\": 6.000000000000001,\n    \"ldo_dissipation_W_input10_2V_and_30_10mA\": [\n      0.15899999999999997,\n      0.06966\n    ],\n    \"pulldown100k_1pct_voltage_at_positive10uA_input_leak\": 1.01,\n    \"digital_VIL_limit_at_min_3V3_rail\": 0.6468,\n    \"ADS_tPOR_at_2_048MHz_seconds\": 0.128,\n    \"frame_27bytes_read_us_at_1MHz\": 216,\n    \"sample_period_us_250sps\": 4000.0\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-c",
+      "import pcbnew as k; p='hardware/kicad/neuronic.kicad_pcb'; b=k.LoadBoard(p); b.BuildConnectivity(); k.ZONE_FILLER(b).Fill(b.Zones()); k.SaveBoard(p,b); print('Refilled', b.GetAreaCount(), 'zones and saved disposable PCB')"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02/hardware/validation/independent-a0_2/refill-project",
+    "started_utc": "2026-11-15T17:26:18.542019+00:00",
+    "exit_code": 0,
+    "stdout": "Refilled 2 zones and saved disposable PCB\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "kicad-cli",
+      "pcb",
+      "drc",
+      "--schematic-parity",
+      "--exit-code-violations",
+      "-o",
+      "/workspace/scratch/3a280c114457/neuronic-review-a02/hardware/validation/independent-a0_2/refilled-drc.txt",
+      "hardware/kicad/neuronic.kicad_pcb"
+    ],
+    "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02/hardware/validation/independent-a0_2/refill-project",
+    "started_utc": "2026-11-15T17:26:28.868504+00:00",
+    "exit_code": 0,
+    "stdout": "Found 0 violations\nFound 0 unconnected items\nFound 0 schematic parity issues\nSaved DRC Report to /workspace/scratch/3a280c114457/neuronic-review-a02/hardware/validation/independent-a0_2/refilled-drc.txt\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,129 @@
+COMMAND: /usr/bin/python3 hardware/validation/independent-a0_2/independent_calculations.py
+EXIT: 0
+STDOUT:
+{
+  "mechanical": {
+    "units": "mm",
+    "source": "https://catalog.p1tec.com/dash50/36619_dash50.pdf; revision H; inch dimensions control",
+    "assumptions": "Rigid unbent legs; independent full drawing tolerances can coincide. Finished hole tolerances not specified in project; -0.10 mm is illustrative only.",
+    "signal_max_diameter": 1.7779999999999998,
+    "dummy_max_width": 1.2953999999999999,
+    "dummy_max_thickness": 0.7619999999999999,
+    "dummy_max_diagonal": 1.5028989187566806,
+    "signal_radial_float_nominal_1_9_hole": 0.061000000000000054,
+    "signal_radial_float_1_8_min_hole": 0.01100000000000012,
+    "dummy_transverse_location_error": 0.254,
+    "dummy_required_hole_for_outward_y_tolerance": 1.81410064770398,
+    "dummy_x_float_at_nominal_hole": 0.1676766001057427,
+    "socket_signal_to_dummy_span_tolerance": 0.254,
+    "maximum_housing_width": 6.604,
+    "nominal_socket_pitch": 8.2,
+    "housing_gap_at_max_width": 1.5959999999999992,
+    "nominal_nose_overhang": 0.5,
+    "nose_overhang_dimension_only_range": [
+      -0.008000000000000007,
+      1.008
+    ],
+    "combined_signal_and_dummy_x_float_nominal_holes": 0.22867660010574276
+  },
+  "electrical": {
+    "assumptions": "Ideal linear RC, identical ideal common-mode drive, no electrode impedance, no bias feedback. ADC input C=20pF is a sensitivity model, not a guaranteed common-mode capacitance model or system CMRR.",
+    "cmrr_sensitivity": [
+      {
+        "case": "nominal discrete RC only",
+        "frequency_hz": 50,
+        "differential_per_common_mode": 0.0,
+        "cmrr_db": null,
+        "uV_differential_from_100mV_common_mode": 0.0
+      },
+      {
+        "case": "R and C opposite tolerance corners; no ADC capacitance",
+        "frequency_hz": 50,
+        "differential_per_common_mode": 0.0007539523350991516,
+        "cmrr_db": 62.45312218758467,
+        "uV_differential_from_100mV_common_mode": 75.39523350991516
+      },
+      {
+        "case": "illustrative 20 pF each ADC input; eight inputs on REF",
+        "frequency_hz": 50,
+        "differential_per_common_mode": 0.0008796045156255898,
+        "cmrr_db": 61.11425099535996,
+        "uV_differential_from_100mV_common_mode": 87.96045156255899
+      },
+      {
+        "case": "tolerance corners plus illustrative ADC input capacitance",
+        "frequency_hz": 50,
+        "differential_per_common_mode": 0.0016448594798876483,
+        "cmrr_db": 55.67742395690732,
+        "uV_differential_from_100mV_common_mode": 164.48594798876485
+      },
+      {
+        "case": "nominal discrete RC only",
+        "frequency_hz": 60,
+        "differential_per_common_mode": 0.0,
+        "cmrr_db": null,
+        "uV_differential_from_100mV_common_mode": 0.0
+      },
+      {
+        "case": "R and C opposite tolerance corners; no ADC capacitance",
+        "frequency_hz": 60,
+        "differential_per_common_mode": 0.0009047270148964895,
+        "cmrr_db": 60.86964883155022,
+        "uV_differential_from_100mV_common_mode": 90.47270148964894
+      },
+      {
+        "case": "illustrative 20 pF each ADC input; eight inputs on REF",
+        "frequency_hz": 60,
+        "differential_per_common_mode": 0.0010555035465898244,
+        "cmrr_db": 59.53080606168258,
+        "uV_differential_from_100mV_common_mode": 105.55035465898244
+      },
+      {
+        "case": "tolerance corners plus illustrative ADC input capacitance",
+        "frequency_hz": 60,
+        "differential_per_common_mode": 0.00197378996588324,
+        "cmrr_db": 54.09398126342899,
+        "uV_differential_from_100mV_common_mode": 197.378996588324
+      }
+    ],
+    "bias_feedback_pole_hz": 106.1032953945969,
+    "bias_998k_output_pole_hz": {
+      "1e-10": 1594.738908736426,
+      "5e-10": 318.9477817472852,
+      "1e-09": 159.4738908736426,
+      "5e-09": 31.894778174728525
+    },
+    "resistor_pair_differential_noise_uV_0_5_to_40Hz_300K": 0.1617934023376726,
+    "resistor_pair_differential_noise_uV_100Hz_300K": 0.25743183952262005,
+    "dc_fault_10_2V_one_19_8k_path_mA": 0.5151515151515151,
+    "dc_fault_10_2V_one_9_9k_path_mA": 1.0303030303030303,
+    "nine_19_8k_paths_10_2V_upper_sum_mA": 4.636363636363637,
+    "rail_5_1V_to_contact_19_8k_uA": 257.57575757575756,
+    "bias_5_1V_988_02k_uA": 5.161838829173498,
+    "bias_5_1V_494_01k_uA": 10.323677658346996,
+    "C29_required_bias_ac_aging_retention_after_tolerance_temperature": 0.5941770647653,
+    "C29_uF_before_bias_ac_aging_at_negative_tolerance_temperature": 16.830000000000002,
+    "ldo_additive_accuracy_rails": {
+      "5V": [
+        4.9,
+        5.1
+      ],
+      "3V3": [
+        3.234,
+        3.366
+      ]
+    },
+    "ldo_input_at_pack7_2V_load40mA_fuse15ohm_diode0_5V_harness0_1V": 6.000000000000001,
+    "ldo_dissipation_W_input10_2V_and_30_10mA": [
+      0.15899999999999997,
+      0.06966
+    ],
+    "pulldown100k_1pct_voltage_at_positive10uA_input_leak": 1.01,
+    "digital_VIL_limit_at_min_3V3_rail": 0.6468,
+    "ADS_tPOR_at_2_048MHz_seconds": 0.128,
+    "frame_27bytes_read_us_at_1MHz": 216,
+    "sample_period_us_250sps": 4000.0
+  }
+}
+
+STDERR:

@@ -1,0 +1,126 @@
+{
+  "revision": "A0.2-routed-bench",
+  "manufacture_ready": false,
+  "body_connection_approved": false,
+  "sources": {
+    "adc": "https://www.ti.com/lit/ds/symlink/ads1299.pdf",
+    "ldo": "https://www.ti.com/lit/ds/symlink/tps7a24.pdf"
+  },
+  "assumptions": {
+    "battery_min_max_v": [
+      7.2,
+      10.2
+    ],
+    "afe_current_a": 0.04,
+    "fuse_resistance_upper_ohm": 15,
+    "diode_drop_allowance_v": 0.5,
+    "harness_switch_drop_allowance_v": 0.1,
+    "ldo_total_output_error_budget": 0.02,
+    "ldo_dropout_max_at_200ma_v": 0.25,
+    "capacitor_positive_tolerance": 0.1,
+    "capacitor_positive_temperature_allowance": 0.15,
+    "low_energy_dc_fault_voltage_v": 10.2,
+    "resistor_negative_tolerance": 0.01,
+    "thermal_model": "TI JEDEC board, not this layout; physical thermal measurements required"
+  },
+  "calculations": {
+    "avdd_direct_caps_uF": {
+      "C21": 1.0,
+      "C31": 1.0,
+      "C32": 1.0,
+      "C33": 1.0,
+      "C34": 1.0,
+      "C35": 1.0,
+      "C36": 1.0,
+      "C37": 10.0,
+      "C38": 0.1
+    },
+    "avdd_nominal_uF": 17.1,
+    "avdd_upper_uF_before_bias_aging": 21.631500000000003,
+    "dvdd_direct_caps_uF": {
+      "C23": 4.7,
+      "C39": 1.0,
+      "C40": 1.0,
+      "C41": 0.1
+    },
+    "dvdd_nominal_uF": 6.8,
+    "afe_ldo_min_input_v_conditional": 6.000000000000001,
+    "analog_output_range_v": [
+      4.9,
+      5.1
+    ],
+    "digital_output_range_v": [
+      3.234,
+      3.3659999999999997
+    ],
+    "analog_min_input_margin_over_nominal_plus_0_5_v": 0.5000000000000009,
+    "analog_dropout_margin_v_at_high_output": 0.6500000000000012,
+    "analog_ldo_power_w_upper_ignoring_input_drops": 0.15899999999999997,
+    "digital_ldo_power_w_upper_ignoring_input_drops": 0.06966,
+    "analog_temp_rise_c_using_datasheet_board": 26.6802,
+    "digital_temp_rise_c_using_datasheet_board": 11.688948,
+    "raw_bytes_s": 6750,
+    "frame_read_us_ideal": 216.0,
+    "sample_period_us": 4000.0,
+    "ideal_differential_full_scale_v": 0.375,
+    "bounded_10_2v_input_fault_current_ma": 0.5151515151515151,
+    "bounded_10_2v_input_fault_one_resistor_short_ma": 1.0303030303030303,
+    "bounded_10_2v_remaining_input_resistor_power_w": 0.010509090909090909,
+    "internal_5_1v_to_contact_20k_path_ua": 257.57575757575756,
+    "internal_5_1v_to_contact_one_resistor_short_ua": 515.1515151515151,
+    "bias_5_1v_through_two_resistors_ua": 5.161838829173498,
+    "bias_5_1v_one_resistor_short_ua": 10.323677658346996,
+    "two_20k_paths_resistor_noise_uv_rms_100hz_300k": 0.25743183952262005
+  },
+  "conditional_checks": [
+    {
+      "name": "TPS7A24 analog output budget inside ADS1299 recommended 4.75-5.25V",
+      "passed": true
+    },
+    {
+      "name": "TPS7A24 digital output budget inside ADS1299 recommended 1.8-3.6V",
+      "passed": true
+    },
+    {
+      "name": "Conditional input exceeds nominal+0.5V regulation test boundary",
+      "passed": true
+    },
+    {
+      "name": "AVDD upper direct output capacitance below 50uF effective limit",
+      "passed": true
+    },
+    {
+      "name": "40mA AFE budget below 100mA fuse hold at 23C",
+      "passed": true
+    },
+    {
+      "name": "Bounded low-energy 10.2V fault with one series resistor short below TI 10mA injection limit",
+      "passed": true
+    },
+    {
+      "name": "Bounded DC fault resistor dissipation below nominal 0.125W rating",
+      "passed": true
+    },
+    {
+      "name": "Eight-channel frame size",
+      "passed": true
+    },
+    {
+      "name": "Ideal SPI frame fits sample period",
+      "passed": true
+    }
+  ],
+  "open_items": [
+    "Effective minimum capacitance, cold/aged startup and stability measurements required",
+    "C29 must retain >=10uF at 4.5V including temperature/tolerance/aging",
+    "TPS7A24 noise/overshoot and ADC PSRR must be assessed in assembled board",
+    "Battery limits are assumptions, not discharge limits or an automatic cutoff",
+    "Nano branch protection, VIN radio-burst droop and interference require validation",
+    "BAV199 does not guarantee rail +/-0.3V clamping: TI internal clamps may conduct first",
+    "Injection-current calculation does not prove rails can sink current or establish acceptable body current",
+    "Power-off analog and GPIO injection can back-power rails and violate LDO VOUT <= VIN+0.3V; no live inputs with board off",
+    "20k input paths allow hundreds of microamps in a rail-to-contact fault; not a qualified body protection design",
+    "Bias resistor fault bounds, aggregate leakage, cable compensation and ESD tests remain open",
+    "No mains, defibrillator or IEC patient-protection compliance claim"
+  ]
+}

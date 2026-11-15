@@ -7,6 +7,12 @@ PCB, ESP32 wireless streaming and PC-based signal processing and classification.
 There is no manufactured or body-validated Neuronic board yet. This repository
 contains genuine KiCad source, not a manufacturing release.
 
+**Independent AI review completed for hardware commit `558886f`.** The fresh
+checks pass, but the review identifies changes and unresolved assumptions to
+close before fabrication. Read [the findings and repair priorities](docs/INDEPENDENT_REVIEW_A0_2.md)
+and [the reusable review brief](docs/REVIEW_HANDOFF_A0_2.md). This review checkpoint
+adds documentation and evidence; the circuit and copper remain at A0.2.
+
 **Controller selected: use the Waveshare ESP32-S3-Nano you already own.**
 The Sino-k SGE117DN ten-lead set is recorded; P1 36619 touchproof sockets are selected; physical plug fit still needs verification. See [the wiring and power plan](docs/CONTROLLER_AND_ELECTRODES.md)
 and [the step-by-step roadmap](docs/NEXT_STEPS.md).
@@ -90,7 +96,8 @@ See [the socket/protection/power review](docs/PROTECTION_POWER_REVIEW_A0_2.md) f
 - [x] Export and audit connectivity; perform limited ideal RC calculation.
 - [ ] Close input-protection, connector, bias-loop and power-review blockers.
 - [x] Complete a routed bench checkpoint with clean ERC and schematic-parity DRC.
-- [ ] Complete independent layout, physical fit and manufacturing-release review.
+- [x] Complete a separate AI review of the saved circuit and layout, with fresh checks and written findings.
+- [ ] Resolve review findings, verify physical fit and complete manufacturing-release review.
 - [x] Select exact candidate PCB MPNs and the owned controller.
 - [ ] Verify procurement details and compare delivered bare-board quotes.
 - [ ] Fabricate a small prototype batch and complete bench tests.

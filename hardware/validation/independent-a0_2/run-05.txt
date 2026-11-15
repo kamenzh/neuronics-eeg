@@ -1,0 +1,6 @@
+COMMAND: /usr/bin/python3 tools/check_routing.py
+EXIT: 0
+STDOUT:
+537 tracks, 87 vias, 2 zones; routing checks 4/4
+
+STDERR:

@@ -1,0 +1,36 @@
+{
+  "method": "Copied all tracked project files into disposable full project tree; refilled/saved its zones with pcbnew, then ran full schematic-parity DRC. Removed disposable tree after capturing results. Reviewed worktree CAD not modified.",
+  "original_board_sha256": "5f4b88664aa77f68d1fdaa45f889a85b34424c19b7fb3a49b4f3d3076a580c1f",
+  "refilled_board_sha256": "5f4b88664aa77f68d1fdaa45f889a85b34424c19b7fb3a49b4f3d3076a580c1f",
+  "runs": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-c",
+        "import pcbnew as k; p='hardware/kicad/neuronic.kicad_pcb'; b=k.LoadBoard(p); b.BuildConnectivity(); k.ZONE_FILLER(b).Fill(b.Zones()); k.SaveBoard(p,b); print('Refilled', b.GetAreaCount(), 'zones and saved disposable PCB')"
+      ],
+      "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02/hardware/validation/independent-a0_2/refill-project",
+      "started_utc": "2026-11-15T17:26:18.542019+00:00",
+      "exit_code": 0,
+      "stdout": "Refilled 2 zones and saved disposable PCB\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "drc",
+        "--schematic-parity",
+        "--exit-code-violations",
+        "-o",
+        "/workspace/scratch/3a280c114457/neuronic-review-a02/hardware/validation/independent-a0_2/refilled-drc.txt",
+        "hardware/kicad/neuronic.kicad_pcb"
+      ],
+      "cwd": "/workspace/scratch/3a280c114457/neuronic-review-a02/hardware/validation/independent-a0_2/refill-project",
+      "started_utc": "2026-11-15T17:26:28.868504+00:00",
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nFound 0 unconnected items\nFound 0 schematic parity issues\nSaved DRC Report to /workspace/scratch/3a280c114457/neuronic-review-a02/hardware/validation/independent-a0_2/refilled-drc.txt\n",
+      "stderr": ""
+    }
+  ]
+}

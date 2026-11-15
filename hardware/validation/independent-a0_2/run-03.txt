@@ -1,0 +1,6 @@
+COMMAND: /usr/bin/python3 -c import pcbnew;print(pcbnew.GetBuildVersion())
+EXIT: 0
+STDOUT:
+9.0.2+dfsg-1
+
+STDERR:

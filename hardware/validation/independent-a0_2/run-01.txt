@@ -1,0 +1,6 @@
+COMMAND: git status --short
+EXIT: 0
+STDOUT:
+?? hardware/validation/independent-a0_2/
+
+STDERR:

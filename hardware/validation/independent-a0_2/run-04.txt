@@ -1,0 +1,13 @@
+COMMAND: /usr/bin/python3 tools/validate_kicad.py
+EXIT: 0
+STDOUT:
+version: exit 0
+netlist: exit 0
+connectivity: exit 0
+Connectivity checks: 462/462
+board parity: exit 0
+PCB pad/net parity: 370 checks, 0 issues
+ERC: exit 0
+DRC: exit 0
+
+STDERR:
