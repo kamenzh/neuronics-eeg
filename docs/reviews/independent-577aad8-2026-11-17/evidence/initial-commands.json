@@ -1,0 +1,63 @@
+[
+  {
+    "command": [
+      "kicad-cli",
+      "version"
+    ],
+    "exit_code": 0,
+    "log": "initial-command-0.log"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "--version"
+    ],
+    "exit_code": 0,
+    "log": "initial-command-1.log"
+  },
+  {
+    "command": [
+      "kicad-cli",
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "-o",
+      "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/fresh.net.xml",
+      "bench-copy/hardware/kicad/neuronic.kicad_sch"
+    ],
+    "exit_code": 0,
+    "log": "initial-command-2.log"
+  },
+  {
+    "command": [
+      "kicad-cli",
+      "sch",
+      "erc",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/fresh-erc.txt",
+      "bench-copy/hardware/kicad/neuronic.kicad_sch"
+    ],
+    "exit_code": 0,
+    "log": "initial-command-3.log"
+  },
+  {
+    "command": [
+      "kicad-cli",
+      "pcb",
+      "drc",
+      "--schematic-parity",
+      "--all-track-errors",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/fresh-drc.txt",
+      "bench-copy/hardware/kicad/neuronic.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "log": "initial-command-4.log"
+  }
+]

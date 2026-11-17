@@ -1,0 +1,115 @@
+[
+  {
+    "command": [
+      "kicad-cli",
+      "version"
+    ],
+    "cwd": "/workspace/scratch/e0fcc76666ca/review-repo",
+    "start_utc": "2026-11-17T10:29:59.918370+00:00",
+    "exit_code": 0,
+    "log": "analysis-0.log"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "--version"
+    ],
+    "cwd": "/workspace/scratch/e0fcc76666ca/review-repo",
+    "start_utc": "2026-11-17T10:30:00.034197+00:00",
+    "exit_code": 0,
+    "log": "analysis-1.log"
+  },
+  {
+    "command": [
+      "python3",
+      "--version"
+    ],
+    "cwd": "/workspace/scratch/e0fcc76666ca/review-repo",
+    "start_utc": "2026-11-17T10:30:00.035932+00:00",
+    "exit_code": 0,
+    "log": "analysis-2.log"
+  },
+  {
+    "command": [
+      "git",
+      "--version"
+    ],
+    "cwd": "/workspace/scratch/e0fcc76666ca/review-repo",
+    "start_utc": "2026-11-17T10:30:00.037949+00:00",
+    "exit_code": 0,
+    "log": "analysis-3.log"
+  },
+  {
+    "command": [
+      "inkscape",
+      "--version"
+    ],
+    "cwd": "/workspace/scratch/e0fcc76666ca/review-repo",
+    "start_utc": "2026-11-17T10:30:00.039408+00:00",
+    "exit_code": 0,
+    "log": "analysis-4.log"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/extract_saved_board.py",
+      "/workspace/scratch/e0fcc76666ca/review-repo/hardware/kicad/neuronic.kicad_pcb",
+      "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/saved-board.json"
+    ],
+    "cwd": "/workspace/scratch/e0fcc76666ca/review-repo",
+    "start_utc": "2026-11-17T10:30:00.122765+00:00",
+    "exit_code": 0,
+    "log": "analysis-5.log"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/measure_geometry.py"
+    ],
+    "cwd": "/workspace/scratch/e0fcc76666ca/review-repo",
+    "start_utc": "2026-11-17T10:30:00.506926+00:00",
+    "exit_code": 0,
+    "log": "analysis-6.log"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/check_plane_returns.py",
+      "/workspace/scratch/e0fcc76666ca/review-repo/hardware/kicad/neuronic.kicad_pcb"
+    ],
+    "cwd": "/workspace/scratch/e0fcc76666ca/review-repo",
+    "start_utc": "2026-11-17T10:30:00.588166+00:00",
+    "exit_code": 0,
+    "log": "analysis-7.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/independent_calculations.py"
+    ],
+    "cwd": "/workspace/scratch/e0fcc76666ca/review-repo",
+    "start_utc": "2026-11-17T10:31:34.628765+00:00",
+    "exit_code": 0,
+    "log": "analysis-8.log"
+  },
+  {
+    "command": [
+      "python3",
+      "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/audit_pin_and_bom.py"
+    ],
+    "cwd": "/workspace/scratch/e0fcc76666ca/review-repo",
+    "start_utc": "2026-11-17T10:33:38.604020+00:00",
+    "exit_code": 0,
+    "log": "analysis-9.log"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/plot_geometry.py"
+    ],
+    "cwd": "/workspace/scratch/e0fcc76666ca/review-repo",
+    "start_utc": "2026-11-17T10:30:00.935286+00:00",
+    "exit_code": 0,
+    "log": "analysis-10.log"
+  }
+]

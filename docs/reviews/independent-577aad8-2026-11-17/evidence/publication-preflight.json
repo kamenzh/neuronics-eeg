@@ -1,0 +1,15 @@
+{
+  "date_utc": "2026-11-17T10:32:45.830842+00:00",
+  "command": [
+    "git",
+    "ls-remote",
+    "--heads",
+    "origin",
+    "main",
+    "review/independent-577aad8-2026-11-17"
+  ],
+  "exit_code": 0,
+  "remote_main": "577aad8a8dee0c60e3b7e949f6b8f7cf200fe180",
+  "remote_review_branch_already_present": false,
+  "scope": "Only new review documentation/evidence; main will not be updated."
+}

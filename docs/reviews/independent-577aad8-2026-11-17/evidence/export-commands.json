@@ -1,0 +1,35 @@
+[
+  {
+    "command": [
+      "kicad-cli",
+      "sch",
+      "export",
+      "pdf",
+      "-o",
+      "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/schematic.pdf",
+      "bench-copy/hardware/kicad/neuronic.kicad_sch"
+    ],
+    "exit_code": 0,
+    "log": "export-0.log"
+  },
+  {
+    "command": [
+      "kicad-cli",
+      "pcb",
+      "export",
+      "svg",
+      "--mode-multi",
+      "--layers",
+      "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.SilkS,F.Fab",
+      "--common-layers",
+      "Edge.Cuts",
+      "--fit-page-to-board",
+      "--exclude-drawing-sheet",
+      "-o",
+      "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/",
+      "bench-copy/hardware/kicad/neuronic.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "log": "export-1.log"
+  }
+]

@@ -1,0 +1,18 @@
+{'capacitor': 'C24', 'adc_ground_pin': '32', 'from_via': [104.0, 107.14], 'to_via': [103.5, 96.0], 'separation_mm': 11.15121518041868, 'In1_filled_samples': 201, 'samples': 201}
+{'capacitor': 'C25', 'adc_ground_pin': '32', 'from_via': [108.05, 98.7], 'to_via': [103.5, 96.0], 'separation_mm': 5.2907938912794545, 'In1_filled_samples': 201, 'samples': 201}
+{'capacitor': 'C26', 'adc_ground_pin': '57', 'from_via': [99.05, 82.1], 'to_via': [99.5, 88.0], 'separation_mm': 5.917136131609621, 'In1_filled_samples': 201, 'samples': 201}
+{'capacitor': 'C27', 'adc_ground_pin': '57', 'from_via': [98.414, 80.164], 'to_via': [99.5, 88.0], 'separation_mm': 7.910897041423303, 'In1_filled_samples': 201, 'samples': 201}
+{'capacitor': 'C28', 'adc_ground_pin': '25', 'from_via': [100.75, 105.85], 'to_via': [100.25, 96.0], 'separation_mm': 9.862682190966101, 'In1_filled_samples': 201, 'samples': 201}
+{'capacitor': 'C29', 'adc_ground_pin': '25', 'from_via': [103.875, 100.4], 'to_via': [100.25, 96.0], 'separation_mm': 5.700931941358364, 'In1_filled_samples': 201, 'samples': 201}
+{'capacitor': 'C30', 'adc_ground_pin': '25', 'from_via': [98.15, 102.65], 'to_via': [100.25, 96.0], 'separation_mm': 6.97370059580995, 'In1_filled_samples': 201, 'samples': 201}
+{'capacitor': 'C36', 'adc_ground_pin': '53', 'from_via': [105.35, 84.0], 'to_via': [101.75, 88.0], 'separation_mm': 5.38144961882948, 'In1_filled_samples': 201, 'samples': 201}
+{'capacitor': 'C39', 'adc_ground_pin': '49', 'from_via': [110.45, 88.25], 'to_via': [103.75, 88.0], 'separation_mm': 6.704662556758546, 'In1_filled_samples': 168, 'samples': 201}
+{'capacitor': 'C40', 'adc_ground_pin': '51', 'from_via': [105.4, 80.15], 'to_via': [102.75, 88.0], 'separation_mm': 8.285227818231672, 'In1_filled_samples': 201, 'samples': 201}
+B.Cu crossing ADS_DRDY_N [108.7, 89.5] [108.0, 89.5] In2 uncovered ~ 0.7 example {'xy': [108.30625, 89.5], 'In1_filled': True, 'distance_to_any_via_mm': 1.1994953365895136}
+B.Cu crossing ADS_DRDY_N [108.9, 89.7] [108.7, 89.5] In2 uncovered ~ 0.283 example {'xy': [108.73333333333333, 89.53333333333333], 'In1_filled': True, 'distance_to_any_via_mm': 0.8975274678557509}
+B.Cu crossing ADS_DRDY_N [109.7, 89.8] [112.9, 93.0] In2 uncovered ~ 0.689 example {'xy': [110.56956521739131, 90.66956521739131], 'In1_filled': True, 'distance_to_any_via_mm': 1.1621308894263043}
+B.Cu crossing ADS_DRDY_N [107.9, 89.4] [107.4, 89.4] In2 uncovered ~ 0.1 example {'xy': [107.85000000000001, 89.4], 'In1_filled': True, 'distance_to_any_via_mm': 1.3647344063956166}
+B.Cu crossing ADS_DRDY_N [108.0, 89.5] [107.9, 89.4] In2 uncovered ~ 0.141 example {'xy': [107.92500000000001, 89.42500000000001], 'In1_filled': True, 'distance_to_any_via_mm': 1.3532368602724387}
+B.Cu crossing SPI_MOSI [112.9, 86.5] [110.3, 86.5] In2 uncovered ~ 1.444 example {'xy': [111.21481481481482, 86.5], 'In1_filled': True, 'distance_to_any_via_mm': 0.9148148148148181}
+B.Cu crossing HOST_SPI_MISO [131.0, 93.08] [128.2608, 90.3408] In2 uncovered ~ 1.093 example {'xy': [130.61370256410257, 92.69370256410257], 'In1_filled': False, 'distance_to_any_via_mm': 4.827255648041821}
+B.Cu crossing HOST_SPI_MISO [128.2608, 90.3408] [128.2608, 88.4787] In2 uncovered ~ 0.98 example {'xy': [128.2608, 89.3117447368421], 'In1_filled': True, 'distance_to_any_via_mm': 0.8330447368420977}

@@ -1,0 +1,48 @@
+{
+  "model": "Ideal 20 kohm series, 1 nF shunt, high impedance ADC input; one input path",
+  "limitations": [
+    "No ADS1299 SPICE model",
+    "No electrode impedance",
+    "No diode leakage or clamping model",
+    "No bias-loop stability model",
+    "No parasitic coupling, power noise or patient safety model"
+  ],
+  "rf_pole_hz": 7957.7471545947665,
+  "response_db": {
+    "0.5": -1.7145258279850926e-08,
+    "10": -6.858098152404291e-06,
+    "40": -0.00010972827088484521,
+    "50": -0.0001714492049482957,
+    "60": -0.00024688471094735383,
+    "125": -0.00107144650351237,
+    "8000": -3.0333593619813417,
+    "1000000.0": -41.98447229192784
+  },
+  "series_resistor_thermal_noise_0_5_to_40_hz_uV_rms_300K": 0.1144052119442117,
+  "initial_gain": 12,
+  "ideal_input_range_V_at_VREF_4_5": [
+    -0.375,
+    0.375
+  ],
+  "ideal_code_step_nV_at_VREF_4_5": 44.70348891061412,
+  "two_input_resistor_noise_0_5_to_40_hz_uV_rms_300K": 0.1617934023376726,
+  "tolerance_only_common_mode_rejection_db": {
+    "10": 76.43219157789959,
+    "40": 64.39119843809027,
+    "50": 62.45312218758467,
+    "60": 60.86964883155022,
+    "125": 54.49613028426421
+  },
+  "illustrative_shared_input_capacitance_rejection_db": {
+    "50": 61.11425099535996,
+    "60": 59.53080606168258
+  },
+  "shared_capacitance_qualification": "Sensitivity example only: 20pF per input modeled as a shunt, not a guaranteed ADC common-mode capacitance model; electrode/cable loading and bias omitted.",
+  "bias_output_rc_pole_hz_illustrative": {
+    "0.5": 318.9477817472852,
+    "1": 159.4738908736426,
+    "5": 31.894778174728525
+  },
+  "bias_pole_qualification": "Output RC only, not bias-loop phase margin or stability proof.",
+  "interpretation": "The RF filter barely attenuates 50/60 Hz. Use suitable digital processing after conversion; do not expect this RC to remove mains interference."
+}

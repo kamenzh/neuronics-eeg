@@ -1,0 +1,108 @@
+ref,value,mpn,footprint,sheet,result
+C1,1nF C0G,C0805C102J5GACTU,Neuronic:C_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+C10,1.5nF C0G,C0805C152J5GACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C2,1nF C0G,C0805C102J5GACTU,Neuronic:C_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+C20,4.7uF 25V,C0805C475K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C21,4.7uF 25V,C0805C475K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C22,4.7uF 25V,C0805C475K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C23,4.7uF 25V,C0805C475K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C24,100uF 6.3V,T491B107M006AT,Neuronic:CP_EIA-3528-21_Kemet-B,/Power / bypass / bias drive/,MATCH
+C25,1uF 25V,C0805C105K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C26,1uF 25V,C0805C105K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C27,100nF 50V,C0805C104K5RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C28,1uF 25V,C0805C105K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C29,22uF 25V,C1210C226K3RACTU,Neuronic:C_1210_3225Metric,/Power / bypass / bias drive/,MATCH
+C3,1nF C0G,C0805C102J5GACTU,Neuronic:C_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+C30,100nF 50V,C0805C104K5RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C31,1uF 25V,C0805C105K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C32,1uF 25V,C0805C105K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C33,1uF 25V,C0805C105K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C34,1uF 25V,C0805C105K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C35,1uF 25V,C0805C105K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C36,1uF 25V,C0805C105K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C37,10uF 25V,C0805C106K3PACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C38,100nF 50V,C0805C104K5RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C39,1uF 25V,C0805C105K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C4,1nF C0G,C0805C102J5GACTU,Neuronic:C_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+C40,1uF 25V,C0805C105K3RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C41,100nF 50V,C0805C104K5RACTU,Neuronic:C_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+C42,22uF 25V,C1210C226K3RACTU,Neuronic:C_1210_3225Metric,/Power / bypass / bias drive/,MATCH
+C43,100nF 50V,C0805C104K5RACTU,Neuronic:C_0805_2012Metric,/Interface / power-off buffers/,MATCH
+C44,100nF 50V,C0805C104K5RACTU,Neuronic:C_0805_2012Metric,/Interface / power-off buffers/,MATCH
+C45,100nF 50V,C0805C104K5RACTU,Neuronic:C_0805_2012Metric,/Interface / power-off buffers/,MATCH
+C46,100nF 50V,C0805C104K5RACTU,Neuronic:C_0805_2012Metric,/Interface / power-off buffers/,MATCH
+C5,1nF C0G,C0805C102J5GACTU,Neuronic:C_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+C6,1nF C0G,C0805C102J5GACTU,Neuronic:C_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+C7,1nF C0G,C0805C102J5GACTU,Neuronic:C_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+C8,1nF C0G,C0805C102J5GACTU,Neuronic:C_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+C9,1nF C0G,C0805C102J5GACTU,Neuronic:C_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+D1,BAV199,"BAV199,215",Neuronic:SOT-23,/Input filters / CH1-8 / REF/,MATCH
+D10,SS14,SS14-E3/61T,Neuronic:D_SMA,/Power / bypass / bias drive/,MATCH
+D2,BAV199,"BAV199,215",Neuronic:SOT-23,/Input filters / CH1-8 / REF/,MATCH
+D3,BAV199,"BAV199,215",Neuronic:SOT-23,/Input filters / CH1-8 / REF/,MATCH
+D4,BAV199,"BAV199,215",Neuronic:SOT-23,/Input filters / CH1-8 / REF/,MATCH
+D5,BAV199,"BAV199,215",Neuronic:SOT-23,/Input filters / CH1-8 / REF/,MATCH
+D6,BAV199,"BAV199,215",Neuronic:SOT-23,/Input filters / CH1-8 / REF/,MATCH
+D7,BAV199,"BAV199,215",Neuronic:SOT-23,/Input filters / CH1-8 / REF/,MATCH
+D8,BAV199,"BAV199,215",Neuronic:SOT-23,/Input filters / CH1-8 / REF/,MATCH
+D9,BAV199,"BAV199,215",Neuronic:SOT-23,/Input filters / CH1-8 / REF/,MATCH
+F1,100mA_HOLD,MF-MSMF010-2,Neuronic:Fuse_1812_4532Metric,/Power / bypass / bias drive/,MATCH
+J1,CH1_TOUCHPROOF,8R003661901F,Neuronic:P1_36619_Touchproof_RA,/Input filters / CH1-8 / REF/,MATCH
+J10,BIAS_TOUCHPROOF,8R003661901F,Neuronic:P1_36619_Touchproof_RA,/Power / bypass / bias drive/,MATCH
+J11,MCU_3V3_IO_ONLY,61301221121,Neuronic:PinHeader_2x06_P2.54mm_Vertical,/,MATCH
+J12,BATTERY_6AA,B2B-XH-A(LF)(SN),Neuronic:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,/Power / bypass / bias drive/,MATCH
+J2,CH2_TOUCHPROOF,8R003661901F,Neuronic:P1_36619_Touchproof_RA,/Input filters / CH1-8 / REF/,MATCH
+J3,CH3_TOUCHPROOF,8R003661901F,Neuronic:P1_36619_Touchproof_RA,/Input filters / CH1-8 / REF/,MATCH
+J4,CH4_TOUCHPROOF,8R003661901F,Neuronic:P1_36619_Touchproof_RA,/Input filters / CH1-8 / REF/,MATCH
+J5,CH5_TOUCHPROOF,8R003661901F,Neuronic:P1_36619_Touchproof_RA,/Input filters / CH1-8 / REF/,MATCH
+J6,CH6_TOUCHPROOF,8R003661901F,Neuronic:P1_36619_Touchproof_RA,/Input filters / CH1-8 / REF/,MATCH
+J7,CH7_TOUCHPROOF,8R003661901F,Neuronic:P1_36619_Touchproof_RA,/Input filters / CH1-8 / REF/,MATCH
+J8,CH8_TOUCHPROOF,8R003661901F,Neuronic:P1_36619_Touchproof_RA,/Input filters / CH1-8 / REF/,MATCH
+J9,REF_TOUCHPROOF,8R003661901F,Neuronic:P1_36619_Touchproof_RA,/Input filters / CH1-8 / REF/,MATCH
+R1,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R10,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R11,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R12,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R13,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R14,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R15,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R16,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R17,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R18,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R2,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R20,1M,RC0805FR-071ML,Neuronic:R_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+R21,499k,RC0805FR-07499KL,Neuronic:R_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+R22,499k,RC0805FR-07499KL,Neuronic:R_0805_2012Metric,/Power / bypass / bias drive/,MATCH
+R3,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R30,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/,MATCH
+R31,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/,MATCH
+R32,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/,MATCH
+R33,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/,MATCH
+R34,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/,MATCH
+R35,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/,MATCH
+R36,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/,MATCH
+R37,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/,MATCH
+R38,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/,MATCH
+R39,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/,MATCH
+R4,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R40,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/,MATCH
+R41,33R,RC0805FR-0733RL,Neuronic:R_0805_2012Metric,/Interface / power-off buffers/,MATCH
+R42,33R,RC0805FR-0733RL,Neuronic:R_0805_2012Metric,/Interface / power-off buffers/,MATCH
+R43,33R,RC0805FR-0733RL,Neuronic:R_0805_2012Metric,/Interface / power-off buffers/,MATCH
+R44,33R,RC0805FR-0733RL,Neuronic:R_0805_2012Metric,/Interface / power-off buffers/,MATCH
+R45,33R,RC0805FR-0733RL,Neuronic:R_0805_2012Metric,/Interface / power-off buffers/,MATCH
+R46,33R,RC0805FR-0733RL,Neuronic:R_0805_2012Metric,/Interface / power-off buffers/,MATCH
+R47,33R,RC0805FR-0733RL,Neuronic:R_0805_2012Metric,/Interface / power-off buffers/,MATCH
+R48,33R,RC0805FR-0733RL,Neuronic:R_0805_2012Metric,/Interface / power-off buffers/,MATCH
+R49,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Interface / power-off buffers/,MATCH
+R5,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R6,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R7,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R8,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+R9,10k,RC0805FR-0710KL,Neuronic:R_0805_2012Metric,/Input filters / CH1-8 / REF/,MATCH
+SW1,POWER,61300211121,Neuronic:PinHeader_1x02_P2.54mm_Vertical,/Power / bypass / bias drive/,MATCH
+U1,ADS1299IPAG,ADS1299IPAG,Neuronic:TQFP-64_10x10mm_P0.5mm,/,MATCH
+U2,TPS7A2450DBVR,TPS7A2450DBVR,Neuronic:SOT-23-5,/Power / bypass / bias drive/,MATCH
+U3,TPS7A2433DBVR,TPS7A2433DBVR,Neuronic:SOT-23-5,/Power / bypass / bias drive/,MATCH
+U4,TXU0304PWR,TXU0304PWR,Neuronic:TSSOP-14_4.4x5mm_P0.65mm,/Interface / power-off buffers/,MATCH
+U5,TXU0304PWR,TXU0304PWR,Neuronic:TSSOP-14_4.4x5mm_P0.65mm,/Interface / power-off buffers/,MATCH

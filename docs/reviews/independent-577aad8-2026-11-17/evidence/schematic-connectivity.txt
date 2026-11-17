@@ -1,0 +1,214 @@
+J11 MCU_3V3_IO_ONLY Neuronic:PinHeader_2x06_P2.54mm_Vertical /
+  1=GND; 2=GND; 3=HOST_SPI_SCLK; 4=HOST_SPI_MOSI; 5=HOST_SPI_MISO; 6=HOST_ADS_CS_N; 7=HOST_ADS_DRDY_N; 8=HOST_ADS_RESET_N; 9=HOST_ADS_START; 10=HOST_ADS_PWDN_N; 11=HOST_3V3; 12=IF_EN
+R30 10k Neuronic:R_0805_2012Metric /
+  1=ADS_CS_N; 2=GND
+R31 10k Neuronic:R_0805_2012Metric /
+  1=ADS_RESET_N; 2=GND
+R32 10k Neuronic:R_0805_2012Metric /
+  1=ADS_PWDN_N; 2=GND
+R33 10k Neuronic:R_0805_2012Metric /
+  1=ADS_START; 2=GND
+R34 10k Neuronic:R_0805_2012Metric /
+  1=SPI_SCLK; 2=GND
+R35 10k Neuronic:R_0805_2012Metric /
+  1=SPI_MOSI; 2=GND
+R36 10k Neuronic:R_0805_2012Metric /
+  1=CLKSEL_PU; 2=DVDD_3V3
+R37 10k Neuronic:R_0805_2012Metric /
+  1=GPIO1_PD; 2=GND
+R38 10k Neuronic:R_0805_2012Metric /
+  1=GPIO2_PD; 2=GND
+R39 10k Neuronic:R_0805_2012Metric /
+  1=GPIO3_PD; 2=GND
+R40 10k Neuronic:R_0805_2012Metric /
+  1=GPIO4_PD; 2=GND
+U1 ADS1299IPAG Neuronic:TQFP-64_10x10mm_P0.5mm /
+  1=REF_FILTERED; 2=EEG8; 3=REF_FILTERED; 4=EEG7; 5=REF_FILTERED; 6=EEG6; 7=REF_FILTERED; 8=EEG5; 9=REF_FILTERED; 10=EEG4; 11=REF_FILTERED; 12=EEG3; 13=REF_FILTERED; 14=EEG2; 15=REF_FILTERED; 16=EEG1; 17=unconnected-(U1-SRB1-Pad17); 18=unconnected-(U1-SRB2-Pad18); 19=AVDD_5V; 20=GND; 21=AVDD_5V; 22=AVDD_5V; 23=GND; 24=VREFP; 25=GND; 26=VCAP4; 27=unconnected-(U1-NC-Pad27); 28=VCAP1; 29=unconnected-(U1-NC-Pad29); 30=VCAP2; 31=GND; 32=GND; 33=GND; 34=SPI_MOSI; 35=ADS_PWDN_N; 36=ADS_RESET_N; 37=unconnected-(U1-CLK-Pad37); 38=ADS_START; 39=ADS_CS_N; 40=SPI_SCLK; 41=GND; 42=GPIO1_PD; 43=SPI_MISO; 44=GPIO2_PD; 45=GPIO3_PD; 46=GPIO4_PD; 47=ADS_DRDY_N; 48=DVDD_3V3; 49=GND; 50=DVDD_3V3; 51=GND; 52=CLKSEL_PU; 53=GND; 54=AVDD_5V; 55=VCAP3; 56=AVDD_5V; 57=GND; 58=GND; 59=AVDD_5V; 60=unconnected-(U1-BIASREF-Pad60); 61=BIASINV; 62=GND; 63=BIASOUT; 64=unconnected-(U1-RESERVED-Pad64)
+C1 1nF C0G Neuronic:C_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=EEG1; 2=GND
+C2 1nF C0G Neuronic:C_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=EEG2; 2=GND
+C3 1nF C0G Neuronic:C_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=EEG3; 2=GND
+C4 1nF C0G Neuronic:C_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=EEG4; 2=GND
+C5 1nF C0G Neuronic:C_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=EEG5; 2=GND
+C6 1nF C0G Neuronic:C_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=EEG6; 2=GND
+C7 1nF C0G Neuronic:C_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=EEG7; 2=GND
+C8 1nF C0G Neuronic:C_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=EEG8; 2=GND
+C9 1nF C0G Neuronic:C_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=REF_FILTERED; 2=GND
+D1 BAV199 Neuronic:SOT-23 /Input filters / CH1-8 / REF/
+  1=GND; 2=AVDD_5V; 3=EEG1
+D2 BAV199 Neuronic:SOT-23 /Input filters / CH1-8 / REF/
+  1=GND; 2=AVDD_5V; 3=EEG2
+D3 BAV199 Neuronic:SOT-23 /Input filters / CH1-8 / REF/
+  1=GND; 2=AVDD_5V; 3=EEG3
+D4 BAV199 Neuronic:SOT-23 /Input filters / CH1-8 / REF/
+  1=GND; 2=AVDD_5V; 3=EEG4
+D5 BAV199 Neuronic:SOT-23 /Input filters / CH1-8 / REF/
+  1=GND; 2=AVDD_5V; 3=EEG5
+D6 BAV199 Neuronic:SOT-23 /Input filters / CH1-8 / REF/
+  1=GND; 2=AVDD_5V; 3=EEG6
+D7 BAV199 Neuronic:SOT-23 /Input filters / CH1-8 / REF/
+  1=GND; 2=AVDD_5V; 3=EEG7
+D8 BAV199 Neuronic:SOT-23 /Input filters / CH1-8 / REF/
+  1=GND; 2=AVDD_5V; 3=EEG8
+D9 BAV199 Neuronic:SOT-23 /Input filters / CH1-8 / REF/
+  1=GND; 2=AVDD_5V; 3=REF_FILTERED
+J1 CH1_TOUCHPROOF Neuronic:P1_36619_Touchproof_RA /Input filters / CH1-8 / REF/
+  1=CONTACT_1
+J2 CH2_TOUCHPROOF Neuronic:P1_36619_Touchproof_RA /Input filters / CH1-8 / REF/
+  1=CONTACT_2
+J3 CH3_TOUCHPROOF Neuronic:P1_36619_Touchproof_RA /Input filters / CH1-8 / REF/
+  1=CONTACT_3
+J4 CH4_TOUCHPROOF Neuronic:P1_36619_Touchproof_RA /Input filters / CH1-8 / REF/
+  1=CONTACT_4
+J5 CH5_TOUCHPROOF Neuronic:P1_36619_Touchproof_RA /Input filters / CH1-8 / REF/
+  1=CONTACT_5
+J6 CH6_TOUCHPROOF Neuronic:P1_36619_Touchproof_RA /Input filters / CH1-8 / REF/
+  1=CONTACT_6
+J7 CH7_TOUCHPROOF Neuronic:P1_36619_Touchproof_RA /Input filters / CH1-8 / REF/
+  1=CONTACT_7
+J8 CH8_TOUCHPROOF Neuronic:P1_36619_Touchproof_RA /Input filters / CH1-8 / REF/
+  1=CONTACT_8
+J9 REF_TOUCHPROOF Neuronic:P1_36619_Touchproof_RA /Input filters / CH1-8 / REF/
+  1=CONTACT_REF
+R1 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=CONTACT_1; 2=INPUT_RMID_1
+R2 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=INPUT_RMID_1; 2=EEG1
+R3 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=CONTACT_2; 2=INPUT_RMID_2
+R4 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=INPUT_RMID_2; 2=EEG2
+R5 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=CONTACT_3; 2=INPUT_RMID_3
+R6 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=INPUT_RMID_3; 2=EEG3
+R7 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=CONTACT_4; 2=INPUT_RMID_4
+R8 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=INPUT_RMID_4; 2=EEG4
+R9 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=CONTACT_5; 2=INPUT_RMID_5
+R10 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=INPUT_RMID_5; 2=EEG5
+R11 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=CONTACT_6; 2=INPUT_RMID_6
+R12 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=INPUT_RMID_6; 2=EEG6
+R13 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=CONTACT_7; 2=INPUT_RMID_7
+R14 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=INPUT_RMID_7; 2=EEG7
+R15 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=CONTACT_8; 2=INPUT_RMID_8
+R16 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=INPUT_RMID_8; 2=EEG8
+R17 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=CONTACT_REF; 2=INPUT_RMID_9
+R18 10k Neuronic:R_0805_2012Metric /Input filters / CH1-8 / REF/
+  1=INPUT_RMID_9; 2=REF_FILTERED
+C10 1.5nF C0G Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=BIASOUT; 2=BIASINV
+C20 4.7uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=VBAT; 2=GND
+C21 4.7uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=AVDD_5V; 2=GND
+C22 4.7uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=VBAT; 2=GND
+C23 4.7uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=DVDD_3V3; 2=GND
+C24 100uF 6.3V Neuronic:CP_EIA-3528-21_Kemet-B /Power / bypass / bias drive/
+  1=VCAP1; 2=GND
+C25 1uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=VCAP2; 2=GND
+C26 1uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=VCAP3; 2=GND
+C27 100nF 50V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=VCAP3; 2=GND
+C28 1uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=VCAP4; 2=GND
+C29 22uF 25V Neuronic:C_1210_3225Metric /Power / bypass / bias drive/
+  1=VREFP; 2=GND
+C30 100nF 50V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=VREFP; 2=GND
+C31 1uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=AVDD_5V; 2=GND
+C32 1uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=AVDD_5V; 2=GND
+C33 1uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=AVDD_5V; 2=GND
+C34 1uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=AVDD_5V; 2=GND
+C35 1uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=AVDD_5V; 2=GND
+C36 1uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=AVDD_5V; 2=GND
+C37 10uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=AVDD_5V; 2=GND
+C38 100nF 50V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=AVDD_5V; 2=GND
+C39 1uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=DVDD_3V3; 2=GND
+C40 1uF 25V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=DVDD_3V3; 2=GND
+C41 100nF 50V Neuronic:C_0805_2012Metric /Power / bypass / bias drive/
+  1=DVDD_3V3; 2=GND
+C42 22uF 25V Neuronic:C_1210_3225Metric /Power / bypass / bias drive/
+  1=VREFP; 2=GND
+D10 SS14 Neuronic:D_SMA /Power / bypass / bias drive/
+  1=VBAT_DIODE; 2=VBAT_FUSED
+F1 100mA_HOLD Neuronic:Fuse_1812_4532Metric /Power / bypass / bias drive/
+  1=VBAT_RAW; 2=VBAT_FUSED
+J10 BIAS_TOUCHPROOF Neuronic:P1_36619_Touchproof_RA /Power / bypass / bias drive/
+  1=CONTACT_BIAS
+J12 BATTERY_6AA Neuronic:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical /Power / bypass / bias drive/
+  1=VBAT_RAW; 2=GND
+R20 1M Neuronic:R_0805_2012Metric /Power / bypass / bias drive/
+  1=BIASOUT; 2=BIASINV
+R21 499k Neuronic:R_0805_2012Metric /Power / bypass / bias drive/
+  1=BIASOUT; 2=BIAS_LIMIT_MID
+R22 499k Neuronic:R_0805_2012Metric /Power / bypass / bias drive/
+  1=BIAS_LIMIT_MID; 2=CONTACT_BIAS
+SW1 POWER Neuronic:PinHeader_1x02_P2.54mm_Vertical /Power / bypass / bias drive/
+  1=VBAT_DIODE; 2=VBAT
+U2 TPS7A2450DBVR Neuronic:SOT-23-5 /Power / bypass / bias drive/
+  1=VBAT; 2=GND; 3=VBAT; 4=GND; 5=AVDD_5V
+U3 TPS7A2433DBVR Neuronic:SOT-23-5 /Power / bypass / bias drive/
+  1=VBAT; 2=GND; 3=VBAT; 4=GND; 5=DVDD_3V3
+C43 100nF 50V Neuronic:C_0805_2012Metric /Interface / power-off buffers/
+  1=HOST_3V3; 2=GND
+C44 100nF 50V Neuronic:C_0805_2012Metric /Interface / power-off buffers/
+  1=HOST_3V3; 2=GND
+C45 100nF 50V Neuronic:C_0805_2012Metric /Interface / power-off buffers/
+  1=DVDD_3V3; 2=GND
+C46 100nF 50V Neuronic:C_0805_2012Metric /Interface / power-off buffers/
+  1=DVDD_3V3; 2=GND
+R41 33R Neuronic:R_0805_2012Metric /Interface / power-off buffers/
+  1=BUF_SPI_SCLK; 2=SPI_SCLK
+R42 33R Neuronic:R_0805_2012Metric /Interface / power-off buffers/
+  1=BUF_SPI_MOSI; 2=SPI_MOSI
+R43 33R Neuronic:R_0805_2012Metric /Interface / power-off buffers/
+  1=BUF_ADS_CS_N; 2=ADS_CS_N
+R44 33R Neuronic:R_0805_2012Metric /Interface / power-off buffers/
+  1=BUF_ADS_RESET_N; 2=ADS_RESET_N
+R45 33R Neuronic:R_0805_2012Metric /Interface / power-off buffers/
+  1=BUF_ADS_START; 2=ADS_START
+R46 33R Neuronic:R_0805_2012Metric /Interface / power-off buffers/
+  1=BUF_ADS_PWDN_N; 2=ADS_PWDN_N
+R47 33R Neuronic:R_0805_2012Metric /Interface / power-off buffers/
+  1=BUF_HOST_SPI_MISO; 2=HOST_SPI_MISO
+R48 33R Neuronic:R_0805_2012Metric /Interface / power-off buffers/
+  1=BUF_HOST_ADS_DRDY_N; 2=HOST_ADS_DRDY_N
+R49 10k Neuronic:R_0805_2012Metric /Interface / power-off buffers/
+  1=IF_EN; 2=GND
+U4 TXU0304PWR Neuronic:TSSOP-14_4.4x5mm_P0.65mm /Interface / power-off buffers/
+  1=HOST_3V3; 2=HOST_SPI_SCLK; 3=HOST_SPI_MOSI; 4=HOST_ADS_CS_N; 5=BUF_HOST_SPI_MISO; 6=unconnected-(U4-NC-Pad6); 7=GND; 8=IF_EN; 9=unconnected-(U4-NC-Pad9); 10=SPI_MISO; 11=BUF_ADS_CS_N; 12=BUF_SPI_MOSI; 13=BUF_SPI_SCLK; 14=DVDD_3V3
+U5 TXU0304PWR Neuronic:TSSOP-14_4.4x5mm_P0.65mm /Interface / power-off buffers/
+  1=HOST_3V3; 2=HOST_ADS_RESET_N; 3=HOST_ADS_START; 4=HOST_ADS_PWDN_N; 5=BUF_HOST_ADS_DRDY_N; 6=unconnected-(U5-NC-Pad6); 7=GND; 8=IF_EN; 9=unconnected-(U5-NC-Pad9); 10=ADS_DRDY_N; 11=BUF_ADS_PWDN_N; 12=BUF_ADS_START; 13=BUF_ADS_RESET_N; 14=DVDD_3V3

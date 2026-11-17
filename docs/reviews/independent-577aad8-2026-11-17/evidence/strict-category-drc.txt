@@ -1,0 +1,49 @@
+** Drc report for neuronic.kicad_pcb **
+** Created on 2026-11-17T10:00:00+0000 **
+
+** Found 0 DRC violations **
+
+** Found 0 unconnected pads **
+
+** Found 13 Footprint errors **
+[footprint_filters_mismatch]: Neuronic:PinHeader_2x06_P2.54mm_Vertical doesn't match symbol's footprint filters (Connector*:*_2x??_*).
+    Local override; warning
+    @(131.0000 mm, 88.0000 mm): Footprint J11
+[footprint_filters_mismatch]: Neuronic:P1_36619_Touchproof_RA doesn't match symbol's footprint filters (Connector*:*_1x??_*).
+    Local override; warning
+    @(67.0260 mm, 118.4000 mm): Footprint J1
+[footprint_filters_mismatch]: Neuronic:P1_36619_Touchproof_RA doesn't match symbol's footprint filters (Connector*:*_1x??_*).
+    Local override; warning
+    @(67.0260 mm, 110.2000 mm): Footprint J2
+[footprint_filters_mismatch]: Neuronic:P1_36619_Touchproof_RA doesn't match symbol's footprint filters (Connector*:*_1x??_*).
+    Local override; warning
+    @(67.0260 mm, 102.0000 mm): Footprint J3
+[footprint_filters_mismatch]: Neuronic:P1_36619_Touchproof_RA doesn't match symbol's footprint filters (Connector*:*_1x??_*).
+    Local override; warning
+    @(67.0260 mm, 93.8000 mm): Footprint J4
+[footprint_filters_mismatch]: Neuronic:P1_36619_Touchproof_RA doesn't match symbol's footprint filters (Connector*:*_1x??_*).
+    Local override; warning
+    @(67.0260 mm, 85.6000 mm): Footprint J5
+[footprint_filters_mismatch]: Neuronic:P1_36619_Touchproof_RA doesn't match symbol's footprint filters (Connector*:*_1x??_*).
+    Local override; warning
+    @(67.0260 mm, 77.4000 mm): Footprint J6
+[footprint_filters_mismatch]: Neuronic:P1_36619_Touchproof_RA doesn't match symbol's footprint filters (Connector*:*_1x??_*).
+    Local override; warning
+    @(67.0260 mm, 69.2000 mm): Footprint J7
+[footprint_filters_mismatch]: Neuronic:P1_36619_Touchproof_RA doesn't match symbol's footprint filters (Connector*:*_1x??_*).
+    Local override; warning
+    @(67.0260 mm, 61.0000 mm): Footprint J8
+[footprint_filters_mismatch]: Neuronic:P1_36619_Touchproof_RA doesn't match symbol's footprint filters (Connector*:*_1x??_*).
+    Local override; warning
+    @(67.0260 mm, 126.6000 mm): Footprint J9
+[footprint_filters_mismatch]: Neuronic:Fuse_1812_4532Metric doesn't match symbol's footprint filters (*polyfuse* *PTC*).
+    Local override; warning
+    @(121.0000 mm, 60.0000 mm): Footprint F1
+[footprint_filters_mismatch]: Neuronic:P1_36619_Touchproof_RA doesn't match symbol's footprint filters (Connector*:*_1x??_*).
+    Local override; warning
+    @(67.0260 mm, 134.8000 mm): Footprint J10
+[footprint_filters_mismatch]: Neuronic:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical doesn't match symbol's footprint filters (Connector*:*_1x??_*).
+    Local override; warning
+    @(126.0000 mm, 65.0000 mm): Footprint J12
+
+** End of Report **

@@ -1,0 +1,263 @@
+{
+  "scope": "Engineering arithmetic from fresh CAD values; not SPICE or measurements.",
+  "cad_values": {
+    "R_series_ohm": 20000.0,
+    "C_shunt_F": 1e-09,
+    "bias_series_ohm": 998000.0,
+    "bias_feedback_ohm": 1000000.0,
+    "bias_feedback_F": 1.5000000000000002e-09
+  },
+  "RC_pole_Hz": 7957.7471545947665,
+  "RC_50Hz_dB": -0.00017144920494926007,
+  "resistor_noise_uVrms": {
+    "39.5": {
+      "one_leg": 0.1144052119442117,
+      "P_minus_REF": 0.1617934023376726
+    },
+    "70": {
+      "one_leg": 0.1522987301325917,
+      "P_minus_REF": 0.21538292968571118
+    },
+    "100": {
+      "one_leg": 0.1820317994197717,
+      "P_minus_REF": 0.25743183952262005
+    }
+  },
+  "CMRR_sensitivities_not_predictions": {
+    "capacitor_resistor_tolerance_only": {
+      "50": {
+        "rejection_db": 62.45312218758467,
+        "differential_uV_per_100mV_common_mode": 75.39523350991516
+      },
+      "60": {
+        "rejection_db": 60.86964883155022,
+        "differential_uV_per_100mV_common_mode": 90.47270148964894
+      }
+    },
+    "typical_input_capacitance_only_20pF_each": {
+      "50": {
+        "rejection_db": 61.11425099535995,
+        "differential_uV_per_100mV_common_mode": 87.96045156255907
+      },
+      "60": {
+        "rejection_db": 59.53080606168257,
+        "differential_uV_per_100mV_common_mode": 105.55035465898261
+      }
+    },
+    "tolerances_plus_shared_typical_capacitance": {
+      "50": {
+        "rejection_db": 55.677423956907305,
+        "differential_uV_per_100mV_common_mode": 164.48594798876502
+      },
+      "60": {
+        "rejection_db": 54.09398126342899,
+        "differential_uV_per_100mV_common_mode": 197.378996588324
+      }
+    },
+    "5k_reference_source_imbalance_plus_shared_C": {
+      "50": {
+        "rejection_db": 51.367572360965674,
+        "differential_uV_per_100mV_common_mode": 270.160207972028
+      },
+      "60": {
+        "rejection_db": 49.784184517691244,
+        "differential_uV_per_100mV_common_mode": 324.1834009970788
+      }
+    },
+    "50k_reference_source_imbalance_plus_shared_C": {
+      "50": {
+        "rejection_db": 34.381934573015805,
+        "differential_uV_per_100mV_common_mode": 1909.4279320534408
+      },
+      "60": {
+        "rejection_db": 32.79963065716364,
+        "differential_uV_per_100mV_common_mode": 2290.9650674922796
+      }
+    }
+  },
+  "input_bias_300pA_sensitivity": {
+    "positive_drop_uV": 6.0,
+    "reference_8_inputs_drop_uV": 48.0,
+    "same_sign_differential_uV": 42.0
+  },
+  "single_diode_5nA_leakage_sensitivity_uV": 100.0,
+  "gain_headroom": {
+    "1": {
+      "reference_full_scale_V": 4.5,
+      "max_diff_at_fixed_pair_CM_2_5V": 4.5,
+      "max_one_electrode_offset_with_REF_2_5V": 2.3,
+      "max_one_electrode_offset_with_REF_2_45V_AVDD_4_9V": 2.25
+    },
+    "2": {
+      "reference_full_scale_V": 2.25,
+      "max_diff_at_fixed_pair_CM_2_5V": 2.25,
+      "max_one_electrode_offset_with_REF_2_5V": 1.5333333333333332,
+      "max_one_electrode_offset_with_REF_2_45V_AVDD_4_9V": 1.5
+    },
+    "4": {
+      "reference_full_scale_V": 1.125,
+      "max_diff_at_fixed_pair_CM_2_5V": 1.125,
+      "max_one_electrode_offset_with_REF_2_5V": 0.9199999999999999,
+      "max_one_electrode_offset_with_REF_2_45V_AVDD_4_9V": 0.9
+    },
+    "6": {
+      "reference_full_scale_V": 0.75,
+      "max_diff_at_fixed_pair_CM_2_5V": 0.75,
+      "max_one_electrode_offset_with_REF_2_5V": 0.6571428571428571,
+      "max_one_electrode_offset_with_REF_2_45V_AVDD_4_9V": 0.6428571428571429
+    },
+    "8": {
+      "reference_full_scale_V": 0.5625,
+      "max_diff_at_fixed_pair_CM_2_5V": 0.5625,
+      "max_one_electrode_offset_with_REF_2_5V": 0.5111111111111111,
+      "max_one_electrode_offset_with_REF_2_45V_AVDD_4_9V": 0.5
+    },
+    "12": {
+      "reference_full_scale_V": 0.375,
+      "max_diff_at_fixed_pair_CM_2_5V": 0.375,
+      "max_one_electrode_offset_with_REF_2_5V": 0.3538461538461538,
+      "max_one_electrode_offset_with_REF_2_45V_AVDD_4_9V": 0.34615384615384615
+    },
+    "24": {
+      "reference_full_scale_V": 0.1875,
+      "max_diff_at_fixed_pair_CM_2_5V": 0.1875,
+      "max_one_electrode_offset_with_REF_2_5V": 0.184,
+      "max_one_electrode_offset_with_REF_2_45V_AVDD_4_9V": 0.18
+    }
+  },
+  "gain12_CM_limits_at_abs_diff": {
+    "0.1": [
+      0.8,
+      4.199999999999999
+    ],
+    "0.3": [
+      1.9999999999999998,
+      3.0
+    ],
+    "0.35": [
+      2.3,
+      2.7
+    ],
+    "0.375": [
+      2.45,
+      2.55
+    ]
+  },
+  "bias_feedback_pole_Hz": 106.1032953945969,
+  "bias_series_capacitive_load_poles_Hz": {
+    "0.5": 318.9477817472852,
+    "1": 159.4738908736426,
+    "5": 31.894778174728525
+  },
+  "bias_gain_source_discrepancy_sensitivity": {
+    "2": {
+      "220k_diagram": 9.090909090909092,
+      "330k_text": 6.0606060606060606
+    },
+    "8": {
+      "220k_diagram": 36.36363636363637,
+      "330k_text": 24.242424242424242
+    },
+    "16": {
+      "220k_diagram": 72.72727272727273,
+      "330k_text": 48.484848484848484
+    }
+  },
+  "VCAP1_illustrative_first_order": {
+    "R1_ohm_Fig25": 9800,
+    "bandgap_V_Fig25": 1.2,
+    "nominal_time_constant_s": 0.9799999999999999,
+    "time_to_1_1V_s_ignoring_leakage": 2.435208516792241,
+    "max_6_3uA_leakage_times_9_8k_V": 0.061739999999999996,
+    "qualification": "6.3uA is capacitor rated-voltage leakage, not measured or guaranteed leakage at 1.2V; simplified source model, no guaranteed startup time."
+  },
+  "power": {
+    "ldo_input_low_V_assumed": 6.000000000000001,
+    "AVDD_conservative_V": [
+      4.9,
+      5.1
+    ],
+    "DVDD_conservative_V": [
+      3.234,
+      3.366
+    ],
+    "analog_dissipation_W_upper": 0.15899999999999997,
+    "digital_dissipation_W_upper": 0.06966,
+    "analog_temp_rise_C_JEDEC_only": 26.6802,
+    "digital_temp_rise_C_JEDEC_only": 11.688948,
+    "Nano_VIN_low_conditional": 6.300000000000001
+  },
+  "fault_path_bounds_not_body_acceptance": {
+    "5_1V_single_input_20k_uA": 257.57575757575756,
+    "5_1V_nine_parallel_input_paths_uA": 2318.181818181818,
+    "10_2V_input_20k_mA": 0.5151515151515151,
+    "10_2V_one_10k_remaining_mA": 1.0303030303030303,
+    "10_2V_nine_input_paths_mA": 4.636363636363637,
+    "5_1V_bias_998k_uA": 5.161838829173498,
+    "5_1V_bias_one_499k_uA": 10.323677658346996,
+    "5V_clamp_short_return_via_2_5V_bias_uA": 2.455795677799607,
+    "qualification": "Parallel bounds require a common source and real return on all indicated paths; a single shorted clamp does not automatically create nine such paths."
+  },
+  "SPI": {
+    "frame_bytes": 27,
+    "frame_at_1MHz_us": 216,
+    "period_at_250SPS_us": 4000,
+    "raw_bytes_per_second": 6750,
+    "command_decode_4tclk_us": 1.953125,
+    "POR_2pow18_nominal_s": 0.128,
+    "internal_test_amplitude_V_default": 0.001875,
+    "internal_test_frequency_Hz_default": 0.9765625,
+    "test_magnitude_code_gain12_register_formula_ideal": 41943.035
+  },
+  "socket": {
+    "signal_max_diameter_mm": 1.7779999999999998,
+    "signal_min_finished_hole_assumed_mm": 2.0,
+    "signal_min_radial_clearance_mm": 0.1110000000000001,
+    "dummy_max_section_mm": [
+      1.2953999999999999,
+      0.7619999999999999
+    ],
+    "dummy_worst_corner_distance_mm": 0.785001840762173,
+    "slot_radius_at_assumed_min_mm": 1.0
+  },
+  "capacitance_budget": {
+    "direct_rail_caps": {
+      "AVDD_5V": {
+        "references": [
+          "C21",
+          "C31",
+          "C32",
+          "C33",
+          "C34",
+          "C35",
+          "C36",
+          "C37",
+          "C38"
+        ],
+        "nominal_uF": 20.799999999999997
+      },
+      "DVDD_3V3": {
+        "references": [
+          "C23",
+          "C39",
+          "C40",
+          "C41",
+          "C45",
+          "C46"
+        ],
+        "nominal_uF": 7.0
+      }
+    },
+    "AVDD_high_uF_tolerance_temperature_only": 26.311999999999998,
+    "reference_nominal_uF": 44.0,
+    "reference_engineering_factors": [
+      0.75,
+      0.9,
+      0.85,
+      0.9,
+      0.9
+    ],
+    "reference_engineering_estimate_uF": 20.448449999999998,
+    "qualification": "Factors are engineering assumptions for DC bias, tolerance, temperature, aging and reserve; not guaranteed manufacturer bounds or measured capacitance."
+  }
+}

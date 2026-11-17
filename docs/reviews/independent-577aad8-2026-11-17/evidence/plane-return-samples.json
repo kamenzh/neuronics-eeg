@@ -1,0 +1,1510 @@
+{
+  "method": "Sample actual filled copper; point coverage is not HF return impedance.",
+  "return_via_pairs": [
+    {
+      "capacitor": "C24",
+      "adc_ground_pin": "32",
+      "from_via": [
+        104.0,
+        107.14
+      ],
+      "to_via": [
+        103.5,
+        96.0
+      ],
+      "separation_mm": 11.15121518041868,
+      "In1_filled_samples": 201,
+      "samples": 201
+    },
+    {
+      "capacitor": "C25",
+      "adc_ground_pin": "32",
+      "from_via": [
+        108.05,
+        98.7
+      ],
+      "to_via": [
+        103.5,
+        96.0
+      ],
+      "separation_mm": 5.2907938912794545,
+      "In1_filled_samples": 201,
+      "samples": 201
+    },
+    {
+      "capacitor": "C26",
+      "adc_ground_pin": "57",
+      "from_via": [
+        99.05,
+        82.1
+      ],
+      "to_via": [
+        99.5,
+        88.0
+      ],
+      "separation_mm": 5.917136131609621,
+      "In1_filled_samples": 201,
+      "samples": 201
+    },
+    {
+      "capacitor": "C27",
+      "adc_ground_pin": "57",
+      "from_via": [
+        98.414,
+        80.164
+      ],
+      "to_via": [
+        99.5,
+        88.0
+      ],
+      "separation_mm": 7.910897041423303,
+      "In1_filled_samples": 201,
+      "samples": 201
+    },
+    {
+      "capacitor": "C28",
+      "adc_ground_pin": "25",
+      "from_via": [
+        100.75,
+        105.85
+      ],
+      "to_via": [
+        100.25,
+        96.0
+      ],
+      "separation_mm": 9.862682190966101,
+      "In1_filled_samples": 201,
+      "samples": 201
+    },
+    {
+      "capacitor": "C29",
+      "adc_ground_pin": "25",
+      "from_via": [
+        103.875,
+        100.4
+      ],
+      "to_via": [
+        100.25,
+        96.0
+      ],
+      "separation_mm": 5.700931941358364,
+      "In1_filled_samples": 201,
+      "samples": 201
+    },
+    {
+      "capacitor": "C30",
+      "adc_ground_pin": "25",
+      "from_via": [
+        98.15,
+        102.65
+      ],
+      "to_via": [
+        100.25,
+        96.0
+      ],
+      "separation_mm": 6.97370059580995,
+      "In1_filled_samples": 201,
+      "samples": 201
+    },
+    {
+      "capacitor": "C36",
+      "adc_ground_pin": "53",
+      "from_via": [
+        105.35,
+        84.0
+      ],
+      "to_via": [
+        101.75,
+        88.0
+      ],
+      "separation_mm": 5.38144961882948,
+      "In1_filled_samples": 201,
+      "samples": 201
+    },
+    {
+      "capacitor": "C39",
+      "adc_ground_pin": "49",
+      "from_via": [
+        110.45,
+        88.25
+      ],
+      "to_via": [
+        103.75,
+        88.0
+      ],
+      "separation_mm": 6.704662556758546,
+      "In1_filled_samples": 168,
+      "samples": 201
+    },
+    {
+      "capacitor": "C40",
+      "adc_ground_pin": "51",
+      "from_via": [
+        105.4,
+        80.15
+      ],
+      "to_via": [
+        102.75,
+        88.0
+      ],
+      "separation_mm": 8.285227818231672,
+      "In1_filled_samples": 201,
+      "samples": 201
+    }
+  ],
+  "back_digital_over_In2": [
+    {
+      "net": "ADS_DRDY_N",
+      "start": [
+        108.7,
+        89.5
+      ],
+      "end": [
+        108.0,
+        89.5
+      ],
+      "segment_length_mm": 0.7000000000000028,
+      "uncovered_length_estimate_mm": 0.7000000000000028,
+      "samples_in_gap": [
+        {
+          "xy": [
+            108.65625,
+            89.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.967297297887262
+        },
+        {
+          "xy": [
+            108.56875000000001,
+            89.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.0190567022987427
+        },
+        {
+          "xy": [
+            108.48125,
+            89.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.075454119198023
+        },
+        {
+          "xy": [
+            108.39375,
+            89.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.1357988653366424
+        },
+        {
+          "xy": [
+            108.30625,
+            89.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.1994953365895136
+        },
+        {
+          "xy": [
+            108.21875,
+            89.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.2660377413410713
+        },
+        {
+          "xy": [
+            108.13125,
+            89.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.3350005852058693
+        },
+        {
+          "xy": [
+            108.04375,
+            89.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.3777387497272442
+        }
+      ]
+    },
+    {
+      "net": "ADS_DRDY_N",
+      "start": [
+        104.8,
+        89.1
+      ],
+      "end": [
+        104.5,
+        88.8
+      ],
+      "segment_length_mm": 0.4242640687119245,
+      "uncovered_length_estimate_mm": 0.42426406871192446,
+      "samples_in_gap": [
+        {
+          "xy": [
+            104.77,
+            89.07
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.38183766184073004
+        },
+        {
+          "xy": [
+            104.71,
+            89.00999999999999
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.29698484809834114
+        },
+        {
+          "xy": [
+            104.65,
+            88.94999999999999
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.21213203435596226
+        },
+        {
+          "xy": [
+            104.59,
+            88.89
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.12727922061358338
+        },
+        {
+          "xy": [
+            104.53,
+            88.83
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.04242640687119446
+        }
+      ]
+    },
+    {
+      "net": "ADS_DRDY_N",
+      "start": [
+        108.9,
+        89.7
+      ],
+      "end": [
+        108.7,
+        89.5
+      ],
+      "segment_length_mm": 0.282842712474623,
+      "uncovered_length_estimate_mm": 0.282842712474623,
+      "samples_in_gap": [
+        {
+          "xy": [
+            108.86666666666667,
+            89.66666666666667
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.7156970184527873
+        },
+        {
+          "xy": [
+            108.80000000000001,
+            89.6
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.8062257748298532
+        },
+        {
+          "xy": [
+            108.73333333333333,
+            89.53333333333333
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.8975274678557509
+        }
+      ]
+    },
+    {
+      "net": "ADS_DRDY_N",
+      "start": [
+        109.7,
+        89.8
+      ],
+      "end": [
+        112.9,
+        93.0
+      ],
+      "segment_length_mm": 4.5254833995939086,
+      "uncovered_length_estimate_mm": 0.6886605173295078,
+      "samples_in_gap": [
+        {
+          "xy": [
+            110.3608695652174,
+            90.4608695652174
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.1719629535361862
+        },
+        {
+          "xy": [
+            110.4304347826087,
+            90.5304347826087
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.2518266426663192
+        },
+        {
+          "xy": [
+            110.5,
+            90.6
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.216552506059645
+        },
+        {
+          "xy": [
+            110.56956521739131,
+            90.66956521739131
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.1621308894263043
+        },
+        {
+          "xy": [
+            110.63913043478261,
+            90.73913043478261
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.1137565650537675
+        },
+        {
+          "xy": [
+            110.70869565217392,
+            90.80869565217391
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.0722483136497616
+        },
+        {
+          "xy": [
+            110.77826086956522,
+            90.87826086956521
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.0384298165653483
+        }
+      ]
+    },
+    {
+      "net": "ADS_DRDY_N",
+      "start": [
+        107.9,
+        89.4
+      ],
+      "end": [
+        107.4,
+        89.4
+      ],
+      "segment_length_mm": 0.5,
+      "uncovered_length_estimate_mm": 0.1,
+      "samples_in_gap": [
+        {
+          "xy": [
+            107.85000000000001,
+            89.4
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.3647344063956166
+        }
+      ]
+    },
+    {
+      "net": "ADS_DRDY_N",
+      "start": [
+        106.6,
+        89.1
+      ],
+      "end": [
+        104.8,
+        89.1
+      ],
+      "segment_length_mm": 1.7999999999999972,
+      "uncovered_length_estimate_mm": 0.19999999999999968,
+      "samples_in_gap": [
+        {
+          "xy": [
+            104.95,
+            89.1
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.5408326913195992
+        },
+        {
+          "xy": [
+            104.85,
+            89.1
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.4609772228646382
+        }
+      ]
+    },
+    {
+      "net": "ADS_DRDY_N",
+      "start": [
+        116.3,
+        100.6
+      ],
+      "end": [
+        118.4,
+        102.7
+      ],
+      "segment_length_mm": 2.9698484809835115,
+      "uncovered_length_estimate_mm": 0.5939696961967023,
+      "samples_in_gap": [
+        {
+          "xy": [
+            118.015,
+            102.315
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.5444722215136488
+        },
+        {
+          "xy": [
+            118.08500000000001,
+            102.385
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.44547727214752175
+        },
+        {
+          "xy": [
+            118.155,
+            102.455
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.3464823227814147
+        },
+        {
+          "xy": [
+            118.22500000000001,
+            102.525
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.24748737341528762
+        },
+        {
+          "xy": [
+            118.295,
+            102.595
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.14849242404918062
+        },
+        {
+          "xy": [
+            118.36500000000001,
+            102.665
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.0494974746830535
+        }
+      ]
+    },
+    {
+      "net": "ADS_DRDY_N",
+      "start": [
+        108.0,
+        89.5
+      ],
+      "end": [
+        107.9,
+        89.4
+      ],
+      "segment_length_mm": 0.14142135623730145,
+      "uncovered_length_estimate_mm": 0.14142135623730145,
+      "samples_in_gap": [
+        {
+          "xy": [
+            107.975,
+            89.475
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.3788582233137618
+        },
+        {
+          "xy": [
+            107.92500000000001,
+            89.42500000000001
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 1.3532368602724387
+        }
+      ]
+    },
+    {
+      "net": "ADS_DRDY_N",
+      "start": [
+        109.5,
+        89.7
+      ],
+      "end": [
+        108.9,
+        89.7
+      ],
+      "segment_length_mm": 0.5999999999999943,
+      "uncovered_length_estimate_mm": 0.4999999999999953,
+      "samples_in_gap": [
+        {
+          "xy": [
+            109.35,
+            89.7
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.6184658438426415
+        },
+        {
+          "xy": [
+            109.25,
+            89.7
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.6020797289396089
+        },
+        {
+          "xy": [
+            109.15,
+            89.7
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.6020797289396089
+        },
+        {
+          "xy": [
+            109.05000000000001,
+            89.7
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.6184658438426415
+        },
+        {
+          "xy": [
+            108.95,
+            89.7
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.6499999999999948
+        }
+      ]
+    },
+    {
+      "net": "ADS_RESET_N",
+      "start": [
+        112.0,
+        98.8
+      ],
+      "end": [
+        112.0,
+        98.0
+      ],
+      "segment_length_mm": 0.7999999999999972,
+      "uncovered_length_estimate_mm": 0.5999999999999979,
+      "samples_in_gap": [
+        {
+          "xy": [
+            112.0,
+            98.55
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.5499999999999972
+        },
+        {
+          "xy": [
+            112.0,
+            98.45
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.45000000000000284
+        },
+        {
+          "xy": [
+            112.0,
+            98.35
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.3499999999999943
+        },
+        {
+          "xy": [
+            112.0,
+            98.25
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.25
+        },
+        {
+          "xy": [
+            112.0,
+            98.15
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.15000000000000568
+        },
+        {
+          "xy": [
+            112.0,
+            98.05
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.04999999999999716
+        }
+      ]
+    },
+    {
+      "net": "ADS_RESET_N",
+      "start": [
+        114.5,
+        101.4
+      ],
+      "end": [
+        112.6,
+        99.5
+      ],
+      "segment_length_mm": 2.6870057685088886,
+      "uncovered_length_estimate_mm": 0.5971123930019752,
+      "samples_in_gap": [
+        {
+          "xy": [
+            114.46481481481482,
+            101.36481481481482
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.049759366083497195
+        },
+        {
+          "xy": [
+            114.39444444444445,
+            101.29444444444445
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.14927809825049157
+        },
+        {
+          "xy": [
+            114.32407407407408,
+            101.22407407407408
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.24879683041748596
+        },
+        {
+          "xy": [
+            114.2537037037037,
+            101.15370370370371
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.3483155625844804
+        },
+        {
+          "xy": [
+            114.18333333333334,
+            101.08333333333334
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.44783429475147474
+        },
+        {
+          "xy": [
+            114.11296296296297,
+            101.01296296296297
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.5473530269184691
+        }
+      ]
+    },
+    {
+      "net": "ADS_START",
+      "start": [
+        107.0,
+        96.1
+      ],
+      "end": [
+        107.0,
+        93.6
+      ],
+      "segment_length_mm": 2.5,
+      "uncovered_length_estimate_mm": 0.6,
+      "samples_in_gap": [
+        {
+          "xy": [
+            107.0,
+            94.14999999999999
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.5499999999999972
+        },
+        {
+          "xy": [
+            107.0,
+            94.05
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.45000000000000284
+        },
+        {
+          "xy": [
+            107.0,
+            93.94999999999999
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.3499999999999943
+        },
+        {
+          "xy": [
+            107.0,
+            93.85
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.25
+        },
+        {
+          "xy": [
+            107.0,
+            93.75
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.15000000000000568
+        },
+        {
+          "xy": [
+            107.0,
+            93.64999999999999
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.04999999999999716
+        }
+      ]
+    },
+    {
+      "net": "ADS_START",
+      "start": [
+        109.3,
+        101.7
+      ],
+      "end": [
+        109.3,
+        101.1
+      ],
+      "segment_length_mm": 0.6000000000000085,
+      "uncovered_length_estimate_mm": 0.5142857142857216,
+      "samples_in_gap": [
+        {
+          "xy": [
+            109.3,
+            101.65714285714286
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.04285714285714448
+        },
+        {
+          "xy": [
+            109.3,
+            101.57142857142857
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.12857142857143344
+        },
+        {
+          "xy": [
+            109.3,
+            101.48571428571428
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.2142857142857224
+        },
+        {
+          "xy": [
+            109.3,
+            101.4
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.29999999999999716
+        },
+        {
+          "xy": [
+            109.3,
+            101.31428571428572
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.3857142857142861
+        },
+        {
+          "xy": [
+            109.3,
+            101.22857142857143
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.4714285714285751
+        }
+      ]
+    },
+    {
+      "net": "SPI_MOSI",
+      "start": [
+        114.7,
+        85.2
+      ],
+      "end": [
+        114.2,
+        85.2
+      ],
+      "segment_length_mm": 0.5,
+      "uncovered_length_estimate_mm": 0.5,
+      "samples_in_gap": [
+        {
+          "xy": [
+            114.65,
+            85.2
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.04999999999999716
+        },
+        {
+          "xy": [
+            114.55,
+            85.2
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.15000000000000568
+        },
+        {
+          "xy": [
+            114.45,
+            85.2
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.25
+        },
+        {
+          "xy": [
+            114.35000000000001,
+            85.2
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.3499999999999943
+        },
+        {
+          "xy": [
+            114.25,
+            85.2
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.45000000000000284
+        }
+      ]
+    },
+    {
+      "net": "SPI_MOSI",
+      "start": [
+        114.2,
+        85.2
+      ],
+      "end": [
+        112.9,
+        86.5
+      ],
+      "segment_length_mm": 1.8384776310850195,
+      "uncovered_length_estimate_mm": 0.09676198058342207,
+      "samples_in_gap": [
+        {
+          "xy": [
+            114.16578947368421,
+            85.23421052631579
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.5353048164713219
+        }
+      ]
+    },
+    {
+      "net": "SPI_MOSI",
+      "start": [
+        112.9,
+        86.5
+      ],
+      "end": [
+        110.3,
+        86.5
+      ],
+      "segment_length_mm": 2.6000000000000085,
+      "uncovered_length_estimate_mm": 1.444444444444449,
+      "samples_in_gap": [
+        {
+          "xy": [
+            111.6962962962963,
+            86.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.672484899193536
+        },
+        {
+          "xy": [
+            111.6,
+            86.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.7211102550927962
+        },
+        {
+          "xy": [
+            111.5037037037037,
+            86.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.7786591126529062
+        },
+        {
+          "xy": [
+            111.4074074074074,
+            86.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.843306575804794
+        },
+        {
+          "xy": [
+            111.31111111111112,
+            86.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.9135468796041902
+        },
+        {
+          "xy": [
+            111.21481481481482,
+            86.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.9148148148148181
+        },
+        {
+          "xy": [
+            111.11851851851851,
+            86.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.8185185185185162
+        },
+        {
+          "xy": [
+            111.02222222222223,
+            86.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.7222222222222285
+        },
+        {
+          "xy": [
+            110.92592592592592,
+            86.5
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.6259259259259267
+        },
+        {
+          "xy": [
+            110.82962962962962,
+            86.5
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.5296296296296248
+        },
+        {
+          "xy": [
+            110.73333333333333,
+            86.5
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.4333333333333371
+        },
+        {
+          "xy": [
+            110.63703703703703,
+            86.5
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.33703703703703525
+        },
+        {
+          "xy": [
+            110.54074074074074,
+            86.5
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.24074074074074758
+        },
+        {
+          "xy": [
+            110.44444444444444,
+            86.5
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.1444444444444457
+        },
+        {
+          "xy": [
+            110.34814814814814,
+            86.5
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.04814814814814383
+        }
+      ]
+    },
+    {
+      "net": "HOST_SPI_MISO",
+      "start": [
+        131.0,
+        93.08
+      ],
+      "end": [
+        128.2608,
+        90.3408
+      ],
+      "segment_length_mm": 3.8738137900523872,
+      "uncovered_length_estimate_mm": 1.0926141459122118,
+      "samples_in_gap": [
+        {
+          "xy": [
+            130.96488205128205,
+            93.04488205128204
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 5.30679547990273
+        },
+        {
+          "xy": [
+            130.89464615384617,
+            92.97464615384615
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 5.210631188293245
+        },
+        {
+          "xy": [
+            130.82441025641026,
+            92.90441025641026
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 5.114587844632925
+        },
+        {
+          "xy": [
+            130.75417435897435,
+            92.83417435897435
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 5.018672392742311
+        },
+        {
+          "xy": [
+            130.68393846153845,
+            92.76393846153846
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 4.922892307986782
+        },
+        {
+          "xy": [
+            130.61370256410257,
+            92.69370256410257
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 4.827255648041821
+        },
+        {
+          "xy": [
+            130.54346666666666,
+            92.62346666666667
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 4.731771109449639
+        },
+        {
+          "xy": [
+            130.47323076923078,
+            92.55323076923077
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 4.636448090731458
+        },
+        {
+          "xy": [
+            130.40299487179487,
+            92.48299487179487
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 4.541296762933137
+        },
+        {
+          "xy": [
+            130.33275897435897,
+            92.41275897435898
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 4.446328148614439
+        },
+        {
+          "xy": [
+            130.26252307692306,
+            92.34252307692307
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 4.35155421044592
+        }
+      ]
+    },
+    {
+      "net": "HOST_SPI_MISO",
+      "start": [
+        128.2608,
+        90.3408
+      ],
+      "end": [
+        128.2608,
+        88.4787
+      ],
+      "segment_length_mm": 1.862099999999998,
+      "uncovered_length_estimate_mm": 0.9800526315789464,
+      "samples_in_gap": [
+        {
+          "xy": [
+            128.2608,
+            89.40975
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.931049999999999
+        },
+        {
+          "xy": [
+            128.2608,
+            89.3117447368421
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.8330447368420977
+        },
+        {
+          "xy": [
+            128.2608,
+            89.21373947368421
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.7350394736842105
+        },
+        {
+          "xy": [
+            128.2608,
+            89.11573421052631
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.6370342105263092
+        },
+        {
+          "xy": [
+            128.2608,
+            89.01772894736843
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.539028947368422
+        },
+        {
+          "xy": [
+            128.2608,
+            88.91972368421052
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.44102368421052063
+        },
+        {
+          "xy": [
+            128.2608,
+            88.82171842105264
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.34301842105263347
+        },
+        {
+          "xy": [
+            128.2608,
+            88.72371315789474
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.2450131578947321
+        },
+        {
+          "xy": [
+            128.2608,
+            88.62570789473685
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.14700789473684495
+        },
+        {
+          "xy": [
+            128.2608,
+            88.52770263157895
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.04900263157894358
+        }
+      ]
+    },
+    {
+      "net": "BUF_SPI_MOSI",
+      "start": [
+        113.4,
+        87.6
+      ],
+      "end": [
+        113.8,
+        88.0
+      ],
+      "segment_length_mm": 0.565685424949236,
+      "uncovered_length_estimate_mm": 0.47140452079103,
+      "samples_in_gap": [
+        {
+          "xy": [
+            113.5,
+            87.69999999999999
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.7615773105863867
+        },
+        {
+          "xy": [
+            113.56666666666666,
+            87.76666666666667
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.731816613336674
+        },
+        {
+          "xy": [
+            113.63333333333334,
+            87.83333333333333
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.7133644853010805
+        },
+        {
+          "xy": [
+            113.7,
+            87.9
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.7071067811865476
+        },
+        {
+          "xy": [
+            113.76666666666667,
+            87.96666666666667
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.7133644853010892
+        }
+      ]
+    },
+    {
+      "net": "BUF_SPI_MOSI",
+      "start": [
+        117.9,
+        88.3
+      ],
+      "end": [
+        118.2,
+        88.6
+      ],
+      "segment_length_mm": 0.4242640687119245,
+      "uncovered_length_estimate_mm": 0.42426406871192446,
+      "samples_in_gap": [
+        {
+          "xy": [
+            117.93,
+            88.33
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.38183766184073004
+        },
+        {
+          "xy": [
+            117.99000000000001,
+            88.39
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.29698484809834114
+        },
+        {
+          "xy": [
+            118.05000000000001,
+            88.44999999999999
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.21213203435596226
+        },
+        {
+          "xy": [
+            118.11,
+            88.50999999999999
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.12727922061358338
+        },
+        {
+          "xy": [
+            118.17,
+            88.57
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.04242640687119446
+        }
+      ]
+    },
+    {
+      "net": "BUF_SPI_MOSI",
+      "start": [
+        112.0,
+        87.1
+      ],
+      "end": [
+        112.7,
+        87.1
+      ],
+      "segment_length_mm": 0.7000000000000028,
+      "uncovered_length_estimate_mm": 0.5250000000000021,
+      "samples_in_gap": [
+        {
+          "xy": [
+            112.04375,
+            87.1
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.04375000000000284
+        },
+        {
+          "xy": [
+            112.13125,
+            87.1
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.13124999999999432
+        },
+        {
+          "xy": [
+            112.21875,
+            87.1
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.21875
+        },
+        {
+          "xy": [
+            112.30625,
+            87.1
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.3062500000000057
+        },
+        {
+          "xy": [
+            112.39375,
+            87.1
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.39374999999999716
+        },
+        {
+          "xy": [
+            112.48125,
+            87.1
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.48125000000000284
+        }
+      ]
+    },
+    {
+      "net": "BUF_SPI_MOSI",
+      "start": [
+        116.2,
+        88.3
+      ],
+      "end": [
+        117.9,
+        88.3
+      ],
+      "segment_length_mm": 1.7000000000000028,
+      "uncovered_length_estimate_mm": 0.18888888888888922,
+      "samples_in_gap": [
+        {
+          "xy": [
+            117.75833333333334,
+            88.3
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.5339189493213735
+        },
+        {
+          "xy": [
+            117.85277777777779,
+            88.3
+          ],
+          "In1_filled": false,
+          "distance_to_any_via_mm": 0.45887173764019407
+        }
+      ]
+    },
+    {
+      "net": "BUF_SPI_MOSI",
+      "start": [
+        113.8,
+        88.0
+      ],
+      "end": [
+        115.6,
+        88.0
+      ],
+      "segment_length_mm": 1.7999999999999972,
+      "uncovered_length_estimate_mm": 0.29999999999999954,
+      "samples_in_gap": [
+        {
+          "xy": [
+            113.85,
+            88.0
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.6946221994724896
+        },
+        {
+          "xy": [
+            113.95,
+            88.0
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.6499999999999948
+        },
+        {
+          "xy": [
+            114.05,
+            88.0
+          ],
+          "In1_filled": true,
+          "distance_to_any_via_mm": 0.6184658438426449
+        }
+      ]
+    }
+  ]
+}

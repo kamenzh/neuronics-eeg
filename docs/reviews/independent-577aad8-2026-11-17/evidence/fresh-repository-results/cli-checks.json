@@ -1,0 +1,92 @@
+{
+  "kicad_version": "9.0.2",
+  "input_sha256": {
+    "hardware/kicad/Connector_Generic.kicad_sym": "41d9e4f19f0c4774b01ca8ab9e677b4227397e42a98c08da9a0bb201431eb2f4",
+    "hardware/kicad/Device.kicad_sym": "a274875a2924737cdbde398382dc1f6dc903e92977d07213b115c8ba99f6d81d",
+    "hardware/kicad/Neuronic.kicad_sym": "d851a80bd25cd102ae87051be877b8a3300674f19562065c8413a3c3522d54d9",
+    "hardware/kicad/Neuronic.pretty/CP_EIA-3528-21_Kemet-B.kicad_mod": "88201cd3aaf8431f0142894b4968da18e68284fb8b52498f80dffca0b5d6c81c",
+    "hardware/kicad/Neuronic.pretty/C_0805_2012Metric.kicad_mod": "4f88d912a06c5e2e3b8151311be72f6ac49eea68d52b4e1beaeaa067916555cc",
+    "hardware/kicad/Neuronic.pretty/C_1206_3216Metric.kicad_mod": "9343c2f817fd00cce4d60eb82049bd305d87ee6a856d04895b6c546aceac317b",
+    "hardware/kicad/Neuronic.pretty/C_1210_3225Metric.kicad_mod": "db323531d24d7232678e165190896a423571bcc747680edabb9f12f94355ab88",
+    "hardware/kicad/Neuronic.pretty/D_SMA.kicad_mod": "b3365739de128e75186439cbdda353beab3ccfd08fa7a6fe407b6d779d922129",
+    "hardware/kicad/Neuronic.pretty/Fuse_1812_4532Metric.kicad_mod": "2ac783227d0aa3fd5b0660669eba319bf76c7d0bc088748a99dc5b89f9348614",
+    "hardware/kicad/Neuronic.pretty/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.kicad_mod": "138396b2b921227a5e0e58060d1eae2b0c6dd0bd5fb947b62a0d019d4502054f",
+    "hardware/kicad/Neuronic.pretty/MountingHole_2.7mm_M2.5.kicad_mod": "eda9be76e1e6e0feb69e270841b0bb1d87dc96ef5b9a0743f006a4fc9ba4c8e4",
+    "hardware/kicad/Neuronic.pretty/P1_36619_Touchproof_RA.kicad_mod": "f287ed1823f7a350a3413557c97d982db6c25aac54f536ef912a95d9b17b0958",
+    "hardware/kicad/Neuronic.pretty/PinHeader_1x01_P2.54mm_Vertical.kicad_mod": "1751b07210115d52b77e61a268d96d37467da92ed78332bbf13188f8d5c6fb80",
+    "hardware/kicad/Neuronic.pretty/PinHeader_1x02_P2.54mm_Vertical.kicad_mod": "d99c4d03937f72768bbafadda5817203e12c47cb823f3f40a55823bbdfe1e1b6",
+    "hardware/kicad/Neuronic.pretty/PinHeader_2x06_P2.54mm_Vertical.kicad_mod": "9c68d41ff03ec4a720931e2174295ffc6f8544d8bd9c04e53e3e8205128e0d84",
+    "hardware/kicad/Neuronic.pretty/R_0805_2012Metric.kicad_mod": "54fd6e17158e15e5a591053f905fbd5bd9a1aa7008c73cccd391b192a3b1a09d",
+    "hardware/kicad/Neuronic.pretty/SOT-223-3_TabPin2.kicad_mod": "8732e6fb9d63576e4ecfcdb953443fe6f34b5afabc87ef136cdd40fe7cf03434",
+    "hardware/kicad/Neuronic.pretty/SOT-23-5.kicad_mod": "e063acf8bcf318f5ebebddb6eeb493da6614b1f2cee19dd7dd8df0d5943f241a",
+    "hardware/kicad/Neuronic.pretty/SOT-23.kicad_mod": "a047eb42e071414312e7f0d76149c378c6f390c6b852d3be21e1331d96b16bf8",
+    "hardware/kicad/Neuronic.pretty/TQFP-64_10x10mm_P0.5mm.kicad_mod": "99e0be455a9f98f23780613ac115e76e235fd183ae609bfe19c0cd48bd878f93",
+    "hardware/kicad/Neuronic.pretty/TSSOP-14_4.4x5mm_P0.65mm.kicad_mod": "dd7633e00477604dfe54dc06f452d0d754ab89d6e086a61c3e7f52f12fae6ca3",
+    "hardware/kicad/Regulator_Linear.kicad_sym": "3ebd224ee7eeb155733ec4ccac0ead7c3841f64652a9429f8b23aafd3422bf94",
+    "hardware/kicad/Switch.kicad_sym": "8357632bae122ad72a0c8f23085abce11b758fca7e209db382ce40526b8bece0",
+    "hardware/kicad/fp-lib-table": "7fa1f58006227b4d9811e3e2f3de93b6f2a7c7f06740923cf7b219c9decea32b",
+    "hardware/kicad/inputs.kicad_sch": "1d0c3c26daba0becf8d79cddcf7ff257ef364df998d0b3a3d6fb81569bf9e623",
+    "hardware/kicad/interface.kicad_sch": "5fc643a21cfd6d77b7e956315eca3448eff9046911889df288268c50a3970404",
+    "hardware/kicad/neuronic.kicad_pcb": "56e3c25c3cbefbf489e86c24db1670b0620a263d7c0c5adaea14d672e3de33b5",
+    "hardware/kicad/neuronic.kicad_pro": "4280530a94933eb4952be5d1d1960a33d6f34f4ee31ddf4f3af0e9aa679599cb",
+    "hardware/kicad/neuronic.kicad_sch": "44a73645ef63351df02df1f5ab8bb8f19a73c275f45f47fffe66e269db1d7776",
+    "hardware/kicad/power.kicad_sch": "32ad4f65aa30350a6691fca4b58291b00bd61017121d782a83c6142198e49ff9",
+    "hardware/kicad/power.kicad_sym": "42dffd7869ddc2a3839485d33c619d33d222bf9aabb26d932a5130b6df24da5e",
+    "hardware/kicad/sym-lib-table": "08539ca4a0790c9605dd3a8bbb0ed8055973ea189619e17dee9d4450add20cc3",
+    "hardware/design.json": "b1e4650db0fe1b4800b39a005b7c5baa92e150f265307e054b23050f8a3ee9d4",
+    "hardware/interface.json": "22f7e6b78e6e77726867331604c11077bb6f1d914074fc22f14bea564567ec04",
+    "hardware/parts.json": "576b21800e96c642224c5f78f78cd35750bcabee583a3065267353057b79b8d1",
+    "tools/check_board.py": "95f11b86937e13cf97c01e6a3bb4e65fb4c001c71ecb293bf1a00849acf101e0",
+    "tools/check_design.py": "467741464f105e574a09bba23c53dca9c3b79331ce99614b3d4b53ceecee767d",
+    "tools/check_routing.py": "9523111fdedc5e823e30a85a0b3a3717b943c85db4458a3aec561c88f3b21eef",
+    "tools/generate_hardware.py": "8b16deea6a8f2945e2dbb2a7f90706cf22d15a159e8e898202b89da16f608a41",
+    "tools/prepare_bom.py": "e561806af61e7cafab74a261dbe3c499095dd502dbd9c75b32420be891e5045d",
+    "tools/render_previews.py": "fa00176b57aeea8a759f800d9ee7e0a8445674f5bec6ce50cfa4b9c71e9c9fc1",
+    "tools/review_electrical.py": "afd451f3d334f022889b70e8e93c77215317c69101e2a86518935b879f6c2fd4",
+    "tools/route_hardware.py": "408f29a4ec1a30933032ddf4adcd53f388a592b64e88b42b3322d9102f076688",
+    "tools/simulate_input.py": "bf04eb67ae96e9264404aac5b088aeb0430535c6989d11a95474333a85f7286d",
+    "tools/validate_kicad.py": "fda35953891de0b9c50bb5771082c9285cb3ed26cf03fe4498f93e96d5006cdf",
+    "tests/test_workflow_guards.py": "b0da3195ea7ad1feb409a501917425d795b0d9587093bd1fc0e503afcef26691"
+  },
+  "results": [
+    {
+      "check": "version",
+      "returncode": 0,
+      "stdout": "9.0.2\n",
+      "stderr": ""
+    },
+    {
+      "check": "netlist",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "check": "connectivity",
+      "returncode": 0,
+      "stdout": "Connectivity checks: 573/573\n",
+      "stderr": ""
+    },
+    {
+      "check": "board parity",
+      "returncode": 0,
+      "stdout": "PCB pad/net parity: 442 checks, 0 issues\n",
+      "stderr": ""
+    },
+    {
+      "check": "ERC",
+      "returncode": 0,
+      "stdout": "Checking sheet names...\nChecking bus conflicts...\nChecking conflicts...\nChecking units...\nChecking footprints...\nChecking pins...\nChecking similar labels...\nChecking local and global labels...\nChecking for unresolved variables...\nChecking no connect pins for connections...\nChecking for library symbol issues...\nChecking for footprint link issues...\nChecking for off grid pins and wires...\nChecking for labels on more than one wire...\nChecking for undefined netclasses...\nFound 0 violations\nSaved ERC Report to /workspace/scratch/e0fcc76666ca/bench-copy/hardware/validation/erc.txt\n",
+      "stderr": ""
+    },
+    {
+      "check": "DRC",
+      "returncode": 0,
+      "stdout": "Found 0 violations\nFound 0 unconnected items\nFound 0 schematic parity issues\nSaved DRC Report to /workspace/scratch/e0fcc76666ca/bench-copy/hardware/validation/drc.txt\n",
+      "stderr": ""
+    }
+  ],
+  "automated_checks_passed": true,
+  "manufacture_ready": false,
+  "scope": "Automated checks only. Analog/body review and physical tests are separate requirements."
+}

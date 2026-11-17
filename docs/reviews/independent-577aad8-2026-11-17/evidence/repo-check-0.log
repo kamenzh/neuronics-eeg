@@ -1,0 +1,8 @@
+version: exit 0
+netlist: exit 0
+connectivity: exit 0
+Connectivity checks: 573/573
+board parity: exit 0
+PCB pad/net parity: 442 checks, 0 issues
+ERC: exit 0
+DRC: exit 0

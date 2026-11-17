@@ -1,0 +1,23 @@
+{
+  "date_utc": "2026-11-17T10:31:34.845182+00:00",
+  "reviewed_sha": "577aad8a8dee0c60e3b7e949f6b8f7cf200fe180",
+  "original_tracked_files": 149,
+  "source_hash_mismatches": [],
+  "missing_relative_markdown_targets": [],
+  "no_bench_or_simulation_claimed": true,
+  "git_diff_all_whitespace_exit": 2,
+  "generated_formatting_warning_count": 3417,
+  "generated_formatting_warning_files": [
+    "docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/drill-audit/neuronic-NPTH-drl_map.svg",
+    "docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/drill-audit/neuronic-PTH-drl_map.svg",
+    "docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/neuronic-B_Cu.svg",
+    "docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/neuronic-B_Mask.svg",
+    "docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/neuronic-F_Cu.svg",
+    "docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/neuronic-F_Fab.svg",
+    "docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/neuronic-F_Mask.svg",
+    "docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/neuronic-F_Silkscreen.svg",
+    "docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/neuronic-In1_Cu.svg",
+    "docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/neuronic-In2_Cu.svg"
+  ],
+  "authored_text_whitespace_exit": 0
+}

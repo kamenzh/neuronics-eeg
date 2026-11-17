@@ -1,0 +1,18 @@
+version: exit 0
+netlist: exit 2
+ERC: exit 2
+DRC: exit 2
+test_failed_export_cannot_reuse_stale_passes (test_workflow_guards.FailedExport.test_failed_export_cannot_reuse_stale_passes) ... ok
+test_preserves_tracks (test_workflow_guards.GeneratorGuards.test_preserves_tracks) ... ok
+test_preserves_vias (test_workflow_guards.GeneratorGuards.test_preserves_vias) ... ok
+test_preserves_zones (test_workflow_guards.GeneratorGuards.test_preserves_zones) ... ok
+test_requires_explicit_overwrite (test_workflow_guards.GeneratorGuards.test_requires_explicit_overwrite) ... ok
+test_changed_schematic_and_dsn_rejected (test_workflow_guards.RoutingImportGuards.test_changed_schematic_and_dsn_rejected) ... ok
+test_failed_drc_preserves_original_board (test_workflow_guards.RoutingImportGuards.test_failed_drc_preserves_original_board) ... ok
+test_old_session_and_changed_digest_rejected (test_workflow_guards.RoutingImportGuards.test_old_session_and_changed_digest_rejected) ... ok
+test_stale_board_rejected_without_write (test_workflow_guards.RoutingImportGuards.test_stale_board_rejected_without_write) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.593s
+
+OK

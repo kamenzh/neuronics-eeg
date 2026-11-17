@@ -1,0 +1,69 @@
+{
+  "scope": "Disposable refill-copy only; no source changes; strict pass raises existing ignored severity categories to warning. Drill export is review evidence, not a manufacturing release.",
+  "before_sha256": "56e3c25c3cbefbf489e86c24db1670b0620a263d7c0c5adaea14d672e3de33b5",
+  "after_sha256": "56e3c25c3cbefbf489e86c24db1670b0620a263d7c0c5adaea14d672e3de33b5",
+  "date_utc": "2026-11-17T10:00:01.297995+00:00",
+  "raised_categories": [
+    "footprint_filters_mismatch",
+    "footprint_type_mismatch",
+    "missing_courtyard",
+    "npth_inside_courtyard",
+    "pth_inside_courtyard"
+  ],
+  "records": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-c",
+        "import pcbnew as k; b=k.LoadBoard(\"refill-copy/neuronic.kicad_pcb\"); b.BuildConnectivity(); k.ZONE_FILLER(b).Fill(b.Zones()); k.SaveBoard(\"refill-copy/neuronic.kicad_pcb\",b); print(k.Version())"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "drc",
+        "--schematic-parity",
+        "--all-track-errors",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/refilled-drc.txt",
+        "refill-copy/neuronic.kicad_pcb"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "drc",
+        "--schematic-parity",
+        "--all-track-errors",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/strict-category-drc.txt",
+        "refill-copy/neuronic.kicad_pcb"
+      ],
+      "exit_code": 5
+    },
+    {
+      "command": [
+        "kicad-cli",
+        "pcb",
+        "export",
+        "drill",
+        "--excellon-separate-th",
+        "--generate-map",
+        "--map-format",
+        "svg",
+        "-o",
+        "/workspace/scratch/e0fcc76666ca/review-repo/docs/reviews/independent-577aad8-2026-11-17/evidence/cad-exports/drill-audit/",
+        "refill-copy/neuronic.kicad_pcb"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

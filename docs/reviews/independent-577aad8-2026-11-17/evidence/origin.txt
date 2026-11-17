@@ -1,0 +1,3 @@
+Retrieved 2026-11-17 via GitHub branch API and full git clone.
+Reviewed commit: 577aad8a8dee0c60e3b7e949f6b8f7cf200fe180
+Tree: 5f442167e52139c1d277884793f3417da6335e17
