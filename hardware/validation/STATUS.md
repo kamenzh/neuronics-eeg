@@ -32,6 +32,24 @@ connection unapproved. The mocked failures in `workflow-tests.txt` are regressio
 fixtures, not actual KiCad failures. The router-import guards have negative
 regression tests; a successful new export/import round trip is not claimed.
 
+## Documentation and connector follow-up — 2026-11-19
+
+The [November 17 independent report](../../docs/reviews/independent-577aad8-2026-11-17/REPORT.md)
+and all its original evidence are incorporated. It repeated ERC/full DRC and
+the nine workflow tests successfully. Its additional strict-category run exposed
+13 footprint-filter warnings, with no copper/unconnected errors. The default
+zero-violation result above must not be read as zero warnings under every setting.
+
+The November 19 [read-only connector audit](connector-review-2026-11-19/saved-cad.json)
+confirms all 13 connector footprints, 107 components / 25 groups / 23 unique
+MPNs, and all 46 previous validation input hashes. CAD, BOM CSVs, source tools,
+tests and copper were not changed; this follow-up did not rerun ERC/DRC or claim
+new physical measurements. The [connector worksheet](../../docs/CONNECTOR_VERIFICATION_A0_3.md)
+records manufacturer drawings, remaining fit checks and a J12 tolerance erratum.
+Only the stale BOM-prose finding is closed. Firmware, physical performance and
+person-use acceptance remain pending under the
+[working-system plan](../../docs/SYSTEM_ACCEPTANCE_PLAN.md).
+
 ## Recheck the saved board
 
 ```bash

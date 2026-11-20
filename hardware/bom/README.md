@@ -1,7 +1,9 @@
 # Candidate parts — not an order release
 
-`bom-review.csv` lists each of the 91 PCB components. `bom-candidates.csv` groups
-them into 22 exact candidate MPNs with quantities, packages and manufacturer
+`bom-review.csv` lists each of the **107 electrical PCB components** (the four
+mounting-hole footprints are not purchased components). `bom-candidates.csv`
+contains **25 catalog groups and 23 distinct candidate MPNs**: some groups use
+the same MPN for different circuit roles. It records quantities, packages and manufacturer
 sources. `hardware/parts.json` is the editable catalog; the generator applies it
 to the schematic and BOM. Candidate selection is not stock or price verification.
 
@@ -11,8 +13,11 @@ another controller or a second ADS1299. ADS1299IPAG and ADS1299IPAGR use the sam
 PAG package; the R suffix is reel packaging. Buy one genuine eight-channel device
 from a traceable supplier when the design/order list is frozen.
 
-J1–J10 are bench headers and DO NOT mate to the electrode plugs. Their replacement
-sockets remain unresolved. SW1's BOM item is a header for an external switch, not
+J1–J10 are ten selected **P1 36619 / 8R003661901F** right-angle touchproof jacks,
+not the superseded bench headers. Mating with Kamen's actual Sino-k leads is
+**not yet verified**. See the [connector drawing/fit audit](../../docs/CONNECTOR_VERIFICATION_A0_3.md),
+including the unresolved finished-hole requirements for J11, SW1 and J12.
+SW1's BOM item is a header for an external switch, not
 a switch. The battery holder/cells, Nano branch protection, switches, cables,
 JST mating housing/contacts, enclosure, paste/gel, soldering consumables and PCB
 fabrication/delivery are also outside this PCB BOM and must be budgeted separately.
@@ -27,3 +32,8 @@ finish effective-capacitance/protection review, check genuine part stock, reques
 cut tape rather than a whole reel, allow a few spare inexpensive passives, and
 compare total delivered cost including tax/shipping. Prices from earlier planning
 are not quotes and are not reproduced as current facts here.
+
+Updated 2026-11-19 against both CSVs and saved CAD; this closes the stale prose
+finding IR-10 in the [November 17 review](../../docs/reviews/independent-577aad8-2026-11-17/REPORT.md).
+It does not close procurement or physical fit. At Kamen's request, fabrication
+files, manufacturer selection and parts ordering wait until design confirmation.

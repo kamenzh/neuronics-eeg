@@ -1,0 +1,30 @@
+{
+  "retrieved": "2026-11-19",
+  "scope": "Manufacturer drawings visually checked; PDFs not redistributed",
+  "sources": [
+    {
+      "item": "p1",
+      "url": "https://catalog.p1tec.com/dash50/36619_dash50.pdf",
+      "drawing": "36619-50 rev H, sheet 1",
+      "sha256": "5b0f92092b2e8a24cfd5bb2595b0cffa7f3b9ca8ab3b63a5394ec512f3ff4937"
+    },
+    {
+      "item": "j11",
+      "url": "https://www.we-online.com/components/products/datasheet/61301221121.pdf",
+      "drawing": "002.000, 2025-11-08, page 1",
+      "sha256": "7ef7dfc85c50df2b9e1d2c388d3d6e6aaf90e8d2fc4ca61f072d884b6e4943a3"
+    },
+    {
+      "item": "sw1",
+      "url": "https://www.we-online.com/components/products/datasheet/61300211121.pdf",
+      "drawing": "003.000, 2023-01-08, page 1",
+      "sha256": "a054dde42f94b42e1f34117df97a37071aa9e57febcb8375058a3fb7dbae6dbe"
+    },
+    {
+      "item": "j12",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+      "drawing": "XH, page 2: two-circuit top-entry pattern",
+      "sha256": "9426b136902f11900825077535e5c65032b7fbc31ffb59c5e9e1f463bb20fb90"
+    }
+  ]
+}

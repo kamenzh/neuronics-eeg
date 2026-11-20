@@ -1,39 +1,40 @@
-# From A0.3 to an assembled prototype
+# Next steps toward a working EEG board
 
-A0.3 has a revised circuit and real copper routing. The main A0.2 review fixes
-are implemented; a manufactured, working EEG device does not exist yet.
-Use the owned Waveshare ESP32-S3-Nano and the full eight-channel ADS1299.
+The goal is a usable eight-channel EEG system with the owned Waveshare
+ESP32-S3-Nano and self-assembly. A0.3 has real schematics, component placement and
+copper routing; it has not been manufactured or demonstrated to work.
 
-The next work has two tracks: physical connector/manufacturing checks, and
-acquisition firmware. Neither requires buying an assembled PCB.
+Kamen's current scope is review integration and connector verification.
+Fabrication files, manufacturer choice and parts ordering wait until design
+confirmation. No new purchase is needed to review the evidence already available.
 
-| Order | Work | Who can do it | Evidence needed |
-| --- | --- | --- | --- |
-| 1 | Verify the actual Sino-k lead fits a P1 36619 / 8R003661901F socket | Kamen with a real sample | Comfortable insertion/retention, correct contact, photos/measurements; no forcing |
-| 2 | Verify the revised three-hole footprint and enclosure clearance | Kamen + chosen fabricator | Approved slot/hole tolerances; socket coupon/sample solder fit and mechanical support |
-| 3 | Finish manufacturing review | CAD reviewer + fabricator | Confirm 4-layer stack-up, process rules, BOM availability, hand-assembly access and remaining analog concerns |
-| 4 | Implement bench acquisition firmware and PC recorder | Codex can do this in the repo | Pinned successful build, register readback, test/short modes, timestamps, loss accounting and protocol tests |
-| 5 | Export and inspect a bench fabrication package | Codex + independent reviewer | Gerber/drill inspection, plated slots, exact BOM, assembly drawing, test map and recorded source hashes |
-| 6 | Choose a delivered bare-board quote | Kamen | Board-only price + shipping + tax; confirm affordable total before ordering |
-| 7 | Assemble one board | Kamen, preferably with an experienced soldering helper | Magnified solder inspection, continuity/polarity tests, no rail short |
-| 8 | Power and acquire on the bench | Kamen with the documented fixture | Rails, startup, reference, temperature, internal test, noise, calibrated input and radio/loss measurements |
-| 9 | Resolve any measured hardware weaknesses | Codex + electronics reviewer | CMRR/reference matching, bias-loop/cable behavior, rail injection and fault analysis; revise if needed |
-| 10 | Complete a separate body-connected safety review | Qualified electronics/safety reviewer | Assembled system, cable/enclosure, aggregate leakage, faults and external power paths covered |
-| 11 | Record EEG, then evaluate a control model | Kamen + Codex | Repeatable signal first; held-out-session classification and artifact checks before robotic control |
+| Step | Work and owner | Status / completion evidence |
+| --- | --- | --- |
+| 1 | Incorporate the independent report and correct documentation — Codex | Complete in this follow-up: original report/evidence retained, BOM counts and socket description corrected, findings mapped into the blocker register |
+| 2 | Verify connectors — Codex for drawings/CAD, Kamen for actual parts | Desk audit complete. Exact Sino-k plug identity/mating, physical seating and enclosure support remain open; J11/SW1 hole decision and J12 finished minimum need resolution |
+| 3 | Close design-stage decisions for the intended working system — Codex plus qualified electronics/safety reviewer | Whole-system protection and external connections must be reviewed before design confirmation; resolve any necessary circuit/mechanical changes and define measurable acceptance limits |
+| 4 | Implement acquisition and recorder — Codex, as a separate work item | Missing. Build/register/protocol checks first; prove all eight channels and raw recording on assembled hardware later |
+| 5 | Confirm the proposed design — Kamen with documented engineering review | Record exact revision, intended use, remaining post-assembly tests and any limitations; this is not physical validation |
+| 6 | Prepare manufacturing files, select process and price parts — later | Deferred by Kamen. Inspect exports, confirm tolerances, freeze BOM/harness and quote before an order |
+| 7 | Assemble and verify without a person — Kamen with suitable assistance/equipment | Inspect, check power/startup, test acquisition, noise/CMRR/bias, radio and fault behavior; correct failures and revise if necessary |
+| 8 | Qualify the complete system for body connection — qualified reviewer | Physical safety evidence and final assembly/harness/enclosure review required before EEG on a person |
+| 9 | Record repeatable EEG, then evaluate control models — Kamen + Codex | Requires a working, accepted instrument; robotic-arm control is a later project stage |
 
-**The practical next item for Kamen is one real socket sample, not a PCB order.**
-The plug family is still an assumption. A nominal drawing match cannot replace
-that inexpensive physical check. Codex can develop firmware while the sample
-and fabricator checks are pending.
+The immediate missing evidence from Kamen is a clear front/side photo of the
+actual electrode plug, with scale, plus its model/package marking. If an exact
+P1 jack sample is already available, record disconnected mating/contact evidence.
+If none is available, leave that check pending; do not substitute a nominal
+“1.5 mm” description for proof. Photos can identify a connector but cannot alone
+close the physical-fit test. See the [connector worksheet](CONNECTOR_VERIFICATION_A0_3.md).
 
-The [review-fix record](REVIEW_FIXES_A0_3.md),
-[harness/pinout](POWER_HARNESS_A0_3.md) and
-[current validation status](../hardware/validation/STATUS.md) distinguish completed
-software checks from physical measurements. Historical A0.2 findings remain in
-[the independent review](INDEPENDENT_REVIEW_A0_2.md).
+The [working-system acceptance plan](SYSTEM_ACCEPTANCE_PLAN.md) separates
+pre-fabrication design review from tests that require assembled hardware.
+The [blocker register](REVIEW_BLOCKERS.md) maps every November 17 finding to
+closure evidence. The [original report](reviews/independent-577aad8-2026-11-17/REPORT.md)
+remains intact, including the measurements it says were not performed.
 
 `.kicad_sch` defines the circuit; `.kicad_pcb` contains placement and copper.
-`design.json` records the generated component/net/starting placement data; it is
-not a manufacturing file. Preserve the routed CAD. Generation refuses a board
-with copper; a router import now requires a matching export and clean candidate
-DRC. Passing either tool is not a body-use approval.
+`design.json` is generated component/net/starting-placement data, not a fabrication
+file. Preserve the routed CAD: generation refuses a board with copper; router
+import requires a matching export and clean candidate DRC. Automated passes do
+not establish signal quality or safety.

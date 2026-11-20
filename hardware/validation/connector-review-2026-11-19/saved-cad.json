@@ -1,0 +1,905 @@
+{
+  "scope": "Saved-CAD geometry and BOM audit; physical fit NOT tested",
+  "review_date": "2026-11-19",
+  "cad_checkpoint": "577aad8a8dee0c60e3b7e949f6b8f7cf200fe180",
+  "pcb_sha256": "56e3c25c3cbefbf489e86c24db1670b0620a263d7c0c5adaea14d672e3de33b5",
+  "previous_validation_input_hashes_match": true,
+  "previous_validation_input_count": 46,
+  "bom": {
+    "components": 107,
+    "groups": 25,
+    "unique_mpns": 23
+  },
+  "socket_pitch_mm": [
+    8.2,
+    8.2,
+    8.2,
+    8.2,
+    8.2,
+    8.2,
+    8.2,
+    8.2,
+    8.2
+  ],
+  "connectors": {
+    "J1": {
+      "footprint": "P1_36619_Touchproof_RA",
+      "position_mm": [
+        67.026,
+        118.4
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            115.86
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            120.94
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "1",
+          "net": "CONTACT_1",
+          "position_mm": [
+            67.026,
+            118.4
+          ],
+          "copper_mm": [
+            3.1,
+            3.1
+          ],
+          "drill_mm": [
+            2.1,
+            2.1
+          ]
+        }
+      ],
+      "candidate_mpn": "8R003661901F"
+    },
+    "J2": {
+      "footprint": "P1_36619_Touchproof_RA",
+      "position_mm": [
+        67.026,
+        110.2
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            107.66
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            112.74
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "1",
+          "net": "CONTACT_2",
+          "position_mm": [
+            67.026,
+            110.2
+          ],
+          "copper_mm": [
+            3.1,
+            3.1
+          ],
+          "drill_mm": [
+            2.1,
+            2.1
+          ]
+        }
+      ],
+      "candidate_mpn": "8R003661901F"
+    },
+    "J3": {
+      "footprint": "P1_36619_Touchproof_RA",
+      "position_mm": [
+        67.026,
+        102.0
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            99.46
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            104.54
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "1",
+          "net": "CONTACT_3",
+          "position_mm": [
+            67.026,
+            102.0
+          ],
+          "copper_mm": [
+            3.1,
+            3.1
+          ],
+          "drill_mm": [
+            2.1,
+            2.1
+          ]
+        }
+      ],
+      "candidate_mpn": "8R003661901F"
+    },
+    "J4": {
+      "footprint": "P1_36619_Touchproof_RA",
+      "position_mm": [
+        67.026,
+        93.8
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            91.26
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            96.34
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "1",
+          "net": "CONTACT_4",
+          "position_mm": [
+            67.026,
+            93.8
+          ],
+          "copper_mm": [
+            3.1,
+            3.1
+          ],
+          "drill_mm": [
+            2.1,
+            2.1
+          ]
+        }
+      ],
+      "candidate_mpn": "8R003661901F"
+    },
+    "J5": {
+      "footprint": "P1_36619_Touchproof_RA",
+      "position_mm": [
+        67.026,
+        85.6
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            83.06
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            88.14
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "1",
+          "net": "CONTACT_5",
+          "position_mm": [
+            67.026,
+            85.6
+          ],
+          "copper_mm": [
+            3.1,
+            3.1
+          ],
+          "drill_mm": [
+            2.1,
+            2.1
+          ]
+        }
+      ],
+      "candidate_mpn": "8R003661901F"
+    },
+    "J6": {
+      "footprint": "P1_36619_Touchproof_RA",
+      "position_mm": [
+        67.026,
+        77.4
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            74.86
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            79.94
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "1",
+          "net": "CONTACT_6",
+          "position_mm": [
+            67.026,
+            77.4
+          ],
+          "copper_mm": [
+            3.1,
+            3.1
+          ],
+          "drill_mm": [
+            2.1,
+            2.1
+          ]
+        }
+      ],
+      "candidate_mpn": "8R003661901F"
+    },
+    "J7": {
+      "footprint": "P1_36619_Touchproof_RA",
+      "position_mm": [
+        67.026,
+        69.2
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            66.66
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            71.74
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "1",
+          "net": "CONTACT_7",
+          "position_mm": [
+            67.026,
+            69.2
+          ],
+          "copper_mm": [
+            3.1,
+            3.1
+          ],
+          "drill_mm": [
+            2.1,
+            2.1
+          ]
+        }
+      ],
+      "candidate_mpn": "8R003661901F"
+    },
+    "J8": {
+      "footprint": "P1_36619_Touchproof_RA",
+      "position_mm": [
+        67.026,
+        61.0
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            58.46
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            63.54
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "1",
+          "net": "CONTACT_8",
+          "position_mm": [
+            67.026,
+            61.0
+          ],
+          "copper_mm": [
+            3.1,
+            3.1
+          ],
+          "drill_mm": [
+            2.1,
+            2.1
+          ]
+        }
+      ],
+      "candidate_mpn": "8R003661901F"
+    },
+    "J9": {
+      "footprint": "P1_36619_Touchproof_RA",
+      "position_mm": [
+        67.026,
+        126.6
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            124.06
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            129.14
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "1",
+          "net": "CONTACT_REF",
+          "position_mm": [
+            67.026,
+            126.6
+          ],
+          "copper_mm": [
+            3.1,
+            3.1
+          ],
+          "drill_mm": [
+            2.1,
+            2.1
+          ]
+        }
+      ],
+      "candidate_mpn": "8R003661901F"
+    },
+    "J10": {
+      "footprint": "P1_36619_Touchproof_RA",
+      "position_mm": [
+        67.026,
+        134.8
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            132.26
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "",
+          "net": "",
+          "position_mm": [
+            56.866,
+            137.34
+          ],
+          "copper_mm": [
+            5.0,
+            2.9
+          ],
+          "drill_mm": [
+            4.2,
+            2.1
+          ]
+        },
+        {
+          "number": "1",
+          "net": "CONTACT_BIAS",
+          "position_mm": [
+            67.026,
+            134.8
+          ],
+          "copper_mm": [
+            3.1,
+            3.1
+          ],
+          "drill_mm": [
+            2.1,
+            2.1
+          ]
+        }
+      ],
+      "candidate_mpn": "8R003661901F"
+    },
+    "J11": {
+      "footprint": "PinHeader_2x06_P2.54mm_Vertical",
+      "position_mm": [
+        131.0,
+        88.0
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "1",
+          "net": "GND",
+          "position_mm": [
+            131.0,
+            88.0
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "10",
+          "net": "HOST_ADS_PWDN_N",
+          "position_mm": [
+            133.54,
+            98.16
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "11",
+          "net": "HOST_3V3",
+          "position_mm": [
+            131.0,
+            100.7
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "12",
+          "net": "IF_EN",
+          "position_mm": [
+            133.54,
+            100.7
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "2",
+          "net": "GND",
+          "position_mm": [
+            133.54,
+            88.0
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "3",
+          "net": "HOST_SPI_SCLK",
+          "position_mm": [
+            131.0,
+            90.54
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "4",
+          "net": "HOST_SPI_MOSI",
+          "position_mm": [
+            133.54,
+            90.54
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "5",
+          "net": "HOST_SPI_MISO",
+          "position_mm": [
+            131.0,
+            93.08
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "6",
+          "net": "HOST_ADS_CS_N",
+          "position_mm": [
+            133.54,
+            93.08
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "7",
+          "net": "HOST_ADS_DRDY_N",
+          "position_mm": [
+            131.0,
+            95.62
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "8",
+          "net": "HOST_ADS_RESET_N",
+          "position_mm": [
+            133.54,
+            95.62
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "9",
+          "net": "HOST_ADS_START",
+          "position_mm": [
+            131.0,
+            98.16
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "candidate_mpn": "61301221121"
+    },
+    "J12": {
+      "footprint": "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "position_mm": [
+        126.0,
+        65.0
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "1",
+          "net": "VBAT_RAW",
+          "position_mm": [
+            126.0,
+            65.0
+          ],
+          "copper_mm": [
+            1.7,
+            2.0
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "2",
+          "net": "GND",
+          "position_mm": [
+            128.5,
+            65.0
+          ],
+          "copper_mm": [
+            1.7,
+            2.0
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "candidate_mpn": "B2B-XH-A(LF)(SN)"
+    },
+    "SW1": {
+      "footprint": "PinHeader_1x02_P2.54mm_Vertical",
+      "position_mm": [
+        104.0,
+        60.0
+      ],
+      "rotation_degrees": 0.0,
+      "pads": [
+        {
+          "number": "1",
+          "net": "VBAT_DIODE",
+          "position_mm": [
+            104.0,
+            60.0
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "number": "2",
+          "net": "VBAT",
+          "position_mm": [
+            104.0,
+            62.54
+          ],
+          "copper_mm": [
+            1.7,
+            1.7
+          ],
+          "drill_mm": [
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "candidate_mpn": "61300211121"
+    }
+  }
+}

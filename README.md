@@ -7,6 +7,17 @@ PCB, ESP32 wireless streaming and PC-based signal processing and classification.
 There is no manufactured or body-validated Neuronic board yet. This repository
 contains genuine KiCad source, not a manufacturing release.
 
+**The target is a working eight-channel EEG instrument.** Bench testing is a
+development phase; actual acquisition and person-use readiness still need
+implementation, measurements and qualified system review. See the
+[working-system acceptance plan](docs/SYSTEM_ACCEPTANCE_PLAN.md).
+
+**November 19 follow-up:** the [independent November 17 report](docs/reviews/independent-577aad8-2026-11-17/REPORT.md)
+is incorporated, the BOM prose is corrected, and a
+[connector drawing/CAD audit](docs/CONNECTOR_VERIFICATION_A0_3.md) records what is
+known and what still needs physical evidence. Fabrication files, manufacturer
+selection and parts ordering are deferred until design confirmation.
+
 **A0.3 implements the main A0.2 review fixes:** revised analog routing,
 stronger default logic pulls, two power-off tolerant interface buffers, extra
 reference capacitance and revised socket mounting slots. Read the
