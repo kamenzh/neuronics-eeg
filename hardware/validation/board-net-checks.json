@@ -1,8 +1,8 @@
 {
-  "checks": 448,
+  "checks": 451,
   "issues": [],
   "passed": true,
-  "pcb_footprints": 113,
+  "pcb_footprints": 114,
   "mechanical_only": [
     "H1",
     "H2",

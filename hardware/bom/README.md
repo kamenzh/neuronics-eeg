@@ -1,8 +1,8 @@
 # Candidate parts — not an order release
 
-`bom-review.csv` lists each of the **109 electrical PCB components** (the four
+`bom-review.csv` lists each of the **110 electrical PCB components** (the four
 mounting-hole footprints are not purchased components). `bom-candidates.csv`
-contains **26 catalog groups and 24 distinct candidate MPNs**: some groups use
+contains **29 catalog groups and 27 distinct candidate MPNs**: some groups use
 the same MPN for different circuit roles. It records quantities, packages and manufacturer
 sources. `hardware/parts.json` is the editable catalog; the generator applies it
 to the schematic and BOM. Candidate selection is not stock or price verification.

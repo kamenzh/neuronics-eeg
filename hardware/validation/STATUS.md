@@ -1,6 +1,12 @@
-# Validation status — A0.3, 2026-11-15
+# Validation status for A0.5
 
-**A0.4 update.** See the [current circuit decisions, dimensions, budgets and checks](../../docs/A0_4_DESIGN_REVIEW.md). The A0.3 figures below describe the earlier hardware. The Sino-k leads have not been ordered.
+The saved A0.5 PCB passed KiCad 9.0.2 ERC and full DRC. DRC reported zero unconnected pads. The netlist passed 613 connectivity checks and the saved board passed 451 pad/footprint checks. The board contains 1,187 routed track segments, 124 vias and two filled zones. All nine workflow regression tests passed.
+
+The positive DC contact-fault model evaluated 138 cases with a worst unpowered AVDD of 0.2381 V rounded upward. The [electrical protection review](../../docs/A0_5_PROTECTION.md) gives the assumptions, other fault paths and required measurements. [Fabrication checks and package hashes](../fabrication/A0.5/) cover the current revision. Complete-system safety and acquisition performance still require physical tests. Sino-k connector confirmation is pending.
+
+## Historical A0.3 results and A0.4 follow-up
+
+The counts and board hash below apply to the archived A0.3 design. See the [A0.4 review](../../docs/A0_4_DESIGN_REVIEW.md) for the intermediate revision.
 
 **Routed bench-development checkpoint; not a manufacturing or body-use release.**
 No physical board was tested and no acquisition firmware was built. Reports

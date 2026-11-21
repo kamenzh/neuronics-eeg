@@ -1,5 +1,7 @@
 # A0.3 battery and controller harness — bench candidate
 
+**Current A0.5 hardware.** J11 pin 1 is ground. Pad 2 is isolated and must be keyed with no wire. See the [A0.5 electrical review](A0_5_PROTECTION.md) for current values, fault cases, cable assembly and remaining tests.
+
 **A0.4 update.** See the [current circuit decisions, dimensions, budgets and checks](A0_4_DESIGN_REVIEW.md). The A0.3 figures below describe the earlier hardware. The Sino-k leads have not been ordered.
 
 The circuit is shared-ground and **not galvanically isolated**. This is a wiring
@@ -27,7 +29,7 @@ Battery negative runs separately to Nano GND and J12.2. J12.1 is positive.
 Use short, insulated 22 AWG power pairs with strain relief and a covered battery
 holder. Put F0 close to the pack positive terminal, before the switch and branch
 split. Keep the unfused lead short and mechanically protected. Route the Nano
-power pair away from the analog inputs. J11.1/.2 provide the signal return.
+power pair away from the analog inputs. On A0.5, J11.1 provides the signal return. Leave position 2 unwired and keyed.
 SW1 on the AFE can be fitted with a shunt for normal master-switch operation;
 it is not the system master switch and does not turn the Nano off.
 
@@ -53,7 +55,7 @@ burst droop before accepting the harness. The AFE's existing fuse/diode/drop
 calculation remains separate. Verify the total F0/switch/wire drop remains inside
 its 0.1 V allowance at the measured combined load, or recompute the AFE margin.
 
-## J11 cable — incompatible with the A0.2 cable
+## J11 cable for current A0.5 builds
 
 **Pin 11 is now Nano 3V3. Pin 12 is now GPIO6 enable, not GND.** Do not reuse an
 A0.2 harness without rewiring and continuity testing. Use the square pad to
@@ -61,7 +63,8 @@ identify pin 1 and the KiCad assembly drawing to verify numbering.
 
 | J11 pin | Net | Nano label | Native GPIO | Direction at Nano |
 | --- | --- | --- | --- | --- |
-| 1, 2 | GND | GND | — | Common return |
+| 1 | GND | GND | — | Common return |
+| 2 | NC | No wire | — | Remove mating post and block cable cavity 2 |
 | 3 | HOST_SPI_SCLK | D2 | 5 | Output |
 | 4 | HOST_SPI_MOSI | D11 | 38 | Output |
 | 5 | HOST_SPI_MISO | D12 | 47 | Input |

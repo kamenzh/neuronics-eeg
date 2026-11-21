@@ -1,9 +1,9 @@
 {
-  "passed": 581,
-  "total": 581,
+  "passed": 613,
+  "total": 613,
   "checks": [
     {
-      "name": "All 109 physical components exported by KiCad",
+      "name": "All 110 physical components exported by KiCad",
       "passed": true
     },
     {
@@ -275,7 +275,7 @@
       "passed": true
     },
     {
-      "name": "J11.2 -> GND",
+      "name": "J11.2 -> NC",
       "passed": true
     },
     {
@@ -1387,6 +1387,18 @@
       "passed": true
     },
     {
+      "name": "R52 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R52.1 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "R52.2 -> GND",
+      "passed": true
+    },
+    {
       "name": "C20 footprint matches schematic",
       "passed": true
     },
@@ -1979,11 +1991,123 @@
       "passed": true
     },
     {
+      "name": "Contact series resistor R1",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R2",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R3",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R4",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R5",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R6",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R7",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R8",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R9",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R10",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R11",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R12",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R13",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R14",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R15",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R16",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R17",
+      "passed": true
+    },
+    {
+      "name": "Contact series resistor R18",
+      "passed": true
+    },
+    {
+      "name": "Input shunt C1",
+      "passed": true
+    },
+    {
+      "name": "Input shunt C2",
+      "passed": true
+    },
+    {
+      "name": "Input shunt C3",
+      "passed": true
+    },
+    {
+      "name": "Input shunt C4",
+      "passed": true
+    },
+    {
+      "name": "Input shunt C5",
+      "passed": true
+    },
+    {
+      "name": "Input shunt C6",
+      "passed": true
+    },
+    {
+      "name": "Input shunt C7",
+      "passed": true
+    },
+    {
+      "name": "Input shunt C8",
+      "passed": true
+    },
+    {
+      "name": "Input shunt C9",
+      "passed": true
+    },
+    {
       "name": "R50 regulator discharge path",
       "passed": true
     },
     {
       "name": "R51 regulator discharge path",
+      "passed": true
+    },
+    {
+      "name": "R52 regulator discharge path",
       "passed": true
     },
     {
@@ -2060,6 +2184,14 @@
     },
     {
       "name": "Clamp D9: A1=GND / K2=5V / midpoint=signal",
+      "passed": true
+    },
+    {
+      "name": "J11 key pin is an explicit NC",
+      "passed": true
+    },
+    {
+      "name": "F1 updated PTC",
       "passed": true
     },
     {
@@ -2224,10 +2356,6 @@
     },
     {
       "name": "Controller header J11.1",
-      "passed": true
-    },
-    {
-      "name": "Controller header J11.2",
       "passed": true
     },
     {

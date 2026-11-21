@@ -1,5 +1,7 @@
 # Bench test plan
 
+**Current A0.5 hardware.** J11 pin 1 is ground. Pad 2 is isolated and must be keyed with no wire. See the [A0.5 electrical review](A0_5_PROTECTION.md) for current values, fault cases, cable assembly and remaining tests.
+
 **No person connected for any test in this document.** Internal self-test,
 external signal generators, USB and oscilloscopes are bench tools here, not
 equipment to attach while wearing electrodes. Record actual data; an unchecked

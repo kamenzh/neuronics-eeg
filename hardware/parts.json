@@ -1,27 +1,9 @@
 {
-  "revision": "A0.4",
+  "revision": "A0.5",
   "purpose": "Candidate PCB components; no stock, price or manufacturing approval implied",
   "groups": [
     {
       "references": [
-        "R1",
-        "R2",
-        "R3",
-        "R4",
-        "R5",
-        "R6",
-        "R7",
-        "R8",
-        "R9",
-        "R10",
-        "R11",
-        "R12",
-        "R13",
-        "R14",
-        "R15",
-        "R16",
-        "R17",
-        "R18",
         "R36",
         "R37",
         "R38",
@@ -74,26 +56,6 @@
       "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07499KL",
       "status": "candidate_not_order_release",
       "review": "Check pulse/fault stress and excess noise in final analog design"
-    },
-    {
-      "references": [
-        "C1",
-        "C2",
-        "C3",
-        "C4",
-        "C5",
-        "C6",
-        "C7",
-        "C8",
-        "C9"
-      ],
-      "mpn": "C0805C102J5GACTU",
-      "manufacturer": "KEMET",
-      "specification": "1nF, 5%, 50V, C0G, 0805",
-      "source": "https://search.kemet.com/component-documentation/download/specsheet/C0805C102J5GACTU",
-      "status": "candidate_not_order_release",
-      "value": "1nF C0G",
-      "review": "Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"
     },
     {
       "references": [
@@ -271,11 +233,12 @@
       "references": [
         "F1"
       ],
-      "mpn": "MF-MSMF010-2",
+      "mpn": "MF-MSMF014-2",
       "manufacturer": "Bourns",
-      "specification": "1812, 60V, 0.10A hold, 0.30A trip at 23C",
+      "specification": "1812, 60 V, 0.14 A hold / 0.34 A trip at 23 C",
       "source": "https://www.bourns.com/docs/product-datasheets/mf-msmf.pdf",
-      "status": "candidate_not_order_release"
+      "status": "candidate_not_order_release",
+      "value": "140mA_HOLD"
     },
     {
       "references": [
@@ -296,7 +259,8 @@
       "manufacturer": "Wurth Elektronik",
       "specification": "2x6, 2.54mm, vertical male header",
       "source": "https://www.we-online.com/components/products/datasheet/61301221121.pdf",
-      "status": "candidate_not_order_release"
+      "status": "candidate_not_order_release",
+      "review": "A0.5 keyed harness: pad 2 isolated. Remove exposed pin 2 and plug matching socket cavity. Only pin 1 is signal ground."
     },
     {
       "references": [
@@ -377,7 +341,6 @@
     },
     {
       "references": [
-        "R50",
         "R51"
       ],
       "mpn": "RC0805FR-071KL",
@@ -387,6 +350,79 @@
       "status": "candidate_not_order_release",
       "value": "1k",
       "review": "Passive regulator-output discharge load."
+    },
+    {
+      "references": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18"
+      ],
+      "mpn": "RT0805BRD07100KL",
+      "manufacturer": "Yageo",
+      "specification": "100 kohm, 0.1%, 25 ppm/K, 0805",
+      "source": "https://www.yageogroup.com/component-documentation/download/specsheet/RT0805BRD07100KL",
+      "status": "candidate_not_order_release",
+      "review": "Two independent series resistors per contact.",
+      "value": "100k"
+    },
+    {
+      "references": [
+        "R50",
+        "R52"
+      ],
+      "mpn": "RC0805FR-07499RL",
+      "manufacturer": "Yageo",
+      "specification": "499 ohm, 1%, 0805, 0.125 W",
+      "source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-07499RL",
+      "status": "candidate_not_order_release",
+      "value": "499R",
+      "review": "Parallel analog rail bleeds, individually rated for the full rail voltage."
+    },
+    {
+      "references": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "mpn": "C0805C471F5GACTU",
+      "manufacturer": "KEMET",
+      "specification": "470 pF, 1%, 50 V, C0G, 0805",
+      "source": "https://yageogroup.com/download/specsheet/C0805C471F5GACTU",
+      "status": "candidate_not_order_release",
+      "value": "470pF C0G",
+      "review": "C9 is tuned separately for the shared reference. Verify actual common-mode response."
+    },
+    {
+      "references": [
+        "C9"
+      ],
+      "mpn": "C0805C331F5GACTU",
+      "manufacturer": "KEMET",
+      "specification": "330 pF, 1%, 50 V, C0G, 0805",
+      "source": "https://yageogroup.com/download/specsheet/C0805C331F5GACTU",
+      "status": "candidate_not_order_release",
+      "value": "330pF C0G",
+      "review": "C9 is tuned separately for the shared reference. Verify actual common-mode response."
     }
   ]
 }

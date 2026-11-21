@@ -24,12 +24,12 @@ The source of truth is `hardware/interface.json`. Board labels are not raw GPIO
 numbers. ESP-IDF uses the GPIO column. If using Arduino's Nano ESP32 board profile,
 select native GPIO numbering or translate deliberately; do not mix the two schemes.
 
-**A0.3 cable change: pin 11 = Nano 3V3, pin 12 = GPIO6 enable (formerly GND).**
+**A0.5 cable: pin 1 is the signal return, pin 2 is a blocked key cavity. Previous change: pin 11 = Nano 3V3, pin 12 = GPIO6 enable (formerly GND).**
 
 | J11 pin | Net | Nano label | Native GPIO |
 | --- | --- | --- | --- |
 | 1 | GND | GND | — |
-| 2 | GND | GND | — |
+| 2 | NC, keyed | No wire or mating contact | — |
 | 3 | HOST_SPI_SCLK | D2 | 5 |
 | 4 | HOST_SPI_MOSI | D11 | 38 |
 | 5 | HOST_SPI_MISO | D12 | 47 |

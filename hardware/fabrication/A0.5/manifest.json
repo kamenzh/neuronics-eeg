@@ -1,0 +1,30 @@
+{
+  "revision": "A0.5",
+  "tool": "KiCad 9.0.2",
+  "source_sha256": {
+    "hardware/kicad/inputs.kicad_sch": "534734d8699dac8f487a830ae7d055beba205f7c338125b3e51cf26d763bb0e0",
+    "hardware/kicad/interface.kicad_sch": "b89477b2576f2dd89cd91b9e3f639e01e9d756fa24942b6e0b4ffe1d6cab580c",
+    "hardware/kicad/neuronic.kicad_pcb": "3e22da14cb6ec7fafa9863948aa802ddc6d9ecb2198c21ddf5f4b601b9114fc4",
+    "hardware/kicad/neuronic.kicad_pro": "392da52f6ea15aa0a57a239109e3cc201cf8e5443310ec78bf1c974f6c3a0000",
+    "hardware/kicad/neuronic.kicad_sch": "683b036958cdc6b6cca15b98e5b3023b920312d17eb89646b2582fa0385893ae",
+    "hardware/kicad/power.kicad_sch": "b48c5fa36403c3b0c2b82e269927c98d9a878a998fef4527a0cbcf53dba00c97"
+  },
+  "archives": {
+    "Neuronic-A0.5-bare-board-review.zip": "6c95ed6294f626c8085507f150a5a801014573480e8f8d18c3373a8bbf65baf5",
+    "Neuronic-A0.5-hand-assembly.zip": "6e34756c4f516ed578bc10d65fcfbf80220ff7930a087f33fcf1be0bc4f258d3"
+  },
+  "cam_files": {
+    "neuronic-B_Cu.gbr": "78e669e6b1d7a7d5ff9fd7a1845614596f45ab0e648db4b537b690cfe1802e23",
+    "neuronic-B_Mask.gbr": "89ad974711c5ba18931bd36b0549e7b6868a781983c94e332e59c7591e45d145",
+    "neuronic-B_Silkscreen.gbr": "f7d49fd03ce0e91aec0fddd3c01e02becbc581a69d3dfc491eb717d62be8c164",
+    "neuronic-Edge_Cuts.gbr": "784259beded873116a67c4d90ded87e10dc053d88d3c562c02cd32d82f87ca78",
+    "neuronic-F_Cu.gbr": "dcb902e0f1e36b6b88f2fef14998c50e99dac6cba86f3b4d59ed2a79adfa66e2",
+    "neuronic-F_Mask.gbr": "c0983d4f179e5c3f582b8d8b22998b80902075031024e42f583e9ee12f68d663",
+    "neuronic-F_Silkscreen.gbr": "5bac0ab6097b19075b4bfdc12e769dd068f1c5f0f95249cb9f45cc5726533b6f",
+    "neuronic-In1_Cu.gbr": "61063553f9612a0d1ba68256d7d727f2be7a04bddc39d42e9d3faa188419f4ae",
+    "neuronic-In2_Cu.gbr": "cf59467aeeed9367f0fb0922641fe864201fd48fe2a9350fa471c905ea19c68f",
+    "neuronic-NPTH.drl": "54de44f95b92dd319c3e655402a9f1f91559f1d475bd7a48569b64f8a8d83f97",
+    "neuronic-PTH.drl": "7c6543b25fc6f7f36865d915c03a3fbb5a295aeab866526fd7b01a7e6d546754",
+    "Shop-notes.txt": "c8a8ee14bd313040715db4914b42c0acb75cc910669ac2481bc129210638e202"
+  }
+}

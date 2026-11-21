@@ -22,7 +22,7 @@ def check(name,condition):
     if not condition: print('FAIL:',name)
 
 parts={p['ref']:p for p in src['parts']}
-check('All 109 physical components exported by KiCad',set(parts)==set(comps) and len(parts)==109)
+check('All 110 physical components exported by KiCad',set(parts)==set(comps) and len(parts)==110)
 for p in parts.values():
     check(f"{p['ref']} footprint matches schematic",comps[p['ref']].findtext('footprint')==p['fp'])
     for pin,net in p['nets'].items():
@@ -46,14 +46,20 @@ for ref,rail in [('U2','AVDD_5V'),('U3','DVDD_3V3')]:
     for pin,net in {'1':'VBAT','2':'GND','3':'VBAT','4':'GND','5':rail}.items():
         check(f'TI fixed TPS7A24 DBV contract {ref}.{pin}',actual.get((ref,pin))==net)
     check(f'{ref} uses SOT-23-5 footprint',comps[ref].findtext('footprint')=='Neuronic:SOT-23-5')
-for ref, rail in [('R50','AVDD_5V'),('R51','DVDD_3V3')]:
-    check(f'{ref} regulator discharge path', comps[ref].findtext('value')=='1k' and actual.get((ref,'1'))==rail and actual.get((ref,'2'))=='GND')
+for i in range(1,19):
+    check(f'Contact series resistor R{i}', comps[f'R{i}'].findtext('value') == '100k')
+for i in range(1,10):
+    check(f'Input shunt C{i}', comps[f'C{i}'].findtext('value') == ('470pF C0G' if i<9 else '330pF C0G'))
+for ref, rail in [('R50','AVDD_5V'),('R51','DVDD_3V3'),('R52','AVDD_5V')]:
+    check(f'{ref} regulator discharge path', comps[ref].findtext('value')==('1k' if ref=='R51' else '499R') and actual.get((ref,'1'))==rail and actual.get((ref,'2'))=='GND')
 for i in range(1,11):
     check(f'J{i} selected touchproof jack footprint',comps[f'J{i}'].findtext('footprint')=='Neuronic:P1_36619_Touchproof_RA')
 for i in range(1,10):
     check(f'Clamp D{i}: A1=GND / K2=5V / midpoint=signal',
       actual.get((f'D{i}','1'))=='GND' and actual.get((f'D{i}','2'))=='AVDD_5V' and
       actual.get((f'D{i}','3'))==(f'EEG{i}' if i<9 else 'REF_FILTERED'))
+check('J11 key pin is an explicit NC', actual.get(('J11','2'),'').startswith('unconnected-'))
+check('F1 updated PTC', comps['F1'].findtext('value')=='140mA_HOLD' and parts['F1']['mpn']=='MF-MSMF014-2')
 check('J11 pin 11 powers buffer host ports only',actual.get(('J11','11'))=='HOST_3V3')
 check('J11 pin 12 is interface enable',actual.get(('J11','12'))=='IF_EN')
 buffer_contract={

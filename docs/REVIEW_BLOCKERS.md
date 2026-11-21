@@ -1,5 +1,7 @@
 # Remaining hardware and system work — A0.3
 
+**Current A0.5 hardware.** J11 pin 1 is ground. Pad 2 is isolated and must be keyed with no wire. See the [A0.5 electrical review](A0_5_PROTECTION.md) for current values, fault cases, cable assembly and remaining tests.
+
 **A0.4 update.** See the [current circuit decisions, dimensions, budgets and checks](A0_4_DESIGN_REVIEW.md). The A0.3 figures below describe the earlier hardware. The Sino-k leads have not been ordered.
 
 Updated 2026-11-19. IR numbers below refer specifically to the

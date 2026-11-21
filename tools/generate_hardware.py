@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'hardware/kicad'
 DATA = Path(os.environ.get('KICAD_DATA', '/usr/share/kicad'))
 NS = uuid.UUID('b314a604-c394-4051-a09e-9626c22cb806')
-REVISION = 'A0.4'
+REVISION = 'A0.5'
 CAD_REVISION = REVISION.split('-')[0]
 def uid(key): return str(uuid.uuid5(NS, key))
 def q(s): return json.dumps(str(s))
@@ -227,7 +227,7 @@ def make_design():
     root=Sheet('neuronic','01 - ADS1299 core and SPI interface',1)
     inp=Sheet('inputs','02 - Eight channels and shared reference',2)
     power=Sheet('power','03 - Battery regulators, decoupling and bias',3)
-    root.text('NEURONIC / A0.4 BENCH REVIEW',20,18,2)
+    root.text('NEURONIC / A0.5 BENCH REVIEW',20,18,2)
     root.text('8 synchronous channels, 10 contacts. One ADS1299 contains both PGAs and ADCs.',20,25)
     root.text('Filtered reference is shared by all negative inputs. MISC1=0x00; CHnSET.SRB2=0. SRB1/SRB2 are NC.',20,32)
     nets={}
@@ -241,10 +241,10 @@ def make_design():
         '60':None,'61':'BIASINV','62':'GND','63':'BIASOUT','64':None})
     root.part('U1','Neuronic:ADS1299IPAG','ADS1299IPAG',155,105,nets,'Neuronic:TQFP-64_10x10mm_P0.5mm',xy=(95,90),note='TI SBAS499C pin functions, unipolar 5 V, internal clock/reference',mpn='ADS1299IPAG')
     root.part('J11','Connector_Generic:Conn_02x06_Odd_Even','MCU_3V3_IO_ONLY',312,65,
-        {'1':'GND','2':'GND','3':'HOST_SPI_SCLK','4':'HOST_SPI_MOSI','5':'HOST_SPI_MISO','6':'HOST_ADS_CS_N',
+        {'1':'GND','2':None,'3':'HOST_SPI_SCLK','4':'HOST_SPI_MOSI','5':'HOST_SPI_MISO','6':'HOST_ADS_CS_N',
          '7':'HOST_ADS_DRDY_N','8':'HOST_ADS_RESET_N','9':'HOST_ADS_START','10':'HOST_ADS_PWDN_N','11':'HOST_3V3','12':'IF_EN'},
         'Neuronic:PinHeader_2x06_P2.54mm_Vertical',xy=(130,86),note='A0.3: pin11 host 3V3, pin12 GPIO6 interface enable. Common GND; power-off protection is not isolation.')
-    root.text('J11: board-neutral connector; not an ESP32 dev-board footprint.',258,93)
+    root.text('J11: pin 1 GND; pin 2 NC, clipped key post and blocked cable cavity.',258,93)
     root.text('Waveshare ESP32-S3-Nano; see hardware/interface.json.',258,100)
     root.text('External controller power/USB can join GND. No body-connected tests.',258,107)
     rnum=30
@@ -257,7 +257,7 @@ def make_design():
         sheet_y=39.37 if name!='interface' else 132.08
         root.items.append(f'(sheet (at {x} {sheet_y}) (size 170.18 12.7) (fields_autoplaced) (stroke (width 0.1524) (type default)) (fill (color 0 0 0 0)) (uuid {uid("sheet-"+name)}) (property "Sheetname" {q(title)} (at {x} {sheet_y-1.37} 0) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "{name}.kicad_sch" (at {x} {sheet_y+13.63} 0) (effects (font (size 1.27 1.27)) (justify left top))) (instances (project "neuronic" (path "/{root.id}" (page "{SHEETS[name].page}")))))')
 
-    io.text('A0.4 / POWER-OFF BUFFERING - SHARED GROUND, NOT GALVANIC ISOLATION',18,18,1.8)
+    io.text('A0.5 / POWER-OFF BUFFERING - SHARED GROUND, NOT GALVANIC ISOLATION',18,18,1.8)
     io.text('J11.11 = Nano 3V3. J11.12 = GPIO6 / D3, enable HIGH only after supplies settle. Default disabled.',18,26)
     io.text('Two TXU0304PW devices: six host outputs and two ADC outputs. Series resistors at all buffer outputs; verify placement and edges.',18,33)
     for j,(ref,host,afe) in enumerate([
@@ -278,8 +278,8 @@ def make_design():
     io.text('No USB or grounded instruments during any future body-connected use. No body use approved for this prototype.',18,275)
 
     inp.text('INPUT NETWORKS: P1 36619 touchproof jacks; verify physical cable fit before fabrication',18,16,1.8)
-    inp.text('20k series + 1nF shunt: nominal RF pole 7.96 kHz. This is not the EEG bandpass. ADS1299 digital filter is still required.',18,24)
-    inp.text('BAV199 + 20k: bounded low-energy bench faults only. Power-off backfeeding / body fault currents are not qualified.',18,31)
+    inp.text('Each recording input: 2 x 100k with 470pF. Shared reference: 2 x 100k with 330pF.',18,24)
+    inp.text('BAV199 + 200k: bounded low-energy bench faults only. Power-off backfeeding / body fault currents are not qualified.',18,31)
     for i in range(9):
         y=47+i*24
         out=f'EEG{i+1}' if i<8 else 'REF_FILTERED'
@@ -287,9 +287,9 @@ def make_design():
         mid=f'INPUT_RMID_{i+1}'
         inp.text(f'CH{i+1}' if i<8 else 'REFERENCE',18,y-5)
         inp.part(f'J{i+1}','Connector_Generic:Conn_01x01',f'CH{i+1}_TOUCHPROOF' if i<8 else 'REF_TOUCHPROOF',45,y,{'1':raw},'Neuronic:P1_36619_Touchproof_RA',angle=180,xy=(67.026,61+(7-i if i<8 else 8)*8.2),note='P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required',labels=False)
-        inp.part(f'R{i*2+1}','Device:R','10k',95,y,{'1':raw,'2':mid},RFP,angle=90,xy=(64,65+i*7),rot=90,note='Input series resistor, 1%',labels=False)
-        inp.part(f'R{i*2+2}','Device:R','10k',160,y,{'1':mid,'2':out},RFP,angle=90,xy=(69,65+i*7),rot=90,note='Input series resistor, 1%',labels=False)
-        inp.part(f'C{i+1}','Device:C','1nF C0G',225,y+6.35,{'1':out,'2':'GND'},CFP,xy=(78,65+i*7),note='Matched C0G RF filter capacitor',labels=False)
+        inp.part(f'R{i*2+1}','Device:R','100k',95,y,{'1':raw,'2':mid},RFP,angle=90,xy=(64,65+i*7),rot=90,note='Input series resistor, 0.1%',labels=False)
+        inp.part(f'R{i*2+2}','Device:R','100k',160,y,{'1':mid,'2':out},RFP,angle=90,xy=(69,65+i*7),rot=90,note='Input series resistor, 0.1%',labels=False)
+        inp.part(f'C{i+1}','Device:C','470pF C0G' if i<8 else '330pF C0G',225,y+6.35,{'1':out,'2':'GND'},CFP,xy=(78,65+i*7),note='Matched C0G RF filter capacitor',labels=False)
         inp.wire((50.08,y),(91.19,y));inp.local_label(raw,56,y)
         inp.wire((98.81,y),(156.19,y));inp.local_label(mid,112,y)
         inp.wire((163.81,y),(225,y));inp.wire((225,y),(245,y));inp.label(out,245,y,0)
@@ -297,18 +297,19 @@ def make_design():
         inp.items.append(f'(junction (at {n(grid(225))} {n(grid(y))}) (diameter 0) (color 0 0 0 0) (uuid {inp.ident()}))')
         inp.wire((225,y+10.16),(225,y+13.97));inp.wire((225,y+13.97),(235.16,y+13.97));inp.label('GND',235.16,y+13.97,0)
         inp.part(f'D{i+1}','Neuronic:BAV199','BAV199',335,y,{'1':'GND','2':'AVDD_5V','3':out},'Neuronic:SOT-23',xy=(73.5,65+i*7),note='Clamp candidate only; not certified input protection',mpn='BAV199,215')
-    inp.text('All 9 paths use the same nominal RC values; routing and parasitics still need review for common-mode rejection.',18,272)
+    inp.text('Reference capacitance compensates typical shared ADC loading. Measure actual CMRR with the final cable.',18,272)
 
     power.text('BENCH POWER: 6 x AA alkaline candidate (7.2-10.2 V review envelope) -> 5 V / 3.3 V LDOs',18,17,1.8)
     power.text('ESP32 has its own supply. No onboard charging. Regulators must not supply ESP32 radio current.',18,25)
     power.part('J12','Connector_Generic:Conn_01x02','BATTERY_6AA',40,48,{'1':'VBAT_RAW','2':'GND'},'Neuronic:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical',xy=(132,66),note='Candidate keyed battery connector; pin 1 positive, pin 2 ground; verify harness polarity')
-    power.part('F1','Device:Polyfuse','100mA_HOLD',100,48,{'1':'VBAT_RAW','2':'VBAT_FUSED'},'Neuronic:Fuse_1812_4532Metric',xy=(124,60),note='MF-MSMF010-2: 60V, 100mA hold / 300mA trip at 23C; AFE branch only, not body protection',mpn='MF-MSMF010-2')
+    power.part('F1','Device:Polyfuse','140mA_HOLD',100,48,{'1':'VBAT_RAW','2':'VBAT_FUSED'},'Neuronic:Fuse_1812_4532Metric',xy=(124,60),note='MF-MSMF014-2: 60V, 140mA hold / 340mA trip at 23C; AFE branch only, not body protection',mpn='MF-MSMF014-2')
     power.part('D10','Device:D_Schottky','SS14',162,48,{'2':'VBAT_FUSED','1':'VBAT_DIODE'},'Neuronic:D_SMA',xy=(117,60),note='Reverse polarity protection; verify thermal behavior',mpn='SS14')
     power.part('SW1','Switch:SW_SPST','POWER',220,48,{'1':'VBAT_DIODE','2':'VBAT'},'Neuronic:PinHeader_1x02_P2.54mm_Vertical',xy=(109,60),note='Header for an offboard SPST switch')
     for i,(value,rail) in enumerate([('TPS7A2450DBVR','AVDD_5V'),('TPS7A2433DBVR','DVDD_3V3')]):
         power.part(f'U{i+2}','Neuronic:TPS7A24_FIXED',value,95+155*i,86,{'1':'VBAT','2':'GND','3':'VBAT','4':'GND','5':rail},'Neuronic:SOT-23-5',xy=(109+i*14,72),note='Fixed DBV: 1 VIN, 2 GND, 3 EN=VIN, 4 NC=GND, 5 VOUT',mpn=value)
-    add_rc(power,'R50','1k','AVDD_5V','GND',330,86,(116.5,70),rot=90)
+    add_rc(power,'R50','499R','AVDD_5V','GND',330,86,(116.5,70),rot=90)
     add_rc(power,'R51','1k','DVDD_3V3','GND',380,86,(130.5,72),rot=90)
+    add_rc(power,'R52','499R','AVDD_5V','GND',330,106,(116.5,74.2),rot=-90)
     power.part('FLG1','power:PWR_FLAG','PWR_FLAG',330,48,{'1':'VBAT'})
     power.part('FLG2','power:PWR_FLAG','PWR_FLAG',365,48,{'1':'GND'})
     bypass=[('C20','4.7uF 25V','VBAT','GND',(109,66)),('C21','1uF','AVDD_5V','GND',(109,78)),
@@ -519,7 +520,7 @@ def board():
     # Board is deliberately a placement checkpoint: no inferred tracks or planes.
     for a,c in [((50,55),(138,55)),((138,55),(138,145)),((138,145),(50,145)),((50,145),(50,55))]:
         s=k.PCB_SHAPE();s.SetShape(k.SHAPE_T_SEGMENT);s.SetLayer(k.Edge_Cuts);s.SetWidth(k.FromMM(0.05));s.SetStart(k.VECTOR2I(k.FromMM(a[0]),k.FromMM(a[1])));s.SetEnd(k.VECTOR2I(k.FromMM(c[0]),k.FromMM(c[1])));b.Add(s)
-    for text,xy,size in [('NEURONIC A0.4 / BENCH', (109,138),1),('BENCH ONLY / NO BODY CONNECTION',(93,141),0.9),('8CH + REF + BIAS',(70,138),0.8),('MCU 3V3 IO',(128,112),0.8)]:
+    for text,xy,size in [('NEURONIC A0.5 / BENCH', (109,138),1),('BENCH ONLY / NO BODY CONNECTION',(93,141),0.9),('8CH + REF + BIAS',(70,138),0.8),('MCU 3V3 IO',(128,112),0.8),('J11 KEY 2',(131,84.9),0.8),('J12 1+ 2-',(127.2,59.3),0.8)]:
         t=k.PCB_TEXT(b);t.SetText(text);t.SetPosition(k.VECTOR2I(k.FromMM(xy[0]),k.FromMM(xy[1])));t.SetTextSize(k.VECTOR2I(k.FromMM(size),k.FromMM(size)));t.SetTextThickness(k.FromMM(0.12));t.SetLayer(k.F_SilkS);b.Add(t)
     for num,xy in enumerate([(87,58),(135,58),(135,142),(73,142)]):
         fp=k.FootprintLoad(str(OUT/'Neuronic.pretty'),'MountingHole_2.7mm_M2.5');fp.SetReference(f'H{num+1}');fp.SetValue('M2.5');fp.SetFPID(k.LIB_ID('Neuronic','MountingHole_2.7mm_M2.5'));fp.SetPosition(k.VECTOR2I(k.FromMM(xy[0]),k.FromMM(xy[1])));fp.Reference().SetVisible(False);fp.Value().SetVisible(False);fp.SetAttributes(k.FP_BOARD_ONLY | k.FP_EXCLUDE_FROM_BOM | k.FP_EXCLUDE_FROM_POS_FILES);b.Add(fp)

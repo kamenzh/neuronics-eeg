@@ -1,5 +1,7 @@
 # Workspace and upstream
 
+**Current A0.5 hardware.** J11 pin 1 is ground. Pad 2 is isolated and must be keyed with no wire. See the [A0.5 electrical review](A0_5_PROTECTION.md) for current values, fault cases, cable assembly and remaining tests.
+
 Upstream: https://github.com/kamenzh/neuronics-eeg
 
 A0.3 implements the main circuit/layout changes proposed in the independent

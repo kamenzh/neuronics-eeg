@@ -1,6 +1,6 @@
 Reference,Value,Footprint,Proposed_MPN,Review_notes
 U1,ADS1299IPAG,Neuronic:TQFP-64_10x10mm_P0.5mm,ADS1299IPAG,"TI SBAS499C pin functions, unipolar 5 V, internal clock/reference; ADS1299IPAGR is reel packaging of the same PAG device; one IC total"
-J11,MCU_3V3_IO_ONLY,Neuronic:PinHeader_2x06_P2.54mm_Vertical,61301221121,"A0.3: pin11 host 3V3, pin12 GPIO6 interface enable. Common GND; power-off protection is not isolation."
+J11,MCU_3V3_IO_ONLY,Neuronic:PinHeader_2x06_P2.54mm_Vertical,61301221121,"A0.3: pin11 host 3V3, pin12 GPIO6 interface enable. Common GND; power-off protection is not isolation.; A0.5 keyed harness: pad 2 isolated. Remove exposed pin 2 and plug matching socket cavity. Only pin 1 is signal ground."
 R30,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,10k gives <=0.122V for 12uA combined ADC/buffer leakage; verify host startup and rail sequencing
 R31,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,10k gives <=0.122V for 12uA combined ADC/buffer leakage; verify host startup and rail sequencing
 R32,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,10k gives <=0.122V for 12uA combined ADC/buffer leakage; verify host startup and rail sequencing
@@ -28,58 +28,59 @@ C44,100nF 50V,Neuronic:C_0805_2012Metric,C0805C104K5RACTU,Verify effective capac
 C45,100nF 50V,Neuronic:C_0805_2012Metric,C0805C104K5RACTU,Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient
 C46,100nF 50V,Neuronic:C_0805_2012Metric,C0805C104K5RACTU,Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient
 J1,CH1_TOUCHPROOF,Neuronic:P1_36619_Touchproof_RA,8R003661901F,"P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required."
-R1,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-R2,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-C1,1nF C0G,Neuronic:C_0805_2012Metric,C0805C102J5GACTU,Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient
+R1,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+R2,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+C1,470pF C0G,Neuronic:C_0805_2012Metric,C0805C471F5GACTU,Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.
 D1,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution
 J2,CH2_TOUCHPROOF,Neuronic:P1_36619_Touchproof_RA,8R003661901F,"P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required."
-R3,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-R4,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-C2,1nF C0G,Neuronic:C_0805_2012Metric,C0805C102J5GACTU,Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient
+R3,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+R4,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+C2,470pF C0G,Neuronic:C_0805_2012Metric,C0805C471F5GACTU,Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.
 D2,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution
 J3,CH3_TOUCHPROOF,Neuronic:P1_36619_Touchproof_RA,8R003661901F,"P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required."
-R5,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-R6,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-C3,1nF C0G,Neuronic:C_0805_2012Metric,C0805C102J5GACTU,Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient
+R5,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+R6,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+C3,470pF C0G,Neuronic:C_0805_2012Metric,C0805C471F5GACTU,Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.
 D3,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution
 J4,CH4_TOUCHPROOF,Neuronic:P1_36619_Touchproof_RA,8R003661901F,"P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required."
-R7,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-R8,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-C4,1nF C0G,Neuronic:C_0805_2012Metric,C0805C102J5GACTU,Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient
+R7,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+R8,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+C4,470pF C0G,Neuronic:C_0805_2012Metric,C0805C471F5GACTU,Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.
 D4,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution
 J5,CH5_TOUCHPROOF,Neuronic:P1_36619_Touchproof_RA,8R003661901F,"P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required."
-R9,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-R10,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-C5,1nF C0G,Neuronic:C_0805_2012Metric,C0805C102J5GACTU,Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient
+R9,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+R10,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+C5,470pF C0G,Neuronic:C_0805_2012Metric,C0805C471F5GACTU,Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.
 D5,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution
 J6,CH6_TOUCHPROOF,Neuronic:P1_36619_Touchproof_RA,8R003661901F,"P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required."
-R11,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-R12,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-C6,1nF C0G,Neuronic:C_0805_2012Metric,C0805C102J5GACTU,Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient
+R11,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+R12,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+C6,470pF C0G,Neuronic:C_0805_2012Metric,C0805C471F5GACTU,Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.
 D6,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution
 J7,CH7_TOUCHPROOF,Neuronic:P1_36619_Touchproof_RA,8R003661901F,"P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required."
-R13,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-R14,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-C7,1nF C0G,Neuronic:C_0805_2012Metric,C0805C102J5GACTU,Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient
+R13,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+R14,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+C7,470pF C0G,Neuronic:C_0805_2012Metric,C0805C471F5GACTU,Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.
 D7,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution
 J8,CH8_TOUCHPROOF,Neuronic:P1_36619_Touchproof_RA,8R003661901F,"P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required."
-R15,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-R16,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-C8,1nF C0G,Neuronic:C_0805_2012Metric,C0805C102J5GACTU,Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient
+R15,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+R16,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+C8,470pF C0G,Neuronic:C_0805_2012Metric,C0805C471F5GACTU,Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.
 D8,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution
 J9,REF_TOUCHPROOF,Neuronic:P1_36619_Touchproof_RA,8R003661901F,"P1 36619-50 rev H; pad 1 signal, two unnumbered isolated dummy legs; physical sample fit required; A0.3: signal finished hole 2.10mm; isolated dummy plated slots 4.20x2.10mm. See tolerance worksheet; sample fit and fabricator slot confirmation required."
-R17,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-R18,10k,Neuronic:R_0805_2012Metric,RC0805FR-0710KL,"Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design"
-C9,1nF C0G,Neuronic:C_0805_2012Metric,C0805C102J5GACTU,Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient
+R17,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+R18,100k,Neuronic:R_0805_2012Metric,RT0805BRD07100KL,"Input series resistor, 0.1%; Two independent series resistors per contact."
+C9,330pF C0G,Neuronic:C_0805_2012Metric,C0805C331F5GACTU,Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.
 D9,BAV199,Neuronic:SOT-23,"BAV199,215",Clamp candidate only; not certified input protection; Not a proven ADS1299 absolute-maximum clamp or body-protection solution
 J12,BATTERY_6AA,Neuronic:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,B2B-XH-A(LF)(SN),"Candidate keyed battery connector; pin 1 positive, pin 2 ground; verify harness polarity; Harness requires matching XHP-2 housing and wire-appropriate contacts; do not infer polarity from wire color"
-F1,100mA_HOLD,Neuronic:Fuse_1812_4532Metric,MF-MSMF010-2,"MF-MSMF010-2: 60V, 100mA hold / 300mA trip at 23C; AFE branch only, not body protection"
+F1,140mA_HOLD,Neuronic:Fuse_1812_4532Metric,MF-MSMF014-2,"MF-MSMF014-2: 60V, 140mA hold / 340mA trip at 23C; AFE branch only, not body protection"
 D10,SS14,Neuronic:D_SMA,SS14-E3/61T,Reverse polarity protection; verify thermal behavior; Check forward drop at AFE load and reverse leakage
 SW1,POWER,Neuronic:PinHeader_1x02_P2.54mm_Vertical,61300211121,"Header for an offboard SPST switch; This MPN buys the PCB header, not the external switch"
 U2,TPS7A2450DBVR,Neuronic:SOT-23-5,TPS7A2450DBVR,"Fixed DBV: 1 VIN, 2 GND, 3 EN=VIN, 4 NC=GND, 5 VOUT; Pin 1 IN, 2 GND, 3 EN tied to IN, 4 NC tied GND for thermal performance, 5 OUT. 2% combined accuracy budget. Measure rail noise/startup/reverse-current behavior."
 U3,TPS7A2433DBVR,Neuronic:SOT-23-5,TPS7A2433DBVR,"Fixed DBV: 1 VIN, 2 GND, 3 EN=VIN, 4 NC=GND, 5 VOUT; Pin 1 IN, 2 GND, 3 EN tied to IN, 4 NC tied GND for thermal performance, 5 OUT. 2% combined accuracy budget. Measure rail noise/startup/reverse-current behavior."
-R50,1k,Neuronic:R_0805_2012Metric,RC0805FR-071KL,Passive regulator-output discharge load.
+R50,499R,Neuronic:R_0805_2012Metric,RC0805FR-07499RL,"Parallel analog rail bleeds, individually rated for the full rail voltage."
 R51,1k,Neuronic:R_0805_2012Metric,RC0805FR-071KL,Passive regulator-output discharge load.
+R52,499R,Neuronic:R_0805_2012Metric,RC0805FR-07499RL,"Parallel analog rail bleeds, individually rated for the full rail voltage."
 C20,4.7uF 25V,Neuronic:C_0805_2012Metric,C0805C475K3RACTU,"Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"
 C21,4.7uF 25V,Neuronic:C_0805_2012Metric,C0805C475K3RACTU,"Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"
 C22,4.7uF 25V,Neuronic:C_0805_2012Metric,C0805C475K3RACTU,"Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"

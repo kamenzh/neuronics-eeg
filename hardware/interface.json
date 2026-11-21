@@ -1,5 +1,5 @@
 {
-  "revision": "A0.4",
+  "revision": "A0.5",
   "controller": {
     "model": "Waveshare ESP32-S3-Nano",
     "owned": true,
@@ -40,9 +40,9 @@
     },
     {
       "pin": 2,
-      "net": "GND",
+      "net": null,
       "gpio": null,
-      "board_label": "GND"
+      "board_label": "KEY / no wire"
     },
     {
       "pin": 3,
@@ -128,7 +128,7 @@
       "reference": 1,
       "bias": 1
     },
-    "connector_status": "1.5 mm DIN 42802 assumed; P1 36619 candidate. Revised tolerance-based slots; physical cable fit and fabricator confirmation remain required.",
+    "connector_status": "Sino-k contacted by Kamen. Awaiting response for SGE117DN.",
     "pcb_connectors": "J1-J8 channels; J9 reference; J10 bias. P1 36619 right-angle PCB jacks; isolated dummy legs.",
     "socket_mpn": "8R003661901F",
     "socket_drawing": "https://catalog.p1tec.com/dash50/36619_dash50.pdf"
@@ -139,14 +139,14 @@
       7.2,
       10.2
     ],
-    "afe_analog_budget_ma": 36,
+    "afe_analog_budget_ma": 52,
     "afe_digital_budget_ma": 14,
     "controller_input": "Separate protected battery branch to Nano VIN; Nano 3V3 to J11.11 supplies buffer A ports only",
     "nano_documented_vin_range_v": [
       6,
       21
     ],
-    "status": "See docs/POWER_HARNESS_A0_3.md; star battery branches and master switch, bench-only. Physical droop/thermal/power-order tests pending.",
+    "status": "A0.5 assumes 52 mA analog and 14 mA digital. See docs/A0_5_PROTECTION.md.",
     "recording_concept": "Self-contained battery and wireless; no USB, charger or mains-connected instruments when electrodes are on a person; only after final safety review",
     "ldo_analog": "TPS7A2450DBVR",
     "ldo_digital": "TPS7A2433DBVR"
@@ -163,6 +163,13 @@
     "enable_active_high": true,
     "default_disabled": true,
     "galvanic_isolation": false,
-    "note": "A0.3 cable change: pin11 host 3V3; pin12 GPIO6 enable, no longer GND. Pins1/2 common GND. Host supply powers only buffer A ports."
+    "note": "Pin 1 GND. Pin 2 keyed NC. Pin 11 HOST_3V3, pin 12 IF_EN."
+  },
+  "service_interface": {
+    "carrier": "removable Nano",
+    "recording": "battery only; USB port captured behind fixed insulating wall",
+    "service": "withdraw carrier to break ALL power, return and GPIO connections before USB can be inserted",
+    "j11": "remove exposed pin 2, block socket cavity 2, no wire at 2; use a captive guide to prevent offset mating",
+    "physical_verification": "pending"
   }
 }

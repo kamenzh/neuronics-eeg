@@ -22,8 +22,8 @@
       "passed": true
     }
   ],
-  "tracks": 1185,
-  "vias": 123,
+  "tracks": 1187,
+  "vias": 124,
   "zones": [
     {
       "net": "GND",
@@ -37,7 +37,7 @@
     }
   ],
   "tracks_by_layer": {
-    "F.Cu": 724,
+    "F.Cu": 726,
     "In2.Cu": 146,
     "B.Cu": 315
   },
@@ -92,7 +92,7 @@
       "x_max_mm": 114.9125
     },
     "AVDD_5V": {
-      "track_length_mm": 218.241,
+      "track_length_mm": 220.616,
       "via_count": 2,
       "layers": [
         "B.Cu",
@@ -386,8 +386,8 @@
       "x_max_mm": 94.3375
     },
     "GND": {
-      "track_length_mm": 83.086,
-      "via_count": 73,
+      "track_length_mm": 84.273,
+      "via_count": 74,
       "layers": [
         "F.Cu"
       ],

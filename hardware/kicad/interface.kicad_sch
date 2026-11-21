@@ -1,5 +1,5 @@
 (kicad_sch (version 20250114) (generator eeschema) (uuid daf2cb48-0ad5-5394-b260-e30d50af7104) (paper "A3")
-(title_block (title "04 - Power-off protected host interface") (date "2026-11-21") (rev "A0.4") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))
+(title_block (title "04 - Power-off protected host interface") (date "2026-11-21") (rev "A0.5") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))
 (lib_symbols
 (symbol "Device:C"
 		(pin_numbers
@@ -387,7 +387,7 @@
 		(embedded_fonts no)
 	)
 )
-(text "A0.4 / POWER-OFF BUFFERING - SHARED GROUND, NOT GALVANIC ISOLATION" (at 18 18 0) (effects (font (size 1.8 1.8)) (justify left)) (uuid 59c59f7e-4101-5fce-ac39-98918429a4f0))
+(text "A0.5 / POWER-OFF BUFFERING - SHARED GROUND, NOT GALVANIC ISOLATION" (at 18 18 0) (effects (font (size 1.8 1.8)) (justify left)) (uuid 59c59f7e-4101-5fce-ac39-98918429a4f0))
 (text "J11.11 = Nano 3V3. J11.12 = GPIO6 / D3, enable HIGH only after supplies settle. Default disabled." (at 18 26 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid 718d3747-a560-5299-ba06-6c804fb3ccbf))
 (text "Two TXU0304PW devices: six host outputs and two ADC outputs. Series resistors at all buffer outputs; verify placement and edges." (at 18 33 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid 310e1099-4c61-506f-80f6-472431a19212))
 (symbol (lib_id "Neuronic:TXU0304_PW") (at 100.33 85.09 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid e20f37c9-ae4e-5fb8-b84a-7c503bd4b2c7)

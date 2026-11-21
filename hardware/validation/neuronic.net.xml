@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/3a280c114457/neuronic/hardware/kicad/neuronic.kicad_sch</source>
-    <date>2026-11-21T09:52:14+0000</date>
+    <date>2026-11-21T11:02:37+0000</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
-    <textvar name="REVISION">A0.4</textvar>
+    <textvar name="REVISION">A0.5</textvar>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>01 - ADS1299 core and SPI interface</title>
         <company>Neuronic</company>
-        <rev>A0.4</rev>
+        <rev>A0.5</rev>
         <date>2026-11-21</date>
         <source>neuronic.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
@@ -27,7 +27,7 @@
       <title_block>
         <title>02 - Eight channels and shared reference</title>
         <company>Neuronic</company>
-        <rev>A0.4</rev>
+        <rev>A0.5</rev>
         <date>2026-11-21</date>
         <source>inputs.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
@@ -45,7 +45,7 @@
       <title_block>
         <title>03 - Battery regulators, decoupling and bias</title>
         <company>Neuronic</company>
-        <rev>A0.4</rev>
+        <rev>A0.5</rev>
         <date>2026-11-21</date>
         <source>power.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
@@ -63,7 +63,7 @@
       <title_block>
         <title>04 - Power-off protected host interface</title>
         <company>Neuronic</company>
-        <rev>A0.4</rev>
+        <rev>A0.5</rev>
         <date>2026-11-21</date>
         <source>interface.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
@@ -312,16 +312,16 @@
       <tstamps>1d78f5a4-670b-5d43-b66d-e817a944dd9d</tstamps>
     </comp>
     <comp ref="C1">
-      <value>1nF C0G</value>
+      <value>470pF C0G</value>
       <footprint>Neuronic:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">C0805C102J5GACTU</field>
+        <field name="Candidate_MPN">C0805C471F5GACTU</field>
         <field name="Footprint">Neuronic:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Candidate_MPN" value="C0805C102J5GACTU"/>
+      <property name="Candidate_MPN" value="C0805C471F5GACTU"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -330,16 +330,16 @@
       <tstamps>815d2fd3-3b7d-5202-a857-bae8691b26b2</tstamps>
     </comp>
     <comp ref="C2">
-      <value>1nF C0G</value>
+      <value>470pF C0G</value>
       <footprint>Neuronic:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">C0805C102J5GACTU</field>
+        <field name="Candidate_MPN">C0805C471F5GACTU</field>
         <field name="Footprint">Neuronic:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Candidate_MPN" value="C0805C102J5GACTU"/>
+      <property name="Candidate_MPN" value="C0805C471F5GACTU"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -348,16 +348,16 @@
       <tstamps>62b842e7-d8a3-5c41-ac2c-5a62ca04eea9</tstamps>
     </comp>
     <comp ref="C3">
-      <value>1nF C0G</value>
+      <value>470pF C0G</value>
       <footprint>Neuronic:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">C0805C102J5GACTU</field>
+        <field name="Candidate_MPN">C0805C471F5GACTU</field>
         <field name="Footprint">Neuronic:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Candidate_MPN" value="C0805C102J5GACTU"/>
+      <property name="Candidate_MPN" value="C0805C471F5GACTU"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -366,16 +366,16 @@
       <tstamps>2c3967b0-2c85-5ca8-91fb-e300ee822df2</tstamps>
     </comp>
     <comp ref="C4">
-      <value>1nF C0G</value>
+      <value>470pF C0G</value>
       <footprint>Neuronic:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">C0805C102J5GACTU</field>
+        <field name="Candidate_MPN">C0805C471F5GACTU</field>
         <field name="Footprint">Neuronic:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Candidate_MPN" value="C0805C102J5GACTU"/>
+      <property name="Candidate_MPN" value="C0805C471F5GACTU"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -384,16 +384,16 @@
       <tstamps>d6300a51-a9f0-5109-8da8-c80f323db6c5</tstamps>
     </comp>
     <comp ref="C5">
-      <value>1nF C0G</value>
+      <value>470pF C0G</value>
       <footprint>Neuronic:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">C0805C102J5GACTU</field>
+        <field name="Candidate_MPN">C0805C471F5GACTU</field>
         <field name="Footprint">Neuronic:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Candidate_MPN" value="C0805C102J5GACTU"/>
+      <property name="Candidate_MPN" value="C0805C471F5GACTU"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -402,16 +402,16 @@
       <tstamps>52b5258a-0b43-5347-82b3-132e03045332</tstamps>
     </comp>
     <comp ref="C6">
-      <value>1nF C0G</value>
+      <value>470pF C0G</value>
       <footprint>Neuronic:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">C0805C102J5GACTU</field>
+        <field name="Candidate_MPN">C0805C471F5GACTU</field>
         <field name="Footprint">Neuronic:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Candidate_MPN" value="C0805C102J5GACTU"/>
+      <property name="Candidate_MPN" value="C0805C471F5GACTU"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -420,16 +420,16 @@
       <tstamps>410a0c5e-bcee-5187-b48c-e7f0a8796f01</tstamps>
     </comp>
     <comp ref="C7">
-      <value>1nF C0G</value>
+      <value>470pF C0G</value>
       <footprint>Neuronic:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">C0805C102J5GACTU</field>
+        <field name="Candidate_MPN">C0805C471F5GACTU</field>
         <field name="Footprint">Neuronic:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Candidate_MPN" value="C0805C102J5GACTU"/>
+      <property name="Candidate_MPN" value="C0805C471F5GACTU"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -438,16 +438,16 @@
       <tstamps>f4ebee2d-45eb-5b40-96b2-ae9db9edbc9f</tstamps>
     </comp>
     <comp ref="C8">
-      <value>1nF C0G</value>
+      <value>470pF C0G</value>
       <footprint>Neuronic:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">C0805C102J5GACTU</field>
+        <field name="Candidate_MPN">C0805C471F5GACTU</field>
         <field name="Footprint">Neuronic:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Candidate_MPN" value="C0805C102J5GACTU"/>
+      <property name="Candidate_MPN" value="C0805C471F5GACTU"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -456,16 +456,16 @@
       <tstamps>5054c6db-6ae8-5ec7-94c8-21df2d70b609</tstamps>
     </comp>
     <comp ref="C9">
-      <value>1nF C0G</value>
+      <value>330pF C0G</value>
       <footprint>Neuronic:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">C0805C102J5GACTU</field>
+        <field name="Candidate_MPN">C0805C331F5GACTU</field>
         <field name="Footprint">Neuronic:C_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Candidate_MPN" value="C0805C102J5GACTU"/>
+      <property name="Candidate_MPN" value="C0805C331F5GACTU"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -780,16 +780,16 @@
       <tstamps>89b7be3b-a9f6-559d-b86c-fd4e862bc899</tstamps>
     </comp>
     <comp ref="R1">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -798,16 +798,16 @@
       <tstamps>1da75846-d3f5-5bab-a143-a5f9e58bbfc6</tstamps>
     </comp>
     <comp ref="R2">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -816,16 +816,16 @@
       <tstamps>39337229-bb4e-5d28-b186-99cabe1cd319</tstamps>
     </comp>
     <comp ref="R3">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -834,16 +834,16 @@
       <tstamps>e7fa5676-b46f-5260-afa2-983682bc7e0f</tstamps>
     </comp>
     <comp ref="R4">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -852,16 +852,16 @@
       <tstamps>9c736448-46d7-5ed8-b3a9-33584deb3b01</tstamps>
     </comp>
     <comp ref="R5">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -870,16 +870,16 @@
       <tstamps>0feb846c-0761-5e52-bc5d-dcaf09316a81</tstamps>
     </comp>
     <comp ref="R6">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -888,16 +888,16 @@
       <tstamps>a62dad11-8661-521d-9cee-efba542e75f8</tstamps>
     </comp>
     <comp ref="R7">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -906,16 +906,16 @@
       <tstamps>dcdb46be-b923-592e-8ad9-4f6a5e1f76df</tstamps>
     </comp>
     <comp ref="R8">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -924,16 +924,16 @@
       <tstamps>7254eed4-a350-5443-a812-50e724d770d8</tstamps>
     </comp>
     <comp ref="R9">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -942,16 +942,16 @@
       <tstamps>ab9e2a1d-f406-5fc3-b067-bff58eb7d9af</tstamps>
     </comp>
     <comp ref="R10">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -960,16 +960,16 @@
       <tstamps>b403a41e-62e6-5b02-9d47-8c0d543b0f29</tstamps>
     </comp>
     <comp ref="R11">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -978,16 +978,16 @@
       <tstamps>64c1a9ce-e480-5ee4-853f-0d3ae36f83f2</tstamps>
     </comp>
     <comp ref="R12">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -996,16 +996,16 @@
       <tstamps>7a1aaa8d-80a5-5874-9869-135c6129fc80</tstamps>
     </comp>
     <comp ref="R13">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1014,16 +1014,16 @@
       <tstamps>28873bf5-fc6e-5f39-85f4-1e778ccf0cb4</tstamps>
     </comp>
     <comp ref="R14">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1032,16 +1032,16 @@
       <tstamps>e9778dc3-1a4a-553b-b6a9-3e14bd368ed8</tstamps>
     </comp>
     <comp ref="R15">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1050,16 +1050,16 @@
       <tstamps>4023ac2e-0145-59bc-b5f1-ed12643167e2</tstamps>
     </comp>
     <comp ref="R16">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1068,16 +1068,16 @@
       <tstamps>fd945c21-ae1d-5914-9933-5bf0bb4b6060</tstamps>
     </comp>
     <comp ref="R17">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1086,16 +1086,16 @@
       <tstamps>60b25c42-edb0-5e0e-b7b9-58c39cce6db0</tstamps>
     </comp>
     <comp ref="R18">
-      <value>10k</value>
+      <value>100k</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-0710KL</field>
+        <field name="Candidate_MPN">RT0805BRD07100KL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-0710KL"/>
+      <property name="Candidate_MPN" value="RT0805BRD07100KL"/>
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1554,16 +1554,16 @@
       <tstamps>18df0d1e-ac74-53b4-b0ac-e11882612cab</tstamps>
     </comp>
     <comp ref="F1">
-      <value>100mA_HOLD</value>
+      <value>140mA_HOLD</value>
       <footprint>Neuronic:Fuse_1812_4532Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">MF-MSMF010-2</field>
+        <field name="Candidate_MPN">MF-MSMF014-2</field>
         <field name="Footprint">Neuronic:Fuse_1812_4532Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
-      <property name="Candidate_MPN" value="MF-MSMF010-2"/>
+      <property name="Candidate_MPN" value="MF-MSMF014-2"/>
       <property name="Sheetname" value="Power / bypass / bias drive"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="resettable fuse PTC PPTC polyfuse polyswitch"/>
@@ -1662,16 +1662,16 @@
       <tstamps>de6aa466-42f6-590b-8b27-9824cb0a695a</tstamps>
     </comp>
     <comp ref="R50">
-      <value>1k</value>
+      <value>499R</value>
       <footprint>Neuronic:R_0805_2012Metric</footprint>
       <fields>
-        <field name="Candidate_MPN">RC0805FR-071KL</field>
+        <field name="Candidate_MPN">RC0805FR-07499RL</field>
         <field name="Footprint">Neuronic:R_0805_2012Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Candidate_MPN" value="RC0805FR-071KL"/>
+      <property name="Candidate_MPN" value="RC0805FR-07499RL"/>
       <property name="Sheetname" value="Power / bypass / bias drive"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1696,6 +1696,24 @@
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
       <tstamps>7bf4adee-b6c8-52c6-a17c-8f14ea8702cd</tstamps>
+    </comp>
+    <comp ref="R52">
+      <value>499R</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">RC0805FR-07499RL</field>
+        <field name="Footprint">Neuronic:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Candidate_MPN" value="RC0805FR-07499RL"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>ee4852e2-b5e0-56d5-9439-7997b85b710f</tstamps>
     </comp>
     <comp ref="SW1">
       <value>POWER</value>
@@ -2384,6 +2402,7 @@
       <node ref="D8" pin="2" pinfunction="K2" pintype="passive"/>
       <node ref="D9" pin="2" pinfunction="K2" pintype="passive"/>
       <node ref="R50" pin="1" pintype="passive"/>
+      <node ref="R52" pin="1" pintype="passive"/>
       <node ref="U1" pin="19" pinfunction="AVDD" pintype="power_in"/>
       <node ref="U1" pin="21" pinfunction="AVDD" pintype="power_in"/>
       <node ref="U1" pin="22" pinfunction="AVDD" pintype="power_in"/>
@@ -2593,7 +2612,6 @@
       <node ref="D8" pin="1" pinfunction="A1" pintype="passive"/>
       <node ref="D9" pin="1" pinfunction="A1" pintype="passive"/>
       <node ref="J11" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="J11" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="J12" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="R30" pin="2" pintype="passive"/>
       <node ref="R31" pin="2" pintype="passive"/>
@@ -2608,6 +2626,7 @@
       <node ref="R49" pin="2" pintype="passive"/>
       <node ref="R50" pin="2" pintype="passive"/>
       <node ref="R51" pin="2" pintype="passive"/>
+      <node ref="R52" pin="2" pintype="passive"/>
       <node ref="U1" pin="20" pinfunction="AVSS" pintype="power_in"/>
       <node ref="U1" pin="23" pinfunction="AVSS" pintype="power_in"/>
       <node ref="U1" pin="25" pinfunction="VREFN" pintype="input"/>
@@ -2796,37 +2815,40 @@
       <node ref="C42" pin="1" pintype="passive"/>
       <node ref="U1" pin="24" pinfunction="VREFP" pintype="bidirectional"/>
     </net>
-    <net code="75" name="unconnected-(U1-BIASREF-Pad60)" class="Default">
+    <net code="75" name="unconnected-(J11-Pin_2-Pad2)" class="Default">
+      <node ref="J11" pin="2" pinfunction="Pin_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(U1-BIASREF-Pad60)" class="Default">
       <node ref="U1" pin="60" pinfunction="BIASREF" pintype="input+no_connect"/>
     </net>
-    <net code="76" name="unconnected-(U1-CLK-Pad37)" class="Default">
+    <net code="77" name="unconnected-(U1-CLK-Pad37)" class="Default">
       <node ref="U1" pin="37" pinfunction="CLK" pintype="input+no_connect"/>
     </net>
-    <net code="77" name="unconnected-(U1-NC-Pad27)" class="Default">
+    <net code="78" name="unconnected-(U1-NC-Pad27)" class="Default">
       <node ref="U1" pin="27" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="78" name="unconnected-(U1-NC-Pad29)" class="Default">
+    <net code="79" name="unconnected-(U1-NC-Pad29)" class="Default">
       <node ref="U1" pin="29" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="79" name="unconnected-(U1-RESERVED-Pad64)" class="Default">
+    <net code="80" name="unconnected-(U1-RESERVED-Pad64)" class="Default">
       <node ref="U1" pin="64" pinfunction="RESERVED" pintype="no_connect"/>
     </net>
-    <net code="80" name="unconnected-(U1-SRB1-Pad17)" class="Default">
+    <net code="81" name="unconnected-(U1-SRB1-Pad17)" class="Default">
       <node ref="U1" pin="17" pinfunction="SRB1" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="81" name="unconnected-(U1-SRB2-Pad18)" class="Default">
+    <net code="82" name="unconnected-(U1-SRB2-Pad18)" class="Default">
       <node ref="U1" pin="18" pinfunction="SRB2" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="82" name="unconnected-(U4-NC-Pad6)" class="Default">
+    <net code="83" name="unconnected-(U4-NC-Pad6)" class="Default">
       <node ref="U4" pin="6" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="83" name="unconnected-(U4-NC-Pad9)" class="Default">
+    <net code="84" name="unconnected-(U4-NC-Pad9)" class="Default">
       <node ref="U4" pin="9" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="84" name="unconnected-(U5-NC-Pad6)" class="Default">
+    <net code="85" name="unconnected-(U5-NC-Pad6)" class="Default">
       <node ref="U5" pin="6" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="85" name="unconnected-(U5-NC-Pad9)" class="Default">
+    <net code="86" name="unconnected-(U5-NC-Pad9)" class="Default">
       <node ref="U5" pin="9" pinfunction="NC" pintype="no_connect"/>
     </net>
   </nets>

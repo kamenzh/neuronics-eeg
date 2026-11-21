@@ -1,5 +1,5 @@
 {
-  "revision": "A0.4",
+  "revision": "A0.5",
   "state": "source-netlist-and-placement-record; see saved PCB and validation/STATUS.md",
   "parts": [
     {
@@ -89,7 +89,7 @@
       "value": "MCU_3V3_IO_ONLY",
       "nets": {
         "1": "GND",
-        "2": "GND",
+        "2": null,
         "3": "HOST_SPI_SCLK",
         "4": "HOST_SPI_MOSI",
         "5": "HOST_SPI_MISO",
@@ -107,7 +107,7 @@
         88
       ],
       "rot": 0,
-      "note": "A0.3: pin11 host 3V3, pin12 GPIO6 interface enable. Common GND; power-off protection is not isolation.",
+      "note": "A0.3: pin11 host 3V3, pin12 GPIO6 interface enable. Common GND; power-off protection is not isolation.; A0.5 keyed harness: pad 2 isolated. Remove exposed pin 2 and plug matching socket cavity. Only pin 1 is signal ground.",
       "mpn": "61301221121",
       "sheet": "neuronic",
       "uuid": "63e5f4a2-b11b-511b-ada5-91834f363141"
@@ -651,7 +651,7 @@
     {
       "ref": "R1",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "CONTACT_1",
         "2": "INPUT_RMID_1"
@@ -662,15 +662,15 @@
         118.39999999999999
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "1da75846-d3f5-5bab-a143-a5f9e58bbfc6"
     },
     {
       "ref": "R2",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "INPUT_RMID_1",
         "2": "EEG1"
@@ -681,15 +681,15 @@
         118.39999999999999
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "39337229-bb4e-5d28-b186-99cabe1cd319"
     },
     {
       "ref": "C1",
       "lib": "Device:C",
-      "value": "1nF C0G",
+      "value": "470pF C0G",
       "nets": {
         "1": "EEG1",
         "2": "GND"
@@ -700,8 +700,8 @@
         105
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
-      "mpn": "C0805C102J5GACTU",
+      "note": "Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.",
+      "mpn": "C0805C471F5GACTU",
       "sheet": "inputs",
       "uuid": "815d2fd3-3b7d-5202-a857-bae8691b26b2"
     },
@@ -746,7 +746,7 @@
     {
       "ref": "R3",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "CONTACT_2",
         "2": "INPUT_RMID_2"
@@ -757,15 +757,15 @@
         110.19999999999999
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "e7fa5676-b46f-5260-afa2-983682bc7e0f"
     },
     {
       "ref": "R4",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "INPUT_RMID_2",
         "2": "EEG2"
@@ -776,15 +776,15 @@
         110.19999999999999
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "9c736448-46d7-5ed8-b3a9-33584deb3b01"
     },
     {
       "ref": "C2",
       "lib": "Device:C",
-      "value": "1nF C0G",
+      "value": "470pF C0G",
       "nets": {
         "1": "EEG2",
         "2": "GND"
@@ -795,8 +795,8 @@
         101
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
-      "mpn": "C0805C102J5GACTU",
+      "note": "Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.",
+      "mpn": "C0805C471F5GACTU",
       "sheet": "inputs",
       "uuid": "62b842e7-d8a3-5c41-ac2c-5a62ca04eea9"
     },
@@ -841,7 +841,7 @@
     {
       "ref": "R5",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "CONTACT_3",
         "2": "INPUT_RMID_3"
@@ -852,15 +852,15 @@
         102.0
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "0feb846c-0761-5e52-bc5d-dcaf09316a81"
     },
     {
       "ref": "R6",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "INPUT_RMID_3",
         "2": "EEG3"
@@ -871,15 +871,15 @@
         102.0
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "a62dad11-8661-521d-9cee-efba542e75f8"
     },
     {
       "ref": "C3",
       "lib": "Device:C",
-      "value": "1nF C0G",
+      "value": "470pF C0G",
       "nets": {
         "1": "EEG3",
         "2": "GND"
@@ -890,8 +890,8 @@
         97
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
-      "mpn": "C0805C102J5GACTU",
+      "note": "Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.",
+      "mpn": "C0805C471F5GACTU",
       "sheet": "inputs",
       "uuid": "2c3967b0-2c85-5ca8-91fb-e300ee822df2"
     },
@@ -936,7 +936,7 @@
     {
       "ref": "R7",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "CONTACT_4",
         "2": "INPUT_RMID_4"
@@ -947,15 +947,15 @@
         93.8
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "dcdb46be-b923-592e-8ad9-4f6a5e1f76df"
     },
     {
       "ref": "R8",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "INPUT_RMID_4",
         "2": "EEG4"
@@ -966,15 +966,15 @@
         93.8
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "7254eed4-a350-5443-a812-50e724d770d8"
     },
     {
       "ref": "C4",
       "lib": "Device:C",
-      "value": "1nF C0G",
+      "value": "470pF C0G",
       "nets": {
         "1": "EEG4",
         "2": "GND"
@@ -985,8 +985,8 @@
         93
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
-      "mpn": "C0805C102J5GACTU",
+      "note": "Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.",
+      "mpn": "C0805C471F5GACTU",
       "sheet": "inputs",
       "uuid": "d6300a51-a9f0-5109-8da8-c80f323db6c5"
     },
@@ -1031,7 +1031,7 @@
     {
       "ref": "R9",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "CONTACT_5",
         "2": "INPUT_RMID_5"
@@ -1042,15 +1042,15 @@
         85.6
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "ab9e2a1d-f406-5fc3-b067-bff58eb7d9af"
     },
     {
       "ref": "R10",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "INPUT_RMID_5",
         "2": "EEG5"
@@ -1061,15 +1061,15 @@
         85.6
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "b403a41e-62e6-5b02-9d47-8c0d543b0f29"
     },
     {
       "ref": "C5",
       "lib": "Device:C",
-      "value": "1nF C0G",
+      "value": "470pF C0G",
       "nets": {
         "1": "EEG5",
         "2": "GND"
@@ -1080,8 +1080,8 @@
         89
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
-      "mpn": "C0805C102J5GACTU",
+      "note": "Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.",
+      "mpn": "C0805C471F5GACTU",
       "sheet": "inputs",
       "uuid": "52b5258a-0b43-5347-82b3-132e03045332"
     },
@@ -1126,7 +1126,7 @@
     {
       "ref": "R11",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "CONTACT_6",
         "2": "INPUT_RMID_6"
@@ -1137,15 +1137,15 @@
         77.4
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "64c1a9ce-e480-5ee4-853f-0d3ae36f83f2"
     },
     {
       "ref": "R12",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "INPUT_RMID_6",
         "2": "EEG6"
@@ -1156,15 +1156,15 @@
         77.4
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "7a1aaa8d-80a5-5874-9869-135c6129fc80"
     },
     {
       "ref": "C6",
       "lib": "Device:C",
-      "value": "1nF C0G",
+      "value": "470pF C0G",
       "nets": {
         "1": "EEG6",
         "2": "GND"
@@ -1175,8 +1175,8 @@
         85
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
-      "mpn": "C0805C102J5GACTU",
+      "note": "Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.",
+      "mpn": "C0805C471F5GACTU",
       "sheet": "inputs",
       "uuid": "410a0c5e-bcee-5187-b48c-e7f0a8796f01"
     },
@@ -1221,7 +1221,7 @@
     {
       "ref": "R13",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "CONTACT_7",
         "2": "INPUT_RMID_7"
@@ -1232,15 +1232,15 @@
         69.2
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "28873bf5-fc6e-5f39-85f4-1e778ccf0cb4"
     },
     {
       "ref": "R14",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "INPUT_RMID_7",
         "2": "EEG7"
@@ -1251,15 +1251,15 @@
         69.2
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "e9778dc3-1a4a-553b-b6a9-3e14bd368ed8"
     },
     {
       "ref": "C7",
       "lib": "Device:C",
-      "value": "1nF C0G",
+      "value": "470pF C0G",
       "nets": {
         "1": "EEG7",
         "2": "GND"
@@ -1270,8 +1270,8 @@
         81
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
-      "mpn": "C0805C102J5GACTU",
+      "note": "Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.",
+      "mpn": "C0805C471F5GACTU",
       "sheet": "inputs",
       "uuid": "f4ebee2d-45eb-5b40-96b2-ae9db9edbc9f"
     },
@@ -1316,7 +1316,7 @@
     {
       "ref": "R15",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "CONTACT_8",
         "2": "INPUT_RMID_8"
@@ -1327,15 +1327,15 @@
         61.0
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "4023ac2e-0145-59bc-b5f1-ed12643167e2"
     },
     {
       "ref": "R16",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "INPUT_RMID_8",
         "2": "EEG8"
@@ -1346,15 +1346,15 @@
         61.0
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "fd945c21-ae1d-5914-9933-5bf0bb4b6060"
     },
     {
       "ref": "C8",
       "lib": "Device:C",
-      "value": "1nF C0G",
+      "value": "470pF C0G",
       "nets": {
         "1": "EEG8",
         "2": "GND"
@@ -1365,8 +1365,8 @@
         77
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
-      "mpn": "C0805C102J5GACTU",
+      "note": "Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.",
+      "mpn": "C0805C471F5GACTU",
       "sheet": "inputs",
       "uuid": "5054c6db-6ae8-5ec7-94c8-21df2d70b609"
     },
@@ -1411,7 +1411,7 @@
     {
       "ref": "R17",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "CONTACT_REF",
         "2": "INPUT_RMID_9"
@@ -1422,15 +1422,15 @@
         126.6
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "60b25c42-edb0-5e0e-b7b9-58c39cce6db0"
     },
     {
       "ref": "R18",
       "lib": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "INPUT_RMID_9",
         "2": "REF_FILTERED"
@@ -1441,15 +1441,15 @@
         126.6
       ],
       "rot": 0,
-      "note": "Input series resistor, 1%; Check pulse/fault stress and excess noise in final analog design",
-      "mpn": "RC0805FR-0710KL",
+      "note": "Input series resistor, 0.1%; Two independent series resistors per contact.",
+      "mpn": "RT0805BRD07100KL",
       "sheet": "inputs",
       "uuid": "41f78dfc-b49f-580c-81dc-6a3924597179"
     },
     {
       "ref": "C9",
       "lib": "Device:C",
-      "value": "1nF C0G",
+      "value": "330pF C0G",
       "nets": {
         "1": "REF_FILTERED",
         "2": "GND"
@@ -1460,8 +1460,8 @@
         113
       ],
       "rot": 0,
-      "note": "Matched C0G RF filter capacitor; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient",
-      "mpn": "C0805C102J5GACTU",
+      "note": "Matched C0G RF filter capacitor; C9 is tuned separately for the shared reference. Verify actual common-mode response.",
+      "mpn": "C0805C331F5GACTU",
       "sheet": "inputs",
       "uuid": "a0bca73f-9668-5c0e-a69f-d654482479c5"
     },
@@ -1507,7 +1507,7 @@
     {
       "ref": "F1",
       "lib": "Device:Polyfuse",
-      "value": "100mA_HOLD",
+      "value": "140mA_HOLD",
       "nets": {
         "1": "VBAT_RAW",
         "2": "VBAT_FUSED"
@@ -1518,8 +1518,8 @@
         60
       ],
       "rot": 0,
-      "note": "MF-MSMF010-2: 60V, 100mA hold / 300mA trip at 23C; AFE branch only, not body protection",
-      "mpn": "MF-MSMF010-2",
+      "note": "MF-MSMF014-2: 60V, 140mA hold / 340mA trip at 23C; AFE branch only, not body protection",
+      "mpn": "MF-MSMF014-2",
       "sheet": "power",
       "uuid": "be43af05-a17f-5546-9934-1ec0f57e5057"
     },
@@ -1608,7 +1608,7 @@
     {
       "ref": "R50",
       "lib": "Device:R",
-      "value": "1k",
+      "value": "499R",
       "nets": {
         "1": "AVDD_5V",
         "2": "GND"
@@ -1619,8 +1619,8 @@
         70
       ],
       "rot": 90,
-      "note": "Passive regulator-output discharge load.",
-      "mpn": "RC0805FR-071KL",
+      "note": "Parallel analog rail bleeds, individually rated for the full rail voltage.",
+      "mpn": "RC0805FR-07499RL",
       "sheet": "power",
       "uuid": "d13b03e3-48f6-5352-bb1d-3ed0d6a47fe3"
     },
@@ -1642,6 +1642,25 @@
       "mpn": "RC0805FR-071KL",
       "sheet": "power",
       "uuid": "7bf4adee-b6c8-52c6-a17c-8f14ea8702cd"
+    },
+    {
+      "ref": "R52",
+      "lib": "Device:R",
+      "value": "499R",
+      "nets": {
+        "1": "AVDD_5V",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        116.5,
+        74.2
+      ],
+      "rot": -90,
+      "note": "Parallel analog rail bleeds, individually rated for the full rail voltage.",
+      "mpn": "RC0805FR-07499RL",
+      "sheet": "power",
+      "uuid": "ee4852e2-b5e0-56d5-9439-7997b85b710f"
     },
     {
       "ref": "C20",

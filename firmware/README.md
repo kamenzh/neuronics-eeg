@@ -1,5 +1,7 @@
 # ESP32 acquisition firmware — implementation contract for A0.3
 
+**Current A0.5 hardware.** J11 pin 1 is ground. Pad 2 is isolated and must be keyed with no wire. See the [A0.5 electrical review](../docs/A0_5_PROTECTION.md) for current values, fault cases, cable assembly and remaining tests.
+
 **Implementation and hardware testing remain pending.** The selected board is
 Kamen's Waveshare ESP32-S3-Nano. This directory is a specification, not runnable
 firmware. See [the wiring/power sequence](../docs/POWER_HARNESS_A0_3.md).

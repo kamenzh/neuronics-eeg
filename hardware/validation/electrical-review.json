@@ -1,5 +1,5 @@
 {
-  "revision": "A0.4",
+  "revision": "A0.5",
   "manufacture_ready": false,
   "body_connection_approved": false,
   "sources": {
@@ -14,8 +14,8 @@
       7.2,
       10.2
     ],
-    "afe_current_a": 0.05,
-    "fuse_resistance_upper_ohm": 15,
+    "afe_current_a": 0.066,
+    "ptc_R1Max_ohm_reference_condition": 6.5,
     "diode_drop_allowance_v": 0.5,
     "harness_switch_drop_allowance_v": 0.1,
     "ldo_total_output_error_budget": 0.02,
@@ -23,7 +23,7 @@
     "capacitor_positive_tolerance": 0.1,
     "capacitor_positive_temperature_allowance": 0.15,
     "low_energy_dc_fault_voltage_v": 10.2,
-    "resistor_negative_tolerance": 0.01,
+    "electrode_resistor_analysis_allowance": 0.02,
     "thermal_model": "TI JEDEC board, not this layout; physical thermal measurements required"
   },
   "calculations": {
@@ -56,7 +56,7 @@
       "C41": 0.1
     },
     "dvdd_nominal_uF": 7.0,
-    "afe_ldo_min_input_v_conditional": 5.8500000000000005,
+    "afe_ldo_min_input_v_conditional": 6.171,
     "analog_output_range_v": [
       4.9,
       5.1
@@ -65,44 +65,45 @@
       3.234,
       3.3659999999999997
     ],
-    "analog_min_input_margin_over_nominal_plus_0_5_v": 0.35000000000000053,
-    "analog_dropout_margin_v_at_high_output": 0.5000000000000009,
-    "analog_ldo_power_w_upper_ignoring_input_drops": 0.19079999999999994,
+    "analog_min_input_margin_over_nominal_plus_0_5_v": 0.6710000000000003,
+    "analog_dropout_margin_v_at_high_output": 0.8210000000000006,
+    "analog_ldo_power_w_upper_ignoring_input_drops": 0.27559999999999996,
     "digital_ldo_power_w_upper_ignoring_input_drops": 0.09752399999999999,
-    "analog_temp_rise_c_using_datasheet_board": 32.01623999999999,
+    "analog_temp_rise_c_using_datasheet_board": 46.24567999999999,
     "digital_temp_rise_c_using_datasheet_board": 16.364527199999998,
     "raw_bytes_s": 6750,
     "frame_read_us_ideal": 216.0,
     "sample_period_us": 4000.0,
     "ideal_differential_full_scale_v": 0.375,
-    "bounded_10_2v_input_fault_current_ma": 0.5151515151515151,
-    "bounded_10_2v_input_fault_one_resistor_short_ma": 1.0303030303030303,
-    "bounded_10_2v_remaining_input_resistor_power_w": 0.010509090909090909,
-    "internal_5_1v_to_contact_20k_path_ua": 257.57575757575756,
-    "internal_5_1v_to_contact_one_resistor_short_ua": 515.1515151515151,
-    "bias_5_1v_through_two_resistors_ua": 5.161838829173498,
-    "bias_5_1v_one_resistor_short_ua": 10.323677658346996,
-    "two_20k_paths_resistor_noise_uv_rms_100hz_300k": 0.25743183952262005,
+    "bounded_10_2v_input_fault_current_ma": 0.052040816326530605,
+    "bounded_10_2v_input_fault_one_resistor_short_ma": 0.10408163265306121,
+    "bounded_10_2v_remaining_input_resistor_power_w": 0.0010616326530612243,
+    "internal_5_1v_to_contact_200k_path_ua": 26.020408163265305,
+    "internal_5_1v_to_contact_one_resistor_short_ua": 52.04081632653061,
+    "bias_5_1v_through_two_resistors_ua": 5.214510653960983,
+    "bias_5_1v_one_resistor_short_ua": 10.429021307921966,
+    "two_200k_paths_resistor_noise_uv_rms_100hz_300k": 0.8140709551384326,
     "bleed_current_max_ma": {
-      "AVDD": 5.1515151515151505,
-      "DVDD": 3.4
+      "AVDD": 20.85804261584393,
+      "DVDD": 3.43469387755102
     },
     "bleed_max_w": {
-      "R50": 0.02627272727272727,
-      "R51": 0.011444399999999997
+      "R50": 0.05318800867040203,
+      "R52": 0.05318800867040203,
+      "R51": 0.011561179591836732
     },
     "direct_cap_discharge_tau_ms_max_model": {
-      "AVDD": 26.575120000000002,
-      "DVDD": 8.943550000000002
+      "AVDD": 6.696140880000001,
+      "DVDD": 9.0321
     },
-    "unpowered_rail_5_1v_one_input_v": 0.24752522825564632,
-    "unpowered_rail_5_1v_one_shorted_series_resistor_v": 0.47213565536205315,
-    "unpowered_rail_5_1v_nine_inputs_v": 1.6046728971962616,
-    "unpowered_rail_10_2v_one_input_v": 0.49505045651129265
+    "unpowered_rail_5_1v_one_input_v": 0.006613346782537307,
+    "unpowered_rail_5_1v_one_shorted_series_resistor_v": 0.013209564265205588,
+    "unpowered_rail_5_1v_nine_inputs_v": 0.05890900623988824,
+    "unpowered_rail_10_2v_one_input_v": 0.013226693565074613
   },
   "conditional_checks": [
     {
-      "name": "Bleed load fits added 6mA/4mA rail allowances",
+      "name": "Bleed load fits added 22mA/4mA rail allowances",
       "passed": true
     },
     {
@@ -138,7 +139,7 @@
       "passed": true
     },
     {
-      "name": "50mA AFE budget below 100mA fuse hold at 23C",
+      "name": "66mA AFE budget below 140mA fuse hold at 23C",
       "passed": true
     },
     {
@@ -191,7 +192,7 @@
     "Injection-current calculation does not prove rails can sink current or establish acceptable body current",
     "Analog injection can still back-power AVDD and violate LDO VOUT <= VIN+0.3V; no live analog inputs with board off",
     "Buffers address direct GPIO backfeed, but power-order/brownout/disconnected-supply tests remain open; no galvanic isolation",
-    "20k input paths allow hundreds of microamps in a rail-to-contact fault; not a qualified body protection design",
+    "200k input paths reduce continuous fault current. Aggregate currents, lead bias, insulation and common returns require qualified system review.",
     "Bias resistor fault bounds, aggregate leakage, cable compensation and ESD tests remain open",
     "No mains, defibrillator or IEC patient-protection compliance claim"
   ]

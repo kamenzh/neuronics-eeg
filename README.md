@@ -3,7 +3,7 @@
 An open development project for an affordable eight-channel EEG acquisition
 PCB, ESP32 wireless streaming and PC-based signal processing and classification.
 
-**Current revision A0.4** adds two rail discharge loads and corrects the Würth header holes. The [design review](docs/A0_4_DESIGN_REVIEW.md) records the safety and fit questions still open. Download the [bare-board and hand-assembly packages](hardware/fabrication/A0.4/).
+**Current revision A0.5** increases electrode series resistance, revises input filtering and rail discharge, updates the battery PTC and keys the controller harness. See the [protection review](docs/A0_5_PROTECTION.md) and [checked fabrication and hand-assembly files](hardware/fabrication/A0.5/). The Sino-k connector inquiry and assembled-system qualification are open.
 There is no manufactured or body-validated Neuronic board yet. This repository
 contains genuine KiCad source, not a manufacturing release.
 
@@ -15,7 +15,7 @@ implementation, measurements and qualified system review. See the
 **November 19 follow-up:** the [independent November 17 report](docs/reviews/independent-577aad8-2026-11-17/REPORT.md)
 is incorporated, the BOM prose is corrected, and a
 [connector drawing/CAD audit](docs/CONNECTOR_VERIFICATION_A0_3.md) records what is
-known and what still needs physical evidence. A0.4 fabrication data are available for review. Manufacturer selection and ordering are pending.
+known and what still needs physical evidence. A0.5 fabrication data are available for review. Manufacturer selection and ordering are pending.
 
 **A0.3 implements the main A0.2 review fixes:** revised analog routing,
 stronger default logic pulls, two power-off tolerant interface buffers, extra
@@ -23,8 +23,7 @@ reference capacitance and revised socket mounting slots. Read the
 [changes and remaining gates](docs/REVIEW_FIXES_A0_3.md). Historical
 [A0.2 findings](docs/INDEPENDENT_REVIEW_A0_2.md) remain available.
 
-**J11 cable change:** pin 11 now takes Nano 3V3; pin 12 is GPIO6 enable, formerly
-GND. Use the [A0.3 harness guide](docs/POWER_HARNESS_A0_3.md).
+**A0.5 controller cable.** Pin 1 is ground, position 2 is the mechanical key and must have no wire, pin 11 takes Nano 3V3, and pin 12 is GPIO6 enable. See the [cable pinout](docs/POWER_HARNESS_A0_3.md) and [keying instructions](docs/A0_5_PROTECTION.md).
 
 **Controller selected: use the Waveshare ESP32-S3-Nano you already own.**
 The Sino-k SGE117DN ten-lead set is recorded; P1 36619 touchproof sockets are selected; physical plug fit still needs verification. See [the wiring and power plan](docs/CONTROLLER_AND_ELECTRODES.md)
@@ -45,7 +44,7 @@ flowchart TD
     V["Battery and regulators"] --> A
 ```
 
-| Parameter | A0.3 design target |
+| Parameter | A0.5 design target |
 | --- | --- |
 | Recording channels | 8 simultaneous |
 | Contacts | 8 recording + 1 reference + 1 bias |
@@ -70,7 +69,7 @@ a claim of noise-free resolution, and more gain can reduce offset headroom.
 | `hardware/interface.json` | Selected controller GPIO, electrode and power contract |
 | `hardware/design.json` | Generated component/net/placement record |
 | `hardware/validation/` | Exported netlist, connectivity audit, DRC, RC calculation and sheet previews |
-| `hardware/fabrication/` | A0.4 Gerber/drill package and assembly references for review |
+| `hardware/fabrication/` | A0.5 Gerber/drill package and assembly references for review |
 | `firmware/` | Acquisition firmware specification; implementation pending |
 | `software/` | PC receiver/recorder specification; implementation pending |
 | `ml/` | Evaluation plan; no trained classifier yet |
@@ -94,13 +93,14 @@ performance, layout quality or body safety.
 /usr/bin/python3 tools/validate_kicad.py
 python3 tools/prepare_bom.py
 python3 tools/review_electrical.py
+python3 tools/check_contact_faults.py
 python3 tools/simulate_input.py
 /usr/bin/python3 -m unittest discover -s tests -v
 ```
 
 Validation uses KiCad 9; on Linux use its compatible `/usr/bin/python3` for pcbnew. Read the current validation report for routing and CAD results; manufacturing and body-use approval remain separate. GUI ERC/DRC instructions are in the beginner guide.
 
-See [the review fixes](docs/REVIEW_FIXES_A0_3.md) and [power/harness candidate](docs/POWER_HARNESS_A0_3.md) for current decisions and physical checks.
+See the [current protection review](docs/A0_5_PROTECTION.md) and [power and cable guide](docs/POWER_HARNESS_A0_3.md) for the circuit decisions and physical checks.
 
 ## Roadmap
 
@@ -126,8 +126,8 @@ experiment. Intentional command classification follows measured signal quality.
 EEG does not directly reveal arbitrary thoughts. Eye and muscle artifacts must
 be checked, and train/test data must be separated by complete trials/sessions.
 
-This is a body-connected engineering project, not a diagnostic device. A0.3 is
-for bench development only. Do not attach it to a person. Final electrode
+This is a body-connected engineering project, not a diagnostic device. A0.5 still needs
+bench qualification and complete-system electrical safety review. Do not attach it to a person. Final electrode
 protection and fault paths need qualified review before any scalp recording.
 Battery power, ERC and DRC alone do not establish safety. During approved
 recording, use a self-contained battery arrangement and wireless communication,
