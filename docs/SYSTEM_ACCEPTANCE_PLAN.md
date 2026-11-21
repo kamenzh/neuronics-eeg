@@ -1,5 +1,7 @@
 # Target: a working eight-channel EEG system
 
+**A0.4 update.** See the [current circuit decisions, dimensions, budgets and checks](A0_4_DESIGN_REVIEW.md). The A0.3 figures below describe the earlier hardware. The Sino-k leads have not been ordered.
+
 Updated 2026-11-19 to reflect Kamen's requested outcome. The goal is one useful,
 self-assembled EEG instrument using the full ADS1299 and the owned Waveshare
 ESP32-S3-Nano, with wireless recording on a PC. Eight recording contacts share

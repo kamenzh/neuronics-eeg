@@ -1,5 +1,7 @@
 # Validation status — A0.3, 2026-11-15
 
+**A0.4 update.** See the [current circuit decisions, dimensions, budgets and checks](../../docs/A0_4_DESIGN_REVIEW.md). The A0.3 figures below describe the earlier hardware. The Sino-k leads have not been ordered.
+
 **Routed bench-development checkpoint; not a manufacturing or body-use release.**
 No physical board was tested and no acquisition firmware was built. Reports
 were generated from the saved KiCad 9.0.2 source, not the partial router output.

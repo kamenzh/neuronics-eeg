@@ -22,7 +22,7 @@ def check(name,condition):
     if not condition: print('FAIL:',name)
 
 parts={p['ref']:p for p in src['parts']}
-check('All 107 physical components exported by KiCad',set(parts)==set(comps) and len(parts)==107)
+check('All 109 physical components exported by KiCad',set(parts)==set(comps) and len(parts)==109)
 for p in parts.values():
     check(f"{p['ref']} footprint matches schematic",comps[p['ref']].findtext('footprint')==p['fp'])
     for pin,net in p['nets'].items():
@@ -46,6 +46,8 @@ for ref,rail in [('U2','AVDD_5V'),('U3','DVDD_3V3')]:
     for pin,net in {'1':'VBAT','2':'GND','3':'VBAT','4':'GND','5':rail}.items():
         check(f'TI fixed TPS7A24 DBV contract {ref}.{pin}',actual.get((ref,pin))==net)
     check(f'{ref} uses SOT-23-5 footprint',comps[ref].findtext('footprint')=='Neuronic:SOT-23-5')
+for ref, rail in [('R50','AVDD_5V'),('R51','DVDD_3V3')]:
+    check(f'{ref} regulator discharge path', comps[ref].findtext('value')=='1k' and actual.get((ref,'1'))==rail and actual.get((ref,'2'))=='GND')
 for i in range(1,11):
     check(f'J{i} selected touchproof jack footprint',comps[f'J{i}'].findtext('footprint')=='Neuronic:P1_36619_Touchproof_RA')
 for i in range(1,10):

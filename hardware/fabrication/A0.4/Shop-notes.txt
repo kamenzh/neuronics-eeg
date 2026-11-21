@@ -1,0 +1,25 @@
+NEURONIC A0.4   ENGINEERING REVIEW COPY   2026-11-21
+Bare PCB for instrumented evaluation. Hold purchase pending design and DFM review.
+
+Outline 88.00 x 90.00 mm on profile centreline. Thickness 1.60 mm nominal.
+Design proposal FR-4, 35 um nominal copper each layer. Confirm available stack,
+finished copper, mask registration and surface finish before release. Lead-free
+HASL or ENIG needs owner/DFM agreement for hand assembly of the 0.50 mm pitch ADC.
+Physical stack TOP to BOTTOM: F_Cu / In1_Cu (ground) / In2_Cu (routing + ground) / B_Cu.
+Top and bottom mask; top legend; bottom legend has no positive artwork.
+X2 plots and separate absolute metric PTH / NPTH Excellon share a common origin.
+No mirroring. Drill dimensions in these files specify nominal FINISHED bores.
+Shop to compensate plating and confirm all tolerances below in writing.
+
+P1 jacks: 10 plated round 2.10 mm signal holes (minimum finished 2.00)
+and 20 plated rounded slots, 4.20 long x 2.10 wide, minimum 4.10 x 2.00.
+Max relative position error assumed 0.15 mm on each axis between signal
+and dummy tails. Agree upper dimensions/registration consistent with the
+signal and slot lands (nominal rings 0.50 and 0.40 mm respectively).
+Slots are isolated retention pads. Preserve plating, oval shape and copper.
+J11 and SW1: 14 plated 1.10 mm, manufacturer interval 0.95–1.25 mm.
+J12: 2 plated 1.00 mm, finished 1.00–1.05 mm; pitch 2.50 ±0.05 mm.
+Vias: 123 plated 0.30 mm. Mechanical: 4 nonplated 2.70 mm.
+Minimum track 0.15 mm; design clearance 0.20 mm. Review mask webs at U1;
+nominal opening width 0.30 mm on 0.50 mm pitch. Review no-net slot copper
+and outline against CAM preview. Return deviations for design review.

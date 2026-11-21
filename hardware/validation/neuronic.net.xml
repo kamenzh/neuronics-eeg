@@ -2,15 +2,15 @@
 <export version="E">
   <design>
     <source>/workspace/scratch/3a280c114457/neuronic/hardware/kicad/neuronic.kicad_sch</source>
-    <date>2026-11-15T19:55:04+0100</date>
+    <date>2026-11-21T09:52:14+0000</date>
     <tool>Eeschema 9.0.2+dfsg-1</tool>
-    <textvar name="REVISION">A0.3-review-fixes</textvar>
+    <textvar name="REVISION">A0.4</textvar>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>01 - ADS1299 core and SPI interface</title>
         <company>Neuronic</company>
-        <rev>A0.3</rev>
-        <date>2026-11-15</date>
+        <rev>A0.4</rev>
+        <date>2026-11-21</date>
         <source>neuronic.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
         <comment number="2" value=""/>
@@ -27,8 +27,8 @@
       <title_block>
         <title>02 - Eight channels and shared reference</title>
         <company>Neuronic</company>
-        <rev>A0.3</rev>
-        <date>2026-11-15</date>
+        <rev>A0.4</rev>
+        <date>2026-11-21</date>
         <source>inputs.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
         <comment number="2" value=""/>
@@ -45,8 +45,8 @@
       <title_block>
         <title>03 - Battery regulators, decoupling and bias</title>
         <company>Neuronic</company>
-        <rev>A0.3</rev>
-        <date>2026-11-15</date>
+        <rev>A0.4</rev>
+        <date>2026-11-21</date>
         <source>power.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
         <comment number="2" value=""/>
@@ -63,8 +63,8 @@
       <title_block>
         <title>04 - Power-off protected host interface</title>
         <company>Neuronic</company>
-        <rev>A0.3</rev>
-        <date>2026-11-15</date>
+        <rev>A0.4</rev>
+        <date>2026-11-21</date>
         <source>interface.kicad_sch</source>
         <comment number="1" value="BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"/>
         <comment number="2" value=""/>
@@ -93,7 +93,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="neuronic.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
+      <property name="ki_fp_filters" value="Neuronic:PinHeader_2x06_P2.54mm_Vertical Connector*:*_2x??_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>63e5f4a2-b11b-511b-ada5-91834f363141</tstamps>
     </comp>
@@ -631,7 +631,7 @@
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Neuronic:P1_36619_Touchproof_RA Connector*:*_1x??_*"/>
       <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
       <tstamps>ca444771-fef7-534d-a1e3-8eddef82ade5</tstamps>
     </comp>
@@ -649,7 +649,7 @@
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Neuronic:P1_36619_Touchproof_RA Connector*:*_1x??_*"/>
       <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
       <tstamps>2e68d078-186f-5cb6-9841-168bd9eed1f2</tstamps>
     </comp>
@@ -667,7 +667,7 @@
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Neuronic:P1_36619_Touchproof_RA Connector*:*_1x??_*"/>
       <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
       <tstamps>6b0e4943-9211-52b1-8710-40164e00c482</tstamps>
     </comp>
@@ -685,7 +685,7 @@
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Neuronic:P1_36619_Touchproof_RA Connector*:*_1x??_*"/>
       <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
       <tstamps>1328a76a-aa71-5de1-b666-e3347092adb2</tstamps>
     </comp>
@@ -703,7 +703,7 @@
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Neuronic:P1_36619_Touchproof_RA Connector*:*_1x??_*"/>
       <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
       <tstamps>0c27e9dc-29b1-55c7-9a3a-f1ef3c7218de</tstamps>
     </comp>
@@ -721,7 +721,7 @@
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Neuronic:P1_36619_Touchproof_RA Connector*:*_1x??_*"/>
       <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
       <tstamps>34fc5357-ec0f-5f58-8f32-02ef2e8a9f26</tstamps>
     </comp>
@@ -739,7 +739,7 @@
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Neuronic:P1_36619_Touchproof_RA Connector*:*_1x??_*"/>
       <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
       <tstamps>b9be75e9-c33a-5fe6-98cd-972df1d64fed</tstamps>
     </comp>
@@ -757,7 +757,7 @@
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Neuronic:P1_36619_Touchproof_RA Connector*:*_1x??_*"/>
       <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
       <tstamps>f2578509-69d4-5600-ad63-a7819d66980e</tstamps>
     </comp>
@@ -775,7 +775,7 @@
       <property name="Sheetname" value="Input filters / CH1-8 / REF"/>
       <property name="Sheetfile" value="inputs.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Neuronic:P1_36619_Touchproof_RA Connector*:*_1x??_*"/>
       <sheetpath names="/Input filters / CH1-8 / REF/" tstamps="/8512254c-53b0-57da-bc73-e12eadbd8d8c/"/>
       <tstamps>89b7be3b-a9f6-559d-b86c-fd4e862bc899</tstamps>
     </comp>
@@ -1567,7 +1567,7 @@
       <property name="Sheetname" value="Power / bypass / bias drive"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="resettable fuse PTC PPTC polyfuse polyswitch"/>
-      <property name="ki_fp_filters" value="*polyfuse* *PTC*"/>
+      <property name="ki_fp_filters" value="Neuronic:Fuse_1812_4532Metric *polyfuse* *PTC*"/>
       <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
       <tstamps>be43af05-a17f-5546-9934-1ec0f57e5057</tstamps>
     </comp>
@@ -1585,7 +1585,7 @@
       <property name="Sheetname" value="Power / bypass / bias drive"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Neuronic:P1_36619_Touchproof_RA Connector*:*_1x??_*"/>
       <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
       <tstamps>e9bb80b1-f942-512d-9b65-9f964dfd8b47</tstamps>
     </comp>
@@ -1603,7 +1603,7 @@
       <property name="Sheetname" value="Power / bypass / bias drive"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_fp_filters" value="Neuronic:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical Connector*:*_1x??_*"/>
       <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
       <tstamps>2ea121ce-6928-55f5-bdea-a7c3605be7a7</tstamps>
     </comp>
@@ -1660,6 +1660,42 @@
       <property name="ki_fp_filters" value="R_*"/>
       <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
       <tstamps>de6aa466-42f6-590b-8b27-9824cb0a695a</tstamps>
+    </comp>
+    <comp ref="R50">
+      <value>1k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">RC0805FR-071KL</field>
+        <field name="Footprint">Neuronic:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Candidate_MPN" value="RC0805FR-071KL"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>d13b03e3-48f6-5352-bb1d-3ed0d6a47fe3</tstamps>
+    </comp>
+    <comp ref="R51">
+      <value>1k</value>
+      <footprint>Neuronic:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Candidate_MPN">RC0805FR-071KL</field>
+        <field name="Footprint">Neuronic:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Candidate_MPN" value="RC0805FR-071KL"/>
+      <property name="Sheetname" value="Power / bypass / bias drive"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power / bypass / bias drive/" tstamps="/4211f9a2-901f-5dfc-9787-3eab65268c9f/"/>
+      <tstamps>7bf4adee-b6c8-52c6-a17c-8f14ea8702cd</tstamps>
     </comp>
     <comp ref="SW1">
       <value>POWER</value>
@@ -1982,6 +2018,7 @@
       <description>Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <docs>~</docs>
       <footprints>
+        <fp>Neuronic:P1_36619_Touchproof_RA</fp>
         <fp>Connector*:*_1x??_*</fp>
       </footprints>
       <fields>
@@ -1999,6 +2036,7 @@
       <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <docs>~</docs>
       <footprints>
+        <fp>Neuronic:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</fp>
         <fp>Connector*:*_1x??_*</fp>
       </footprints>
       <fields>
@@ -2017,6 +2055,7 @@
       <description>Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <docs>~</docs>
       <footprints>
+        <fp>Neuronic:PinHeader_2x06_P2.54mm_Vertical</fp>
         <fp>Connector*:*_2x??_*</fp>
       </footprints>
       <fields>
@@ -2102,6 +2141,7 @@
       <description>Resettable fuse, polymeric positive temperature coefficient</description>
       <docs>~</docs>
       <footprints>
+        <fp>Neuronic:Fuse_1812_4532Metric</fp>
         <fp>*polyfuse*</fp>
         <fp>*PTC*</fp>
       </footprints>
@@ -2343,6 +2383,7 @@
       <node ref="D7" pin="2" pinfunction="K2" pintype="passive"/>
       <node ref="D8" pin="2" pinfunction="K2" pintype="passive"/>
       <node ref="D9" pin="2" pinfunction="K2" pintype="passive"/>
+      <node ref="R50" pin="1" pintype="passive"/>
       <node ref="U1" pin="19" pinfunction="AVDD" pintype="power_in"/>
       <node ref="U1" pin="21" pinfunction="AVDD" pintype="power_in"/>
       <node ref="U1" pin="22" pinfunction="AVDD" pintype="power_in"/>
@@ -2450,6 +2491,7 @@
       <node ref="C45" pin="1" pintype="passive"/>
       <node ref="C46" pin="1" pintype="passive"/>
       <node ref="R36" pin="2" pintype="passive"/>
+      <node ref="R51" pin="1" pintype="passive"/>
       <node ref="U1" pin="48" pinfunction="DVDD" pintype="power_in"/>
       <node ref="U1" pin="50" pinfunction="DVDD" pintype="power_in"/>
       <node ref="U3" pin="5" pinfunction="OUT" pintype="power_out"/>
@@ -2564,6 +2606,8 @@
       <node ref="R39" pin="2" pintype="passive"/>
       <node ref="R40" pin="2" pintype="passive"/>
       <node ref="R49" pin="2" pintype="passive"/>
+      <node ref="R50" pin="2" pintype="passive"/>
+      <node ref="R51" pin="2" pintype="passive"/>
       <node ref="U1" pin="20" pinfunction="AVSS" pintype="power_in"/>
       <node ref="U1" pin="23" pinfunction="AVSS" pintype="power_in"/>
       <node ref="U1" pin="25" pinfunction="VREFN" pintype="input"/>

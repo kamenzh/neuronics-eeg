@@ -1,5 +1,5 @@
 {
-  "revision": "A0.3-review-fixes",
+  "revision": "A0.4",
   "controller": {
     "model": "Waveshare ESP32-S3-Nano",
     "owned": true,
@@ -121,7 +121,7 @@
     "vendor": "Sino-k",
     "listed_model": "SGE117DN",
     "url": "https://www.sinokmed.com/collections/ecg-cables/products/eeg-cable-10-leadwires-golden-plated-cup-electrodes?variant=42757052924081",
-    "owned": true,
+    "owned": false,
     "contacts": 10,
     "roles": {
       "recording": 8,
@@ -139,8 +139,8 @@
       7.2,
       10.2
     ],
-    "afe_analog_budget_ma": 30,
-    "afe_digital_budget_ma": 10,
+    "afe_analog_budget_ma": 36,
+    "afe_digital_budget_ma": 14,
     "controller_input": "Separate protected battery branch to Nano VIN; Nano 3V3 to J11.11 supplies buffer A ports only",
     "nano_documented_vin_range_v": [
       6,

@@ -51,7 +51,24 @@ calculations={
  'bias_5_1v_through_two_resistors_ua':avdd_max/bias_min_r*1e6,
  'bias_5_1v_one_resistor_short_ua':avdd_max/(bias_min_r/2)*1e6,
  'two_20k_paths_resistor_noise_uv_rms_100hz_300k':math.sqrt(4*1.380649e-23*300*40000*100)*1e6}
+# One positive external source relative to board GND, VIN held at zero;
+# use a zero-drop input clamp and omit all other loads for the divider bound.
+bleed_max = 1000 * 1.01
+bleed_min = 1000 * 0.99
+def rail_bound(voltage, paths, series_r):
+    return voltage * bleed_max / (bleed_max + series_r / paths)
+calculations.update({
+ 'bleed_current_max_ma': {r: v/bleed_min*1000 for r,v in [('AVDD',avdd_max),('DVDD',dvdd_max)]},
+ 'bleed_max_w': {r: v**2/bleed_min for r,v in [('R50',avdd_max),('R51',dvdd_max)]},
+ 'direct_cap_discharge_tau_ms_max_model': {r: total*1.1*1.15*bleed_max/1000 for r,total in [('AVDD',sum(analog.values())),('DVDD',sum(digital.values()))]},
+ 'unpowered_rail_5_1v_one_input_v': rail_bound(5.1,1,input_min_r),
+ 'unpowered_rail_5_1v_one_shorted_series_resistor_v': rail_bound(5.1,1,input_min_r/2),
+ 'unpowered_rail_5_1v_nine_inputs_v': rail_bound(5.1,9,input_min_r),
+ 'unpowered_rail_10_2v_one_input_v': rail_bound(10.2,1,input_min_r),
+})
 checks=[
+ ('Bleed load fits added 6mA/4mA rail allowances',avdd_max/bleed_min<.006 and dvdd_max/bleed_min<.004),
+ ('One 5.1V source through intact input into unloaded rail and bleed at VIN=0 stays below 0.3V in DC model',rail_bound(5.1,1,input_min_r)<.3),
  ('10k control LOW calculation below ADC VIL',pull_low_v<dvdd_min*.2),
  ('Reference engineering estimate exceeds 10uF; not a guaranteed minimum',reference_estimate>10),
  ('Conditional socket capsule corner fits assumed finished slot',slot_corner<1),
@@ -59,7 +76,7 @@ checks=[
  ('TPS7A24 digital output budget inside ADS1299 recommended 1.8-3.6V',dvdd_min>=1.8 and dvdd_max<=3.6),
  ('Conditional input exceeds nominal+0.5V regulation test boundary',vin_min>=5.5),
  ('AVDD upper direct output capacitance below 50uF effective limit',cmax<=50),
- ('40mA AFE budget below 100mA fuse hold at 23C',load<.1),
+ ('50mA AFE budget below 100mA fuse hold at 23C',load<.1),
  ('Bounded low-energy 10.2V fault with one series resistor short below TI 10mA injection limit',fault_v/(input_min_r/2)<.01),
  ('Bounded DC fault resistor dissipation below nominal 0.125W rating',fault_v**2/(input_min_r/2)<.125),
  ('Eight-channel frame size',a['frame_bytes']==3+3*a['channels']),

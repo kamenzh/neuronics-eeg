@@ -1,5 +1,7 @@
 # A0.3 connector verification — 2026-11-19
 
+**A0.4 update.** See the [current circuit decisions, dimensions, budgets and checks](A0_4_DESIGN_REVIEW.md). The A0.3 figures below describe the earlier hardware. The Sino-k leads have not been ordered.
+
 **Desk review complete; actual mating and solder fit remain untested.** This is
 the step-two follow-up to the [independent November 17 review](reviews/independent-577aad8-2026-11-17/REPORT.md),
 IR-06. The saved CAD remains the reviewed `577aad8` board. No footprints, holes,
@@ -67,7 +69,7 @@ needs an appropriate heating process and inspection for housing/contact damage.
 
 ## Evidence needed from the actual hardware
 
-No purchasing is requested at this stage. Start with the leads already owned;
+No purchasing is requested at this stage. When leads become available,
 use a socket/header sample only if available. If none is available, record that
 physical verification remains pending rather than calling it passed.
 

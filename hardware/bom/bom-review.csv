@@ -78,6 +78,8 @@ D10,SS14,Neuronic:D_SMA,SS14-E3/61T,Reverse polarity protection; verify thermal 
 SW1,POWER,Neuronic:PinHeader_1x02_P2.54mm_Vertical,61300211121,"Header for an offboard SPST switch; This MPN buys the PCB header, not the external switch"
 U2,TPS7A2450DBVR,Neuronic:SOT-23-5,TPS7A2450DBVR,"Fixed DBV: 1 VIN, 2 GND, 3 EN=VIN, 4 NC=GND, 5 VOUT; Pin 1 IN, 2 GND, 3 EN tied to IN, 4 NC tied GND for thermal performance, 5 OUT. 2% combined accuracy budget. Measure rail noise/startup/reverse-current behavior."
 U3,TPS7A2433DBVR,Neuronic:SOT-23-5,TPS7A2433DBVR,"Fixed DBV: 1 VIN, 2 GND, 3 EN=VIN, 4 NC=GND, 5 VOUT; Pin 1 IN, 2 GND, 3 EN tied to IN, 4 NC tied GND for thermal performance, 5 OUT. 2% combined accuracy budget. Measure rail noise/startup/reverse-current behavior."
+R50,1k,Neuronic:R_0805_2012Metric,RC0805FR-071KL,Passive regulator-output discharge load.
+R51,1k,Neuronic:R_0805_2012Metric,RC0805FR-071KL,Passive regulator-output discharge load.
 C20,4.7uF 25V,Neuronic:C_0805_2012Metric,C0805C475K3RACTU,"Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"
 C21,4.7uF 25V,Neuronic:C_0805_2012Metric,C0805C475K3RACTU,"Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"
 C22,4.7uF 25V,Neuronic:C_0805_2012Metric,C0805C475K3RACTU,"Final MPN, voltage bias capacitance and placement require review; Verify effective capacitance at operating bias/temperature and aging; nominal value alone is insufficient"

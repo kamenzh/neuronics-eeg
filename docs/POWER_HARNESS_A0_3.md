@@ -1,5 +1,7 @@
 # A0.3 battery and controller harness — bench candidate
 
+**A0.4 update.** See the [current circuit decisions, dimensions, budgets and checks](A0_4_DESIGN_REVIEW.md). The A0.3 figures below describe the earlier hardware. The Sino-k leads have not been ordered.
+
 The circuit is shared-ground and **not galvanically isolated**. This is a wiring
 proposal for an electrode-disconnected bench prototype, with physical verification
 still pending. The Nano must not take its radio current from the AFE regulators.

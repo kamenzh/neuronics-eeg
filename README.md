@@ -3,7 +3,7 @@
 An open development project for an affordable eight-channel EEG acquisition
 PCB, ESP32 wireless streaming and PC-based signal processing and classification.
 
-**Current revision: A0.3 — revised, routed bench-development PCB.**
+**Current revision A0.4** adds two rail discharge loads and corrects the Würth header holes. The [design review](docs/A0_4_DESIGN_REVIEW.md) records the safety and fit questions still open. Download the [bare-board and hand-assembly packages](hardware/fabrication/A0.4/).
 There is no manufactured or body-validated Neuronic board yet. This repository
 contains genuine KiCad source, not a manufacturing release.
 
@@ -15,8 +15,7 @@ implementation, measurements and qualified system review. See the
 **November 19 follow-up:** the [independent November 17 report](docs/reviews/independent-577aad8-2026-11-17/REPORT.md)
 is incorporated, the BOM prose is corrected, and a
 [connector drawing/CAD audit](docs/CONNECTOR_VERIFICATION_A0_3.md) records what is
-known and what still needs physical evidence. Fabrication files, manufacturer
-selection and parts ordering are deferred until design confirmation.
+known and what still needs physical evidence. A0.4 fabrication data are available for review. Manufacturer selection and ordering are pending.
 
 **A0.3 implements the main A0.2 review fixes:** revised analog routing,
 stronger default logic pulls, two power-off tolerant interface buffers, extra
@@ -71,7 +70,7 @@ a claim of noise-free resolution, and more gain can reduce offset headroom.
 | `hardware/interface.json` | Selected controller GPIO, electrode and power contract |
 | `hardware/design.json` | Generated component/net/placement record |
 | `hardware/validation/` | Exported netlist, connectivity audit, DRC, RC calculation and sheet previews |
-| `hardware/fabrication/` | Release policy; no order-ready Gerbers |
+| `hardware/fabrication/` | A0.4 Gerber/drill package and assembly references for review |
 | `firmware/` | Acquisition firmware specification; implementation pending |
 | `software/` | PC receiver/recorder specification; implementation pending |
 | `ml/` | Evaluation plan; no trained classifier yet |

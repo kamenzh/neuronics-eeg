@@ -9,7 +9,7 @@ test_old_session_and_changed_digest_rejected (test_workflow_guards.RoutingImport
 test_stale_board_rejected_without_write (test_workflow_guards.RoutingImportGuards.test_stale_board_rejected_without_write) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 1.462s
+Ran 9 tests in 0.631s
 
 OK
 version: exit 0

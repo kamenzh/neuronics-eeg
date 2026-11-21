@@ -22,7 +22,7 @@
       "passed": true
     }
   ],
-  "tracks": 1181,
+  "tracks": 1185,
   "vias": 123,
   "zones": [
     {
@@ -37,7 +37,7 @@
     }
   ],
   "tracks_by_layer": {
-    "F.Cu": 720,
+    "F.Cu": 724,
     "In2.Cu": 146,
     "B.Cu": 315
   },
@@ -92,14 +92,14 @@
       "x_max_mm": 114.9125
     },
     "AVDD_5V": {
-      "track_length_mm": 215.741,
+      "track_length_mm": 218.241,
       "via_count": 2,
       "layers": [
         "B.Cu",
         "F.Cu"
       ],
       "x_min_mm": 75.0553,
-      "x_max_mm": 114.0
+      "x_max_mm": 116.5
     },
     "BIASINV": {
       "track_length_mm": 12.293,
@@ -303,14 +303,14 @@
       "x_max_mm": 70.0875
     },
     "DVDD_3V3": {
-      "track_length_mm": 76.407,
+      "track_length_mm": 78.907,
       "via_count": 4,
       "layers": [
         "B.Cu",
         "F.Cu"
       ],
       "x_min_mm": 103.25,
-      "x_max_mm": 128.0
+      "x_max_mm": 130.5
     },
     "EEG1": {
       "track_length_mm": 37.678,
@@ -386,7 +386,7 @@
       "x_max_mm": 94.3375
     },
     "GND": {
-      "track_length_mm": 78.085,
+      "track_length_mm": 83.086,
       "via_count": 73,
       "layers": [
         "F.Cu"

@@ -1,14 +1,13 @@
 # Candidate parts — not an order release
 
-`bom-review.csv` lists each of the **107 electrical PCB components** (the four
+`bom-review.csv` lists each of the **109 electrical PCB components** (the four
 mounting-hole footprints are not purchased components). `bom-candidates.csv`
-contains **25 catalog groups and 23 distinct candidate MPNs**: some groups use
+contains **26 catalog groups and 24 distinct candidate MPNs**: some groups use
 the same MPN for different circuit roles. It records quantities, packages and manufacturer
 sources. `hardware/parts.json` is the editable catalog; the generator applies it
 to the schematic and BOM. Candidate selection is not stock or price verification.
 
-The owned Nano and Sino-k electrode set cost nothing additional to reuse and
-are off-board, so neither is included in the PCB component count. Do not buy
+The Nano is already owned. The planned Sino-k leads have not been ordered. Both are off-board, so neither is included in the PCB component count. Do not buy
 another controller or a second ADS1299. ADS1299IPAG and ADS1299IPAGR use the same
 PAG package; the R suffix is reel packaging. Buy one genuine eight-channel device
 from a traceable supplier when the design/order list is frozen.
@@ -16,7 +15,7 @@ from a traceable supplier when the design/order list is frozen.
 J1–J10 are ten selected **P1 36619 / 8R003661901F** right-angle touchproof jacks,
 not the superseded bench headers. Mating with Kamen's actual Sino-k leads is
 **not yet verified**. See the [connector drawing/fit audit](../../docs/CONNECTOR_VERIFICATION_A0_3.md),
-including the unresolved finished-hole requirements for J11, SW1 and J12.
+and the [A0.4 dimensions](../../docs/A0_4_DESIGN_REVIEW.md), including finished-hole requirements for J11, SW1 and J12.
 SW1's BOM item is a header for an external switch, not
 a switch. The battery holder/cells, Nano branch protection, switches, cables,
 JST mating housing/contacts, enclosure, paste/gel, soldering consumables and PCB

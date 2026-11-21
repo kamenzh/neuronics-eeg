@@ -59,7 +59,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_fp_filters" "Connector*:*_1x??_*"
+		(property "ki_fp_filters" "Neuronic:P1_36619_Touchproof_RA Connector*:*_1x??_*"
 			(at 0 0 0)
 			(effects
 				(font
@@ -172,7 +172,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_fp_filters" "Connector*:*_1x??_*"
+		(property "ki_fp_filters" "Neuronic:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical Connector*:*_1x??_*"
 			(at 0 0 0)
 			(effects
 				(font
@@ -314,7 +314,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_fp_filters" "Connector*:*_2x??_*"
+		(property "ki_fp_filters" "Neuronic:PinHeader_2x06_P2.54mm_Vertical Connector*:*_2x??_*"
 			(at 0 0 0)
 			(effects
 				(font

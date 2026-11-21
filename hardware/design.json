@@ -1,5 +1,5 @@
 {
-  "revision": "A0.3-review-fixes",
+  "revision": "A0.4",
   "state": "source-netlist-and-placement-record; see saved PCB and validation/STATUS.md",
   "parts": [
     {
@@ -1604,6 +1604,44 @@
       "mpn": "TPS7A2433DBVR",
       "sheet": "power",
       "uuid": "5caff16a-83ae-576c-939b-27b4fe449cfc"
+    },
+    {
+      "ref": "R50",
+      "lib": "Device:R",
+      "value": "1k",
+      "nets": {
+        "1": "AVDD_5V",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        116.5,
+        70
+      ],
+      "rot": 90,
+      "note": "Passive regulator-output discharge load.",
+      "mpn": "RC0805FR-071KL",
+      "sheet": "power",
+      "uuid": "d13b03e3-48f6-5352-bb1d-3ed0d6a47fe3"
+    },
+    {
+      "ref": "R51",
+      "lib": "Device:R",
+      "value": "1k",
+      "nets": {
+        "1": "DVDD_3V3",
+        "2": "GND"
+      },
+      "fp": "Neuronic:R_0805_2012Metric",
+      "xy": [
+        130.5,
+        72
+      ],
+      "rot": 90,
+      "note": "Passive regulator-output discharge load.",
+      "mpn": "RC0805FR-071KL",
+      "sheet": "power",
+      "uuid": "7bf4adee-b6c8-52c6-a17c-8f14ea8702cd"
     },
     {
       "ref": "C20",

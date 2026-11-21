@@ -1,5 +1,5 @@
 {
-  "revision": "A0.3-review-fixes",
+  "revision": "A0.4",
   "purpose": "Candidate PCB components; no stock, price or manufacturing approval implied",
   "groups": [
     {
@@ -374,6 +374,19 @@
       "source": "https://www.yageo.com/en/Chart/Download/pdf/RC0805.pdf",
       "status": "candidate_not_order_release",
       "review": "Buffer OE default disabled."
+    },
+    {
+      "references": [
+        "R50",
+        "R51"
+      ],
+      "mpn": "RC0805FR-071KL",
+      "manufacturer": "Yageo",
+      "specification": "1 kohm, 1%, 0805, 0.125W",
+      "source": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-071KL",
+      "status": "candidate_not_order_release",
+      "value": "1k",
+      "review": "Passive regulator-output discharge load."
     }
   ]
 }

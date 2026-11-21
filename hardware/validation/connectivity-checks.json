@@ -1,9 +1,9 @@
 {
-  "passed": 573,
-  "total": 573,
+  "passed": 581,
+  "total": 581,
   "checks": [
     {
-      "name": "All 107 physical components exported by KiCad",
+      "name": "All 109 physical components exported by KiCad",
       "passed": true
     },
     {
@@ -1363,6 +1363,30 @@
       "passed": true
     },
     {
+      "name": "R50 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R50.1 -> AVDD_5V",
+      "passed": true
+    },
+    {
+      "name": "R50.2 -> GND",
+      "passed": true
+    },
+    {
+      "name": "R51 footprint matches schematic",
+      "passed": true
+    },
+    {
+      "name": "R51.1 -> DVDD_3V3",
+      "passed": true
+    },
+    {
+      "name": "R51.2 -> GND",
+      "passed": true
+    },
+    {
       "name": "C20 footprint matches schematic",
       "passed": true
     },
@@ -1952,6 +1976,14 @@
     },
     {
       "name": "U3 uses SOT-23-5 footprint",
+      "passed": true
+    },
+    {
+      "name": "R50 regulator discharge path",
+      "passed": true
+    },
+    {
+      "name": "R51 regulator discharge path",
       "passed": true
     },
     {

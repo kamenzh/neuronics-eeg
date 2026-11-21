@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'hardware/kicad'
 DATA = Path(os.environ.get('KICAD_DATA', '/usr/share/kicad'))
 NS = uuid.UUID('b314a604-c394-4051-a09e-9626c22cb806')
-REVISION = 'A0.3-review-fixes'
+REVISION = 'A0.4'
 CAD_REVISION = REVISION.split('-')[0]
 def uid(key): return str(uuid.uuid5(NS, key))
 def q(s): return json.dumps(str(s))
@@ -91,6 +91,14 @@ def initialize():
                       ('Switch','SW_SPST'), ('power','PWR_FLAG'),
                       ('Regulator_Linear','MCP1703Ax-330xxDB')]:
         LIB[f'{lib}:{name}'] = lib_symbol(lib, name)
+    # KiCad's generic upstream filters omit these four bundled footprints.
+    for key, footprint in {
+        'Connector_Generic:Conn_01x01': 'P1_36619_Touchproof_RA',
+        'Connector_Generic:Conn_01x02': 'JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical',
+        'Connector_Generic:Conn_02x06_Odd_Even': 'PinHeader_2x06_P2.54mm_Vertical',
+        'Device:Polyfuse': 'Fuse_1812_4532Metric',
+    }.items():
+        LIB[key] = LIB[key].replace('(property "ki_fp_filters" "', f'(property "ki_fp_filters" "Neuronic:{footprint} ')
     pins = []
     for i in range(1,65):
         side = i <= 32
@@ -198,7 +206,7 @@ class Sheet:
         return p
     def save(self,root=False):
         lib='\n'.join(LIB[k] for k in sorted(self.used))
-        txt=f'(kicad_sch (version 20250114) (generator eeschema) (uuid {self.id}) (paper "A3")\n(title_block (title {q(self.title)}) (date "2026-11-15") (rev "{CAD_REVISION}") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))\n(lib_symbols\n{lib}\n)\n'+'\n'.join(self.items)
+        txt=f'(kicad_sch (version 20250114) (generator eeschema) (uuid {self.id}) (paper "A3")\n(title_block (title {q(self.title)}) (date "2026-11-21") (rev "{CAD_REVISION}") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))\n(lib_symbols\n{lib}\n)\n'+'\n'.join(self.items)
         if root: txt+='\n(sheet_instances (path "/" (page "1")))'
         txt+='\n)\n'
         (OUT/f'{self.name}.kicad_sch').write_text(txt)
@@ -219,7 +227,7 @@ def make_design():
     root=Sheet('neuronic','01 - ADS1299 core and SPI interface',1)
     inp=Sheet('inputs','02 - Eight channels and shared reference',2)
     power=Sheet('power','03 - Battery regulators, decoupling and bias',3)
-    root.text('NEURONIC / A0.3 BENCH REVIEW',20,18,2)
+    root.text('NEURONIC / A0.4 BENCH REVIEW',20,18,2)
     root.text('8 synchronous channels, 10 contacts. One ADS1299 contains both PGAs and ADCs.',20,25)
     root.text('Filtered reference is shared by all negative inputs. MISC1=0x00; CHnSET.SRB2=0. SRB1/SRB2 are NC.',20,32)
     nets={}
@@ -249,7 +257,7 @@ def make_design():
         sheet_y=39.37 if name!='interface' else 132.08
         root.items.append(f'(sheet (at {x} {sheet_y}) (size 170.18 12.7) (fields_autoplaced) (stroke (width 0.1524) (type default)) (fill (color 0 0 0 0)) (uuid {uid("sheet-"+name)}) (property "Sheetname" {q(title)} (at {x} {sheet_y-1.37} 0) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "{name}.kicad_sch" (at {x} {sheet_y+13.63} 0) (effects (font (size 1.27 1.27)) (justify left top))) (instances (project "neuronic" (path "/{root.id}" (page "{SHEETS[name].page}")))))')
 
-    io.text('A0.3 / POWER-OFF BUFFERING - SHARED GROUND, NOT GALVANIC ISOLATION',18,18,1.8)
+    io.text('A0.4 / POWER-OFF BUFFERING - SHARED GROUND, NOT GALVANIC ISOLATION',18,18,1.8)
     io.text('J11.11 = Nano 3V3. J11.12 = GPIO6 / D3, enable HIGH only after supplies settle. Default disabled.',18,26)
     io.text('Two TXU0304PW devices: six host outputs and two ADC outputs. Series resistors at all buffer outputs; verify placement and edges.',18,33)
     for j,(ref,host,afe) in enumerate([
@@ -299,6 +307,8 @@ def make_design():
     power.part('SW1','Switch:SW_SPST','POWER',220,48,{'1':'VBAT_DIODE','2':'VBAT'},'Neuronic:PinHeader_1x02_P2.54mm_Vertical',xy=(109,60),note='Header for an offboard SPST switch')
     for i,(value,rail) in enumerate([('TPS7A2450DBVR','AVDD_5V'),('TPS7A2433DBVR','DVDD_3V3')]):
         power.part(f'U{i+2}','Neuronic:TPS7A24_FIXED',value,95+155*i,86,{'1':'VBAT','2':'GND','3':'VBAT','4':'GND','5':rail},'Neuronic:SOT-23-5',xy=(109+i*14,72),note='Fixed DBV: 1 VIN, 2 GND, 3 EN=VIN, 4 NC=GND, 5 VOUT',mpn=value)
+    add_rc(power,'R50','1k','AVDD_5V','GND',330,86,(116.5,70),rot=90)
+    add_rc(power,'R51','1k','DVDD_3V3','GND',380,86,(130.5,72),rot=90)
     power.part('FLG1','power:PWR_FLAG','PWR_FLAG',330,48,{'1':'VBAT'})
     power.part('FLG2','power:PWR_FLAG','PWR_FLAG',365,48,{'1':'GND'})
     bypass=[('C20','4.7uF 25V','VBAT','GND',(109,66)),('C21','1uF','AVDD_5V','GND',(109,78)),
@@ -509,7 +519,7 @@ def board():
     # Board is deliberately a placement checkpoint: no inferred tracks or planes.
     for a,c in [((50,55),(138,55)),((138,55),(138,145)),((138,145),(50,145)),((50,145),(50,55))]:
         s=k.PCB_SHAPE();s.SetShape(k.SHAPE_T_SEGMENT);s.SetLayer(k.Edge_Cuts);s.SetWidth(k.FromMM(0.05));s.SetStart(k.VECTOR2I(k.FromMM(a[0]),k.FromMM(a[1])));s.SetEnd(k.VECTOR2I(k.FromMM(c[0]),k.FromMM(c[1])));b.Add(s)
-    for text,xy,size in [('NEURONIC A0.3 / BENCH', (109,138),1),('BENCH ONLY / NO BODY CONNECTION',(93,141),0.9),('8CH + REF + BIAS',(70,138),0.8),('MCU 3V3 IO',(128,112),0.8)]:
+    for text,xy,size in [('NEURONIC A0.4 / BENCH', (109,138),1),('BENCH ONLY / NO BODY CONNECTION',(93,141),0.9),('8CH + REF + BIAS',(70,138),0.8),('MCU 3V3 IO',(128,112),0.8)]:
         t=k.PCB_TEXT(b);t.SetText(text);t.SetPosition(k.VECTOR2I(k.FromMM(xy[0]),k.FromMM(xy[1])));t.SetTextSize(k.VECTOR2I(k.FromMM(size),k.FromMM(size)));t.SetTextThickness(k.FromMM(0.12));t.SetLayer(k.F_SilkS);b.Add(t)
     for num,xy in enumerate([(87,58),(135,58),(135,142),(73,142)]):
         fp=k.FootprintLoad(str(OUT/'Neuronic.pretty'),'MountingHole_2.7mm_M2.5');fp.SetReference(f'H{num+1}');fp.SetValue('M2.5');fp.SetFPID(k.LIB_ID('Neuronic','MountingHole_2.7mm_M2.5'));fp.SetPosition(k.VECTOR2I(k.FromMM(xy[0]),k.FromMM(xy[1])));fp.Reference().SetVisible(False);fp.Value().SetVisible(False);fp.SetAttributes(k.FP_BOARD_ONLY | k.FP_EXCLUDE_FROM_BOM | k.FP_EXCLUDE_FROM_POS_FILES);b.Add(fp)

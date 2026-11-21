@@ -1,5 +1,5 @@
 {
-  "revision": "A0.3-review-fixes",
+  "revision": "A0.4",
   "manufacture_ready": false,
   "body_connection_approved": false,
   "sources": {
@@ -14,7 +14,7 @@
       7.2,
       10.2
     ],
-    "afe_current_a": 0.04,
+    "afe_current_a": 0.05,
     "fuse_resistance_upper_ohm": 15,
     "diode_drop_allowance_v": 0.5,
     "harness_switch_drop_allowance_v": 0.1,
@@ -56,7 +56,7 @@
       "C41": 0.1
     },
     "dvdd_nominal_uF": 7.0,
-    "afe_ldo_min_input_v_conditional": 6.000000000000001,
+    "afe_ldo_min_input_v_conditional": 5.8500000000000005,
     "analog_output_range_v": [
       4.9,
       5.1
@@ -65,12 +65,12 @@
       3.234,
       3.3659999999999997
     ],
-    "analog_min_input_margin_over_nominal_plus_0_5_v": 0.5000000000000009,
-    "analog_dropout_margin_v_at_high_output": 0.6500000000000012,
-    "analog_ldo_power_w_upper_ignoring_input_drops": 0.15899999999999997,
-    "digital_ldo_power_w_upper_ignoring_input_drops": 0.06966,
-    "analog_temp_rise_c_using_datasheet_board": 26.6802,
-    "digital_temp_rise_c_using_datasheet_board": 11.688948,
+    "analog_min_input_margin_over_nominal_plus_0_5_v": 0.35000000000000053,
+    "analog_dropout_margin_v_at_high_output": 0.5000000000000009,
+    "analog_ldo_power_w_upper_ignoring_input_drops": 0.19079999999999994,
+    "digital_ldo_power_w_upper_ignoring_input_drops": 0.09752399999999999,
+    "analog_temp_rise_c_using_datasheet_board": 32.01623999999999,
+    "digital_temp_rise_c_using_datasheet_board": 16.364527199999998,
     "raw_bytes_s": 6750,
     "frame_read_us_ideal": 216.0,
     "sample_period_us": 4000.0,
@@ -82,9 +82,33 @@
     "internal_5_1v_to_contact_one_resistor_short_ua": 515.1515151515151,
     "bias_5_1v_through_two_resistors_ua": 5.161838829173498,
     "bias_5_1v_one_resistor_short_ua": 10.323677658346996,
-    "two_20k_paths_resistor_noise_uv_rms_100hz_300k": 0.25743183952262005
+    "two_20k_paths_resistor_noise_uv_rms_100hz_300k": 0.25743183952262005,
+    "bleed_current_max_ma": {
+      "AVDD": 5.1515151515151505,
+      "DVDD": 3.4
+    },
+    "bleed_max_w": {
+      "R50": 0.02627272727272727,
+      "R51": 0.011444399999999997
+    },
+    "direct_cap_discharge_tau_ms_max_model": {
+      "AVDD": 26.575120000000002,
+      "DVDD": 8.943550000000002
+    },
+    "unpowered_rail_5_1v_one_input_v": 0.24752522825564632,
+    "unpowered_rail_5_1v_one_shorted_series_resistor_v": 0.47213565536205315,
+    "unpowered_rail_5_1v_nine_inputs_v": 1.6046728971962616,
+    "unpowered_rail_10_2v_one_input_v": 0.49505045651129265
   },
   "conditional_checks": [
+    {
+      "name": "Bleed load fits added 6mA/4mA rail allowances",
+      "passed": true
+    },
+    {
+      "name": "One 5.1V source through intact input into unloaded rail and bleed at VIN=0 stays below 0.3V in DC model",
+      "passed": true
+    },
     {
       "name": "10k control LOW calculation below ADC VIL",
       "passed": true
@@ -114,7 +138,7 @@
       "passed": true
     },
     {
-      "name": "40mA AFE budget below 100mA fuse hold at 23C",
+      "name": "50mA AFE budget below 100mA fuse hold at 23C",
       "passed": true
     },
     {

@@ -1,5 +1,5 @@
 (kicad_sch (version 20250114) (generator eeschema) (uuid 00011c75-8068-5c2a-a0dd-e7a40761679d) (paper "A3")
-(title_block (title "01 - ADS1299 core and SPI interface") (date "2026-11-15") (rev "A0.3") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))
+(title_block (title "01 - ADS1299 core and SPI interface") (date "2026-11-21") (rev "A0.4") (company "Neuronic") (comment 1 "BENCH DEVELOPMENT ONLY - NOT FOR BODY CONNECTION OR FABRICATION"))
 (lib_symbols
 (symbol "Connector_Generic:Conn_02x06_Odd_Even"
 		(pin_names
@@ -61,7 +61,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_fp_filters" "Connector*:*_2x??_*"
+		(property "ki_fp_filters" "Neuronic:PinHeader_2x06_P2.54mm_Vertical Connector*:*_2x??_*"
 			(at 0 0 0)
 			(effects
 				(font
@@ -629,7 +629,7 @@
 (pin no_connect line (at 22.86 39.37 180) (length 2.54) (name "RESERVED" (effects (font (size 1.016 1.016)))) (number "64" (effects (font (size 1.016 1.016)))))
 ))
 )
-(text "NEURONIC / A0.3 BENCH REVIEW" (at 20 18 0) (effects (font (size 2 2)) (justify left)) (uuid bdc9048b-9fd4-5d23-89d8-872e24e68f61))
+(text "NEURONIC / A0.4 BENCH REVIEW" (at 20 18 0) (effects (font (size 2 2)) (justify left)) (uuid bdc9048b-9fd4-5d23-89d8-872e24e68f61))
 (text "8 synchronous channels, 10 contacts. One ADS1299 contains both PGAs and ADCs." (at 20 25 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid 79a2e323-f790-5a86-8c4c-73979e66803b))
 (text "Filtered reference is shared by all negative inputs. MISC1=0x00; CHnSET.SRB2=0. SRB1/SRB2 are NC." (at 20 32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid eccaa228-0ba3-5fb0-9bda-658e2bf072c2))
 (symbol (lib_id "Neuronic:ADS1299IPAG") (at 154.94 105.41 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 1d78f5a4-670b-5d43-b66d-e817a944dd9d)

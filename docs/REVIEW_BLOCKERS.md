@@ -1,5 +1,7 @@
 # Remaining hardware and system work — A0.3
 
+**A0.4 update.** See the [current circuit decisions, dimensions, budgets and checks](A0_4_DESIGN_REVIEW.md). The A0.3 figures below describe the earlier hardware. The Sino-k leads have not been ordered.
+
 Updated 2026-11-19. IR numbers below refer specifically to the
 [November 17 review of 577aad8](reviews/independent-577aad8-2026-11-17/REPORT.md),
 not the older A0.2/A0.3 reports which reuse similar identifiers.
